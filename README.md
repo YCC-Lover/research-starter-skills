@@ -4,9 +4,11 @@
 
 [![技能校验状态](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml)
 
-**把研究材料变成有依据的论文表达，从你正在卡住的那一步开始。**
+**缺少系统的科研指导，也可以一步步走好自己的科研与论文之路。**
 
-读了不少论文，却不知道引言怎么组织？已有实验结果，却说不清它支持什么结论？把草稿、文献和真实数据交给 Codex，让它按科研流程协助梳理问题、对应证据、修改章节，再列清下一步。
+如果你因导师指导有限或其他原因，主要靠自己摸索科研，还没有系统学过如何查找与阅读文献、确定研究问题、组织论文论证，或准备学术汇报与会议交流，这里可以成为你学习科研方法、推进当前任务的一份参考。
+
+先阅读 [Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 的原创教程，理解各个环节的方法与经验；再结合本项目据此提炼的 **Codex skills**，将所学应用到自己的文献、研究笔记、真实数据与论文草稿中。从找论文、做研究，到写论文、回应审稿与参加学术会议，你可以按当前需要选择相应的文章和 skill，一步步推进，而不必一次掌握全部流程。原教程帮助你理解方法，skill 辅助你实践；研究判断与最终结论仍由你掌握。
 
 **[下载最新技能包](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [查看 16 个使用示例](examples/README.md) · [看场景与配图](examples/SHOWCASE.md) · [开始安装](#安装)**
 
