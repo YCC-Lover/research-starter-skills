@@ -1,0 +1,30 @@
+name: Bug report / 问题反馈
+description: Report installation, validation, or skill behavior with a sanitized example.
+title: "[Bug] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Package version and environment / 版本与环境
+      placeholder: "v1.1.0, Python version, OS, Codex version if relevant"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction / 最小复现
+      description: Include the command or prompt and actual versus expected behavior. Remove private paths and secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence / 脱敏证据
+      description: Paste only relevant errors or a public demonstration. No unpublished manuscripts or raw experimental data.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy / 隐私确认
+      options:
+        - label: I removed passwords, tokens, private paths, personal data, and confidential research materials.
+          required: true

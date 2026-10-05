@@ -1,12 +1,22 @@
 # Research Starter Skills
 
+[中文](README.md) · [English](README_EN.md) · [版本记录](CHANGELOG.md)
+
+[![技能校验状态](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml)
+
 **把研究材料变成有依据的论文表达，从你正在卡住的那一步开始。**
 
 读了不少论文，却不知道引言怎么组织？已有实验结果，却说不清它支持什么结论？把草稿、文献和真实数据交给 Codex，让它按科研流程协助梳理问题、对应证据、修改章节，再列清下一步。
 
-**[下载最新技能包](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [查看 10 个使用示例](examples/README.md) · [开始安装](#安装)**
+**[下载最新技能包](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [查看 16 个使用示例](examples/README.md) · [看场景与配图](examples/SHOWCASE.md) · [开始安装](#安装)**
 
 本项目将 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 固定版本的 README 与全部 **19 篇教程**独立提炼为 **1 个总入口 + 6 个小 skill**，用于 Codex 的科研与论文写作协作。技能文件公开下载，安装脚本仅依赖 Python 标准库；运行任务仍需你自己的 Codex 环境及其可用工具。
+
+**来源与归属：** 原项目 README 介绍人为郭兰哲，致谢陈煜旸、葛凌岳、张逸凯等同学。本仓库由 YCC-Lover 维护，是非官方独立提炼与 Codex 适配，不代表原作者认可。[逐篇来源](skills/research-starter-paper/references/sources.md) · [发布范围](NOTICE.md)。
+
+![一个总入口与六个科研模块的原创功能地图](docs/images/workflow.png)
+
+图为本仓库原创示意，不是原教程截图；文字说明与更多图像见 [场景展示](examples/SHOWCASE.md)。
 
 ## 为什么值得试一次
 
@@ -41,7 +51,9 @@
 | 审稿意见不知从哪回 | 建立逐条回复与真实修改对应表 |
 | 组会或参会准备零散 | 整理报告提纲、讨论问题与跟进草稿 |
 
-[示例页](examples/README.md)包含 10 个场景的输入清单、完整提示词和交付目标，还演示了证据不足时如何改写。选一个与你最接近的任务，带着真实材料试一次。
+[示例页](examples/README.md)包含 16 个场景的输入清单、完整提示词和交付目标，还演示了证据不足时如何改写。选一个与你最接近的任务，带着真实材料试一次。
+
+**还没有适合分享的研究材料？** 可以先用 [随包教学材料](examples/demo-materials/README.md) 练习读表、图注和逐条回复。材料全部自行编写，曲线为合成数据，意见为虚构教学意见，不需要上传自己的未发表论文。
 
 ## 技能目录
 
@@ -78,6 +90,8 @@ python scripts/install_skills.py
 ```
 
 总入口需要六个小 skill 位于同级目录；建议一起安装。已有同名目录时，默认拒绝覆盖，不会删除任何文件。
+
+安装前可执行 `python scripts/install_skills.py --dry-run`；已有安装可用 `python scripts/install_skills.py --check` 只读对比内容。完整路径、备份、失败处理和换账号说明见 [安装指南](docs/INSTALLATION.md)。
 
 ## 使用
 
@@ -118,7 +132,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 ## 版本与来源
 
-当前稳定版为 `v1.0.2`，首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 [GitHub Releases](https://github.com/YCC-Lover/research-starter-skills/releases/latest) 下载技能包或选择对应 tag，以固定版本安装。
+当前稳定版为 `v1.1.0`，首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 [GitHub Releases](https://github.com/YCC-Lover/research-starter-skills/releases/latest) 下载技能包或选择对应 tag，以固定版本安装。
 
 覆盖对应上游提交 `36ba390d153f5289308ec833e2b633c26b304a7b`。外部致谢资料仅保留出处关系，未声称阅读其中的整本书。[完整来源表](skills/research-starter-paper/references/sources.md) 与 [NOTICE.md](NOTICE.md) 说明作者归属和发布范围。
 
@@ -126,8 +140,16 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 上游固定版本没有 LICENSE/COPYING 文件。此仓库不将上游标为 MIT 等许可，也不授予原教程、图片或品牌资产的转载权。
 
+本仓库目前也未添加整体许可或原创素材许可；公开可读不等于已授予任意转载、商业使用或再许可权。引用本适配版可使用 [CITATION.cff](CITATION.cff)，同时注明上游项目来源；引用与许可是两回事。
+
+## 质量与边界
+
+自动检查技能格式、19 篇来源映射、相对链接、公开路径、安装更新及批准图像的完整性。新增回归测试覆盖优化模式下校验、链接目录与硬链接、无写入预览及内容对比。[本次审查记录](docs/PROJECT_AUDIT.md) 区分已验证事项与剩余风险。
+
+这些校验不等于模型在所有学科都表现可靠。示例是任务模板与教学示意，不是准确率、节省时间或录用率证明；最终数据、引文与结论仍需作者核对。
+
 ## 觉得有用，欢迎一起完善
 
 先 [下载技能包](https://github.com/YCC-Lover/research-starter-skills/releases/latest)，用你正在处理的一段文字、一份文献或一张图开始。需要时回来查看示例，不必一次学习全部模块。
 
-欢迎 Star 收藏，方便下次找到；也欢迎通过 [Issues](https://github.com/YCC-Lover/research-starter-skills/issues) 提出缺失场景，或通过 Pull Request 补充示例。反馈请使用脱敏材料，不上传未公开论文、实验数据或个人敏感信息。
+欢迎 Star 收藏，方便下次找到；也欢迎通过 [Issues](https://github.com/YCC-Lover/research-starter-skills/issues) 提出缺失场景，或通过 Pull Request 补充示例。[贡献指南](CONTRIBUTING.md) 说明如何提交可复核的场景与纠错。反馈请使用脱敏材料，不上传未公开论文、实验数据或个人敏感信息。

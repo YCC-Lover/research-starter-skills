@@ -1,0 +1,23 @@
+name: Research scenario / 场景建议
+description: Suggest a concrete workflow or share an authorized, sanitized example.
+title: "[Scenario] "
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Task and audience / 任务与使用者
+      description: Which research step is difficult? What input and output would make the example useful?
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Evidence and boundaries / 证据与边界
+      description: Specify the discipline, available tools, and what must not be changed or claimed.
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Publication rights / 公开权限
+      options:
+        - label: Any attached material is original or authorized, sanitized, and clearly labeled if synthetic.
+          required: true

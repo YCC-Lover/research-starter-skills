@@ -1,0 +1,35 @@
+{
+  "images": [
+    {
+      "path": "docs/images/workflow.png",
+      "kind": "original-diagram",
+      "creator": "YCC-Lover with Codex",
+      "description": "Original map of the router and six focused skills.",
+      "source": "scripts/render_showcase.py",
+      "width": 1600,
+      "height": 960,
+      "sha256": "99fecb4983ad718c05608a225ccc30a2ef6bd487a2c8eee34dbcd13d908134c9"
+    },
+    {
+      "path": "docs/images/evidence-check.png",
+      "kind": "illustrative-output",
+      "creator": "YCC-Lover with Codex",
+      "description": "Manually authored claim/evidence illustration, not a recorded model response.",
+      "source": "scripts/render_showcase.py",
+      "width": 1600,
+      "height": 900,
+      "sha256": "0dc4dce484c5f07acc6003ab1486b1ec9fc906083d196dbadb827f7cabc7ee29"
+    },
+    {
+      "path": "docs/images/thermal-demo.png",
+      "kind": "synthetic-data-plot",
+      "creator": "YCC-Lover with Codex",
+      "description": "Reproducible plot of hand-constructed teaching curves; not a real experiment.",
+      "source": "scripts/render_showcase.py",
+      "width": 1800,
+      "height": 810,
+      "sha256": "38c2a7b514b179595cc4e50c25996d169494bfb40af234e395e9568a62fc9284",
+      "data_source": "examples/demo-materials/thermal-demo.csv"
+    }
+  ]
+}

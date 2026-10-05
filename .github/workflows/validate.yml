@@ -11,23 +11,43 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-24.04
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            python: "3.10"
+          - os: ubuntu-24.04
+            python: "3.13"
+          - os: windows-2025
+            python: "3.13"
+    runs-on: ${{ matrix.os }}
     env:
       PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUTF8: "1"
     steps:
       - uses: actions/checkout@v7.0.1
       - uses: actions/setup-python@v7.0.0
         with:
-          python-version: "3.13"
+          python-version: ${{ matrix.python }}
       - name: Prepare Temporary Directory
-        run: mkdir -p "$RUNNER_TEMP/research-starter-tests"
+        shell: python
+        run: |
+          import os
+          from pathlib import Path
+          work = Path(os.environ["RUNNER_TEMP"]) / "research-starter-tests"
+          work.mkdir(parents=True, exist_ok=True)
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as env:
+              for key in ("TEMP", "TMP", "TMPDIR"):
+                  env.write(f"{key}={work}\n")
       - name: Install Validation Dependency
         env:
           PIP_CACHE_DIR: ${{ runner.temp }}/research-starter-pip-cache
         run: python -m pip install -r requirements-dev.txt
       - name: Validate Skill Package
         run: python scripts/validate_skills.py
+      - name: Validate Under Optimized Python
+        run: python -O scripts/validate_skills.py
       - name: Test Installation And Updates
-        env:
-          TMPDIR: ${{ runner.temp }}/research-starter-tests
         run: python -m unittest discover -s tests -v
