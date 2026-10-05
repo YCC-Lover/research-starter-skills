@@ -1,0 +1,6 @@
+interface:
+  display_name: "实验分析与论文图表"
+  short_description: "对齐主张和实验，分析结果并设计可追溯的论文示意图与数据图表"
+  default_prompt: "使用 $rsk-experiments-figures，帮我规划实验或根据真实数据制作论文图表。"
+policy:
+  allow_implicit_invocation: true

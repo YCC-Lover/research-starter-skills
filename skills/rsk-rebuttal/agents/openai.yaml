@@ -1,0 +1,6 @@
+interface:
+  display_name: "审稿回复与返修"
+  short_description: "逐条回应真实审稿意见，核对证据、实际修改和新增实验的状态"
+  default_prompt: "使用 $rsk-rebuttal，根据审稿意见和稿件准备逐条、有证据的回复。"
+policy:
+  allow_implicit_invocation: true

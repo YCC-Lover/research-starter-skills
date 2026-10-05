@@ -1,0 +1,6 @@
+interface:
+  display_name: "论文论证与章节写作"
+  short_description: "根据真实材料起草或重构摘要、引言、相关工作、方法与全文论证"
+  default_prompt: "使用 $rsk-paper-writing，根据我的研究材料撰写或修改指定论文章节。"
+policy:
+  allow_implicit_invocation: true

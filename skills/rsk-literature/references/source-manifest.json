@@ -1,0 +1,151 @@
+{
+  "repository": "https://github.com/LAMDA-NeSy/Research-Starter-Kit",
+  "revision": "36ba390d153f5289308ec833e2b633c26b304a7b",
+  "checked_date": "2026-10-05",
+  "license_file_present": false,
+  "independent_adaptation": true,
+  "source_mode": "privately provided Feishu PDF exports; raw exports are not distributed",
+  "coverage_scope": "README and listed tutorials; external background works are not fully read",
+  "adaptations": [
+    "AI 领域案例与段数、句数、字体、频率等为教学快照或可调启发，不凌驾于学科和投稿要求。",
+    "BibTeX 拼写纠正为 @article；完整作者名单保留，字段依实际类型和目标规范，不批量删除。",
+    "审稿策略转为客观、专业、有证据的回复，不采用人身判断或评审操纵。",
+    "异常、不显著及机制解释需要实际证据，不机械使用柔化措辞。",
+    "资助金额、资格和月份保留为历史线索，当前申请必须核验官方当年公告。",
+    "Claude/macOS 操作归档为历史工具附录，不迁移为 Codex 命令或权限授权。",
+    "可验证任务与独立检查保留，持续重启转为有界修复，不默认执行回滚、提交、通知或远程控制。",
+    "参会介绍时长、约 24 小时跟进和交流数量是可调整建议；身份、研究结果与合作状态必须真实，不自动联系他人。"
+  ],
+  "handbook_count": 3,
+  "body_read_count": 3,
+  "project_handbook_count": 19,
+  "project_body_read_count": 19,
+  "handbooks": [
+    {
+      "id": 2,
+      "title": "如何找论文？",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "c480a51ddb86145150e4691c691e6f2df480aed3537d1ba88c5c6cdada51b04a",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 745,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 869,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 85,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-literature",
+      "distilled_files": [
+        "rsk-literature/references/search-reading.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何找论文？.pdf"
+    },
+    {
+      "id": 3,
+      "title": "如何读论文？",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/Ow8fw2HtEiixDgkWlkbckdvHnef?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "1f573477bf841a844dca4d71c32bf2b60e2a2df174071df4be9541566b85cdd1",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 805,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 416,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-literature",
+      "distilled_files": [
+        "rsk-literature/references/search-reading.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何读论文？.pdf"
+    },
+    {
+      "id": 15,
+      "title": "如何写论文-Reference",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/A4q2wSnmRi91rykHke1cQIhnnAh?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "c06bc8eaee46d71081262526b018c030cf2f053b3397caae7040537981402f35",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 672,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 1077,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2021"
+            },
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2021"
+            },
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2021"
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "characters": 127,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-literature",
+      "distilled_files": [
+        "rsk-literature/references/references.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何写论文-Reference.pdf"
+    }
+  ]
+}

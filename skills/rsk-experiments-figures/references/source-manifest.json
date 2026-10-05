@@ -1,0 +1,311 @@
+{
+  "repository": "https://github.com/LAMDA-NeSy/Research-Starter-Kit",
+  "revision": "36ba390d153f5289308ec833e2b633c26b304a7b",
+  "checked_date": "2026-10-05",
+  "license_file_present": false,
+  "independent_adaptation": true,
+  "source_mode": "privately provided Feishu PDF exports; raw exports are not distributed",
+  "coverage_scope": "README and listed tutorials; external background works are not fully read",
+  "adaptations": [
+    "AI 领域案例与段数、句数、字体、频率等为教学快照或可调启发，不凌驾于学科和投稿要求。",
+    "BibTeX 拼写纠正为 @article；完整作者名单保留，字段依实际类型和目标规范，不批量删除。",
+    "审稿策略转为客观、专业、有证据的回复，不采用人身判断或评审操纵。",
+    "异常、不显著及机制解释需要实际证据，不机械使用柔化措辞。",
+    "资助金额、资格和月份保留为历史线索，当前申请必须核验官方当年公告。",
+    "Claude/macOS 操作归档为历史工具附录，不迁移为 Codex 命令或权限授权。",
+    "可验证任务与独立检查保留，持续重启转为有界修复，不默认执行回滚、提交、通知或远程控制。",
+    "参会介绍时长、约 24 小时跟进和交流数量是可调整建议；身份、研究结果与合作状态必须真实，不自动联系他人。"
+  ],
+  "handbook_count": 2,
+  "body_read_count": 2,
+  "project_handbook_count": 19,
+  "project_body_read_count": 19,
+  "handbooks": [
+    {
+      "id": 9,
+      "title": "论文画图指南",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/OGpcw6zaRiQ6OwkNxfYcl7IKnBh?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "98e0ecb1f03a7647f078cfe7542b2dda631f27afe8eb8cd4f593648aeadb3605",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 623,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 210,
+          "images": 2,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 91,
+          "images": 3,
+          "links": []
+        },
+        {
+          "page": 4,
+          "characters": 579,
+          "images": 1,
+          "links": [
+            {
+              "uri": "https://arxiv.org/pdf/2601.12538"
+            }
+          ]
+        },
+        {
+          "page": 5,
+          "characters": 176,
+          "images": 2,
+          "links": [
+            {
+              "uri": "https://arxiv.org/pdf/2601.12538"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2410.06467"
+            }
+          ]
+        },
+        {
+          "page": 6,
+          "characters": 552,
+          "images": 2,
+          "links": [
+            {
+              "uri": "https://arxiv.org/abs/2410.06467"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2502.08942"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2502.08942"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2502.08942"
+            },
+            {
+              "uri": "https://virl-platform.github.io/static/V-IRL.pdf"
+            }
+          ]
+        },
+        {
+          "page": 7,
+          "characters": 321,
+          "images": 2,
+          "links": [
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2024/file/62ab1c2cb4b03e717005479efb211841-Paper-Conference.pdf"
+            },
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2024/file/62ab1c2cb4b03e717005479efb211841-Paper-Conference.pdf"
+            },
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2024/file/62ab1c2cb4b03e717005479efb211841-Paper-Conference.pdf"
+            },
+            {
+              "uri": "https://arxiv.org/pdf/2601.03515"
+            },
+            {
+              "uri": "https://arxiv.org/pdf/2601.03515"
+            },
+            {
+              "uri": "https://arxiv.org/pdf/2601.03515"
+            }
+          ]
+        },
+        {
+          "page": 8,
+          "characters": 230,
+          "images": 2,
+          "links": []
+        },
+        {
+          "page": 9,
+          "characters": 367,
+          "images": 1,
+          "links": []
+        },
+        {
+          "page": 10,
+          "characters": 98,
+          "images": 2,
+          "links": []
+        },
+        {
+          "page": 11,
+          "characters": 97,
+          "images": 3,
+          "links": []
+        },
+        {
+          "page": 12,
+          "characters": 646,
+          "images": 2,
+          "links": [
+            {
+              "uri": "https://colorkit.co/palettes/"
+            },
+            {
+              "uri": "https://colorbrewer2.org/"
+            },
+            {
+              "uri": "https://sciviscolor.org/"
+            },
+            {
+              "uri": "https://color.adobe.com/"
+            }
+          ]
+        },
+        {
+          "page": 13,
+          "characters": 61,
+          "images": 3,
+          "links": []
+        },
+        {
+          "page": 14,
+          "characters": 573,
+          "images": 4,
+          "links": [
+            {
+              "uri": "https://www.flaticon.com/"
+            },
+            {
+              "uri": "https://www.iconfont.cn/"
+            },
+            {
+              "uri": "https://thenounproject.com/"
+            },
+            {
+              "uri": "https://biorender.com/"
+            }
+          ]
+        },
+        {
+          "page": 15,
+          "characters": 1201,
+          "images": 0,
+          "links": [
+            {
+              "uri": "http://diagrams.net/"
+            },
+            {
+              "uri": "https://app.diagrams.net/"
+            },
+            {
+              "uri": "https://www.processon.com/"
+            },
+            {
+              "uri": "https://www.lucidchart.com/"
+            },
+            {
+              "uri": "https://proplot.readthedocs.io/"
+            },
+            {
+              "uri": "https://github.com/datawhalechina/paper-chart-tutorial"
+            }
+          ]
+        },
+        {
+          "page": 16,
+          "characters": 0,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-experiments-figures",
+      "distilled_files": [
+        "rsk-experiments-figures/references/figures.md",
+        "rsk-experiments-figures/references/examples-resources.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "visual_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "论文画图指南.pdf"
+    },
+    {
+      "id": 14,
+      "title": "如何写论文-Experiments",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/KHgSw2MkrikxlskGe5qclkdbn2c?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "8eb0965bad6eb8b9db54867511370cc1a24e4dfeabb33fd47b89e75e3f139ae2",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 614,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 714,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 788,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 4,
+          "characters": 119,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-experiments-figures",
+      "distilled_files": [
+        "rsk-experiments-figures/references/experiments.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何写论文-Experiments.pdf"
+    }
+  ]
+}

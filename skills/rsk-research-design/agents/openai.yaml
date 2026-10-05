@@ -1,0 +1,6 @@
+interface:
+  display_name: "科研选题与研究设计"
+  short_description: "从具体问题形成可检验的研究想法、最小实验和论文贡献论证"
+  default_prompt: "使用 $rsk-research-design，帮我梳理研究问题、候选 Idea 和最小验证方案。"
+policy:
+  allow_implicit_invocation: true

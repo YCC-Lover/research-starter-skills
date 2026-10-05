@@ -1,0 +1,166 @@
+{
+  "repository": "https://github.com/LAMDA-NeSy/Research-Starter-Kit",
+  "revision": "36ba390d153f5289308ec833e2b633c26b304a7b",
+  "checked_date": "2026-10-05",
+  "license_file_present": false,
+  "independent_adaptation": true,
+  "source_mode": "privately provided Feishu PDF exports; raw exports are not distributed",
+  "coverage_scope": "README and listed tutorials; external background works are not fully read",
+  "adaptations": [
+    "AI 领域案例与段数、句数、字体、频率等为教学快照或可调启发，不凌驾于学科和投稿要求。",
+    "BibTeX 拼写纠正为 @article；完整作者名单保留，字段依实际类型和目标规范，不批量删除。",
+    "审稿策略转为客观、专业、有证据的回复，不采用人身判断或评审操纵。",
+    "异常、不显著及机制解释需要实际证据，不机械使用柔化措辞。",
+    "资助金额、资格和月份保留为历史线索，当前申请必须核验官方当年公告。",
+    "Claude/macOS 操作归档为历史工具附录，不迁移为 Codex 命令或权限授权。",
+    "可验证任务与独立检查保留，持续重启转为有界修复，不默认执行回滚、提交、通知或远程控制。",
+    "参会介绍时长、约 24 小时跟进和交流数量是可调整建议；身份、研究结果与合作状态必须真实，不自动联系他人。"
+  ],
+  "handbook_count": 2,
+  "body_read_count": 2,
+  "project_handbook_count": 19,
+  "project_body_read_count": 19,
+  "handbooks": [
+    {
+      "id": 1,
+      "title": "如何做科研？",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/LfR9woW57iWpQWkRKJhcoFF7ndb?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "247750f3ca125293c27335f7eb180ee719794468318a81837b4a42c9a69d5682",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 855,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 1001,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub"
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "characters": 800,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            }
+          ]
+        },
+        {
+          "page": 4,
+          "characters": 158,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-design",
+      "distilled_files": [
+        "rsk-research-design/references/design.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何做科研？ .pdf"
+    },
+    {
+      "id": 4,
+      "title": "如何想 Idea？",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "173707c51fd17f5b381debba4268b61c922deaefdb03852298216d3eaf51ab2d",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 968,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Ow8fw2HtEiixDgkWlkbckdvHnef"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Ow8fw2HtEiixDgkWlkbckdvHnef"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Ow8fw2HtEiixDgkWlkbckdvHnef"
+            }
+          ]
+        },
+        {
+          "page": 2,
+          "characters": 954,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://arxiv.org/abs/2504.13837"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2504.13837"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2504.13837"
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "characters": 220,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-design",
+      "distilled_files": [
+        "rsk-research-design/references/design.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何想Idea？.pdf"
+    }
+  ]
+}

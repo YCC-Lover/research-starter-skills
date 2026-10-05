@@ -1,0 +1,6 @@
+interface:
+  display_name: "科研工作流与学术交流"
+  short_description: "组织学术汇报、会议参会、研究记录和 AI 协作，并核查资助线索"
+  default_prompt: "使用 $rsk-research-workflow，帮我准备科研汇报、meeting 或可执行的研究记录。"
+policy:
+  allow_implicit_invocation: true

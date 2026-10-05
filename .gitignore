@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+.codex/
+work/
+tmp/
+backups/
+source-private/
+*.pdf
+*.opju
+*.zip
+auth-probe.json
+publish-report.json

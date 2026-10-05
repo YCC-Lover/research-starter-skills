@@ -1,0 +1,1255 @@
+{
+  "repository": "https://github.com/LAMDA-NeSy/Research-Starter-Kit",
+  "revision": "36ba390d153f5289308ec833e2b633c26b304a7b",
+  "checked_date": "2026-10-05",
+  "license_file_present": false,
+  "independent_adaptation": true,
+  "source_mode": "privately provided Feishu PDF exports; raw exports are not distributed",
+  "coverage_scope": "README and listed tutorials; external background works are not fully read",
+  "adaptations": [
+    "AI 领域案例与段数、句数、字体、频率等为教学快照或可调启发，不凌驾于学科和投稿要求。",
+    "BibTeX 拼写纠正为 @article；完整作者名单保留，字段依实际类型和目标规范，不批量删除。",
+    "审稿策略转为客观、专业、有证据的回复，不采用人身判断或评审操纵。",
+    "异常、不显著及机制解释需要实际证据，不机械使用柔化措辞。",
+    "资助金额、资格和月份保留为历史线索，当前申请必须核验官方当年公告。",
+    "Claude/macOS 操作归档为历史工具附录，不迁移为 Codex 命令或权限授权。",
+    "可验证任务与独立检查保留，持续重启转为有界修复，不默认执行回滚、提交、通知或远程控制。",
+    "参会介绍时长、约 24 小时跟进和交流数量是可调整建议；身份、研究结果与合作状态必须真实，不自动联系他人。"
+  ],
+  "handbook_count": 19,
+  "body_read_count": 19,
+  "project_handbook_count": 19,
+  "project_body_read_count": 19,
+  "handbooks": [
+    {
+      "id": 1,
+      "title": "如何做科研？",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/LfR9woW57iWpQWkRKJhcoFF7ndb?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "247750f3ca125293c27335f7eb180ee719794468318a81837b4a42c9a69d5682",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 855,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 1001,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub"
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "characters": 800,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd"
+            }
+          ]
+        },
+        {
+          "page": 4,
+          "characters": 158,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-design",
+      "distilled_files": [
+        "rsk-research-design/references/design.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何做科研？ .pdf"
+    },
+    {
+      "id": 2,
+      "title": "如何找论文？",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/Co5awLsRiiuYAlkqHhCcwGBanub?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "c480a51ddb86145150e4691c691e6f2df480aed3537d1ba88c5c6cdada51b04a",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 745,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 869,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 85,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-literature",
+      "distilled_files": [
+        "rsk-literature/references/search-reading.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何找论文？.pdf"
+    },
+    {
+      "id": 3,
+      "title": "如何读论文？",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/Ow8fw2HtEiixDgkWlkbckdvHnef?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "1f573477bf841a844dca4d71c32bf2b60e2a2df174071df4be9541566b85cdd1",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 805,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 416,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-literature",
+      "distilled_files": [
+        "rsk-literature/references/search-reading.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何读论文？.pdf"
+    },
+    {
+      "id": 4,
+      "title": "如何想 Idea？",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/MxYVwN0lEiv5HUkLEJccRJI3nTd?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "173707c51fd17f5b381debba4268b61c922deaefdb03852298216d3eaf51ab2d",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 968,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Ow8fw2HtEiixDgkWlkbckdvHnef"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Ow8fw2HtEiixDgkWlkbckdvHnef"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Ow8fw2HtEiixDgkWlkbckdvHnef"
+            }
+          ]
+        },
+        {
+          "page": 2,
+          "characters": 954,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://arxiv.org/abs/2504.13837"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2504.13837"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2504.13837"
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "characters": 220,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-design",
+      "distilled_files": [
+        "rsk-research-design/references/design.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何想Idea？.pdf"
+    },
+    {
+      "id": 5,
+      "title": "如何进行学术汇报",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/Wr0lwNhUdiMpt1kK6UmcgnWEnJI?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "11965b08bdef92beb7f8f4c5e93f56299afb957e8fa3e3437e68f8b5404de783",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 789,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Jwi3wswLNitezskeCOQcqT1rnSe"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Jwi3wswLNitezskeCOQcqT1rnSe"
+            },
+            {
+              "uri": "https://dy8q0bnq8y.feishu.cn/wiki/Jwi3wswLNitezskeCOQcqT1rnSe"
+            },
+            {
+              "uri": "https://www.bilibili.com/video/BV1WF411Y73C/?spm_id_from=333.337.search-card.all.click&vd_source=4deb09ae020d1de21482612e7102fb83"
+            }
+          ]
+        },
+        {
+          "page": 2,
+          "characters": 688,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-workflow",
+      "distilled_files": [
+        "rsk-research-workflow/references/practice.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何进行学术汇报.pdf"
+    },
+    {
+      "id": 6,
+      "title": "如何高效 Meeting",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/B8FBwaHe6ivi2skemtFc3lWbnmh?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "c339e631a9516674c469e60a51aba478e1fb9e7aba63d735ecca412d9a5addd6",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 798,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 626,
+          "images": 2,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 161,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-workflow",
+      "distilled_files": [
+        "rsk-research-workflow/references/practice.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [
+        2
+      ],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何高效Meeting.pdf"
+    },
+    {
+      "id": 7,
+      "title": "一些好的习惯",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/Bp2AwrSnAiGaH2khJaqczVXznwc?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "efd28d4fcf2aecbae6f1e4bc77e06738a9ae755cb58ae4f984cabc3a384b2b09",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 340,
+          "images": 1,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 844,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 52,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-workflow",
+      "distilled_files": [
+        "rsk-research-workflow/references/practice.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [
+        1
+      ],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "一些好的习惯.pdf"
+    },
+    {
+      "id": 8,
+      "title": "如何写论文？",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/NsK3wnWeiivKNukNJOqcd985nTY?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "092aa150e1bfffb3fef0d4341935106fe1fe0ceaa8acc996d29cbb17d91a8444",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 576,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 0,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-paper-writing",
+      "distilled_files": [
+        "rsk-paper-writing/references/structure.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何写论文？.pdf"
+    },
+    {
+      "id": 9,
+      "title": "论文画图指南",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/OGpcw6zaRiQ6OwkNxfYcl7IKnBh?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "98e0ecb1f03a7647f078cfe7542b2dda631f27afe8eb8cd4f593648aeadb3605",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 623,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 210,
+          "images": 2,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 91,
+          "images": 3,
+          "links": []
+        },
+        {
+          "page": 4,
+          "characters": 579,
+          "images": 1,
+          "links": [
+            {
+              "uri": "https://arxiv.org/pdf/2601.12538"
+            }
+          ]
+        },
+        {
+          "page": 5,
+          "characters": 176,
+          "images": 2,
+          "links": [
+            {
+              "uri": "https://arxiv.org/pdf/2601.12538"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2410.06467"
+            }
+          ]
+        },
+        {
+          "page": 6,
+          "characters": 552,
+          "images": 2,
+          "links": [
+            {
+              "uri": "https://arxiv.org/abs/2410.06467"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2502.08942"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2502.08942"
+            },
+            {
+              "uri": "https://arxiv.org/abs/2502.08942"
+            },
+            {
+              "uri": "https://virl-platform.github.io/static/V-IRL.pdf"
+            }
+          ]
+        },
+        {
+          "page": 7,
+          "characters": 321,
+          "images": 2,
+          "links": [
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2024/file/62ab1c2cb4b03e717005479efb211841-Paper-Conference.pdf"
+            },
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2024/file/62ab1c2cb4b03e717005479efb211841-Paper-Conference.pdf"
+            },
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2024/file/62ab1c2cb4b03e717005479efb211841-Paper-Conference.pdf"
+            },
+            {
+              "uri": "https://arxiv.org/pdf/2601.03515"
+            },
+            {
+              "uri": "https://arxiv.org/pdf/2601.03515"
+            },
+            {
+              "uri": "https://arxiv.org/pdf/2601.03515"
+            }
+          ]
+        },
+        {
+          "page": 8,
+          "characters": 230,
+          "images": 2,
+          "links": []
+        },
+        {
+          "page": 9,
+          "characters": 367,
+          "images": 1,
+          "links": []
+        },
+        {
+          "page": 10,
+          "characters": 98,
+          "images": 2,
+          "links": []
+        },
+        {
+          "page": 11,
+          "characters": 97,
+          "images": 3,
+          "links": []
+        },
+        {
+          "page": 12,
+          "characters": 646,
+          "images": 2,
+          "links": [
+            {
+              "uri": "https://colorkit.co/palettes/"
+            },
+            {
+              "uri": "https://colorbrewer2.org/"
+            },
+            {
+              "uri": "https://sciviscolor.org/"
+            },
+            {
+              "uri": "https://color.adobe.com/"
+            }
+          ]
+        },
+        {
+          "page": 13,
+          "characters": 61,
+          "images": 3,
+          "links": []
+        },
+        {
+          "page": 14,
+          "characters": 573,
+          "images": 4,
+          "links": [
+            {
+              "uri": "https://www.flaticon.com/"
+            },
+            {
+              "uri": "https://www.iconfont.cn/"
+            },
+            {
+              "uri": "https://thenounproject.com/"
+            },
+            {
+              "uri": "https://biorender.com/"
+            }
+          ]
+        },
+        {
+          "page": 15,
+          "characters": 1201,
+          "images": 0,
+          "links": [
+            {
+              "uri": "http://diagrams.net/"
+            },
+            {
+              "uri": "https://app.diagrams.net/"
+            },
+            {
+              "uri": "https://www.processon.com/"
+            },
+            {
+              "uri": "https://www.lucidchart.com/"
+            },
+            {
+              "uri": "https://proplot.readthedocs.io/"
+            },
+            {
+              "uri": "https://github.com/datawhalechina/paper-chart-tutorial"
+            }
+          ]
+        },
+        {
+          "page": 16,
+          "characters": 0,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-experiments-figures",
+      "distilled_files": [
+        "rsk-experiments-figures/references/figures.md",
+        "rsk-experiments-figures/references/examples-resources.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "visual_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "论文画图指南.pdf"
+    },
+    {
+      "id": 10,
+      "title": "如何写论文-Abstract",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/Tz2pwvxTyiBK0zkCVszcZmJ3nwd?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "5e591f53a5c85c3b85605ca6fac3eb10fd0dd598f5096fa48399a4a6f1f74cc7",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 880,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 798,
+          "images": 1,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 375,
+          "images": 1,
+          "links": []
+        },
+        {
+          "page": 4,
+          "characters": 0,
+          "images": 1,
+          "links": []
+        }
+      ],
+      "module": "rsk-paper-writing",
+      "distilled_files": [
+        "rsk-paper-writing/references/abstract-introduction.md",
+        "rsk-paper-writing/references/examples.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "visual_pages_reviewed": [
+        2,
+        3,
+        4
+      ],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何写论文-Abstract.pdf"
+    },
+    {
+      "id": 11,
+      "title": "如何写论文-Introduction",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/ULATwBu2MiLqqRkXxV6c2S7AnPd?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "06f7ce0dcedcefc1ece69d7190b741775da599ef6a7940b2687db485c280f060",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 621,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 578,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 749,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 4,
+          "characters": 419,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-paper-writing",
+      "distilled_files": [
+        "rsk-paper-writing/references/abstract-introduction.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何写论文-Introduction.pdf"
+    },
+    {
+      "id": 12,
+      "title": "如何写论文-Related Works",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/CLSAwWm6qifjwQkTd82czgMNnYf?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "1886d34cc63d0b7c6cd7ce1e4a48c4b1076eeecdb970f6b5ce9a2323ae6cc804",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 573,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 874,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 888,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 4,
+          "characters": 88,
+          "images": 2,
+          "links": []
+        }
+      ],
+      "module": "rsk-paper-writing",
+      "distilled_files": [
+        "rsk-paper-writing/references/related-methods.md",
+        "rsk-paper-writing/references/examples.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "visual_pages_reviewed": [
+        4
+      ],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何写论文-Related Works.pdf"
+    },
+    {
+      "id": 13,
+      "title": "如何写论文-Methods",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/CtiAwh1eOiqOfCkPKVLc0WsxnZg?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "978e3bb5a10bf2297866c9b981ab15400cfdaaaca02e80f09c965b12d1dc39e5",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 560,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 585,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 523,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 4,
+          "characters": 87,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-paper-writing",
+      "distilled_files": [
+        "rsk-paper-writing/references/related-methods.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何写论文-Methods.pdf"
+    },
+    {
+      "id": 14,
+      "title": "如何写论文-Experiments",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/KHgSw2MkrikxlskGe5qclkdbn2c?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "8eb0965bad6eb8b9db54867511370cc1a24e4dfeabb33fd47b89e75e3f139ae2",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 614,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 714,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 788,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 4,
+          "characters": 119,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-experiments-figures",
+      "distilled_files": [
+        "rsk-experiments-figures/references/experiments.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何写论文-Experiments.pdf"
+    },
+    {
+      "id": 15,
+      "title": "如何写论文-Reference",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/A4q2wSnmRi91rykHke1cQIhnnAh?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "c06bc8eaee46d71081262526b018c030cf2f053b3397caae7040537981402f35",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 672,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 1077,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2021"
+            },
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2021"
+            },
+            {
+              "uri": "https://proceedings.neurips.cc/paper_files/paper/2021"
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "characters": 127,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-literature",
+      "distilled_files": [
+        "rsk-literature/references/references.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何写论文-Reference.pdf"
+    },
+    {
+      "id": 16,
+      "title": "如何 Rebuttal",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/M9d1wv5Efi2aG4kH4IDc5zqVnQh?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "98d8a7a36b3e7e1a91367e724c50f5a73872782ea3dd471acc230e4794c14253",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 1232,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 1241,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 1712,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 4,
+          "characters": 198,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://github.com/MLNLP-World/Paper-Rebuttal-Tips"
+            }
+          ]
+        }
+      ],
+      "module": "rsk-rebuttal",
+      "distilled_files": [
+        "rsk-rebuttal/references/rebuttal.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "如何Rebuttal.pdf"
+    },
+    {
+      "id": 17,
+      "title": "学术会议参会指南",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/HDYdwMgrki0C35kR147cquf2nph?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "17ffbeae63934764faea622fbc8ef790a9f7d0edc155e13d77f2cf5b08bf7a9c",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 759,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 947,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 712,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-workflow",
+      "distilled_files": [
+        "rsk-research-workflow/references/conferences.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of every page",
+      "layout_pages_reviewed": [
+        1,
+        2,
+        3
+      ],
+      "export_file": "学术会议参会指南.pdf"
+    },
+    {
+      "id": 18,
+      "title": "有哪些能申请的奖学金",
+      "url": "https://dy8q0bnq8y.feishu.cn/wiki/SN0Dw5gvhidkMtkcmAYcXbUhnSh?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "d599637e98a37c3127b217c38c999409daaf61702b8a540788b86853d5fcd701",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 596,
+          "images": 1,
+          "links": [
+            {
+              "uri": "https://www.sensetime.com/cn/scholarship"
+            },
+            {
+              "uri": "https://www.ccf.org.cn/rewardsandincentives/incentiveproject/yxdxsqhjh/#:~:text=%E2%80%9CCCF%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%90%AF%E8%88%AA%E8%AE%A1%E5%88%92%E2%80%9D%E7%AE%80%E7%A7%B0%E2%80%9CCCF%E4%BC%98%E7%A7%80%E5%A4%A7%E5%AD%A6%E7%94%9F%E2%80%9D%EF%BC%88CCF%20Elite%20Collegiate%20Award%EF%BC%89%EF%BC%8C%E8%B5%84%E5%8A%A9%E5%AD%A6%E4%B9%A0%E6%88%90%E7%BB%A9%E4%BC%98%E7%A7%80%E3%80%81%E5%9C%A8%E4%B8%93%E4%B8%9A%E7%A7%91%E7%A0%94%E5%AE%9E%E8%B7%B5%E6%B4%BB%E5%8A%A8%E4%B8%AD%E8%A1%A8%E7%8E%B0%E5%87%BA%E8%89%B2%EF%BC%9B%E6%9C%89%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB%E6%84%9F%EF%BC%8C%E7%A7%AF%E6%9E%81%E5%8F%82%E5%8A%A0%E7%A4%BE%E4%BC%9A%E6%B4%BB%E5%8A%A8%E5%92%8C%E5%85%AC%E7%9B%8A%E6%B4%BB%E5%8A%A8%E7%9A%84%E8%AE%A1%E7%AE%97%E6%9C%BA%EF%BC%88%E6%88%96%E7%9B%B8%E5%85%B3%EF%BC%89%E4%B8%93%E4%B8%9A%E5%9C%A8%E8%AF%BB%E5%85%A8%E6%97%A5%E5%88%B6%E4%B8%89%E5%B9%B4%E7%BA%A7%E3%80%81%E5%9B%9B%E5%B9%B4%E7%BA%A7%E6%9C%AC%E7%A7%91%E7%94%9F%E3%80%82,%E8%AF%A5%E8%AE%A1%E5%88%92%E5%AE%9E%E8%A1%8C%E5%BC%80%E6%94%BE%E5%BC%8F%E6%8E%A8%E8%8D%90%EF%BC%8C%E6%AF%8F%E5%B9%B4%E8%AF%84%E9%80%89%E4%B8%80%E6%AC%A1%EF%BC%8C%E8%B5%84%E5%8A%A9%E4%BA%BA%E6%95%B0%E7%BA%A6105%E4%BA%BA%E3%80%82%20%E5%80%99%E9%80%89%E4%BA%BA%E8%B5%84%E6%A0%BC%EF%BC%9A%20%E5%BD%93%E5%B9%B46%E6%9C%88%E5%9C%A8%E9%AB%98%E6%A0%A1%E8%AE%A1%E7%AE%97%E6%9C%BA%EF%BC%88%E6%88%96%E7%9B%B8%E5%85%B3%EF%BC%89%E4%B8%93%E4%B8%9A%E5%B0%B1%E8%AF%BB%E7%9A%84%E5%85%A8%E6%97%A5%E5%88%B6%E4%B8%89%E5%B9%B4%E7%BA%A7%E5%92%8C%E5%9B%9B%E5%B9%B4%E7%BA%A7%E7%9A%84%E6%9C%AC%E7%A7%91%E7%94%9F%E3%80%82%20%E5%90%8D%E9%A2%9D%E5%88%86%E9%85%8D%EF%BC%9A"
+            },
+            {
+              "uri": "https://opportunitydesk.org/2025/07/24/generation-google-scholarship-for-women-in-computer-science-2025-2026-asia-pacific-apac/"
+            },
+            {
+              "uri": "https://opportunitydesk.org/2025/07/24/generation-google-scholarship-for-women-in-computer-science-2025-2026-asia-pacific-apac/"
+            },
+            {
+              "uri": "https://www.wizsci.com/project/detail/1765"
+            }
+          ]
+        },
+        {
+          "page": 2,
+          "characters": 341,
+          "images": 1,
+          "links": [
+            {
+              "uri": "https://join.qq.com/scholarship.html"
+            },
+            {
+              "uri": "https://scholarship.bytedance.com/"
+            },
+            {
+              "uri": "http://scholarship.baidu.com/"
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "characters": 901,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://www.antresearch.com/Cooperation/InTech"
+            },
+            {
+              "uri": "https://tc.ccf.org.cn/ldtxxjxj/"
+            },
+            {
+              "uri": "https://www.wizsci.com/project/detail/1733"
+            },
+            {
+              "uri": "https://www.cast.org.cn/rc2/fwyfz/zgkxqnkjrcpygc/bsszxjh/art/2025/art_5d6de0d050544e6c9828547489b9fe21.html"
+            },
+            {
+              "uri": "https://www.ccf.org.cn/rewardsandincentives/incentiveproject/bsxwlwjljh/"
+            }
+          ]
+        },
+        {
+          "page": 4,
+          "characters": 1145,
+          "images": 0,
+          "links": [
+            {
+              "uri": "https://awards.acm.org/doctoral-dissertation"
+            },
+            {
+              "uri": "https://research.google/programs-and-events/phd-fellowship/"
+            },
+            {
+              "uri": "https://machinelearning.apple.com/work-with-us#scholars"
+            },
+            {
+              "uri": "https://research.nvidia.com/graduate-fellowships"
+            },
+            {
+              "uri": "https://research.ibm.com/labs/yorktown-heights/ibm-academic-awards-program"
+            },
+            {
+              "uri": "https://www.acm.org/articles/bulletins/2020/march/sighpc-and-george-michael-fellowships-noms"
+            },
+            {
+              "uri": "https://www.acm.org/articles/bulletins/2020/march/sighpc-and-george-michael-fellowships-noms"
+            }
+          ]
+        },
+        {
+          "page": 5,
+          "characters": 87,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 6,
+          "characters": 0,
+          "images": 1,
+          "links": []
+        },
+        {
+          "page": 7,
+          "characters": 0,
+          "images": 1,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-workflow",
+      "distilled_files": [
+        "rsk-research-workflow/references/funding.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "visual_pages_reviewed": [
+        1,
+        2,
+        6,
+        7
+      ],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "有哪些能申请的奖学金？.pdf"
+    },
+    {
+      "id": 19,
+      "title": "AI 辅助科研的一些tips",
+      "url": "https://lamda3-nju.feishu.cn/wiki/Uf9fwnQFxiJS1akJZkPc87gFniq?from=from_copylink",
+      "status": "read_and_distilled",
+      "sha256": "be4222c973427a3e51765759c75dfc80def3c8426d0a0a4358d1daba4baa357a",
+      "pages": [
+        {
+          "page": 1,
+          "characters": 719,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 2,
+          "characters": 855,
+          "images": 0,
+          "links": []
+        },
+        {
+          "page": 3,
+          "characters": 291,
+          "images": 0,
+          "links": []
+        }
+      ],
+      "module": "rsk-research-workflow",
+      "distilled_files": [
+        "rsk-research-workflow/references/ai-collaboration.md",
+        "rsk-research-workflow/references/claude-snapshot.md"
+      ],
+      "body_read": true,
+      "read_date": "2026-10-05",
+      "pages_read": [
+        1,
+        2,
+        3
+      ],
+      "visual_pages_reviewed": [],
+      "review_method": "full page text plus visual review of embedded-image pages",
+      "export_file": "AI辅助科研的一些Tips.pdf"
+    }
+  ],
+  "background_sources": [
+    {
+      "title": "周志华：做研究与写论文",
+      "url": "https://zhuanlan.zhihu.com/p/98747105",
+      "body_read": false
+    },
+    {
+      "title": "凌晓峰、杨强：《学术研究，你的成功之道》",
+      "url": "https://book.douban.com/subject/20284332/",
+      "body_read": false
+    },
+    {
+      "title": "彭思达：我的科研经验",
+      "url": "https://github.com/pengsida/learning_research",
+      "body_read": false
+    },
+    {
+      "title": "魏秀参：浅谈学术 Rebuttal",
+      "url": "https://zhuanlan.zhihu.com/p/104298923",
+      "body_read": false
+    },
+    {
+      "title": "Paper Rebuttal Tips",
+      "url": "https://github.com/MLNLP-World/Paper-Rebuttal-Tips",
+      "body_read": false
+    },
+    {
+      "title": "Science Research Writing: For Non-Native Speakers of English",
+      "url": "https://book.douban.com/subject/4473481/",
+      "body_read": false
+    }
+  ]
+}

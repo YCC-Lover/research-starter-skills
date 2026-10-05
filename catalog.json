@@ -1,0 +1,91 @@
+{
+  "name": "research-starter-skills",
+  "version": "1.0.0",
+  "repository": "https://github.com/YCC-Lover/research-starter-skills",
+  "upstream_repository": "https://github.com/LAMDA-NeSy/Research-Starter-Kit",
+  "upstream_revision": "36ba390d153f5289308ec833e2b633c26b304a7b",
+  "tutorials_covered": 19,
+  "tutorials_total": 19,
+  "skills": [
+    {
+      "name": "research-starter-paper",
+      "path": "skills/research-starter-paper",
+      "tutorial_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "name": "rsk-research-design",
+      "path": "skills/rsk-research-design",
+      "tutorial_ids": [
+        1,
+        4
+      ]
+    },
+    {
+      "name": "rsk-literature",
+      "path": "skills/rsk-literature",
+      "tutorial_ids": [
+        2,
+        3,
+        15
+      ]
+    },
+    {
+      "name": "rsk-paper-writing",
+      "path": "skills/rsk-paper-writing",
+      "tutorial_ids": [
+        8,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "name": "rsk-experiments-figures",
+      "path": "skills/rsk-experiments-figures",
+      "tutorial_ids": [
+        9,
+        14
+      ]
+    },
+    {
+      "name": "rsk-rebuttal",
+      "path": "skills/rsk-rebuttal",
+      "tutorial_ids": [
+        16
+      ]
+    },
+    {
+      "name": "rsk-research-workflow",
+      "path": "skills/rsk-research-workflow",
+      "tutorial_ids": [
+        5,
+        6,
+        7,
+        17,
+        18,
+        19
+      ]
+    }
+  ]
+}

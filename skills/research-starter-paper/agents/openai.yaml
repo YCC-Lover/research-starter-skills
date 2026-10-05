@@ -1,0 +1,6 @@
+interface:
+  display_name: "科研与论文写作总入口"
+  short_description: "按研究阶段协调六个小 skill，把研究材料组织成有证据的论文"
+  default_prompt: "使用 $research-starter-paper，按我的材料协调所需模块并完成论文任务。"
+policy:
+  allow_implicit_invocation: true
