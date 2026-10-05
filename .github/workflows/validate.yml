@@ -2,6 +2,7 @@ name: Validate Skills
 
 on:
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -13,18 +14,20 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       PYTHONDONTWRITEBYTECODE: "1"
-      PIP_CACHE_DIR: ${{ runner.temp }}/research-starter-pip-cache
-      TMPDIR: ${{ runner.temp }}/research-starter-tests
     steps:
       - uses: actions/checkout@v7.0.1
       - uses: actions/setup-python@v7.0.0
         with:
           python-version: "3.13"
       - name: Prepare Temporary Directory
-        run: mkdir -p "$TMPDIR"
+        run: mkdir -p "$RUNNER_TEMP/research-starter-tests"
       - name: Install Validation Dependency
+        env:
+          PIP_CACHE_DIR: ${{ runner.temp }}/research-starter-pip-cache
         run: python -m pip install -r requirements-dev.txt
       - name: Validate Skill Package
         run: python scripts/validate_skills.py
       - name: Test Installation And Updates
+        env:
+          TMPDIR: ${{ runner.temp }}/research-starter-tests
         run: python -m unittest discover -s tests -v

@@ -73,7 +73,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 ## 版本与来源
 
-首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 GitHub Releases 下载技能包或选择对应 tag，以固定版本安装。
+当前稳定版为 `v1.0.1`，首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 GitHub Releases 下载技能包或选择对应 tag，以固定版本安装。
 
 覆盖对应上游提交 `36ba390d153f5289308ec833e2b633c26b304a7b`。外部致谢资料仅保留出处关系，未声称阅读其中的整本书。[完整来源表](skills/research-starter-paper/references/sources.md) 与 [NOTICE.md](NOTICE.md) 说明作者归属和发布范围。
 
