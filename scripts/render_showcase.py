@@ -135,7 +135,12 @@ def main():
         if kind == 'synthetic-data-plot':
             entry['data_source'] = 'examples/demo-materials/thermal-demo.csv'
         images.append(entry)
-    (output / 'manifest.json').write_text(json.dumps({'images': images}, indent=2) + '\n', encoding='utf-8')
+    manifest_path = output / 'manifest.json'
+    if manifest_path.is_file():
+        existing = json.loads(manifest_path.read_text(encoding='utf-8'))['images']
+        rendered_paths = {entry['path'] for entry in images}
+        images.extend(entry for entry in existing if entry['path'] not in rendered_paths)
+    manifest_path.write_text(json.dumps({'images': images}, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'images': [entry['path'] for entry in images], 'cache_dir': str(work)}))
 
 

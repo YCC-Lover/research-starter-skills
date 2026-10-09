@@ -10,13 +10,13 @@ Start with the step that is blocking you: a broad topic, a dense introduction, a
 
 ## Origin first
 
-This is an **unofficial independent adaptation** of [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit), based on its README at revision 36ba390d153f5289308ec833e2b633c26b304a7b and all 19 exported tutorials. The upstream README is introduced by Guo Lanzhe and acknowledges Chen Yuyang, Ge Lingyue, Zhang Yikai, and others. YCC-Lover maintains this Codex adaptation; no upstream endorsement is implied.
+The research methods and tutorials come from [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit), based on its README at revision 36ba390d153f5289308ec833e2b633c26b304a7b and all 19 exported tutorials. We thank Guo Lanzhe, Chen Yuyang, Ge Lingyue, Zhang Yikai, and the other contributors for their work and sharing. YCC-Lover independently distills, adapts and maintains these Codex skills; upstream guidance and additions from this project are identified separately.
 
 [Tutorial-by-tutorial mapping](skills/research-starter-paper/references/sources.md) · [Attribution and publication scope](NOTICE.md) · [Citation metadata](CITATION.cff)
 
-![Original diagram of one router and six focused skills](docs/images/workflow.png)
+![Research Starter Skills product diagram: one router selects among research design, literature, paper writing, experiments and figures, rebuttal, and research workflow](docs/images/workflow-product.png)
 
-The diagram is original to this repository, not a tutorial screenshot. The detailed skills and examples are primarily in Chinese; prompt the skills in your preferred language and supply your discipline and target requirements.
+The product diagram was generated with GPT-image for this project. It illustrates module relationships and evidence boundaries, not an actual interface or research data. [Generation notes and prompt](docs/images/workflow-product.prompt.md) · [Text description and more scenarios](examples/SHOWCASE.md). The detailed skills and examples are primarily in Chinese; prompt the skills in your preferred language and supply your discipline and target requirements.
 
 ## Choose a task
 

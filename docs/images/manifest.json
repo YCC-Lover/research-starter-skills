@@ -1,6 +1,16 @@
 {
   "images": [
     {
+      "path": "docs/images/workflow-product.png",
+      "kind": "original-diagram",
+      "creator": "YCC-Lover with Codex GPT-image",
+      "description": "GPT-image-generated product illustration of one router and six focused skills; conceptual artwork, not a software interface or research data.",
+      "source": "docs/images/workflow-product.prompt.md",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "eac2354543229c23f69342adb65c8f7fd496435ff51e150f7d075d3fd74e027e"
+    },
+    {
       "path": "docs/images/workflow.png",
       "kind": "original-diagram",
       "creator": "YCC-Lover with Codex",

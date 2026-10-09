@@ -2,7 +2,7 @@
 
 [返回首页](../README.md) · [19 个任务提示词](README.md) · [首次练习](first-run/README.md) · [随包教学材料](demo-materials/README.md)
 
-本页的文本与图像是自行编写、可核对的教学展示，不是实际模型运行记录，也不是研究者的实测结果。skill 的方法论来源为 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit)，图像不是原作者作品或官方配图。
+本页是本项目独立制作、可核对的教学与产品展示。产品图使用 GPT-image 生成，其余图像由随包脚本绘制；这些图不是实际模型运行记录或研究者的实测结果。skill 的方法论来源为 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit)，图像与原教程分别归属。
 
 ## 场景一：不确定从哪个模块开始
 
@@ -12,9 +12,11 @@
 
 **交付目标：** 明确问题、可支持主张、所需稿件及影响结论的待补项。
 
-![总入口和六个模块的原创功能地图，强调按任务选择模块](../docs/images/workflow.png)
+![GPT-image 产品示意图：科研总入口按任务选择六个模块，并保留观察、推断、计划与待补的证据边界](../docs/images/workflow-product.png)
 
 文字版：总入口可协调研究设计、文献、论文写作、实验图表、返修回复和科研工作流；所有输出都要区别观察、推断、计划与缺失证据。
+
+总入口与模块的连线表示按需选择，不要求每次执行全部模块。图中论文、仪器和曲线为概念插画，不对应用户的真实材料或数值。[生成说明与完整提示词](../docs/images/workflow-product.prompt.md)。
 
 ## 场景二：一句强结论应该保留吗
 
@@ -40,9 +42,11 @@
 
 两条曲线手工构造，仅展示数据到图的追溯关系，不代表处理效果、真实测量、统计证据或机理发现。各温度的采样点不是独立重复。
 
-## 复现配图
+## 图像来源与复现
 
-安装可选绘图依赖，然后运行：
+产品示意图使用 GPT-image 生成，[提示词](../docs/images/workflow-product.prompt.md)可用于重新创作，但不能保证相同像素与排版。下面的脚本只复现旧版模块图、主张与证据示意、合成 TG/DTG 图，不覆盖新的产品图，并保留其清单记录。
+
+复现脚本绘图时，安装可选绘图依赖，然后运行：
 
 ~~~text
 python -m pip install -r requirements-showcase.txt
@@ -51,4 +55,4 @@ python scripts/render_showcase.py --work-dir D:\Codex\work\rsk-showcase
 
 Windows 中间文件按本机约定使用 D/E；其他平台把参数替换为明确允许的临时目录。图像最终写入仓库 docs/images，缓存只写入指定工作目录。读取、安装与使用 skills 本身不需要这些绘图依赖。
 
-[图像清单](../docs/images/manifest.json)记录创建者、性质、生成脚本、数据来源、尺寸和 SHA-256。文字版说明提供无图环境的替代阅读。
+[图像清单](../docs/images/manifest.json)记录创建者、性质、生成脚本或提示词、数据来源、尺寸和 SHA-256。文字版说明提供无图环境的替代阅读。

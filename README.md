@@ -14,11 +14,11 @@
 
 本项目将 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 固定版本的 README 与全部 **19 篇教程**独立提炼为 **1 个总入口 + 6 个小 skill**，用于 Codex 的科研与论文写作协作。技能文件公开下载，安装脚本仅依赖 Python 标准库；运行任务仍需你自己的 Codex 环境及其可用工具。
 
-**来源与归属：** 原项目 README 介绍人为郭兰哲，致谢陈煜旸、葛凌岳、张逸凯等同学。本仓库由 YCC-Lover 维护，是非官方独立提炼与 Codex 适配，不代表原作者认可。[逐篇来源](skills/research-starter-paper/references/sources.md) · [发布范围](NOTICE.md)。
+**来源与致谢：** 科研方法与教程源自 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit)，感谢郭兰哲老师及陈煜旸、葛凌岳、张逸凯等同学的整理与分享。本项目由 YCC-Lover 独立提炼、适配为 Codex skills 并持续维护；原教程观点与本项目补充内容分别标注。[逐篇来源](skills/research-starter-paper/references/sources.md) · [发布范围](NOTICE.md)。
 
-![一个总入口与六个科研模块的原创功能地图](docs/images/workflow.png)
+![Research Starter Skills 产品示意图：一个科研总入口，按任务连接研究设计、文献阅读、论文写作、实验图表、审稿回复和科研工作流六个模块](docs/images/workflow-product.png)
 
-图为本仓库原创示意，不是原教程截图；文字说明与更多图像见 [场景展示](examples/SHOWCASE.md)。
+图由本项目使用 GPT-image 生成，用于展示技能关系与证据边界；其中插画为概念示意，不是软件界面或科研数据。[生成说明与提示词](docs/images/workflow-product.prompt.md) · [文字版与更多场景](examples/SHOWCASE.md)。
 
 ## 为什么值得试一次
 
