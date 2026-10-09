@@ -24,4 +24,3 @@
 ```
 
 同一提示词重新生成不会保证相同像素或排版。旧版 `workflow.png` 仍由 [render_showcase.py](../../scripts/render_showcase.py) 复现；该脚本不生成或覆盖这张 GPT-image 产品图。
-
