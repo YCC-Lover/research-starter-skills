@@ -10,7 +10,7 @@
 
 先阅读 [Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 的原创教程，理解各个环节的方法与经验；再结合本项目据此提炼的 **Codex skills**，将所学应用到自己的文献、研究笔记、真实数据与论文草稿中。从找论文、做研究，到写论文、回应审稿与参加学术会议，你可以按当前需要选择相应的文章和 skill，一步步推进，而不必一次掌握全部流程。原教程帮助你理解方法，skill 辅助你实践；研究判断与最终结论仍由你掌握。
 
-**[下载最新技能包](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [查看 16 个使用示例](examples/README.md) · [看场景与配图](examples/SHOWCASE.md) · [开始安装](#安装)**
+**[下载最新技能包](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [新手学习路径](docs/LEARNING_PATH.md) · [完成首次练习](examples/first-run/README.md) · [查看 19 个使用示例](examples/README.md) · [开始安装](#安装)**
 
 本项目将 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 固定版本的 README 与全部 **19 篇教程**独立提炼为 **1 个总入口 + 6 个小 skill**，用于 Codex 的科研与论文写作协作。技能文件公开下载，安装脚本仅依赖 Python 标准库；运行任务仍需你自己的 Codex 环境及其可用工具。
 
@@ -30,6 +30,10 @@
 适合刚开始做科研、正在写学位论文，或希望把零散研究材料整理成论证的研究者。原教程以 AI 科研为主，技能保留跨学科适用说明；材料、化学、工程等任务仍以你的学科语境和投稿要求为准。
 
 ## 从一个真实任务开始
+
+完全没有头绪时，先看 [学习路径](docs/LEARNING_PATH.md)：每一步对应原教程、可用 skill、练习产出和自查标准。没有导师推荐或种子论文，也可以从研究对象、现象和资源开始。没有结果时先形成计划，不强行写成果。
+
+七个技能按请求区分 **学习、执行、检查**：说“教我”获得解释、可选练习和反馈；说“帮我写/修改”直接处理指定任务；说“只检查，先别改”只报告问题。方式不是强制课程或固定用户标签。
 
 安装后，在 Codex 中附上现有引言和研究材料，提出：
 
@@ -53,18 +57,20 @@
 | 审稿意见不知从哪回 | 建立逐条回复与真实修改对应表 |
 | 组会或参会准备零散 | 整理报告提纲、讨论问题与跟进草稿 |
 
-[示例页](examples/README.md)包含 16 个场景的输入清单、完整提示词和交付目标，还演示了证据不足时如何改写。选一个与你最接近的任务，带着真实材料试一次。
+[示例页](examples/README.md)包含 19 个场景的输入清单、完整提示词和交付目标，还演示了证据不足时如何改写。选一个与你最接近的任务，带着真实材料试一次。
 
-**还没有适合分享的研究材料？** 可以先用 [随包教学材料](examples/demo-materials/README.md) 练习读表、图注和逐条回复。材料全部自行编写，曲线为合成数据，意见为虚构教学意见，不需要上传自己的未发表论文。
+**还没有适合分享的研究材料？** 先用 [首次引言练习](examples/first-run/README.md) 的草稿、证据与核对清单，再用 [随包教学材料](examples/demo-materials/README.md) 练习读表、图注和逐条回复。材料全部自行编写，数字与曲线为合成数据，引用与意见为虚构教学内容，不需要上传自己的未发表论文。
+
+长期任务可沿用项目记录，或使用 [可选接续模板](skills/research-starter-paper/assets/project-state.md)。换对话后先读记录及相关原始材料，不把聊天当自动持久记忆。更多输入到交付的图像见 [场景展示](examples/SHOWCASE.md)。
 
 ## 技能目录
 
 | Skill | 用途 | 原教程 |
 | --- | --- | --- |
-| [research-starter-paper](skills/research-starter-paper/SKILL.md) | 跨阶段科研与论文任务的总入口 | 01-19 |
+| [research-starter-paper](skills/research-starter-paper/SKILL.md) | 科研入门、跨阶段任务与接续的总入口 | 01-19 |
 | [rsk-research-design](skills/rsk-research-design/SKILL.md) | 选题、问题、Idea、最小验证 | 01、04 |
 | [rsk-literature](skills/rsk-literature/SKILL.md) | 找论文、读论文、引用与 BibTeX | 02、03、15 |
-| [rsk-paper-writing](skills/rsk-paper-writing/SKILL.md) | 大纲、摘要、引言、相关工作、方法 | 08、10-13 |
+| [rsk-paper-writing](skills/rsk-paper-writing/SKILL.md) | 大纲、摘要、引言、相关工作、方法；独立补充讨论与投稿检查 | 08、10-13 |
 | [rsk-experiments-figures](skills/rsk-experiments-figures/SKILL.md) | 实验设计、结果分析、论文图表 | 09、14 |
 | [rsk-rebuttal](skills/rsk-rebuttal/SKILL.md) | 审稿回复与返修 | 16 |
 | [rsk-research-workflow](skills/rsk-research-workflow/SKILL.md) | 汇报、meeting、参会、日志、资助、AI 协作 | 05-07、17-19 |
@@ -134,7 +140,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 ## 版本与来源
 
-当前稳定版为 `v1.1.0`，首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 [GitHub Releases](https://github.com/YCC-Lover/research-starter-skills/releases/latest) 下载技能包或选择对应 tag，以固定版本安装。
+当前稳定版为 `v1.2.0`，首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 [GitHub Releases](https://github.com/YCC-Lover/research-starter-skills/releases/latest) 下载技能包或选择对应 tag，以固定版本安装。
 
 覆盖对应上游提交 `36ba390d153f5289308ec833e2b633c26b304a7b`。外部致谢资料仅保留出处关系，未声称阅读其中的整本书。[完整来源表](skills/research-starter-paper/references/sources.md) 与 [NOTICE.md](NOTICE.md) 说明作者归属和发布范围。
 
@@ -148,7 +154,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 自动检查技能格式、19 篇来源映射、相对链接、公开路径、安装更新及批准图像的完整性。新增回归测试覆盖优化模式下校验、链接目录与硬链接、无写入预览及内容对比。[本次审查记录](docs/PROJECT_AUDIT.md) 区分已验证事项与剩余风险。
 
-这些校验不等于模型在所有学科都表现可靠。示例是任务模板与教学示意，不是准确率、节省时间或录用率证明；最终数据、引文与结论仍需作者核对。
+工程校验不等于模型在所有学科都表现可靠。[行为评测](evals/README.md)独立记录固定合成任务的对照协议、实际输出、模型判读与主会话复核，与提示词示例及手工示意分开；不冒充人类专家评审。小样本不证明普遍优越、节省时间或录用率；最终数据、引文与结论仍需作者核对。
 
 ## 觉得有用，欢迎一起完善
 

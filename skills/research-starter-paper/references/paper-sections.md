@@ -54,6 +54,8 @@
 
 ## 补充：Discussion 与 Conclusion
 
+详细步骤由 [讨论与投稿](../../rsk-paper-writing/references/discussion-submission.md) 维护；小 skill 已安装时按任务读取。模块缺少时使用下面的受限概括，不假称已加载完整指南。
+
 Discussion 回到研究问题，解释结果与已有证据的关系，比较替代解释，指出限制。机制推断与直接测得的结果使用不同措辞。
 
 Conclusion 概括本文已经支持的发现和适用范围，不引入新实验、新参考或更强的结论。未来工作与已完成工作分开。

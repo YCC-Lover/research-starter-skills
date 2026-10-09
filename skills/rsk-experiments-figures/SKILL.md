@@ -5,10 +5,13 @@ description: "依据 Research-Starter-Kit 规划公平的实验、撰写实验�
 
 # 实验设计、分析与论文图表
 
+学习请求解释比较条件、主张与证据的关系，用标为教学的例子给可选练习与反馈；执行请求完成所需计划、分析或图表；只检查时报告问题，不改原始数据、不重新处理或运行实验。不得用教学例子填补用户缺失的真实结果。
+
 ## 读取指南
 
 - 实验计划、结果解释、Experiments 章节：[实验](references/experiments.md)。
 - teaser、方法示意、数据图表：[图表](references/figures.md)。
+- 重复类型、统计解释、预处理、TG/DTG 或跨学科比较：[测量与比较](references/measurement-checks.md)。
 - 原文示例页和工具线索：[案例与资源](references/examples-resources.md)。
 - 正文来源与适用说明：[来源](references/sources.md)。
 

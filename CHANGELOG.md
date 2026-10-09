@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0
+
+- Add optional learning, execution and review behavior to all seven skill entrypoints; preserve narrow task scope and read-only review.
+- Add a tutorial-linked beginner path, no-seed-paper starting guidance, optional handoff records and three new scenarios (19 total).
+- Connect measurement/TG-DTG, discussion/submission and responsible-AI guidance to their focused modules.
+- Remove the public installer's hard-coded Windows backup-drive restriction; preserve the maintainer's own non-C storage instructions and safety preflight.
+- Add an original first-use introduction exercise, eight fixed synthetic behavior cases and a transparent evaluation protocol separate from engineering tests.
+- Preserve all 19 source mappings, upstream attribution, existing images and the maintainer's no-new-license choice.
+
 ## 1.1.0
 
 - Harden installation preflight against linked directories, reparse points, hardlinked overwrite targets, and mismatched catalog paths.

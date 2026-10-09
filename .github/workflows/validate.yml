@@ -49,5 +49,7 @@ jobs:
         run: python scripts/validate_skills.py
       - name: Validate Under Optimized Python
         run: python -O scripts/validate_skills.py
+      - name: Validate Recorded Evaluation Integrity
+        run: python scripts/validate_behavior_eval.py
       - name: Test Installation And Updates
         run: python -m unittest discover -s tests -v

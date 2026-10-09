@@ -5,11 +5,14 @@ description: "依据 Research-Starter-Kit 准备学术汇报、meeting、会议�
 
 # 科研工作流与学术交流
 
+学习请求解释当前科研习惯或交流场景，给真实身份可替换的例子、可选演练与反馈；执行请求直接形成所需议程、介绍或记录；检查请求不自动修改文件、安排日程或联系他人。练习中的会面、成果与决定必须标明为虚构或计划。
+
 ## 按用途读取
 
 - 组会、论文汇报、meeting、实验日志和习惯：[科研实践](references/practice.md)。
 - 学术会议计划、现场交流、研究介绍与会后跟进：[会议参会](references/conferences.md)。
 - 与 AI 协作、上下文、验证和自动化边界：[AI 协作](references/ai-collaboration.md)。
+- 未发表材料、AI 使用记录与披露：[负责任的 AI 协作](references/responsible-ai.md)。
 - 原文中的旧版 Claude/macOS 命令：[历史工具附录](references/claude-snapshot.md)，仅用于解释原文，不执行为 Codex 操作。
 - 奖学金及其他资助线索：[历史目录](references/funding.md)，具体申请需检索当年官方通知。
 - 对应教程与适用说明：[来源](references/sources.md)。

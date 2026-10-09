@@ -112,8 +112,6 @@ def install(destination, update=False, backup_dir=None, dry_run=False):
             raise ValueError('Backup and source repository must not overlap.')
         if backup_root.exists() and not backup_root.is_dir():
             raise ValueError('The backup path must be a directory.')
-        if os.name == 'nt' and backup_root.drive.upper() == 'C:':
-            raise ValueError('Use a non-C backup directory on Windows, preferably D or E.')
         if overwrites and not dry_run:
             backup = backup_root / ('snapshot-' + uuid.uuid4().hex)
             backup.mkdir(parents=True, exist_ok=False)

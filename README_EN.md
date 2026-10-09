@@ -6,7 +6,7 @@
 
 Start with the step that is blocking you: a broad topic, a dense introduction, an unclear figure caption, or a reviewer comment. Bring your actual materials; choose one focused skill or let the router select relevant modules.
 
-**[Download](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [16 task examples](examples/README.md) · [Visual scenarios](examples/SHOWCASE.md) · [Contribute](CONTRIBUTING.md)**
+**[Download](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [Learning path](docs/LEARNING_PATH.md) · [First exercise](examples/first-run/README.md) · [19 task examples](examples/README.md) · [Contribute](CONTRIBUTING.md)**
 
 ## Origin first
 
@@ -19,6 +19,8 @@ This is an **unofficial independent adaptation** of [LAMDA-NeSy/Research-Starter
 The diagram is original to this repository, not a tutorial screenshot. The detailed skills and examples are primarily in Chinese; prompt the skills in your preferred language and supply your discipline and target requirements.
 
 ## Choose a task
+
+All seven skills distinguish learning, execution and review. Ask to learn for an explanation, optional practice and feedback; ask for a deliverable to work directly on it; ask for review only to receive findings without file edits. No complete course or prerequisite paper collection is mandatory. Beginners without a supervisor's seed papers can start with their object, phenomenon and resources.
 
 | Skill | Focus |
 | --- | --- |
@@ -52,7 +54,9 @@ Preserve citations, numbers, units, and terminology.
 Mark missing evidence explicitly; do not invent results or references.
 ~~~
 
-No suitable public material yet? Start with the [included teaching fixtures](examples/demo-materials/README.md). Their data and reviewer comments are explicitly synthetic or fictional, never presented as actual research or recorded model performance.
+No suitable public material yet? Start with the [first introduction exercise](examples/first-run/README.md), then the [included teaching fixtures](examples/demo-materials/README.md). Numbers, citations and reviewer comments are explicitly synthetic or fictional, never actual research. Separately recorded model outputs and their limitations belong to the [behavior evaluation](evals/README.md).
+
+For long projects, optionally reuse the [handoff template](skills/research-starter-paper/assets/project-state.md). A new chat must read it and check the current source materials; chat history is not automatic persistent project memory. Discussion/submission, measurement checks and responsible AI guidance are connected to their focused modules.
 
 ## What it does not promise
 

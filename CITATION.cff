@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "Cite this independent adaptation and acknowledge Research-Starter-Kit separately; see NOTICE.md."
 type: software
 title: Research Starter Skills
-version: 1.1.0
-date-released: 2026-10-05
+version: 1.2.0
+date-released: 2026-10-09
 authors:
   - name: YCC-Lover
 repository-code: https://github.com/YCC-Lover/research-starter-skills

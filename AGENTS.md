@@ -26,6 +26,8 @@ For a research request, follow `skills/research-starter-paper/SKILL.md` and load
 
 Run `python scripts/validate_skills.py` and `python -m unittest discover -s tests -v` after meaningful changes.
 Also run `python -O scripts/validate_skills.py`; validation must never depend on removable assertions.
+Run `python scripts/validate_behavior_eval.py` to check recorded evaluation integrity, not model accuracy.
+If skill or fixture changes affect recorded tasks, retain prior outputs and re-evaluate the affected cases with the user's authorization; never refresh hashes to disguise stale results.
 Development validation requires the packages in `requirements-dev.txt`; installing the skills does not.
 The installer refuses existing skill directories unless `--update` is explicitly used with `--backup-dir`.
 It preserves unrelated installed files and never deletes obsolete ones automatically.

@@ -41,6 +41,20 @@ class InstallTests(unittest.TestCase):
         self.assertEqual(marker.read_text(encoding='utf-8'), 'preserve')
         self.assertFalse((self.destination / NAMES[0]).exists())
 
+    def test_learning_and_specialist_guides_are_installed(self):
+        INSTALLER.install(self.destination)
+        paths = [
+            'research-starter-paper/references/learning.md',
+            'research-starter-paper/references/handoff.md',
+            'research-starter-paper/assets/project-state.md',
+            'rsk-experiments-figures/references/measurement-checks.md',
+            'rsk-paper-writing/references/discussion-submission.md',
+            'rsk-research-workflow/references/responsible-ai.md',
+        ]
+        for relative in paths:
+            self.assertEqual((self.destination / relative).read_bytes(),
+                             (ROOT / 'skills' / relative).read_bytes())
+
     def test_update_requires_explicit_backup(self):
         INSTALLER.install(self.destination)
         with self.assertRaises(ValueError):
@@ -80,6 +94,15 @@ class InstallTests(unittest.TestCase):
         backups = self.work / 'backups'
         INSTALLER.install(self.destination, update=True, backup_dir=backups, dry_run=True)
         self.assertFalse(backups.exists())
+
+    @unittest.skipUnless(os.name == 'nt', 'Windows drive compatibility test.')
+    def test_c_drive_backup_can_be_previewed_without_writes(self):
+        backup = Path('C:/rsk-preview-only-' + self.work.name)
+        self.assertFalse(backup.exists())
+        result = INSTALLER.install(self.destination, update=True, backup_dir=backup, dry_run=True)
+        self.assertTrue(result['dry_run'])
+        self.assertFalse(self.destination.exists())
+        self.assertFalse(backup.exists())
 
     def test_check_reports_missing_and_changed_files_without_writing(self):
         check = INSTALLER.check_installation(self.destination)

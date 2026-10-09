@@ -1,6 +1,6 @@
 # 从输入到交付：三个展示场景
 
-[返回首页](../README.md) · [16 个任务提示词](README.md) · [随包教学材料](demo-materials/README.md)
+[返回首页](../README.md) · [19 个任务提示词](README.md) · [首次练习](first-run/README.md) · [随包教学材料](demo-materials/README.md)
 
 本页的文本与图像是自行编写、可核对的教学展示，不是实际模型运行记录，也不是研究者的实测结果。skill 的方法论来源为 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit)，图像不是原作者作品或官方配图。
 

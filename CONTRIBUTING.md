@@ -12,10 +12,13 @@
 python -m pip install -r requirements-dev.txt
 python scripts/validate_skills.py
 python -O scripts/validate_skills.py
+python scripts/validate_behavior_eval.py
 python -m unittest discover -s tests -v
 ~~~
 
 本维护者的 Windows 中间产物与缓存按 AGENTS.md 放在 D/E，不批量删除。其他环境遵循其用户指令和允许的工作目录。新增图像需更新 docs/images/manifest.json，使用原创或明确有权公开的素材；不要复制原教程图片。
+
+修改技能或评测输入会影响已记录输出的适用性。按 [评测协议](evals/README.md) 确认需重测的任务，保存此前结果及新一轮，不仅更新哈希来伪装已验证。加载组的实际相关参考与输入保持可追溯；工程完整性检查不替代行为判断。真实模型运行需获得使用者允许，不在 PR 的 CI 中自动消耗模型服务。
 
 ## 一个好的示例包含什么
 

@@ -1,6 +1,6 @@
 ---
 name: research-starter-paper
-description: "Research-Starter-Kit 科研与论文写作总入口，按任务协调选题、文献、论文写作、实验图表、审稿回复和科研工作流六个小 skill。用于跨阶段任务或未确定模块的科研写作请求。"
+description: "Research-Starter-Kit 科研学习与论文写作总入口，按任务协调六个小 skill。用于科研入门、跨阶段任务或未确定模块的请求，区分学习、执行和只读检查。"
 ---
 
 # 科研与论文写作总入口
@@ -14,6 +14,8 @@ description: "Research-Starter-Kit 科研与论文写作总入口，按任务协
 来源与逐篇覆盖情况见 [references/sources.md](references/sources.md) 和 [references/source-manifest.json](references/source-manifest.json)。正常写作无需加载整份来源清单；用户问出处、要求完整提炼或导入原文时读取它们。
 
 ## 接手任务
+
+按用户意图选择方式，不要求用户先懂技能名称：学习时解释当前概念、给明确标注的例子和可选练习；执行时直接完成所需稿件或文件；检查时列出问题、证据与建议，不因发现问题就修改文件。已有经验的单段任务不启动课程。学习路径与无种子论文的起步方法见 [学习指南](references/learning.md)。
 
 先读取用户已经提供的稿件、图表、数据、实验记录、文献和目标要求。识别本次交付是全文、单章、提纲、研究设计、修改意见还是审稿回复。单章任务只处理该章及必要上下文，不强制启动全流程。
 
@@ -33,6 +35,8 @@ description: "Research-Starter-Kit 科研与论文写作总入口，按任务协
 | 汇报、meeting、参会与跟进、记录、资助、AI 协作 | [rsk-research-workflow](../rsk-research-workflow/SKILL.md) | 05、06、07、17、18、19 |
 
 读取与用户请求相关的小 skill 入口及其按需参考，不一次加载所有模块。可独立使用 `$rsk-paper-writing` 等名称。跨阶段任务共享研究问题、文献池、主张与证据状态，避免重复追问和创建重复记录。这是读取本地指导，不意味着已有子代理执行。
+
+跨对话继续或用户需要持久记录时，读取 [接续指南](references/handoff.md)，复用用户已有状态文件；可采用 [项目状态模板](assets/project-state.md)。临时聊天不是持久记忆，旧状态中的计划不能变成已完成事实。普通小修无需创建项目管理文件。
 
 六个入口安装在本 skill 的同级目录；如未安装或某个入口不存在，明确说明缺项，可使用保留的 [研究补充](references/research.md)、[章节补充](references/paper-sections.md)、[证据补充](references/evidence-and-figures.md)、[返修补充](references/revision.md) 和 [实践补充](references/research-practice.md)，不能假称已调用缺失模块。
 
