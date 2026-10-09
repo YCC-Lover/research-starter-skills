@@ -32,6 +32,96 @@ All seven skills distinguish learning, execution and review. Ask to learn for an
 | [rsk-rebuttal](skills/rsk-rebuttal/SKILL.md) | Evidence-linked replies and revision status |
 | [rsk-research-workflow](skills/rsk-research-workflow/SKILL.md) | Meetings, conferences, logs and bounded AI collaboration |
 
+## Application examples
+
+After installation, attach the relevant materials and adapt a prompt below. These are task examples and expected deliverables, not completed research or guaranteed outputs. Share only materials you are authorized to share.
+
+### 1. Find a starting point as a beginner
+
+**Bring:** Your discipline, stage, current difficulty and any existing materials. Papers or data are not prerequisites.
+
+~~~text
+Use $research-starter-paper. I am new to research in [discipline] and stuck on [difficulty].
+Explain this step, point me to the relevant original tutorial, and give a labeled teaching example with optional practice.
+Suggest a next step based on my materials; do not invent papers or results I do not have.
+~~~
+
+**Expected:** A focused diagnosis, tutorial link, practice task and actionable next step.
+
+### 2. Narrow a broad direction into a research question
+
+**Bring:** Your research object, observed phenomenon, literature leads and available instruments, data or time.
+
+~~~text
+Use $rsk-research-design. My direction is "swelling conditions and material thermal behavior"; see my object and resources in the attachments.
+Separate known facts from candidate hypotheses, narrow the question and propose a minimum test.
+Specify controls, measurements and falsifying outcomes; unperformed experiments must remain plans.
+~~~
+
+**Expected:** A question, candidate hypotheses, a minimum test plan and key risks, not a premature conclusion.
+
+### 3. Connect the papers you have read
+
+**Bring:** Readable PDFs or paper text, plus the question you want to answer.
+
+~~~text
+Use $rsk-literature to read the three supplied papers around [my research question].
+Create a reading card for each and compare their problems, methods, evidence and limitations with page or figure locations.
+Separate author claims from my inferences; if only abstracts are readable, say so without guessing the body.
+~~~
+
+**Expected:** Three reading cards, a literature comparison and questions requiring further verification.
+
+### 4. Make an abstract specific without overstating results
+
+**Bring:** Your abstract draft, actual result tables, method description and word limit.
+
+~~~text
+Use $rsk-paper-writing to revise my abstract from the supplied methods and actual results within [word limit].
+Make the question, method, findings and scope explicit; preserve numbers, units and terminology.
+Revise only the abstract; mark missing evidence as [Needed: specific information] without exaggerating contributions.
+~~~
+
+**Expected:** A revised abstract, brief change notes and concrete missing items.
+
+### 5. Check what differing TG/DTG curves support
+
+**Bring:** Exported CSV/XLSX data, curve images, sample details, atmosphere, heating rate and repeat-measurement records.
+
+~~~text
+Use $rsk-experiments-figures to review the supplied TG/DTG data, measurement conditions and analysis draft.
+Check comparability first, then identify supported observations and mechanism claims lacking evidence.
+Review only: do not edit data, replot or rewrite the text; list missing conditions.
+~~~
+
+**Expected:** Comparability findings, evidence boundaries and a verification checklist, not causal claims from curve differences alone.
+
+### 6. Organize a point-by-point reviewer response
+
+**Bring:** Actual reviewer comments, the manuscript, completed changes and actual new results; label unfinished work separately.
+
+~~~text
+Use $rsk-rebuttal to draft replies from the actual comments and revision records.
+Keep comment IDs, identify evidence and manuscript locations, and list the status of each issue.
+Do not describe unfinished experiments as completed; draft only, without submission or contacting anyone.
+~~~
+
+**Expected:** A reply draft and a comment/evidence/revision-location/status coverage table.
+
+### 7. Prepare for your first academic conference
+
+**Bring:** A research summary approved for public sharing, attendance goals and talks of interest; label unproduced results as plans.
+
+~~~text
+Use $rsk-research-workflow to prepare a short research introduction and discussion questions for my first conference.
+Distinguish actual progress, difficulties and plans from the attachments, then draft a follow-up email template.
+Keep placeholders for conversations that have not happened; do not invent collaborations, send emails or register me.
+~~~
+
+**Expected:** An introduction, question list and a follow-up template to fill after an actual conversation.
+
+See [19 detailed scenarios](examples/README.md) for more inputs and prompts, or try the [first introduction exercise](examples/first-run/README.md) with public teaching materials.
+
 ## Install
 
 Requires Python 3.10+. Installation uses only the standard library.
