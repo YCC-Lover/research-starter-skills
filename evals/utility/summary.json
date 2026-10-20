@@ -1,0 +1,260 @@
+{
+  "pairs": [
+    {
+      "case_id": "U01",
+      "repetition": 1,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U01",
+      "repetition": 2,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U02",
+      "repetition": 1,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U02",
+      "repetition": 2,
+      "baseline": 14.5,
+      "skill": 15.0,
+      "delta": 0.5,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U03",
+      "repetition": 1,
+      "baseline": 15.0,
+      "skill": 14.5,
+      "delta": -0.5,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U03",
+      "repetition": 2,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U04",
+      "repetition": 1,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U04",
+      "repetition": 2,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U05",
+      "repetition": 1,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U05",
+      "repetition": 2,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U06",
+      "repetition": 1,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    },
+    {
+      "case_id": "U06",
+      "repetition": 2,
+      "baseline": 15.0,
+      "skill": 15.0,
+      "delta": 0.0,
+      "outcome": "close"
+    }
+  ],
+  "outcomes": {
+    "close": 12
+  },
+  "mean_total": {
+    "baseline": 14.958333333333334,
+    "skill": 14.958333333333334
+  },
+  "mean_dimension": {
+    "baseline": [
+      3.0,
+      3.0,
+      3.0,
+      2.9583333333333335,
+      3.0
+    ],
+    "skill": [
+      2.9583333333333335,
+      3.0,
+      3.0,
+      3.0,
+      3.0
+    ]
+  },
+  "order_check": [
+    {
+      "case_id": "U01",
+      "repetition": 1,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    },
+    {
+      "case_id": "U01",
+      "repetition": 2,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    },
+    {
+      "case_id": "U02",
+      "repetition": 1,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    },
+    {
+      "case_id": "U02",
+      "repetition": 2,
+      "deltas": [
+        1,
+        0
+      ],
+      "direction_agrees": false
+    },
+    {
+      "case_id": "U03",
+      "repetition": 1,
+      "deltas": [
+        -1,
+        0
+      ],
+      "direction_agrees": false
+    },
+    {
+      "case_id": "U03",
+      "repetition": 2,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    },
+    {
+      "case_id": "U04",
+      "repetition": 1,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    },
+    {
+      "case_id": "U04",
+      "repetition": 2,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    },
+    {
+      "case_id": "U05",
+      "repetition": 1,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    },
+    {
+      "case_id": "U05",
+      "repetition": 2,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    },
+    {
+      "case_id": "U06",
+      "repetition": 1,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    },
+    {
+      "case_id": "U06",
+      "repetition": 2,
+      "deltas": [
+        0,
+        0
+      ],
+      "direction_agrees": true
+    }
+  ],
+  "mean_characters": {
+    "baseline": 1015.5833333333334,
+    "skill": 1192.25
+  },
+  "english_reply_counts": [
+    {
+      "repetition": 1,
+      "variant": "baseline",
+      "words": 209
+    },
+    {
+      "repetition": 1,
+      "variant": "skill",
+      "words": 220
+    },
+    {
+      "repetition": 2,
+      "variant": "baseline",
+      "words": 229
+    },
+    {
+      "repetition": 2,
+      "variant": "skill",
+      "words": 219
+    }
+  ],
+  "english_count_method": "Whitespace tokens in the English reply after its final level-2 heading; Chinese introductory lines excluded."
+}

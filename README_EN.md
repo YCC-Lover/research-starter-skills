@@ -2,164 +2,88 @@
 
 [中文](README.md) · [English](README_EN.md) · [Changelog](CHANGELOG.md)
 
-**Research guidance for Codex, from a focused question to evidence-grounded writing.**
+**Turn research guidance into work you can use.**
 
-Start with the step that is blocking you: a broad topic, a dense introduction, an unclear figure caption, or a reviewer comment. Bring your actual materials; choose one focused skill or let the router select relevant modules.
+Starting research on your own? Preparing a thesis chapter, interpreting results, or responding to reviewers? Bring your papers, notes, data and draft to Codex. One router and six focused skills help you move from your current question to a concrete deliverable.
 
-**[Download](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [Learning path](docs/LEARNING_PATH.md) · [First exercise](examples/first-run/README.md) · [19 task examples](examples/README.md) · [Contribute](CONTRIBUTING.md)**
+Learn the methods from [Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit), then apply them to your own project with these skills.
 
-Version 1.3 adds [seven complete task packs](examples/worked/README.md): task briefing, research decisions, evidence synthesis, thesis chapters, TG/DTG, revision tracing and rehearsal. New guidance is independently authored; the 19 upstream tutorial mappings are unchanged.
+**[Download](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [Learning path](docs/LEARNING_PATH.md) · [Complete task packs](examples/worked/README.md) · [Utility comparison](evals/utility/REPORT.md)**
 
-## Origin first
+**Origin and thanks:** The methods come from all 19 tutorials in LAMDA-NeSy/Research-Starter-Kit. Thanks to Guo Lanzhe, Chen Yuyang, Ge Lingyue, Zhang Yikai and the other contributors. YCC-Lover independently distills, adapts, extends and maintains this Codex skill bundle. [Sources](skills/research-starter-paper/references/sources.md) · [Attribution and usage scope](NOTICE.md)
 
-The research methods and tutorials come from [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit), based on its README at revision 36ba390d153f5289308ec833e2b633c26b304a7b and all 19 exported tutorials. We thank Guo Lanzhe, Chen Yuyang, Ge Lingyue, Zhang Yikai, and the other contributors for their work and sharing. YCC-Lover independently distills, adapts and maintains these Codex skills; upstream guidance and additions from this project are identified separately.
+![Research Starter Skills: a router and six focused research modules](docs/images/workflow-product.png)
 
-[Tutorial-by-tutorial mapping](skills/research-starter-paper/references/sources.md) · [Attribution and publication scope](NOTICE.md) · [Citation metadata](CITATION.cff)
+Product concept image generated with GPT-image. [Image notes](docs/images/workflow-product.prompt.md)
 
-![Research Starter Skills product diagram: one router selects among research design, literature, paper writing, experiments and figures, rebuttal, and research workflow](docs/images/workflow-product.png)
+## What you can get done
 
-The product diagram was generated with GPT-image for this project. It illustrates module relationships and evidence boundaries, not an actual interface or research data. [Generation notes and prompt](docs/images/workflow-product.prompt.md) · [Text description and more scenarios](examples/SHOWCASE.md). The detailed skills and examples are primarily in Chinese; prompt the skills in your preferred language and supply your discipline and target requirements.
+| Bring | Work toward | Take away |
+| --- | --- | --- |
+| A broad topic and limited resources | Choose a useful research question | A conditional priority and minimum informative test |
+| Papers and reading notes | Connect methods, evidence and disagreements | A synthesis, traceable evidence and a concrete research angle |
+| An introduction or thesis chapter | Strengthen the argument and align versions | Replacement prose, substantive edits and linked changes |
+| Experimental tables and measurements | Explain comparisons and trade-offs | A figure plan, caption, results text and next measurement |
+| Reviewer comments and revision records | Prioritize and coordinate revisions | A reply draft, evidence map and actionable sequence |
+| A presentation or defense | Practice one question at a time | Feedback on your words and a focused next question |
 
-## Choose a task
+Ask to learn for an explanation and practice, ask for a deliverable to work directly on it, or request review for findings and recommendations. The detailed guides and examples are primarily in Chinese; supply your preferred language and discipline.
 
-All seven skills distinguish learning, execution and review. Ask to learn for an explanation, optional practice and feedback; ask for a deliverable to work directly on it; ask for review only to receive findings without file edits. No complete course or prerequisite paper collection is mandatory. Beginners without a supervisor's seed papers can start with their object, phenomenon and resources.
+## Start in three steps
 
-| Skill | Focus |
-| --- | --- |
-| [research-starter-paper](skills/research-starter-paper/SKILL.md) | Router for cross-stage requests |
-| [rsk-research-design](skills/rsk-research-design/SKILL.md) | Questions, hypotheses, minimum tests |
-| [rsk-literature](skills/rsk-literature/SKILL.md) | Search, reading cards, citation verification |
-| [rsk-paper-writing](skills/rsk-paper-writing/SKILL.md) | Arguments, outlines, introductions, abstracts, methods |
-| [rsk-experiments-figures](skills/rsk-experiments-figures/SKILL.md) | Comparisons, descriptive analysis, figures and captions |
-| [rsk-rebuttal](skills/rsk-rebuttal/SKILL.md) | Evidence-linked replies and revision status |
-| [rsk-research-workflow](skills/rsk-research-workflow/SKILL.md) | Meetings, conferences, logs and bounded AI collaboration |
-
-## Application examples
-
-After installation, attach the relevant materials and adapt a prompt below. These are task examples and expected deliverables, not completed research or guaranteed outputs. Share only materials you are authorized to share.
-
-### 1. Find a starting point as a beginner
-
-**Bring:** Your discipline, stage, current difficulty and any existing materials. Papers or data are not prerequisites.
-
-~~~text
-Use $research-starter-paper. I am new to research in [discipline] and stuck on [difficulty].
-Explain this step, point me to the relevant original tutorial, and give a labeled teaching example with optional practice.
-Suggest a next step based on my materials; do not invent papers or results I do not have.
-~~~
-
-**Expected:** A focused diagnosis, tutorial link, practice task and actionable next step.
-
-### 2. Narrow a broad direction into a research question
-
-**Bring:** Your research object, observed phenomenon, literature leads and available instruments, data or time.
-
-~~~text
-Use $rsk-research-design. My direction is "swelling conditions and material thermal behavior"; see my object and resources in the attachments.
-Separate known facts from candidate hypotheses, narrow the question and propose a minimum test.
-Specify controls, measurements and falsifying outcomes; unperformed experiments must remain plans.
-~~~
-
-**Expected:** A question, candidate hypotheses, a minimum test plan and key risks, not a premature conclusion.
-
-### 3. Connect the papers you have read
-
-**Bring:** Readable PDFs or paper text, plus the question you want to answer.
-
-~~~text
-Use $rsk-literature to read the three supplied papers around [my research question].
-Create a reading card for each and compare their problems, methods, evidence and limitations with page or figure locations.
-Separate author claims from my inferences; if only abstracts are readable, say so without guessing the body.
-~~~
-
-**Expected:** Three reading cards, a literature comparison and questions requiring further verification.
-
-### 4. Make an abstract specific without overstating results
-
-**Bring:** Your abstract draft, actual result tables, method description and word limit.
-
-~~~text
-Use $rsk-paper-writing to revise my abstract from the supplied methods and actual results within [word limit].
-Make the question, method, findings and scope explicit; preserve numbers, units and terminology.
-Revise only the abstract; mark missing evidence as [Needed: specific information] without exaggerating contributions.
-~~~
-
-**Expected:** A revised abstract, brief change notes and concrete missing items.
-
-### 5. Check what differing TG/DTG curves support
-
-**Bring:** Exported CSV/XLSX data, curve images, sample details, atmosphere, heating rate and repeat-measurement records.
-
-~~~text
-Use $rsk-experiments-figures to review the supplied TG/DTG data, measurement conditions and analysis draft.
-Check comparability first, then identify supported observations and mechanism claims lacking evidence.
-Review only: do not edit data, replot or rewrite the text; list missing conditions.
-~~~
-
-**Expected:** Comparability findings, evidence boundaries and a verification checklist, not causal claims from curve differences alone.
-
-### 6. Organize a point-by-point reviewer response
-
-**Bring:** Actual reviewer comments, the manuscript, completed changes and actual new results; label unfinished work separately.
-
-~~~text
-Use $rsk-rebuttal to draft replies from the actual comments and revision records.
-Keep comment IDs, identify evidence and manuscript locations, and list the status of each issue.
-Do not describe unfinished experiments as completed; draft only, without submission or contacting anyone.
-~~~
-
-**Expected:** A reply draft and a comment/evidence/revision-location/status coverage table.
-
-### 7. Prepare for your first academic conference
-
-**Bring:** A research summary approved for public sharing, attendance goals and talks of interest; label unproduced results as plans.
-
-~~~text
-Use $rsk-research-workflow to prepare a short research introduction and discussion questions for my first conference.
-Distinguish actual progress, difficulties and plans from the attachments, then draft a follow-up email template.
-Keep placeholders for conversations that have not happened; do not invent collaborations, send emails or register me.
-~~~
-
-**Expected:** An introduction, question list and a follow-up template to fill after an actual conversation.
-
-See [19 detailed scenarios](examples/README.md) for more inputs and prompts, or try the [first introduction exercise](examples/first-run/README.md) with public teaching materials.
-
-## Install
-
-Requires Python 3.10+. Installation uses only the standard library.
+**1. Install.** Download the ZIP from [Releases](https://github.com/YCC-Lover/research-starter-skills/releases/latest), extract it, and run the installer beside catalog.json. Or clone:
 
 ~~~text
 git clone https://github.com/YCC-Lover/research-starter-skills.git
 cd research-starter-skills
-python scripts/install_skills.py --dry-run
 python scripts/install_skills.py
 ~~~
 
-Without Git, download the ZIP from Releases, extract it, and run the installer from the directory containing catalog.json. Install all seven folders as siblings. The default is CODEX_HOME/skills, or ~/.codex/skills when unset. Use --dest to specify another profile. See the [installation guide](docs/INSTALLATION.md) for read-only checks and explicit backup updates.
+Python 3.10+; installation uses the standard library. All seven skill directories are installed together under CODEX_HOME/skills, or ~/.codex/skills by default. [Installation and updates](docs/INSTALLATION.md)
 
-Installation/update records a version and file-hash receipt. `--check` compares actual contents and identifies changes since that installation; legacy installs without a receipt report an unknown installed version. `python scripts/install_skills.py --doctor` discovers optional tools without running them, contacting services or installing packages. Discovery is not proof of parsing, export or model behavior.
+**2. Bring one task.** Open a new Codex chat and attach your current material. Start with the [first exercise](examples/first-run/README.md) or [included teaching packs](examples/worked/README.md) to explore the workflow.
 
-Then try:
+**3. Ask for a usable result.**
 
 ~~~text
-Use $rsk-paper-writing to revise the supplied introduction only.
-Check the problem, prior work, concrete gap, response, and evidence.
-Preserve citations, numbers, units, and terminology.
-Mark missing evidence explicitly; do not invent results or references.
+Use $rsk-paper-writing to revise the supplied discussion.
+Give the replacement prose first, then the substantive edits,
+linked chapter changes, and key supporting evidence.
 ~~~
 
-No suitable public material yet? Start with the [first introduction exercise](examples/first-run/README.md), then the [included teaching fixtures](examples/demo-materials/README.md). Numbers, citations and reviewer comments are explicitly synthetic or fictional, never actual research. Separately recorded model outputs and their limitations belong to the [behavior evaluation](evals/README.md).
+~~~text
+Use $rsk-research-workflow to rehearse my proposal defense.
+Give focused feedback on my answer, then ask the next question.
+~~~
 
-For long projects, optionally reuse the [handoff template](skills/research-starter-paper/assets/project-state.md). A new chat must read it and check the current source materials; chat history is not automatic persistent project memory. Discussion/submission, measurement checks and responsible AI guidance are connected to their focused modules.
+## Pick a module
 
-## What it does not promise
+| Skill | Focus |
+| --- | --- |
+| research-starter-paper | Research learning, cross-stage tasks and project handoff |
+| rsk-research-design | Questions, decisions, hypotheses and minimum tests |
+| rsk-literature | Search, critical reading, synthesis and citation versions |
+| rsk-paper-writing | Arguments, sections and thesis consistency |
+| rsk-experiments-figures | Comparisons, characterization, figures and TG/DTG checks |
+| rsk-rebuttal | Reviewer replies, priorities and revision tracing |
+| rsk-research-workflow | Meetings, conferences, research logs and rehearsal |
 
-The v1.3.1 [evaluation report](evals/runs/2026-10-20/REPORT.md) records eight synthetic tasks and sixteen fresh-context responses, with loading labels hidden from the independent model grader. Both arms had the same inputs and read-only thermal helper. [Actual answers](evals/runs/2026-10-20/OUTPUTS.md) are separate from maintainer-written walkthroughs. Rehearsal covers only the first question; this is not a human expert review or evidence of general superiority.
+[19 ready-to-adapt prompts](examples/README.md) · [Stage-by-stage learning](docs/LEARNING_PATH.md)
 
-Skills are instructions, not standalone research engines. Search, proprietary file parsing, plotting, and document export depend on available tools. An Origin .opju file still requires a supported interface or readable export. Validation tests do not establish model accuracy, publication success, or time savings. Authors remain responsible for checking sources and conclusions.
+## Inspect the actual work
 
-No raw tutorials, upstream figures, private research, credentials, or account sessions are published. This repository has not adopted a general license, and does not grant redistribution rights to upstream tutorials. Public visibility and attribution are not substitutes for permission; see [NOTICE.md](NOTICE.md).
+The [utility comparison](evals/utility/REPORT.md) uses six complex tasks with two independent repetitions each. It compares direct Codex use and skill-assisted use on the same materials, scoring research progress, evidence integration, deliverable usability, actionable decisions and collaboration efficiency. Read both sets of answers and their individual judgments.
 
-## Help improve a real workflow
+Both arms averaged 14.96/15, with all twelve pairs in the predefined close range. Inspect the concrete examples of literature synthesis, linked chapter edits and learner-specific feedback to choose a workflow that suits your task.
 
-Star to find the project again, report a sanitized issue, or propose a concrete example. Contributions should preserve evidence, provenance, user scope, and the distinction between completed work and plans. See [CONTRIBUTING.md](CONTRIBUTING.md) and the [audit record](docs/PROJECT_AUDIT.md).
+[Fixed protocol](evals/utility/PROTOCOL.md) · [Evaluation history](evals/README.md) · [Engineering checks](docs/PROJECT_AUDIT.md)
+
+## Keep your workflow portable
+
+Skills are editable Markdown files. Continue with another Codex account in the same user profile, or reinstall on a different machine. Clone or fork this public repository to adapt it; GitHub write access governs contributions to the original repository.
+
+The installer records versions and file hashes, supports read-only checks and optional-tool discovery, and updates with an explicit backup. Document export, plotting and file parsing use the tools available in your Codex environment.
+
+Version **1.4.0** retains the upstream 19-tutorial mapping at revision 36ba390d153f5289308ec833e2b633c26b304a7b. [Attribution and usage scope](NOTICE.md) · [Citation metadata](CITATION.cff)
+
+Star to find the project again, share a sanitized task in [Issues](https://github.com/YCC-Lover/research-starter-skills/issues), or contribute a concrete example. [Contributing](CONTRIBUTING.md)

@@ -2,7 +2,7 @@
 
 [首页](../README.md) · [首次练习](../examples/first-run/README.md) · [技能内学习指南](../skills/research-starter-paper/references/learning.md)
 
-方法论来自 [Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit)；下表的学习安排、练习与自查是本仓库独立编写，不是原作者官方课程。原文与当前提炼不等同，建议在能访问的情况下读相应原文。飞书入口可能需要登录，本仓库不提供登录缓存或原文副本。
+科研方法来自 [Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit)，下表的学习安排、练习与自查由本项目独立编写。先读对应原教程理解方法，再用 skill 完成自己的一个小任务，最后按具体产出检查理解。飞书原文可通过相应入口访问。
 
 ## 选择当前一步
 
@@ -18,7 +18,7 @@
 | 汇报与学术交流 | [汇报](https://dy8q0bnq8y.feishu.cn/wiki/Wr0lwNhUdiMpt1kK6UmcgnWEnJI)、[Meeting](https://dy8q0bnq8y.feishu.cn/wiki/B8FBwaHe6ivi2skemtFc3lWbnmh)、[参会](https://dy8q0bnq8y.feishu.cn/wiki/HDYdwMgrki0C35kR147cquf2nph) | rsk-research-workflow：报告、介绍、提问与跟进草稿 | 听众能理解问题、进展和真实边界 |
 | 长期记录与 AI 协作 | [习惯](https://dy8q0bnq8y.feishu.cn/wiki/Bp2AwrSnAiGaH2khJaqczVXznwc)、[AI 协作](https://lamda3-nju.feishu.cn/wiki/Uf9fwnQFxiJS1akJZkPc87gFniq) | research-workflow / 总入口：可接续记录与核验 | 新对话能找到实际文件，不依赖自动记忆 |
 
-[完整 19 篇来源](../skills/research-starter-paper/references/sources.md)保留引用与资助等其他教程。资助任务用当年官方信息，不能以历史金额和月份判断开放状态。
+[完整 19 篇来源](../skills/research-starter-paper/references/sources.md)包含引用与资助等其他教程。资助任务以当年的官方信息形成申请清单。
 
 ## 不知道从哪里开始
 
@@ -26,10 +26,10 @@
 使用 $research-starter-paper。我还没有系统接受科研训练，主要靠自己摸索。
 我的学科、阶段和当前困难是：[按已知情况填写]。
 先帮助我理解当前最需要的一个环节，给一个明确标为教学的例子和可选练习。
-暂时没有的论文或结果不要编造；只追问会改变本次帮助的关键信息。
+依据我已有的材料先推进一步，列出最值得补充的关键信息。
 ~~~
 
-学习不要求先拥有完整课题。没有导师推荐时，可先整理对象、现象和资源，再形成检索计划；有可用检索工具后选择真实论文。没有数据时先做研究设计，不强行进入结果写作。
+从现有条件就能起步：先整理对象、现象和资源，再形成检索计划；通过实际检索选择论文。有数据时进入分析与写作，正在筹备实验时先完成研究设计。
 
 想检验理解时，可选 [七个任务包与纠错练习](../examples/worked/README.md)：先自己指出输入中的一处问题，再让 skill 对照原句和证据反馈。长篇学位论文可按章节依赖推进，文献综述先形成证据综合，开题或答辩演练一次一个问题；这些为本项目独立补充，不要求按固定顺序完成。
 
@@ -37,4 +37,4 @@
 
 说“教我”可得到解释、练习与反馈；说“帮我写/修改”可直接交付指定文本；说“只检查，先别改”应只报告问题。可以改变方式，不必完成整套课程，也不按固定天数评价科研能力。
 
-跨对话接续可采用 [可选状态模板](../skills/research-starter-paper/assets/project-state.md)。所有输出仍由作者核对；本项目不能替代导师、领域专家、真实实验和当前投稿规则。
+跨对话接续可采用 [项目状态模板](../skills/research-starter-paper/assets/project-state.md)，从当前文件和实际进展继续。想观察完整任务如何交付，阅读 [实用价值对照中的两组答案](../evals/utility/REPORT.md)；把其中的组织方法应用到自己的问题，再结合导师或同行反馈继续完善。

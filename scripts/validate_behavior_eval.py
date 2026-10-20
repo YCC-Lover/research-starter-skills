@@ -96,6 +96,7 @@ def validate_run(report, sources):
             judgments = row['independent_judgments']
             require(len(judgments) == 2 and len({j['grader_id'] for j in judgments}) == 2,
                     'Expected two independent utility judgments.')
+            require({j['pass'] for j in judgments} == {1, 2}, 'Missing order-check judgment pass.')
             for judgment in judgments:
                 validate_checks(judgment['checks'], case, answer)
                 for check in judgment['checks']:

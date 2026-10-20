@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.0
+
+- Put usable deliverables first: replacement prose, a near-term decision or a focused learning exercise, sized to the user's time and scope.
+- Strengthen version-aware literature synthesis, thesis change propagation, multi-indicator interpretation, informative experiment planning, revision priorities and learner-specific rehearsal feedback.
+- Add a preregistered utility comparison: six complex task families, two independent repetitions, identical inputs and two blinded order-swapped judgments, with complete outputs and multidimensional scores.
+- Extend record validation for repetitions, paired judgments, score ranges and means, fixed follow-up inputs and the scoring consequences of factual errors.
+- Rework the Chinese and English READMEs, learning, installation and example entrypoints around research scenarios, concrete outcomes and a three-step start.
+- Preserve the seven skill layout, 19 upstream tutorial mappings, source attribution, existing release history and current usage scope.
+
 ## 1.3.1
 
 - Record eight synthetic cases and sixteen fresh-context model responses with identical materials and read-only thermal-tool availability; preserve full answers, source snapshots, blinded model judgments and limitations.

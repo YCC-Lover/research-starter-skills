@@ -34,7 +34,7 @@ class BehaviorRecordTests(unittest.TestCase):
                                  'followup_input': 'followup', 'turns': [{'answer': 'first'}, {'answer': 'fixture'}]},
                     'reference_snapshot': {p: snapshot['skill_files_sha256'][p] for p in references},
                     'judgment': {'checks': json.loads(json.dumps(checks))},
-                    'independent_judgments': [{'grader_id': str(i), 'checks': json.loads(json.dumps(checks)),
+                    'independent_judgments': [{'grader_id': str(i), 'pass': i + 1, 'checks': json.loads(json.dumps(checks)),
                                                'factual_errors': []} for i in range(2)]})
         return report, sources
 
@@ -63,6 +63,12 @@ class BehaviorRecordTests(unittest.TestCase):
         report, sources = self.utility_fixture()
         report['records'][0]['independent_judgments'].pop()
         with self.assertRaisesRegex(ValueError, 'two independent'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_order_check_requires_two_judgment_passes(self):
+        report, sources = self.utility_fixture()
+        report['records'][0]['independent_judgments'][1]['pass'] = 1
+        with self.assertRaisesRegex(ValueError, 'order-check judgment pass'):
             VALIDATOR.validate_run(report, sources)
 
     def test_followup_input_must_match_archived_material(self):
