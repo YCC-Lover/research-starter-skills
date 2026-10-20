@@ -1,0 +1,92 @@
+{
+  "version": 3,
+  "data_kind": "original-synthetic-utility-tasks",
+  "grading": {"type": "anchored-utility-v1", "scale": [0, 1, 2, 3]},
+  "cases": [
+    {
+      "id": "U01", "skill": "research-starter-paper", "repetitions": 2,
+      "prompt": "周五要给导师看一页研究计划，材料见附件。帮我决定这周先做什么，并写出可以带去组会讨论的版本，正文控制在约800字。",
+      "files": ["evals/utility/inputs/decision.md"],
+      "dependencies": ["skills/research-starter-paper/SKILL.md", "skills/research-starter-paper/references/handoff.md", "skills/rsk-research-design/SKILL.md", "skills/rsk-research-design/references/design.md", "skills/rsk-research-design/references/decision.md"],
+      "checks": [
+        "研究推进：把跨设备分布变化和类别不足转成可区分的问题，说明最小对照的结果如何改变方向",
+        "证据整合：正确使用E1/E2的96/74/41、设备重叠及旧状态，保留生成资源的真实状态",
+        "交付可用：提供可供组会讨论的一页计划，而不仅是建议用户再做计划",
+        "行动决策：近期优先级、可用数据/机时、具体检查与后续分支相匹配",
+        "协作效率：利用已有信息，篇幅集中，区分本周任务与长期方向"
+      ],
+      "reference_facts": ["96%与74%是不同划分的结果，非独立重复", "41%为稀有类召回率", "按设备留出消除了该次设备重叠但仍有分布与类别问题", "生成接口尚未获准", "可用设备ID/标签/两次预测先做错误分析"]
+    },
+    {
+      "id": "U02", "skill": "rsk-literature", "repetitions": 2,
+      "prompt": "这几篇我都做了笔记，但还是写不出有观点的相关工作。请帮我写一段可放进初稿的综合，再给我一个值得进一步研究的具体切口。保留已有citation key，综合正文约450字，必要的对照信息可以另列。",
+      "files": ["evals/utility/inputs/literature.md"],
+      "dependencies": ["skills/rsk-literature/SKILL.md", "skills/rsk-literature/references/synthesis.md", "skills/rsk-literature/references/references.md"],
+      "checks": [
+        "研究推进：按检索决策/证据筛选/生成融合的关系综合，具体解释分歧并提出可检验切口",
+        "证据整合：G的预印本与正式版关联去重，正确采用75/74及C的反例，区分数据集/基线条件",
+        "交付可用：交付连贯的相关工作正文和可追溯对照，而非逐篇摘要或只有提纲",
+        "行动决策：切口连接已有证据缺口、竞争解释与可行的最小检验",
+        "协作效率：正文聚焦当前问题，引用保持可识别，辅助信息简洁"
+      ],
+      "reference_facts": ["gatePre/gateFinal是同一工作G，正式版替代预印本评估", "正式版75%对74%，预印本78%对72%", "filterS的83%与其他数据集数值不构成排名", "counterEx是门控失效反例，overviewQ是概念分类", "引用只针对已提供摘录"]
+    },
+    {
+      "id": "U03", "skill": "rsk-paper-writing", "repetitions": 2,
+      "prompt": "请把3.4讨论改成我今天能发给导师的版本，保留有价值的积极发现，并告诉我接下来哪些位置要联动修改。本次先交付这一小节的替换文本，约450字，附简短修改清单。",
+      "files": ["evals/utility/inputs/thesis.md"],
+      "dependencies": ["skills/rsk-paper-writing/SKILL.md", "skills/rsk-paper-writing/references/thesis-longform.md", "skills/rsk-paper-writing/references/results-discussion.md", "skills/rsk-paper-writing/references/discussion-submission.md"],
+      "checks": [
+        "研究推进：把起始失重提前与高温保留增加组织成权衡，解释其对总问题的意义及待区分解释",
+        "证据整合：使用确认的325/312 C与18.5/22.0%，方向和3.5个百分点正确，术语/重复口径一致",
+        "交付可用：给可替换的3.4讨论，而非只有审查意见；保留高温质量保留的真实积极结果",
+        "行动决策：定位摘要、3.2、图3-5、4.1与总论的具体联动动作并按影响排序",
+        "协作效率：优先交付正文，变更说明紧凑且在本次范围内"
+      ],
+      "reference_facts": ["analysis-v2是已签字确认结果，晚编辑的thesis-v4仍混有旧描述", "T5降低13 C，600 C质量增加3.5个百分点", "每组3份独立样品；SD/显著性未提供", "FTIR峰强描述尚不足以确认交联/成键", "五处联动可用标题和原句定位"]
+    },
+    {
+      "id": "U04", "skill": "rsk-experiments-figures", "repetitions": 2,
+      "prompt": "请帮我选一张组会最值得放的图，给可用图注和一段结果文字，再安排下周两条TGA机时。输入是指标表和记录，正文尽量精炼，主要结论控制在约500字。",
+      "files": ["evals/utility/inputs/measurements.csv", "evals/utility/inputs/measurement-notes.md"],
+      "dependencies": ["skills/rsk-experiments-figures/SKILL.md", "skills/rsk-experiments-figures/references/measurement-checks.md", "skills/rsk-experiments-figures/references/figures.md", "skills/rsk-paper-writing/references/results-discussion.md"],
+      "checks": [
+        "研究推进：同时解释早期失重与高温保留的权衡，将新增机时指向能改变判断的信息",
+        "证据整合：主比较使用四条primary，两组各两份独立样品；区分T1复测与空气探索值，均值/差值正确",
+        "交付可用：给与现有指标相符的图方案、完整可用图注和结果段落，点/批次/n含义清楚",
+        "行动决策：两条机时有具体样品/条件/目的，与可制备新批次和现有问题相匹配",
+        "协作效率：以关键比较为主，图注与正文互补，操作建议便于执行"
+      ],
+      "reference_facts": ["U均值T5=329 C、质量20%；T=316 C、25%", "T5差-13 C，质量差+5个百分点", "独立n=2/组，T1复测不是新增独立样品", "空气探索曲线不与氮气主比较合并", "现有数据只支持指标图，完整曲线未提供", "新批次U/T配对是可行的信息增量方案之一，其他有依据方案亦可"]
+    },
+    {
+      "id": "U05", "skill": "rsk-rebuttal", "repetitions": 2,
+      "prompt": "这些意见有点多，我先处理哪几件最划算？请给按现有资源能执行的返修顺序和一份集中英文回复草稿，英文不超过260词。帮我把回复、证据和改稿位置对应起来。",
+      "files": ["evals/utility/inputs/revision.md"],
+      "dependencies": ["skills/rsk-rebuttal/SKILL.md", "skills/rsk-rebuttal/references/rebuttal.md", "skills/rsk-rebuttal/references/revision-trace.md"],
+      "checks": [
+        "研究推进：识别划分和搜索预算对核心泛化主张的影响，区分必要验证与表达修复",
+        "证据整合：正确区分98/95随机结果、82/81先导、25/8 ms和3种子，以及现有修改状态",
+        "交付可用：回复实质回答R1-R4，并把意见、当前证据、具体修改位置与状态关联",
+        "行动决策：安排符合120 GPU分钟与20分钟/次的工作，保留核查/改稿任务并说明完成新分析后的更新点",
+        "协作效率：英文集中回复在260词内，措辞直接，行动表与正文互补"
+      ],
+      "reference_facts": ["120/20最多6次训练，计划需说明是否足够及如何分配", "31/100设备训练测试重叠", "82/81是已完成的一种子先导，不等于公平预算完整验证", "25/8 ms仅推理，3种子共用设备划分", "方法2.3/摘要/结论/图6均待改", "回复基于当前记录，未来工作与已完成事实区分"]
+    },
+    {
+      "id": "U06", "skill": "rsk-research-workflow", "repetitions": 2,
+      "prompt": "按附件开始开题练习。",
+      "files": ["evals/utility/inputs/rehearsal.md", "evals/utility/inputs/student-reply.md"],
+      "followup_file": "evals/utility/inputs/student-reply.md",
+      "dependencies": ["skills/rsk-research-workflow/SKILL.md", "skills/rsk-research-workflow/references/rehearsal.md"],
+      "checks": [
+        "研究推进：围绕学生对处理效应的理解推进，指出最先应改变的比较设计及理由",
+        "证据整合：反馈明确回应学生实际原句，正确处理条件混杂、温度点与独立重复、机理状态",
+        "交付可用：给予具体、可完成的改述练习或提示，使学生能够自己再答",
+        "行动决策：下一问基于本轮回答，聚焦一个可验证的设计选择或理解点",
+        "协作效率：纠正少量关键概念后等待学生，反馈有支持性且控制认知负担"
+      ],
+      "reference_facts": ["初始只收到rehearsal，固定学生回答在下一轮发出", "气氛/速率未统一且正式对照未开展", "同曲线温度点并非独立重复", "学生请求继续带练，评价焦点是第二轮反馈而非只问首问"]
+    }
+  ]
+}

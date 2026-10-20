@@ -13,6 +13,70 @@ SPEC.loader.exec_module(VALIDATOR)
 
 
 class BehaviorRecordTests(unittest.TestCase):
+    def utility_fixture(self):
+        # Parser data only; never included among model-run records.
+        dependency = 'skills/unit/SKILL.md'
+        case = {'id': 'UNIT', 'skill': 'unit', 'files': ['input.md', 'followup.md'],
+                'repetitions': 2, 'followup_file': 'followup.md', 'checks': ['a', 'b']}
+        sources = {'cases': {'grading': {'type': 'anchored-utility-v1'}, 'cases': [case]},
+                   'inputs': {'input.md': 'input', 'followup.md': 'followup'},
+                   'skills': {dependency: 'guidance'}}
+        snapshot = VALIDATOR.source_snapshot(sources)
+        report = {'snapshot': snapshot, 'protocol': {'independent_context_per_task': True}, 'records': []}
+        for repetition in (1, 2):
+            for variant in ('baseline', 'skill'):
+                references = [] if variant == 'baseline' else [dependency]
+                checks = [{'index': i, 'score': 2, 'status': '通过', 'reason': 'parser fixture',
+                           'evidence': 'fixture'} for i in range(2)]
+                report['records'].append({
+                    'case_id': 'UNIT', 'variant': variant, 'repetition': repetition,
+                    'response': {'answer': 'fixture', 'references_read': references,
+                                 'followup_input': 'followup', 'turns': [{'answer': 'first'}, {'answer': 'fixture'}]},
+                    'reference_snapshot': {p: snapshot['skill_files_sha256'][p] for p in references},
+                    'judgment': {'checks': json.loads(json.dumps(checks))},
+                    'independent_judgments': [{'grader_id': str(i), 'checks': json.loads(json.dumps(checks)),
+                                               'factual_errors': []} for i in range(2)]})
+        return report, sources
+
+    def test_repeated_utility_records_are_valid(self):
+        VALIDATOR.validate_run(*self.utility_fixture())
+
+    def test_missing_utility_repetition_is_rejected(self):
+        report, sources = self.utility_fixture()
+        report['records'].pop()
+        with self.assertRaisesRegex(ValueError, 'Missing or duplicate'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_utility_score_range_is_checked(self):
+        report, sources = self.utility_fixture()
+        report['records'][0]['independent_judgments'][0]['checks'][0]['score'] = 4
+        with self.assertRaisesRegex(ValueError, 'Invalid anchored utility score'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_utility_mean_cannot_be_inflated(self):
+        report, sources = self.utility_fixture()
+        report['records'][0]['judgment']['checks'][0]['score'] = 3
+        with self.assertRaisesRegex(ValueError, 'Utility mean score mismatch'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_both_independent_judgments_are_required(self):
+        report, sources = self.utility_fixture()
+        report['records'][0]['independent_judgments'].pop()
+        with self.assertRaisesRegex(ValueError, 'two independent'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_followup_input_must_match_archived_material(self):
+        report, sources = self.utility_fixture()
+        report['records'][0]['response']['followup_input'] = 'different'
+        with self.assertRaisesRegex(ValueError, 'Follow-up material differs'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_factual_error_has_recorded_scoring_consequence(self):
+        report, sources = self.utility_fixture()
+        report['records'][0]['independent_judgments'][0]['factual_errors'] = ['fixture error']
+        with self.assertRaisesRegex(ValueError, 'Factual error scoring mismatch'):
+            VALIDATOR.validate_run(report, sources)
+
     def setUp(self):
         self.work = Path(tempfile.mkdtemp(prefix='rsk-behavior-record-test-'))
         self.package = self.work / 'package'
@@ -20,7 +84,7 @@ class BehaviorRecordTests(unittest.TestCase):
 
     def test_recorded_artifacts_are_consistent(self):
         result = VALIDATOR.validate(self.package)
-        self.assertEqual(result['records'], result['cases'] * 2)
+        self.assertEqual(result['records'], result['expected_records'])
 
     def test_changed_input_invalidates_record(self):
         path = self.package / 'evals/history/2026-10-09-sources.json'

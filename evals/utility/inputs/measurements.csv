@@ -1,0 +1,7 @@
+specimen_id,batch,treatment,atmosphere,rate_C_min,T5_C,mass_600_pct,record_role
+U1,b1,untreated,nitrogen,10,330,19,primary
+U2,b2,untreated,nitrogen,10,328,21,primary
+T1,b1,treated,nitrogen,10,315,24,primary
+T2,b2,treated,nitrogen,10,317,26,primary
+T1,b1,treated,nitrogen,10,314,24.5,technical-repeat
+Ta,b3,treated,air,20,340,8,exploratory

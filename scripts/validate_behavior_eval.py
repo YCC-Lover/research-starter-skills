@@ -67,8 +67,12 @@ def validate_run(report, sources):
     require(report['snapshot'] == source_snapshot(sources), 'Archived source snapshot changed.')
     require(report['protocol']['independent_context_per_task'] is True, 'Unexpected evaluation protocol.')
     records = report['records']
-    expected = {(case['id'], variant) for case in cases for variant in ('baseline', 'skill')}
-    observed = {(row['case_id'], row['variant']) for row in records}
+    for case in cases:
+        require(type(case.get('repetitions', 1)) is int and case.get('repetitions', 1) > 0,
+                'Invalid repetition count.')
+    expected = {(case['id'], variant, repetition) for case in cases
+                for variant in ('baseline', 'skill') for repetition in range(1, case.get('repetitions', 1) + 1)}
+    observed = {(row['case_id'], row['variant'], row.get('repetition', 1)) for row in records}
     require(observed == expected and len(records) == len(expected), 'Missing or duplicate evaluation record.')
     for row in records:
         case = case_map[row['case_id']]
@@ -87,15 +91,39 @@ def validate_run(report, sources):
                                               for name in references},
                 'Reported reference snapshot differs from the current package.')
         checks = row['judgment']['checks']
-        require([check['index'] for check in checks] == list(range(len(case['checks']))),
-                'Incomplete judgment checklist.')
-        for check in checks:
-            require(check['status'] in {'通过', '不通过', '无法确认'}, 'Unknown judgment status.')
-            require(check['reason'], 'Missing judgment reason.')
-            require(isinstance(check['evidence'], str) and check['evidence'] in answer,
-                    'Judgment evidence is not in the recorded answer.')
-            require(check['evidence'] or check['status'] == '无法确认', 'Missing judgment evidence.')
+        validate_checks(checks, case, answer)
+        if sources['cases'].get('grading', {}).get('type') == 'anchored-utility-v1':
+            judgments = row['independent_judgments']
+            require(len(judgments) == 2 and len({j['grader_id'] for j in judgments}) == 2,
+                    'Expected two independent utility judgments.')
+            for judgment in judgments:
+                validate_checks(judgment['checks'], case, answer)
+                for check in judgment['checks']:
+                    require(type(check['score']) is int and check['score'] in range(4),
+                            'Invalid anchored utility score.')
+                if judgment.get('factual_errors'):
+                    require(judgment['checks'][1]['score'] == 0, 'Factual error scoring mismatch.')
+            for i, check in enumerate(checks):
+                require(check['score'] == sum(j['checks'][i]['score'] for j in judgments) / 2,
+                        'Utility mean score mismatch.')
+            if case.get('followup_file'):
+                require(row['response']['followup_input'] == sources['inputs'][case['followup_file']],
+                        'Follow-up material differs between recorded tasks.')
+                require(len(row['response']['turns']) == 2 and
+                        row['response']['turns'][1]['answer'] == answer,
+                        'Incomplete multi-turn response.')
     return cases
+
+
+def validate_checks(checks, case, answer):
+    require([check['index'] for check in checks] == list(range(len(case['checks']))),
+            'Incomplete judgment checklist.')
+    for check in checks:
+        require(check['status'] in {'通过', '不通过', '无法确认'}, 'Unknown judgment status.')
+        require(check['reason'], 'Missing judgment reason.')
+        require(isinstance(check['evidence'], str) and check['evidence'] in answer,
+                'Judgment evidence is not in the recorded answer.')
+        require(check['evidence'] or check['status'] == '无法确认', 'Missing judgment evidence.')
 
 
 def run_impact(root, item, report, sources):
@@ -140,7 +168,7 @@ def validate(root=ROOT, impact_only=False):
     runs = index['runs']
     require(runs and len({item['id'] for item in runs}) == len(runs), 'Duplicate or empty run index.')
     catalog = json.loads(source_text(root, 'catalog.json'))
-    results, covered, count, records = [], set(), 0, 0
+    results, covered, count, records, expected_records = [], set(), 0, 0, 0
     for item in runs:
         require(item['state'] in {'historical', 'current'}, 'Unknown run state.')
         for field in ('report', 'sources', 'cases'):
@@ -155,6 +183,7 @@ def validate(root=ROOT, impact_only=False):
             covered.update(case['id'] for case in cases)
         count += len(cases)
         records += len(report['records'])
+        expected_records += sum(case.get('repetitions', 1) * 2 for case in cases)
         results.append({'id': item['id'], 'state': item['state'], 'cases': len(cases),
                         'records': len(report['records']), 'affected_cases': affected})
     required = index['required_current_cases']
@@ -164,7 +193,7 @@ def validate(root=ROOT, impact_only=False):
         require(not missing, 'Missing current behavior cases: ' + ', '.join(missing))
         require(not any(run['affected_cases'] for run in results),
                 'Evaluation inputs or dependency snapshot changed; use --impact and re-evaluate affected cases.')
-    return {'cases': count, 'records': records, 'archived_snapshots_match': True,
+    return {'cases': count, 'records': records, 'expected_records': expected_records, 'archived_snapshots_match': True,
             'current_cases_recorded': len(covered),
             'behavior_status': 'current-records-present-not-accuracy-proof' if covered
             else 'historical-only-no-current-model-run',
