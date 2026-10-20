@@ -9,6 +9,8 @@ description: "依据 Research-Starter-Kit 准备组会、会议交流与科研�
 
 ## 按用途读取
 
+不知从何开始的组会、科研记录或学习任务，按 [引导起步](../research-starter-paper/references/guided-start.md) 推进一个产物并自动保存进度。介绍、交流信和讲稿可按 [自然表达](../rsk-paper-writing/references/prose-editing.md) 匹配作者语气；保留真实称呼、身份、结果及约定，不向正文插入编辑过程。
+
 - 组会、论文汇报、meeting、实验日志和习惯：[科研实践](references/practice.md)。
 - 学术会议计划、现场交流、研究介绍与会后跟进：[会议参会](references/conferences.md)。
 - 开题、阶段汇报、预答辩和问答训练：[演练与反馈](references/rehearsal.md)。

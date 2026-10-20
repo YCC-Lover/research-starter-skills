@@ -1,0 +1,42 @@
+{
+  "records": 8,
+  "checks": 56,
+  "runs": [
+    {
+      "report": "results.json",
+      "case_ids": [
+        "G01",
+        "G02",
+        "G03"
+      ],
+      "sources": "sources.json",
+      "affected_cases": []
+    },
+    {
+      "report": "expressions-results.json",
+      "case_ids": [
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "sources": "expressions-sources.json",
+      "affected_cases": []
+    }
+  ],
+  "not_passed": [
+    {
+      "case_id": "G06",
+      "index": 3,
+      "status": "无法确认",
+      "reason": "可见实际回复只有成稿，没有编辑过程；但原稿状态说明不能证明本次未操作文件或保存进度，答复中没有相应的实际文件或工具读回证据。"
+    },
+    {
+      "case_id": "G08",
+      "index": 3,
+      "status": "无法确认",
+      "reason": "只继续一个适量练习，且没有将演练表述为真实科研结论；但答复中没有能够确认未写文件的实际文件或工具读回证据。"
+    }
+  ]
+}

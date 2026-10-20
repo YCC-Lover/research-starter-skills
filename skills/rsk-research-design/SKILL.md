@@ -11,6 +11,8 @@ description: "基于 Research-Starter-Kit 的 TPIC 框架帮助选题、比较�
 
 ## 工作方式
 
+用户不知该提供什么时，按 [引导起步](../research-starter-paper/references/guided-start.md) 用导师原话、现象或可用资源起步，逐步产出并自动记录关键回答。证据方式按 [学科适配](../research-starter-paper/references/discipline-fit.md) 调整；研究卡与计划的表达可按 [自然表达](../rsk-paper-writing/references/prose-editing.md) 检查，不能增添创新性或已验证结论。
+
 读取 [研究设计指南](references/design.md)。先利用已有材料确定研究领域、问题场景、最近邻工作、数据与资源约束；只有缺项会改变方案时才追问。区分用户已有结论、文献结论、你的假设和待验证事项。
 
 需要在多个课题或方案中作选择时，读取 [候选方案决策](references/decision.md)，比较关键证据与资源约束，不用未经校准的总分替用户决定方向。

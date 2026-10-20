@@ -4,13 +4,13 @@
 
 [![技能校验状态](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml)
 
-**把科研方法，变成你手里能继续推进的成果。**
+**不知道从哪开始科研？从你手边的一句话、一份笔记开始。**
 
-刚进课题组，想系统补上科研入门？导师指导有限，正在自己摸索？从找论文、读论文，到选题、写作、返修和学术交流，Research Starter Skills 把科研方法组织成 Codex 可以按任务使用的 **1 个总入口 + 6 个专业模块**，陪你从当前卡住的一步开始。
+刚进课题组，没有系统学过科研，连该准备什么材料都不清楚？Research Starter Skills 会先利用你已有的信息，带你逐步形成研究问题、读懂论文、整理结果、修改章节，自动保存进度。**1 个总入口 + 6 个专业模块**，覆盖从科研起步到论文、返修与学术交流的具体任务。
 
 先读 [Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 的原创教程理解方法，再用本项目的 skills 处理自己的文献、笔记、数据和草稿：把阅读变成观点，把结果变成论证，把问题变成下一步。
 
-**[下载最新版](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [开始安装](#三步开始) · [新手学习路径](docs/LEARNING_PATH.md) · [看完整任务](examples/worked/README.md) · [看对照实测](evals/utility/REPORT.md)**
+**[下载最新版](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [开始安装](#三步开始) · [新手从这里开始](docs/BEGINNER.md) · [原教程学习路径](docs/LEARNING_PATH.md) · [看完整任务](examples/worked/README.md)**
 
 **来源与致谢：** 科研方法源自 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 的全部 19 篇教程。感谢郭兰哲老师及陈煜旸、葛凌岳、张逸凯等同学的整理与分享；YCC-Lover 负责独立提炼、Codex 适配与扩展维护。[逐篇来源](skills/research-starter-paper/references/sources.md) · [归属与使用范围](NOTICE.md)
 
@@ -22,6 +22,7 @@
 
 | 你手里有什么 | skill 帮你推进什么 | 你会拿到什么 |
 | --- | --- | --- |
+| 不知道提供什么，只有导师一句话 | 从眼前困难开始，只补关键材料，逐步完成一件事 | 问题卡、第一步行动、自动保存的项目进度 |
 | 一个宽泛方向、有限时间和设备 | 比较候选问题，找到最有信息价值的验证 | 近期优先建议、研究问题、最小验证计划 |
 | 几篇论文和零散阅读笔记 | 比较路线、条件与分歧，形成自己的观点 | 证据综合、可追溯索引、具体研究切口 |
 | 一段引言或学位论文章节 | 重建论证，统一术语、数据版本和跨章关系 | 可替换正文、实质修改说明、联动清单 |
@@ -53,14 +54,15 @@ python scripts/install_skills.py
 
 ### 2. 带上当前材料
 
-新开 Codex 对话，附上一段草稿、一份记录或几篇论文。还没有适合分享的材料，可以先用 [首次引言练习](examples/first-run/README.md) 或 [七套教学任务](examples/worked/README.md)。
+新开 Codex 对话，附上一段草稿、一份记录或一篇论文。没有文件也没关系，先用自己的话说方向和眼前困难，不需要自己先整理完。[零材料起步](docs/BEGINNER.md) · [七套教学任务](examples/worked/README.md)
 
 ### 3. 说出你想完成的事
 
 ~~~text
 使用 $research-starter-paper。
-我是材料方向硕士生，正在比较两种处理的热行为，材料见附件。
-请先给我本周值得优先推进的问题和最小验证计划。
+我刚读研，没系统学过科研，不知道该提供什么材料。
+导师说先看看【用自己的话写方向】，带我做出下次组会能用的东西。
+工作目录是【我的项目目录】，请自动保存进度。
 ~~~
 
 ~~~text
@@ -84,7 +86,9 @@ python scripts/install_skills.py
 
 **让下一步更明确。** 候选问题比较会解释取舍；实验建议会说明新增信息的价值；学习反馈会回到你的原句，并给一个可以完成的练习。
 
-**持续积累自己的研究记录。** 可复用现有项目笔记或 [接续模板](skills/research-starter-paper/assets/project-state.md)，换对话时从当前文件和真实进展继续。[按阶段学习](docs/LEARNING_PATH.md)
+**进度不用自己反复整理。** 引导任务由代理保存关键回答、实际产物与下一步；新对话先读检查点、核对文件变化，再继续。已有笔记可以复用，只读任务和单段润色不强制建记录。[保存与接续](docs/BEGINNER.md#进度由代理保存)
+
+**自然表达，保留你的声音。** 语言编辑支持作者样例、结构调整和26类表达复核，保护数值、引用、公式与专业含义。不同研究采用相应证据方式，定量实验、定性访谈、历史文本和理论证明不套同一模板。
 
 ## 总入口与六个模块
 
@@ -100,13 +104,11 @@ python scripts/install_skills.py
 
 TG/DTG 模块还提供只读 CSV 检查与按实际温度网格计算导数的工具；`--derive` 使用环境中已有的 NumPy。[完整热分析任务](skills/rsk-experiments-figures/references/thermal-task.md)
 
-## 看成果，也看对照
+## 看实际成果
 
-[完整教学任务](examples/worked/README.md)提供输入、提示词和纠错练习；[实用价值对照](evals/utility/REPORT.md)比较相同材料下直接使用 Codex 与加载 skill 的实际答复。
+[新手与表达任务验收](evals/guided/REPORT.md)记录从空白起步、跨对话接续、材料变化检查和文字编辑的实际答复；[完整教学任务](examples/worked/README.md)提供可自己练习的合成材料。保存成功、文件可用、事实边界和用户操作分别核对，不用一个总分代替体验。
 
-本轮采用六类复杂任务、每类两次独立重复，并从研究推进、证据整合、交付可用、行动决策和协作效率五个维度评价。你可以直接阅读两组答案，找到与自己最接近的场景。[实验协议](evals/utility/PROTOCOL.md) · [历史评测](evals/README.md) · [工程验收](docs/PROJECT_AUDIT.md)
-
-本轮两组均分均为14.96/15，十二对整体接近。文献综合中的判别设计、章节修改的联动清单、针对原话的学习反馈，都有完整实例可看；选择你需要的工作方式，比单看一个总分更有用。
+这些记录是小规模合成任务验证，不承诺录用、通用于所有学科的效果或固定节省时间。自动保存只在当前任务中执行，不是后台监控；新对话仍需定位项目。[工程验收](docs/PROJECT_AUDIT.md)
 
 ## 自己使用，也可以继续改进
 
@@ -120,7 +122,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 安装器保存版本和文件哈希；`--doctor` 提供只读环境诊断。数据解析、作图和 Word/PDF/LaTeX 交付按当前 Codex 环境中的工具完成。[详细验收](docs/INSTALLATION.md#安装后验收)
 
-当前版本为 **v1.4.0**，来源固定于上游提交 `36ba390d153f5289308ec833e2b633c26b304a7b`。原教程归属、独立补充与发布范围见 [NOTICE.md](NOTICE.md)，引用信息见 [CITATION.cff](CITATION.cff)。
+当前版本为 **v1.5.0**，来源固定于上游提交 `36ba390d153f5289308ec833e2b633c26b304a7b`。原教程归属、独立补充与发布范围见 [NOTICE.md](NOTICE.md)，引用信息见 [CITATION.cff](CITATION.cff)。
 
 ## 一起让科研起步更容易
 

@@ -1,6 +1,6 @@
 ---
 name: rsk-paper-writing
-description: "依据 Research-Starter-Kit 组织论文论证、起草或修改章节，并核对学位论文的长文一致性。用于摘要、引言、方法、结果与讨论等实质写作；单纯语言润色无需整套流程。"
+description: "组织论文论证、起草或修改章节、核对学位论文一致性，也可单独自然润色并匹配作者语气。用于学术文字与实质写作；只润色时不启动整套研究流程。"
 ---
 
 # 论文论证与章节写作
@@ -8,6 +8,10 @@ description: "依据 Research-Starter-Kit 组织论文论证、起草或修改�
 学习请求解释当前段落的论证作用，结合材料给短例子、可选改写练习及反馈；执行请求直接交付指定稿件；检查请求先报告问题及依据，不自动重写或修改文件。教学例子与真实研究结论分开，不要求所有用户完成整套课程。
 
 ## 选择所需指南
+
+新手尚不知道提供什么材料时，按 [引导起步](../research-starter-paper/references/guided-start.md) 从一个可分享片段开始，自动保存关键回答和产物；独立润色、只读检查不建立记录。学科与证据方式按 [适配指南](../research-starter-paper/references/discipline-fit.md) 调整。
+
+- 去模板腔、语气匹配、自然润色或成稿表达复核：[自然表达](references/prose-editing.md)。纯润色只加载此页，保留科学含义、作者语气和文件结构；默认交最终稿，不向论文中插入工具来源或编辑过程。
 
 - 全文论证、作者与投稿前准备：[论文结构](references/structure.md)。
 - 学位论文、长文一致性与修改影响：[长篇论文](references/thesis-longform.md)。

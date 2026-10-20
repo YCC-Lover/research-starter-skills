@@ -2,13 +2,13 @@
 
 [中文](README.md) · [English](README_EN.md) · [Changelog](CHANGELOG.md)
 
-**Turn research guidance into work you can use.**
+**Start research with the material you have, even one sentence.**
 
-Starting research on your own? Preparing a thesis chapter, interpreting results, or responding to reviewers? Bring your papers, notes, data and draft to Codex. One router and six focused skills help you move from your current question to a concrete deliverable.
+New to research and unsure what to provide? Start with your supervisor's words, one note, or your current difficulty. One router and six focused skills guide a manageable next step, create a usable deliverable, and save progress in your authorized project. Continue through reading, writing, analysis, revision and academic communication as needed.
 
 Learn the methods from [Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit), then apply them to your own project with these skills.
 
-**[Download](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [Learning path](docs/LEARNING_PATH.md) · [Complete task packs](examples/worked/README.md) · [Utility comparison](evals/utility/REPORT.md)**
+**[Download](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [Beginner start](docs/BEGINNER.md) · [Learning path](docs/LEARNING_PATH.md) · [Complete task packs](examples/worked/README.md)**
 
 **Origin and thanks:** The methods come from all 19 tutorials in LAMDA-NeSy/Research-Starter-Kit. Thanks to Guo Lanzhe, Chen Yuyang, Ge Lingyue, Zhang Yikai and the other contributors. YCC-Lover independently distills, adapts, extends and maintains this Codex skill bundle. [Sources](skills/research-starter-paper/references/sources.md) · [Attribution and usage scope](NOTICE.md)
 
@@ -20,6 +20,7 @@ Product concept image generated with GPT-image. [Image notes](docs/images/workfl
 
 | Bring | Work toward | Take away |
 | --- | --- | --- |
+| No organized material yet | Identify one useful next step | A question card, minimal material request and saved progress |
 | A broad topic and limited resources | Choose a useful research question | A conditional priority and minimum informative test |
 | Papers and reading notes | Connect methods, evidence and disagreements | A synthesis, traceable evidence and a concrete research angle |
 | An introduction or thesis chapter | Strengthen the argument and align versions | Replacement prose, substantive edits and linked changes |
@@ -41,9 +42,16 @@ python scripts/install_skills.py
 
 Python 3.10+; installation uses the standard library. All seven skill directories are installed together under CODEX_HOME/skills, or ~/.codex/skills by default. [Installation and updates](docs/INSTALLATION.md)
 
-**2. Bring one task.** Open a new Codex chat and attach your current material. Start with the [first exercise](examples/first-run/README.md) or [included teaching packs](examples/worked/README.md) to explore the workflow.
+**2. Bring one task.** Open a new Codex chat and attach one item, or describe your direction in everyday words. You do not need a complete proposal or an expert prompt. [Beginner guide](docs/BEGINNER.md) · [Teaching packs](examples/worked/README.md)
 
 **3. Ask for a usable result.**
+
+~~~text
+Use $research-starter-paper. I have not had systematic research training.
+My supervisor mentioned [direction], but I do not know what material to provide.
+Guide me toward something I can discuss at my next meeting.
+My authorized project folder is [path]; please save progress there.
+~~~
 
 ~~~text
 Use $rsk-paper-writing to revise the supplied discussion.
@@ -70,13 +78,13 @@ Give focused feedback on my answer, then ask the next question.
 
 [19 ready-to-adapt prompts](examples/README.md) · [Stage-by-stage learning](docs/LEARNING_PATH.md)
 
-## Inspect the actual work
+## Keep moving without rebuilding the context
 
-The [utility comparison](evals/utility/REPORT.md) uses six complex tasks with two independent repetitions each. It compares direct Codex use and skill-assisted use on the same materials, scoring research progress, evidence integration, deliverable usability, actionable decisions and collaboration efficiency. Read both sets of answers and their individual judgments.
+Guided tasks save confirmed information, hypotheses, answered or unavailable questions, real files and the next step in permanent local checkpoints. A fresh chat can resume from the project and check whether source files changed. This is task-time saving, not background monitoring or automatic memory across unrelated chats.
 
-Both arms averaged 14.96/15, with all twelve pairs in the predefined close range. Inspect the concrete examples of literature synthesis, linked chapter edits and learner-specific feedback to choose a workflow that suits your task.
+Prose editing supports author samples, paragraph restructuring and 26 editing patterns while protecting scientific meaning, citations, numbers and formulas. Evidence guidance adapts to quantitative, qualitative, historical and theoretical work; it does not impose one discipline's method on every project.
 
-[Fixed protocol](evals/utility/PROTOCOL.md) · [Evaluation history](evals/README.md) · [Engineering checks](docs/PROJECT_AUDIT.md)
+The [guided-task records](evals/guided/REPORT.md) show actual starts, handoffs, file checks and editing outputs. These are small synthetic-task checks, not proof of universal outcomes, fixed time savings, detector evasion or publication acceptance. [Engineering checks](docs/PROJECT_AUDIT.md)
 
 ## Keep your workflow portable
 
@@ -84,6 +92,6 @@ Skills are editable Markdown files. Continue with another Codex account in the s
 
 The installer records versions and file hashes, supports read-only checks and optional-tool discovery, and updates with an explicit backup. Document export, plotting and file parsing use the tools available in your Codex environment.
 
-Version **1.4.0** retains the upstream 19-tutorial mapping at revision 36ba390d153f5289308ec833e2b633c26b304a7b. [Attribution and usage scope](NOTICE.md) · [Citation metadata](CITATION.cff)
+Version **1.5.0** retains the upstream 19-tutorial mapping at revision 36ba390d153f5289308ec833e2b633c26b304a7b. [Attribution and usage scope](NOTICE.md) · [Citation metadata](CITATION.cff)
 
 Star to find the project again, share a sanitized task in [Issues](https://github.com/YCC-Lover/research-starter-skills/issues), or contribute a concrete example. [Contributing](CONTRIBUTING.md)

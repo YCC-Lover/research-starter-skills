@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "grading": {
+    "type": "guided-deliverable-v1"
+  },
+  "cases": [
+    {
+      "id": "G01",
+      "skill": "research-starter-paper",
+      "variants": [
+        "skill"
+      ],
+      "files": [
+        "evals/guided/inputs/empty-start.md",
+        "evals/guided/inputs/history-answer.md",
+        "evals/guided/inputs/resume.md"
+      ],
+      "checks": [
+        "从空白求助提出少量、易回答的关键信息请求，不要求用户先填写专业问卷。",
+        "补充后给历史学可用的问题卡或组会起步成果，不虚构报刊、引文、实验或文献空白。",
+        "实际自动保存事实、问题/回答、产物与下一步，而非只口头承诺。",
+        "全新上下文从项目文件继续，不要求重述已记录方向，不把计划当完成。"
+      ],
+      "dependencies": [
+        "skills/research-starter-paper/SKILL.md",
+        "skills/research-starter-paper/references/guided-start.md",
+        "skills/research-starter-paper/references/discipline-fit.md",
+        "skills/research-starter-paper/references/handoff.md",
+        "skills/research-starter-paper/scripts/research_session.py"
+      ]
+    },
+    {
+      "id": "G02",
+      "skill": "research-starter-paper",
+      "variants": [
+        "skill"
+      ],
+      "files": [
+        "evals/guided/inputs/empty-start.md",
+        "evals/guided/inputs/qualitative-answer.md",
+        "evals/guided/inputs/resume.md"
+      ],
+      "checks": [
+        "先询问关键方向或当前需要，不把“没有正式材料”当成无法帮助。",
+        "形成适合教育学的可讨论问题，不把非正式聊天写成已获同意的研究访谈或总体因果证据。",
+        "实际自动保存事实与未知项，用户无需建模板或运行进度脚本。",
+        "全新上下文利用保存的材料状态推进十分钟内的一步，不重复索要已经回答的背景。"
+      ],
+      "dependencies": [
+        "skills/research-starter-paper/SKILL.md",
+        "skills/research-starter-paper/references/guided-start.md",
+        "skills/research-starter-paper/references/discipline-fit.md",
+        "skills/research-starter-paper/references/handoff.md",
+        "skills/research-starter-paper/scripts/research_session.py"
+      ]
+    },
+    {
+      "id": "G03",
+      "skill": "rsk-experiments-figures",
+      "variants": [
+        "skill"
+      ],
+      "files": [
+        "evals/guided/inputs/thermal-start.md",
+        "evals/guided/inputs/thermal-answer.md",
+        "evals/guided/inputs/resume.md",
+        "evals/guided/inputs/thermal.csv",
+        "evals/guided/inputs/thermal-updated.csv",
+        "evals/guided/inputs/lab-note.md",
+        "evals/guided/inputs/origin-placeholder.txt"
+      ],
+      "checks": [
+        "不假称解析了Origin占位文件，指导取得可读导出，不要求用户先提供完整论文。",
+        "基于实际CSV给结果表达，区分高温残余与较低温失重，技术复测不充当独立样本。",
+        "实际保存文件来源、进度和下一步，不编造显著性、交联或完成实验。",
+        "新上下文发现CSV变化或重新读取更新值，不把旧端点27继续当作当前T2结果。"
+      ],
+      "dependencies": [
+        "skills/research-starter-paper/SKILL.md",
+        "skills/research-starter-paper/references/guided-start.md",
+        "skills/research-starter-paper/references/discipline-fit.md",
+        "skills/research-starter-paper/references/handoff.md",
+        "skills/research-starter-paper/scripts/research_session.py",
+        "skills/rsk-experiments-figures/SKILL.md"
+      ]
+    },
+    {
+      "id": "G04",
+      "skill": "rsk-paper-writing",
+      "variants": [
+        "skill"
+      ],
+      "files": [
+        "evals/guided/inputs/patterns.md"
+      ],
+      "checks": [
+        "P01对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P02对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P03对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P04对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P05对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P06对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P07对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P08对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P09对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P10对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P11对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P12对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P13对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P14对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P15对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P16对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P17对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P18对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P19对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P20对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P21对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P22对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P23对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P24对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P25对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "P26对应表达得到具体、自然且不丢有据事实的处理；有意义例外可保留。",
+        "保留作者简洁语气，未编数据、人物经历、引用、因果或权威。",
+        "按请求给26段最终稿，不添加AI检测分数或规避承诺。"
+      ],
+      "dependencies": [
+        "skills/rsk-paper-writing/references/prose-editing.md",
+        "skills/rsk-paper-writing/SKILL.md"
+      ]
+    },
+    {
+      "id": "G05",
+      "skill": "rsk-paper-writing",
+      "variants": [
+        "skill"
+      ],
+      "files": [
+        "evals/guided/inputs/file-edit.md",
+        "evals/guided/inputs/draft.md"
+      ],
+      "checks": [
+        "真实修改指定文件正文，而不只给泛化建议；对比原文有适当表达改善。",
+        "YAML、代码、链接目标、引用键、公式与数字保持，保护检查无未经授权变化。",
+        "保留不确定性、否定与量词，不把未验证交联写成已证实。",
+        "指定文件中只写最终正文并简报，不新建科研进度、不向用户交付双份草稿；允许已授权中间位置保留保护备份与候选稿。"
+      ],
+      "dependencies": [
+        "skills/rsk-paper-writing/references/prose-editing.md",
+        "skills/rsk-paper-writing/scripts/check_prose_edit.py",
+        "skills/rsk-paper-writing/SKILL.md"
+      ]
+    },
+    {
+      "id": "G06",
+      "skill": "rsk-rebuttal",
+      "variants": [
+        "skill"
+      ],
+      "files": [
+        "evals/guided/inputs/rebuttal.md"
+      ],
+      "checks": [
+        "给一段自然、礼貌、有实际内容的回复，不残留夸大套话。",
+        "保留80/23、95/92与单次81/80的状态，不编造公平调参、显著性或已修改定位。",
+        "明确问题与待办，不把计划包装为已完成，不保证接受。",
+        "遵守不改文件、不保存进度、只给成稿的范围。"
+      ],
+      "dependencies": [
+        "skills/rsk-rebuttal/references/rebuttal.md",
+        "skills/rsk-paper-writing/references/prose-editing.md",
+        "skills/rsk-rebuttal/SKILL.md"
+      ]
+    },
+    {
+      "id": "G07",
+      "skill": "rsk-literature",
+      "variants": [
+        "skill"
+      ],
+      "files": [
+        "evals/guided/inputs/literature.md"
+      ],
+      "checks": [
+        "形成围绕共同问题的综合段落，而非逐篇摘要。",
+        "A0/A1视为同一工作并指出条件和版本变化，不将差异全归因于划分。",
+        "保留D负面结果，B跨数据集不能按绝对分数排名，综述不算新实验。",
+        "给具体下一步，不虚构全文阅读、引用或机制。"
+      ],
+      "dependencies": [
+        "skills/rsk-literature/references/synthesis.md",
+        "skills/rsk-literature/SKILL.md"
+      ]
+    },
+    {
+      "id": "G08",
+      "skill": "rsk-research-workflow",
+      "variants": [
+        "skill"
+      ],
+      "files": [
+        "evals/guided/inputs/rehearsal.md",
+        "evals/guided/inputs/student-answer.md"
+      ],
+      "checks": [
+        "先提出一个实际检查论证的问题并等待，不提前泄漏完整答案。",
+        "反馈针对学生把三个例子当一般证明的原话，解释量词与举例的差别。",
+        "给有效的检验或反例（例如n=40时1681=41平方），不把有限检验当证明。",
+        "继续一个适量练习，不写文件、不把演练当真实科研结论。"
+      ],
+      "dependencies": [
+        "skills/rsk-research-workflow/references/rehearsal.md",
+        "skills/rsk-research-workflow/SKILL.md"
+      ]
+    }
+  ]
+}

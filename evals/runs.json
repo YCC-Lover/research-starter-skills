@@ -1,12 +1,14 @@
 {
   "schema_version": 2,
   "required_current_cases": [
-    "U01",
-    "U02",
-    "U03",
-    "U04",
-    "U05",
-    "U06"
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08"
   ],
   "runs": [
     {
@@ -25,10 +27,24 @@
     },
     {
       "id": "2026-10-20-v1.4.0-utility",
-      "state": "current",
+      "state": "historical",
       "cases": "evals/utility/cases.json",
       "report": "evals/utility/results.json",
       "sources": "evals/utility/sources.json"
+    },
+    {
+      "id": "2026-10-20-v1.5.0-guided-progress",
+      "state": "current",
+      "cases": "evals/guided/cases.json",
+      "report": "evals/guided/results.json",
+      "sources": "evals/guided/sources.json"
+    },
+    {
+      "id": "2026-10-20-v1.5.0-expression-and-research",
+      "state": "current",
+      "cases": "evals/guided/cases.json",
+      "report": "evals/guided/expressions-results.json",
+      "sources": "evals/guided/expressions-sources.json"
     }
   ]
 }

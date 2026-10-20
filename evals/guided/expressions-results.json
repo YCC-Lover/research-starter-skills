@@ -1,0 +1,598 @@
+{
+  "package_version": "1.5.0",
+  "case_ids": [
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08"
+  ],
+  "protocol": {
+    "independent_context_per_task": true,
+    "type": "guided-deliverable-v1",
+    "synthetic_materials": true,
+    "path_normalization": "Only local workspace/package prefixes are replaced; raw envelopes retained locally."
+  },
+  "snapshot": {
+    "cases_sha256": "e38654338a8298bf9bb4d753f1705c24fc2721c4e7431635406424e7f08c00c5",
+    "inputs_sha256": "e1841f788d61614ab6a29b1bcfebd1a24b8014f787f30d71583840798dbbac64",
+    "skills_sha256": "77e9f06d7e825cbe07f9a283e714e721d00602bf3b27109697d0ad0e3e09f084",
+    "skill_files_sha256": {
+      "skills/research-starter-paper/agents/openai.yaml": "cf5ee5d65193bb30990a3f66080138f61c8eb615ad63440439de7fe8f2ee9102",
+      "skills/research-starter-paper/assets/evidence-ledger.tsv": "0b51625d3101e9dc2da1017780e9cf179ffc144ecf7fa37d757b60e0711af16e",
+      "skills/research-starter-paper/assets/manuscript-plan.md": "1fdc0d48d5b6c41ca01a292a31b34b6b65c33316077a71260c846dd050ef31eb",
+      "skills/research-starter-paper/assets/project-state.md": "ec731cf95a73e2c26790a71678ccabc6dca112b784beaa82616a7230ad0cfdb1",
+      "skills/research-starter-paper/assets/task-brief.md": "5f6f0e5c3da58773d88048aeb2675103e2ff1d824bca58502598b11025c8a12f",
+      "skills/research-starter-paper/references/discipline-fit.md": "bec10d6ec1eb2d404c8c4f0f2d2858de8cd61a9cc0bee4b77e4828af2c98266d",
+      "skills/research-starter-paper/references/evidence-and-figures.md": "9b460fb529a5a735682e49b069a96026aa9cb3421e35327d619806236ba355f0",
+      "skills/research-starter-paper/references/guided-start.md": "5507c45d5a5cdb3ff5cf8034afc00bda522b25b3eb68719f81bae0b9c9e95534",
+      "skills/research-starter-paper/references/handoff.md": "1fdf3e1b2acdc1ae881e45a14914b329e6014b3fd42c8827bd720151437822ea",
+      "skills/research-starter-paper/references/learning.md": "7b3499183e30fc86e1cc755bffc94c69945f7cff221dccc7d7eaf0affc8d4537",
+      "skills/research-starter-paper/references/paper-sections.md": "ff5d0dbf5ea827b48fce526c77e5045dac94ef364956ad7990d66f0282420b6c",
+      "skills/research-starter-paper/references/research-practice.md": "cf0d9db65c61cf20a692ae773d5865f5f3afefc4654c5af40c61e4788f5e5e33",
+      "skills/research-starter-paper/references/research.md": "61a315184cf03d98ea351bf119a49c6d4b2891b16dda0cbfbb2ebc10675b1bb4",
+      "skills/research-starter-paper/references/revision.md": "35f98497504cf235ad9652ae0039e97e1c6e3b48b73ed12ab9dd5e65b8a399eb",
+      "skills/research-starter-paper/references/source-manifest.json": "37fc4333ce859f3612affe4020eb257174b268391988410b4879233327d7a60e",
+      "skills/research-starter-paper/references/sources.md": "af3121d72eae868680caf21db8ea049d02acb95dad4604af8df723ba3d27e06f",
+      "skills/research-starter-paper/references/task-brief.md": "4ba7bea734908ad59cd7cb65997e0a10c5fde6964eafb2002f1b2994f0741d85",
+      "skills/research-starter-paper/scripts/research_session.py": "082dcbba66a31eab645784ad292a2591b13bc187d92ef4531b48faa540d109c8",
+      "skills/research-starter-paper/SKILL.md": "48afd4392ff3a46676b938f7463db3d7300280de16cf88c2735f2cfb9c078570",
+      "skills/rsk-experiments-figures/agents/openai.yaml": "a9cdf55c7f2b51559d8e54190431ab120bdf3d13f1021158ddfe5bb55b1a47c8",
+      "skills/rsk-experiments-figures/assets/thermal-metadata.json": "81f66005be0c40054bbbb0cf19ad1dc14ebc723d585911f6592d8c10489196d1",
+      "skills/rsk-experiments-figures/references/characterization.md": "c8e291bbfc64fb5a442510145fc00b8a4cc3b3a4ebedab851272ee8e126ca794",
+      "skills/rsk-experiments-figures/references/examples-resources.md": "33bd77133002cc2b6c863037420dbabd010e036f48d28bcdc04877c06280578d",
+      "skills/rsk-experiments-figures/references/experiments.md": "bf726a0ea20b98657bc8dcff51f7a9648a0fd336c72a772f5dfb714a529571cc",
+      "skills/rsk-experiments-figures/references/figures.md": "7ef037bcb7fbf960c1cff15fb8aefc75251906e52ca9f7fd298afecd321cee55",
+      "skills/rsk-experiments-figures/references/measurement-checks.md": "528862aeb4ea68317f0cf36f3325b5d583460e43c3cd73788bd1aa1a7cf9b30e",
+      "skills/rsk-experiments-figures/references/source-manifest.json": "916973fdd0fca33319e86dcb226610c0897bb9bb7e0c50bf9b779e0cfd29fcf8",
+      "skills/rsk-experiments-figures/references/sources.md": "ccec574e37dcffea3c0a2070c8b850df7b6d44109aa30ec41d6dd613c517ca52",
+      "skills/rsk-experiments-figures/references/thermal-task.md": "ea28cc6d201cfd8e5cdac372ae38460e4ba8091c2eb385af170e5653dd3c1191",
+      "skills/rsk-experiments-figures/scripts/check_thermal_data.py": "9aabafc976b0784cd9ddd89afdf46f8817ffcfcf1d43b79c606122a73a38405d",
+      "skills/rsk-experiments-figures/SKILL.md": "f226e0e49118d575d0fd81c4aa0c153a40e9b726263e58b8ffdf646cd893c1bf",
+      "skills/rsk-literature/agents/openai.yaml": "d3a0c987d6dd5bf65faaf0c196ffad9ff929dff55bf82b45e19500f56aca4e42",
+      "skills/rsk-literature/assets/synthesis-matrix.tsv": "cbfd385b28a8d0222bdf81aa75600d1ebe3088f48cd9a13eb3173e01ea09fa00",
+      "skills/rsk-literature/references/references.md": "7eb3182af1ddb3c87941aef6008c27c543e7514a63700e79f1edfd49723f5f63",
+      "skills/rsk-literature/references/search-reading.md": "f11b29c3d9fd08d46ba0d8f7ba864194e7460762f462f1e2ef7144183903515e",
+      "skills/rsk-literature/references/source-manifest.json": "1fb1e976bb739224b60cf1655b38cdfdb7fa994bf2e1f2332edfcc4a1b8537d6",
+      "skills/rsk-literature/references/sources.md": "e94df4a255a5e5b5894a5ff78225370f294c7df42d512d3ecbb046c879aff705",
+      "skills/rsk-literature/references/synthesis.md": "abb439d2cd38ce557d37d7664fcdf41afe9dc637da9cf32395a88b037122e57a",
+      "skills/rsk-literature/SKILL.md": "075a3558b6b458a589b9e06ea92937c66bc928f1fd4156c34f27da4d10495f43",
+      "skills/rsk-paper-writing/agents/openai.yaml": "ea53c4c6d8e7e97b4fa8296715ec84bbd5632bebf903e3b44d987c394a449f74",
+      "skills/rsk-paper-writing/assets/chapter-map.tsv": "a0809f9955aae527d0fb5dea9c8e9a5902a2efc1e2d2d34fbaaa8e97766983dc",
+      "skills/rsk-paper-writing/assets/terminology.tsv": "5d289f128e390d9b0d6fa17572c00a06fb17ab6866364bb75bd7dbfce30b6b76",
+      "skills/rsk-paper-writing/references/abstract-introduction.md": "e6653e7911249254507ce165428e9a64191e7f1cb3b9be609a1a6a4dd44cc0ff",
+      "skills/rsk-paper-writing/references/discussion-submission.md": "5499842c8380cd0b138bb8250f7afa1a9905de399ea9b05eeb0d0623713e1365",
+      "skills/rsk-paper-writing/references/examples.md": "190f7fe3be2d349b508e5a80165e0834bb4f9007e686a08908ec2692f5b3acda",
+      "skills/rsk-paper-writing/references/prose-editing.md": "4fd43bdffa382ed03ca798825c3d7e305449f62916147ee715c86f306d253566",
+      "skills/rsk-paper-writing/references/related-methods.md": "51def848832f7914139850bdf1209014b5fdbdd66b899960017f64553f5d7e7c",
+      "skills/rsk-paper-writing/references/results-discussion.md": "d5730604ecec30c6b2147c7698ed51a4775aeb51773052a7f502aa70c4610556",
+      "skills/rsk-paper-writing/references/source-manifest.json": "127e951958a97a4731c63bb291ad48886dcad7c456fc35e01d49026d38deddbe",
+      "skills/rsk-paper-writing/references/sources.md": "106b4d88652cdba6966f22d67a4e421f296f73cd93b06ac86058f4bc0091af86",
+      "skills/rsk-paper-writing/references/structure.md": "e683d20d80b8892c713954053067a24639c02ef04261d716830934b4e142829f",
+      "skills/rsk-paper-writing/references/thesis-longform.md": "a062ac64ee8a25448dfa03912f143a380287fb0bdd1d4f9970125ffd60d2f820",
+      "skills/rsk-paper-writing/references/third-party-notices.md": "9104bb00e52e065f774b889e66dfca34bfb40c4b652d6c48940e85d70c44bb91",
+      "skills/rsk-paper-writing/scripts/check_prose_edit.py": "9949c96e41069b60637bbbc053577665658ed6acd80e97e3b19dcc624f362445",
+      "skills/rsk-paper-writing/SKILL.md": "d31418c2ebde6b2629d8b902bb9d28a0febc712b4ce247e5cb851a642272e7cc",
+      "skills/rsk-rebuttal/agents/openai.yaml": "3bfae617d701a157a1dc1f55000ed87c50a88ea8604178a8d48ff1496c2d708f",
+      "skills/rsk-rebuttal/assets/revision-trace.tsv": "2e1011558d9b14b6e7189bbd17d2542ff1b5668011c28ee8e61a0895b793c42a",
+      "skills/rsk-rebuttal/references/rebuttal.md": "23ba77d83274a14223048ec178077476e4cf028b55024975aa6a25f720ae0920",
+      "skills/rsk-rebuttal/references/revision-trace.md": "875971b62a38d3c200699b5879fba22a74afb56a94772dffea0af57d639a55c4",
+      "skills/rsk-rebuttal/references/source-manifest.json": "2968c468128e112bafd6d47215eae45f95de681697140b4fda6da6bf47295573",
+      "skills/rsk-rebuttal/references/sources.md": "b727680e1b4af3c8dae896d98ffdd05d6dac08cffbad3f88b095e02066a4238d",
+      "skills/rsk-rebuttal/SKILL.md": "d9e2c8043ef094d611d0c3b024a9f8ebe46eb409291a3edd72269f1563fef370",
+      "skills/rsk-research-design/agents/openai.yaml": "4bd27ade4708961b3a4b7ddcb13db2909b340fcd4c76ae127b2abcde62e04482",
+      "skills/rsk-research-design/references/decision.md": "1624114b865a12dba189e625ab0709f3623979c0839284d8fea144f3d2f5815c",
+      "skills/rsk-research-design/references/design.md": "2987a6f4ebd066b32be74ec0e5487cca7ff7eea45e9c824fda28237252af6e20",
+      "skills/rsk-research-design/references/source-manifest.json": "7dd116585a350b7dfa509b2510ebb221ae17db7a97a55114bd7714a68300abab",
+      "skills/rsk-research-design/references/sources.md": "b2e41d99af3a3aa678091063a05d240983a414c417eeb3d226eaed8c8507afab",
+      "skills/rsk-research-design/SKILL.md": "ef63c6169072b95c5ad9b0c346453a4578ec3cd6f25efa9d8ba45246c487501a",
+      "skills/rsk-research-workflow/agents/openai.yaml": "eae353cec6b227b9e8080c39e1a20ab91125cdb4254f2ef06f59c7907ad9d7dc",
+      "skills/rsk-research-workflow/references/ai-collaboration.md": "b20245fde2a9347767c18700e7db56e0498a0dce76eed40aa26413174964f27c",
+      "skills/rsk-research-workflow/references/claude-snapshot.md": "0e8b48f3c21a83363a27fad8b3a56562d30c922dd981df9ca3b9ba09604b4df9",
+      "skills/rsk-research-workflow/references/conferences.md": "bb1de09204bd527ad8a78e0a1712d6b16940b295c2c73c7b2ad5cdd8670c3e93",
+      "skills/rsk-research-workflow/references/funding.md": "3e9aa791a393880ab6320762e829be14045bedc61798276f96633138c0a08828",
+      "skills/rsk-research-workflow/references/practice.md": "b5343e9d5b563563b628b4de4f6563db90af6196084c5279e1d2d21431154131",
+      "skills/rsk-research-workflow/references/rehearsal.md": "6377cf5ee0d886c5e46facad670e11532ed112ab5781f0fe2f8367fb8e7f8e93",
+      "skills/rsk-research-workflow/references/responsible-ai.md": "d04cd0718e389d67676017f273eebf7bf319732f5fd6413bf012e8bfcc0c201d",
+      "skills/rsk-research-workflow/references/source-manifest.json": "21331a64b25bd5b1cc7334e60d69abd17120c551ef5d2242875ac9fc38edee4c",
+      "skills/rsk-research-workflow/references/sources.md": "3030a0b53b85136fac2e9a5e1b26dbb51230f41066c7e47693c8959c240efcf4",
+      "skills/rsk-research-workflow/SKILL.md": "3be4dc1a3a84037ef44d2646f216c505669523507fd3d0aeef518f19a9da34f5"
+    }
+  },
+  "records": [
+    {
+      "case_id": "G04",
+      "variant": "skill",
+      "response": {
+        "answer": "## Actual assistant reply 1\n\nP01 我们测了12个独立试样。\n\nP02 我们保存了原始曲线。\n\nP03 我们记录了温度。\n\nP04 两组结果不同。\n\nP05 我们明天核对原始记录。\n\nP06 这个方案把记录集中到了同一个文件。\n\nP07 我们记录了日期和条件，并保存了表格。\n\nP08 我们先看曲线，再看条件，最后写出结论。\n\nP09 这个变化在某些情况下可能与条件有关。\n\nP10 The report is high quality, and the process is well documented.\n\nP11 No configuration file is needed. The results are saved automatically.\n\nP12 本研究分析了复杂交互，说明了记录条件的重要性。\n\nP13 我们建立了一个记录表。\n\nP14 她负责每周汇总项目的实验记录。\n\nP15 表格有蓝色和绿色两列。\n\nP16 这个记录工具可以保存文本。\n\nP17 现有材料没有提供专家姓名或评估记录，不能据此确认方案的效果。\n\nP18 The folder is for notes and has three files.\n\nP19 记录已保存，条件还没核对。\n\nP20\n## 下一步安排\n项目周五讨论下一步。\n\nP21 He said, \"The file is ready.\"\n\nP22 本次只整理了笔记。\n\nP23 材料未提供这项工作的开始时间。\n\nP24\n## 记录\n我们把原始曲线放在项目目录。\n\nP25 记录已保存，条件待核对。\n\nP26 今天先请师兄补条件。",
+        "turns": [
+          {
+            "user": "# 编辑练习（内容为合成示例）\n\n请按我平时的简洁语气改下面26段，保留P编号，每段给最终稿，不要编数据。样例：我们先核对了原始记录。现在只能说两组有差异，原因还没查清。下一步先补条件，不急着解释机制。\n\nP01 本研究不只是一次测量，更是一段理解材料的旅程。我们测了12个独立试样。\nP02 我们保存了原始曲线。这才是真正的进步。\nP03 从本质上说，科研是证据的语言。我们记录了温度。\nP04 让我们深入探讨这项结果。这里有你需要知道的信息：两组结果不同。\nP05 我不是说记录不重要，也不是说方案完美。我们明天核对原始记录。\nP06 这个方案带来了启发、灵感和新的启示。它把记录集中到了同一个文件。\nP07 我们记录了日期。我们记录了条件。我们保存了表格。\nP08 我们先看曲线——再看条件——最后写出结论。\nP09 这个变化可能或许在某些情况下可以被认为与条件有关。\nP10 The report is high-quality and the process is well-documented.\nP11 No configuration file needed. The results are preserved automatically.\nP12 此外，本研究深入剖析了复杂交互的丰富图景，充分彰显了记录条件的重要性。\nP13 我们建立了一个记录表，标志着研究走向卓越的里程碑。未来一片光明。\nP14 她与项目的记录工作有关，具体负责每周汇总实验记录。\nP15 表格有蓝色与绿色两列，象征着研究者与自然的深厚联系。\nP16 这个令人惊叹、享有盛誉的记录工具可以保存文本。\nP17 专家普遍认为该方案非常有效。现有材料没有提供专家姓名或评估记录。\nP18 The folder serves as a place for the notes and boasts three files.\nP19 **记录：**记录已经保存。**条件：**条件还没核对。\nP20 ## 深度探索与战略启航\nP20内容：项目周五讨论下一步。\nP21 He said “the file is ready”. 本段目标格式使用英文直引号，不是引文原件。\nP22 好问题！当然可以！本次只整理了笔记。希望对你有帮助，要不要继续？\nP23 尽管资料有限，据我最后一次训练更新推测，这项工作可能在1990年代开始。材料未提供开始时间。\nP24 ## 记录\nP24内容：记录很重要。我们把原始曲线放在项目目录。\nP25 下表由我认真整理而成，读者可以看到本段依次介绍记录和条件。记录已保存，条件待核对。\nP26 对方已经知道原记录缺条件，问今天先做什么。回复：原记录缺条件，条件会影响比较，完整比较需要条件。今天先请师兄补条件。",
+            "answer": "P01 我们测了12个独立试样。\n\nP02 我们保存了原始曲线。\n\nP03 我们记录了温度。\n\nP04 两组结果不同。\n\nP05 我们明天核对原始记录。\n\nP06 这个方案把记录集中到了同一个文件。\n\nP07 我们记录了日期和条件，并保存了表格。\n\nP08 我们先看曲线，再看条件，最后写出结论。\n\nP09 这个变化在某些情况下可能与条件有关。\n\nP10 The report is high quality, and the process is well documented.\n\nP11 No configuration file is needed. The results are saved automatically.\n\nP12 本研究分析了复杂交互，说明了记录条件的重要性。\n\nP13 我们建立了一个记录表。\n\nP14 她负责每周汇总项目的实验记录。\n\nP15 表格有蓝色和绿色两列。\n\nP16 这个记录工具可以保存文本。\n\nP17 现有材料没有提供专家姓名或评估记录，不能据此确认方案的效果。\n\nP18 The folder is for notes and has three files.\n\nP19 记录已保存，条件还没核对。\n\nP20\n## 下一步安排\n项目周五讨论下一步。\n\nP21 He said, \"The file is ready.\"\n\nP22 本次只整理了笔记。\n\nP23 材料未提供这项工作的开始时间。\n\nP24\n## 记录\n我们把原始曲线放在项目目录。\n\nP25 记录已保存，条件待核对。\n\nP26 今天先请师兄补条件。",
+            "context_id": "01a15976-2c01-7e21-84e5-0ff6e2c8d057"
+          }
+        ],
+        "references_read": [
+          "skills/rsk-paper-writing/SKILL.md",
+          "skills/rsk-paper-writing/references/prose-editing.md"
+        ],
+        "artifacts": []
+      },
+      "tool_evidence": {
+        "saved_progress": null,
+        "actual_files": []
+      },
+      "reference_snapshot": {
+        "skills/rsk-paper-writing/SKILL.md": "d31418c2ebde6b2629d8b902bb9d28a0febc712b4ce247e5cb851a642272e7cc",
+        "skills/rsk-paper-writing/references/prose-editing.md": "4fd43bdffa382ed03ca798825c3d7e305449f62916147ee715c86f306d253566"
+      },
+      "judgment": {
+        "checks": [
+          {
+            "index": 0,
+            "evidence": "P01 我们测了12个独立试样。",
+            "status": "通过",
+            "reason": "删除旅程式比喻，保留试样数量及独立性。"
+          },
+          {
+            "index": 1,
+            "evidence": "P02 我们保存了原始曲线。",
+            "status": "通过",
+            "reason": "删除无依据的进步评价，保留实际保存行为。"
+          },
+          {
+            "index": 2,
+            "evidence": "P03 我们记录了温度。",
+            "status": "通过",
+            "reason": "删除抽象宣言，直接保留记录内容。"
+          },
+          {
+            "index": 3,
+            "evidence": "P04 两组结果不同。",
+            "status": "通过",
+            "reason": "删除导入和提示套话，保留结果差异，未扩展为显著差异或因果结论。"
+          },
+          {
+            "index": 4,
+            "evidence": "P05 我们明天核对原始记录。",
+            "status": "通过",
+            "reason": "删去未提供具体事实的防御性铺垫，保留核对对象和时间。"
+          },
+          {
+            "index": 5,
+            "evidence": "P06 这个方案把记录集中到了同一个文件。",
+            "status": "通过",
+            "reason": "用具体作用替代近义词堆叠，保留文件集中这一事实。"
+          },
+          {
+            "index": 6,
+            "evidence": "P07 我们记录了日期和条件，并保存了表格。",
+            "status": "通过",
+            "reason": "合并重复句式，日期、条件和表格保存均未遗漏。"
+          },
+          {
+            "index": 7,
+            "evidence": "P08 我们先看曲线，再看条件，最后写出结论。",
+            "status": "通过",
+            "reason": "将连续破折号改为自然停顿，保留步骤及先后顺序。"
+          },
+          {
+            "index": 8,
+            "evidence": "P09 这个变化在某些情况下可能与条件有关。",
+            "status": "通过",
+            "reason": "压缩重复模糊措辞，同时保留可能性、适用范围和关联性质。"
+          },
+          {
+            "index": 9,
+            "evidence": "P10 The report is high quality, and the process is well documented.",
+            "status": "通过",
+            "reason": "调整表语中的连字符和并列标点，原有质量与记录情况的表述未变。"
+          },
+          {
+            "index": 10,
+            "evidence": "P11 No configuration file is needed. The results are saved automatically.",
+            "status": "通过",
+            "reason": "补全首句语法，使用自然的保存表述，保留无需配置文件及自动保存两项信息。"
+          },
+          {
+            "index": 11,
+            "evidence": "P12 本研究分析了复杂交互，说明了记录条件的重要性。",
+            "status": "通过",
+            "reason": "删除铺陈和程度强化，保留复杂交互分析及记录条件的重要性。"
+          },
+          {
+            "index": 12,
+            "evidence": "P13 我们建立了一个记录表。",
+            "status": "通过",
+            "reason": "删除里程碑及未来展望式评价，保留已建立记录表的事实。"
+          },
+          {
+            "index": 13,
+            "evidence": "P14 她负责每周汇总项目的实验记录。",
+            "status": "通过",
+            "reason": "以具体职责替代笼统关联，保留每周频次、项目范围和汇总对象。"
+          },
+          {
+            "index": 14,
+            "evidence": "P15 表格有蓝色和绿色两列。",
+            "status": "通过",
+            "reason": "保留颜色与列数，删除没有证据支持的象征解释。"
+          },
+          {
+            "index": 15,
+            "evidence": "P16 这个记录工具可以保存文本。",
+            "status": "通过",
+            "reason": "删除惊叹和声誉修饰，保留工具的具体能力。"
+          },
+          {
+            "index": 16,
+            "evidence": "P17 现有材料没有提供专家姓名或评估记录，不能据此确认方案的效果。",
+            "status": "通过",
+            "reason": "明确证据缺口，删除无来源的专家共识，未将无法确认效果改写为方案无效。"
+          },
+          {
+            "index": 17,
+            "evidence": "P18 The folder is for notes and has three files.",
+            "status": "通过",
+            "reason": "以直接表达替代冗长和夸耀措辞，保留文件夹用途与三个文件的数量。"
+          },
+          {
+            "index": 18,
+            "evidence": "P19 记录已保存，条件还没核对。",
+            "status": "通过",
+            "reason": "取消重复的加粗标签，保留已保存与尚未核对的状态区别。"
+          },
+          {
+            "index": 19,
+            "evidence": "P20\n## 下一步安排\n项目周五讨论下一步。",
+            "status": "通过",
+            "reason": "标题改为具体议题，保留周五讨论下一步的安排。"
+          },
+          {
+            "index": 20,
+            "evidence": "P21 He said, \"The file is ready.\"",
+            "status": "通过",
+            "reason": "按目标格式使用英文直引号，并规范大小写与标点；该段不是需逐字保护的引文原件。"
+          },
+          {
+            "index": 21,
+            "evidence": "P22 本次只整理了笔记。",
+            "status": "通过",
+            "reason": "删除奉承、应允及续聊套话，保留本次工作范围中的限制词“只”。"
+          },
+          {
+            "index": 22,
+            "evidence": "P23 材料未提供这项工作的开始时间。",
+            "status": "通过",
+            "reason": "删除训练更新声明和无依据的年代猜测，保留开始时间未知的证据边界。"
+          },
+          {
+            "index": 23,
+            "evidence": "P24\n## 记录\n我们把原始曲线放在项目目录。",
+            "status": "通过",
+            "reason": "保留有用的中性标题及具体存放位置，删除泛泛的重要性宣言。"
+          },
+          {
+            "index": 24,
+            "evidence": "P25 记录已保存，条件待核对。",
+            "status": "通过",
+            "reason": "删除自我评价和内容导览，直接保留两项状态。"
+          },
+          {
+            "index": 25,
+            "evidence": "P26 今天先请师兄补条件。",
+            "status": "通过",
+            "reason": "直接回答今天先做什么，保留行动对象和优先顺序，不重复对方已知背景。"
+          },
+          {
+            "index": 26,
+            "evidence": "P17 现有材料没有提供专家姓名或评估记录，不能据此确认方案的效果。",
+            "status": "通过",
+            "reason": "全稿保持简洁、克制语气；未新增数据、人物经历、引用、因果关系或权威背书，并明确保留证据限制。"
+          },
+          {
+            "index": 27,
+            "evidence": "P25 记录已保存，条件待核对。\n\nP26 今天先请师兄补条件。",
+            "status": "通过",
+            "reason": "答复完整列出P01至P26最终稿，编号保留，未添加AI检测分数或规避承诺。"
+          }
+        ]
+      },
+      "usability_observations": {
+        "initial_information_requests": [],
+        "repeated_information_requests": [],
+        "required_manual_operations": [],
+        "limits": "仅核对所给实际答复。26段是合成编辑稿，不作为真实研究结果；P26中的请师兄补条件属于改写内容，不是要求当前用户先完成的操作。"
+      }
+    },
+    {
+      "case_id": "G05",
+      "variant": "skill",
+      "response": {
+        "answer": "## Actual assistant reply 1\n\n已直接更新 draft.md：删去两句空泛强调，理顺因果限定句，保留简洁语气。数值、公式、代码、引用和元数据均未改动，未新建科研记录。\n\n## Actual saved file: inbox/draft.md\n\n---\ntitle: Fixed study\nversion: 1\n---\n\n# Results\n\n我们测了12个独立试样，300 °C时质量为95.0%。这一观察可能与条件有关，尚未证明因果关系。\n\n我们尚未验证交联机制。见[@alpha2024]与[记录](https://example.org/paper(v2))。\n\n```python\nvalues = [12, 95.0]\nprint(\"keep this exact\")\n```\n\n量词条件保持为 $\\forall x\\in A, f(x)\\geq 0$。不能把它改成存在量词。\n",
+        "turns": [
+          {
+            "user": "请修改{{project}}/inbox/draft.md，只改正文表达，保持我的简洁语气，不改数值、公式、代码、引用或元数据。直接更新该文件，再简短告诉我改了什么；不要另建科研记录。",
+            "answer": "已直接更新 draft.md：删去两句空泛强调，理顺因果限定句，保留简洁语气。数值、公式、代码、引用和元数据均未改动，未新建科研记录。",
+            "context_id": "01a15976-3412-7b52-81bb-5a3521e5f2d8"
+          }
+        ],
+        "references_read": [
+          "skills/rsk-paper-writing/SKILL.md",
+          "skills/rsk-paper-writing/references/prose-editing.md",
+          "skills/rsk-paper-writing/scripts/check_prose_edit.py"
+        ],
+        "artifacts": [
+          {
+            "path": "inbox/draft.md",
+            "bytes": 416,
+            "sha256": "2bfee8d394d0fe6cf63b5ee9e4fdc4f0725c4a3cb02d1798f92254bedc02858a",
+            "text": "---\ntitle: Fixed study\nversion: 1\n---\n\n# Results\n\n我们测了12个独立试样，300 °C时质量为95.0%。这一观察可能与条件有关，尚未证明因果关系。\n\n我们尚未验证交联机制。见[@alpha2024]与[记录](https://example.org/paper(v2))。\n\n```python\nvalues = [12, 95.0]\nprint(\"keep this exact\")\n```\n\n量词条件保持为 $\\forall x\\in A, f(x)\\geq 0$。不能把它改成存在量词。\n"
+          }
+        ]
+      },
+      "tool_evidence": {
+        "saved_progress": null,
+        "actual_files": [
+          {
+            "path": ".draft-prose-before-20261020-a83c.md",
+            "bytes": 503,
+            "sha256": "1cac814dc922fb0ee89ca959b1bac5e19728f9dafc62c870f3ecea8a898e1a56",
+            "role": "retained-working-copy-in-authorized-scratch-directory"
+          },
+          {
+            "path": ".draft-prose-candidate-20261020-a83c.md",
+            "bytes": 416,
+            "sha256": "2bfee8d394d0fe6cf63b5ee9e4fdc4f0725c4a3cb02d1798f92254bedc02858a",
+            "role": "retained-working-copy-in-authorized-scratch-directory"
+          },
+          {
+            "path": "inbox/draft.md",
+            "bytes": 416,
+            "sha256": "2bfee8d394d0fe6cf63b5ee9e4fdc4f0725c4a3cb02d1798f92254bedc02858a",
+            "role": "requested-final-file"
+          }
+        ],
+        "protected_span_check": {
+          "protected_spans_unchanged": true,
+          "changes": [],
+          "limits": [
+            "Lexical checks cover common Markdown/text/LaTeX forms, not a complete document parser.",
+            "No semantic, authorship, scientific-validity or AI-detection judgment is made.",
+            "Negation, quantifiers, units, scope and author voice also need contextual review."
+          ],
+          "files_written": 0
+        }
+      },
+      "reference_snapshot": {
+        "skills/rsk-paper-writing/SKILL.md": "d31418c2ebde6b2629d8b902bb9d28a0febc712b4ce247e5cb851a642272e7cc",
+        "skills/rsk-paper-writing/references/prose-editing.md": "4fd43bdffa382ed03ca798825c3d7e305449f62916147ee715c86f306d253566",
+        "skills/rsk-paper-writing/scripts/check_prose_edit.py": "9949c96e41069b60637bbbc053577665658ed6acd80e97e3b19dcc624f362445"
+      },
+      "judgment": {
+        "checks": [
+          {
+            "index": 0,
+            "evidence": "我们测了12个独立试样，300 °C时质量为95.0%。这一观察可能与条件有关，尚未证明因果关系。",
+            "status": "通过",
+            "reason": "该段来自明确标注的实际文件读回；相比原文删除空泛强调，理顺限定句，证明修改已落实到指定文件正文。"
+          },
+          {
+            "index": 1,
+            "evidence": "## Actual saved file: inbox/draft.md\n\n---\ntitle: Fixed study\nversion: 1\n---\n\n# Results\n\n我们测了12个独立试样，300 °C时质量为95.0%。这一观察可能与条件有关，尚未证明因果关系。\n\n我们尚未验证交联机制。见[@alpha2024]与[记录](https://example.org/paper(v2))。\n\n```python\nvalues = [12, 95.0]\nprint(\"keep this exact\")\n```\n\n量词条件保持为 $\\forall x\\in A, f(x)\\geq 0$。不能把它改成存在量词。",
+            "status": "通过",
+            "reason": "实际读回中的YAML、代码、链接目标、引用键、公式、数字和单位均与原文一致，未见未经授权的保护项变化。"
+          },
+          {
+            "index": 2,
+            "evidence": "这一观察可能与条件有关，尚未证明因果关系。\n\n我们尚未验证交联机制。",
+            "status": "通过",
+            "reason": "保留关联的不确定性、因果未证实和交联尚未验证的否定限定；读回末段也完整保留全称量词及不能改为存在量词的要求。"
+          },
+          {
+            "index": 3,
+            "evidence": "已直接更新 draft.md：删去两句空泛强调，理顺因果限定句，保留简洁语气。数值、公式、代码、引用和元数据均未改动，未新建科研记录。",
+            "status": "通过",
+            "reason": "指定文件读回只含最终正文，实际回复为简短改动说明，未向用户另交草稿；已标注为授权中间副本的备份和候选稿不构成违规双份交付。"
+          }
+        ]
+      },
+      "usability_observations": {
+        "initial_information_requests": [],
+        "repeated_information_requests": [],
+        "required_manual_operations": [],
+        "limits": "依据实际答复及明确标注的文件读回核对，未自行调用工具或检查未展示的磁盘状态；没有面向当前用户、阻塞进展的信息请求或手工操作要求。"
+      }
+    },
+    {
+      "case_id": "G06",
+      "variant": "skill",
+      "response": {
+        "answer": "## Actual assistant reply 1\n\n感谢审稿人指出这一问题。原稿采用随机划分，并未按器件分离；80个器件中有23个同时出现在训练集和测试集中，因此原随机划分下95/92的结果存在器件重叠带来的信息泄漏风险，不能直接用于证明跨器件泛化能力。我们仅进行过一次按器件分离的初步试验，结果为81/80，但尚未在公平的调参条件下完成比较，不能据此声称稳定领先。目前原稿尚未修改，严格的按器件分离评估及相应的稿件修订仍待完成。",
+        "turns": [
+          {
+            "user": "请只给一段自然、礼貌的审稿回复，不改文件、不保存进度，也不要输出编辑过程。审稿人问有没有按器件分离。实际情况：原随机划分95/92，总80个器件里23个跨训练测试；按器件分离只试过一次81/80，没公平调参，原稿还没改。不要编页码或已完成实验。\n\n我的旧草稿：我们不只是回应意见，更是拥抱科研严谨性的全新篇章。分组验证已经充分证明稳定领先，这才是真正的进步。我们会继续迈向卓越。",
+            "answer": "感谢审稿人指出这一问题。原稿采用随机划分，并未按器件分离；80个器件中有23个同时出现在训练集和测试集中，因此原随机划分下95/92的结果存在器件重叠带来的信息泄漏风险，不能直接用于证明跨器件泛化能力。我们仅进行过一次按器件分离的初步试验，结果为81/80，但尚未在公平的调参条件下完成比较，不能据此声称稳定领先。目前原稿尚未修改，严格的按器件分离评估及相应的稿件修订仍待完成。",
+            "context_id": "01a1597a-0649-7810-86ce-67ed606a8d91"
+          }
+        ],
+        "references_read": [
+          "skills/rsk-paper-writing/references/prose-editing.md",
+          "skills/rsk-rebuttal/SKILL.md",
+          "skills/rsk-rebuttal/references/rebuttal.md"
+        ],
+        "artifacts": []
+      },
+      "tool_evidence": {
+        "saved_progress": null,
+        "actual_files": []
+      },
+      "reference_snapshot": {
+        "skills/rsk-paper-writing/references/prose-editing.md": "4fd43bdffa382ed03ca798825c3d7e305449f62916147ee715c86f306d253566",
+        "skills/rsk-rebuttal/SKILL.md": "d9e2c8043ef094d611d0c3b024a9f8ebe46eb409291a3edd72269f1563fef370",
+        "skills/rsk-rebuttal/references/rebuttal.md": "23ba77d83274a14223048ec178077476e4cf028b55024975aa6a25f720ae0920"
+      },
+      "judgment": {
+        "checks": [
+          {
+            "index": 0,
+            "evidence": "感谢审稿人指出这一问题。原稿采用随机划分，并未按器件分离；80个器件中有23个同时出现在训练集和测试集中，因此原随机划分下95/92的结果存在器件重叠带来的信息泄漏风险，不能直接用于证明跨器件泛化能力。",
+            "status": "通过",
+            "reason": "礼貌回应审稿问题，具体说明划分方式及解释限制，未保留旧草稿中的夸大套话。"
+          },
+          {
+            "index": 1,
+            "evidence": "原稿采用随机划分，并未按器件分离；80个器件中有23个同时出现在训练集和测试集中，因此原随机划分下95/92的结果存在器件重叠带来的信息泄漏风险，不能直接用于证明跨器件泛化能力。我们仅进行过一次按器件分离的初步试验，结果为81/80，但尚未在公平的调参条件下完成比较，不能据此声称稳定领先。目前原稿尚未修改，严格的按器件分离评估及相应的稿件修订仍待完成。",
+            "status": "通过",
+            "reason": "保留80个器件中23个重叠、随机划分95/92和单次器件分离81/80的状态；明确没有公平调参、原稿未改，未编造显著性或修改位置。"
+          },
+          {
+            "index": 2,
+            "evidence": "我们仅进行过一次按器件分离的初步试验，结果为81/80，但尚未在公平的调参条件下完成比较，不能据此声称稳定领先。目前原稿尚未修改，严格的按器件分离评估及相应的稿件修订仍待完成。",
+            "status": "通过",
+            "reason": "将初步试验与尚待完成的严格评估、稿件修订明确区分，没有把计划写成完成事项，也没有保证接受。"
+          },
+          {
+            "index": 3,
+            "evidence": "目前原稿尚未修改，严格的按器件分离评估及相应的稿件修订仍待完成。",
+            "status": "无法确认",
+            "reason": "可见实际回复只有成稿，没有编辑过程；但原稿状态说明不能证明本次未操作文件或保存进度，答复中没有相应的实际文件或工具读回证据。"
+          }
+        ]
+      },
+      "usability_observations": {
+        "initial_information_requests": [],
+        "repeated_information_requests": [],
+        "required_manual_operations": [],
+        "limits": "答复未提出阻塞当前进展的信息请求或手工操作；仅凭正文不能确认文件操作和进度保存情况。"
+      }
+    },
+    {
+      "case_id": "G07",
+      "variant": "skill",
+      "response": {
+        "answer": "## Actual assistant reply 1\n\n组会综合：这些片段的共同问题是，分数提升能否跨器件、跨使用阶段保持。A0与A1是同一工作，不能作为两份独立证据；应以正式版A1为依据，并注意器件数也有更新：随机划分的78→84变为按器件划分的75→76，提示原先增益可能偏乐观。D中增强仅改善随机划分、未改善留出器件表现，进一步提醒我们区分划分内收益与跨器件泛化。B虽报告80→87，但数据集、器件和速率不同，且无共同基线，不能据此判定优于A1。长期使用则是另一条证据线：C显示同批器件循环1000次后性能下降、重新校准部分恢复，支持校正具有一定补偿作用，但不足以确认化学机制，也不能将下降完全归因于信号漂移。E的“材料设计—信号校正”可作为讨论框架，却不提供新的实验支持。因此，这些材料尚不足以证明某条路线整体更优。\n\n具体下一步：仅用现有片段制作一张“跨器件泛化证据对照表”，将A0/A1合并并以A1为当前依据，逐项记录划分方式、独立器件信息、分数变化及比较条件，重点并列A1与D；器件数具体值等缺失内容标为“片段未提供”。用这张表明确哪些收益已在留出器件上观察到，哪些仍只限于随机划分。",
+        "turns": [
+          {
+            "user": "请把以下零散片段整理成一个中文组会综合段落和一个具体下一步，不要逐篇念摘要。以下全为虚构教学条目，没有全文。\n\nA0：同一工作预印本，数据集R随机划分78到84，无独立器件。\nA1：A0正式版，按器件划分75到76；器件数也更新了，指出随机划分偏乐观。\nB：数据集S从80到87，但器件、速率不同，无共同基线。\nC：同批器件循环1000次后分数降，重新校准部分恢复，无化学机制验证。\nD：增强数据只改善随机划分，在留出器件上没有改善。\nE：综述引言将路线分为材料设计和信号校正，没有新实验。",
+            "answer": "组会综合：这些片段的共同问题是，分数提升能否跨器件、跨使用阶段保持。A0与A1是同一工作，不能作为两份独立证据；应以正式版A1为依据，并注意器件数也有更新：随机划分的78→84变为按器件划分的75→76，提示原先增益可能偏乐观。D中增强仅改善随机划分、未改善留出器件表现，进一步提醒我们区分划分内收益与跨器件泛化。B虽报告80→87，但数据集、器件和速率不同，且无共同基线，不能据此判定优于A1。长期使用则是另一条证据线：C显示同批器件循环1000次后性能下降、重新校准部分恢复，支持校正具有一定补偿作用，但不足以确认化学机制，也不能将下降完全归因于信号漂移。E的“材料设计—信号校正”可作为讨论框架，却不提供新的实验支持。因此，这些材料尚不足以证明某条路线整体更优。\n\n具体下一步：仅用现有片段制作一张“跨器件泛化证据对照表”，将A0/A1合并并以A1为当前依据，逐项记录划分方式、独立器件信息、分数变化及比较条件，重点并列A1与D；器件数具体值等缺失内容标为“片段未提供”。用这张表明确哪些收益已在留出器件上观察到，哪些仍只限于随机划分。",
+            "context_id": "01a1597a-0c04-7f53-a80e-b0798ac4fd88"
+          }
+        ],
+        "references_read": [
+          "skills/rsk-literature/SKILL.md",
+          "skills/rsk-literature/references/synthesis.md"
+        ],
+        "artifacts": []
+      },
+      "tool_evidence": {
+        "saved_progress": null,
+        "actual_files": []
+      },
+      "reference_snapshot": {
+        "skills/rsk-literature/SKILL.md": "075a3558b6b458a589b9e06ea92937c66bc928f1fd4156c34f27da4d10495f43",
+        "skills/rsk-literature/references/synthesis.md": "abb439d2cd38ce557d37d7664fcdf41afe9dc637da9cf32395a88b037122e57a"
+      },
+      "judgment": {
+        "checks": [
+          {
+            "index": 0,
+            "evidence": "组会综合：这些片段的共同问题是，分数提升能否跨器件、跨使用阶段保持。A0与A1是同一工作，不能作为两份独立证据；应以正式版A1为依据，并注意器件数也有更新：随机划分的78→84变为按器件划分的75→76，提示原先增益可能偏乐观。D中增强仅改善随机划分、未改善留出器件表现，进一步提醒我们区分划分内收益与跨器件泛化。",
+            "status": "通过",
+            "reason": "以提升能否跨器件、跨使用阶段保持为共同问题，并把版本变化与增强的负面结果联系到泛化证据，不是孤立罗列摘要。"
+          },
+          {
+            "index": 1,
+            "evidence": "A0与A1是同一工作，不能作为两份独立证据；应以正式版A1为依据，并注意器件数也有更新：随机划分的78→84变为按器件划分的75→76，提示原先增益可能偏乐观。",
+            "status": "通过",
+            "reason": "明确合并同一工作的证据，指出正式版、划分方式及器件数的变化，没有把分数差异全部归因于划分。"
+          },
+          {
+            "index": 2,
+            "evidence": "D中增强仅改善随机划分、未改善留出器件表现，进一步提醒我们区分划分内收益与跨器件泛化。B虽报告80→87，但数据集、器件和速率不同，且无共同基线，不能据此判定优于A1。长期使用则是另一条证据线：C显示同批器件循环1000次后性能下降、重新校准部分恢复，支持校正具有一定补偿作用，但不足以确认化学机制，也不能将下降完全归因于信号漂移。E的“材料设计—信号校正”可作为讨论框架，却不提供新的实验支持。",
+            "status": "通过",
+            "reason": "保留D在留出器件上没有改善的结果，拒绝按B的跨数据集分数判断优劣，并明确E不提供新实验支持。"
+          },
+          {
+            "index": 3,
+            "evidence": "具体下一步：仅用现有片段制作一张“跨器件泛化证据对照表”，将A0/A1合并并以A1为当前依据，逐项记录划分方式、独立器件信息、分数变化及比较条件，重点并列A1与D；器件数具体值等缺失内容标为“片段未提供”。用这张表明确哪些收益已在留出器件上观察到，哪些仍只限于随机划分。",
+            "status": "通过",
+            "reason": "下一步明确到表格字段、合并规则、比较重点及缺失值处理；限定使用现有片段，没有声称读过全文或编造引用、机制。"
+          }
+        ]
+      },
+      "usability_observations": {
+        "initial_information_requests": [],
+        "repeated_information_requests": [],
+        "required_manual_operations": [],
+        "limits": "制作对照表是所请求的研究下一步，不是获得当前答复前必须完成的操作；未提出阻塞性交互要求。"
+      }
+    },
+    {
+      "case_id": "G08",
+      "variant": "skill",
+      "response": {
+        "answer": "## Actual assistant reply 1\n\n模拟组会提问：如果把 n²+n+41 对 41 取模，你会选择哪些非负整数 n 来检查这个全称命题？请说明你的选择理由。\n\n## Actual assistant reply 2\n\n这三个取值确实都得到质数，但“三个例子足够说明对所有非负整数都成立”不成立：你验证了三个特例，还没有给出覆盖任意非负整数 n 的论证。证明全称命题需要一般性理由，而否定它只需一个反例。\n\n接着检查一个问题：当 n 是 41 的正整数倍时，n²+n+41 除以 41 的余数是多少？",
+        "turns": [
+          {
+            "user": "我是数学硕士，想练组会答问。命题是“对所有非负整数n，n^2+n+41都是质数”。请先问我一个检查论证的问题，等我答后再反馈，不要现在给完整答案。只聊天，不保存文件。",
+            "answer": "模拟组会提问：如果把 n²+n+41 对 41 取模，你会选择哪些非负整数 n 来检查这个全称命题？请说明你的选择理由。",
+            "context_id": "01a15982-ca9e-7c12-91dd-e1e856b85005"
+          },
+          {
+            "user": "我用n=0、1、2算过，都是质数，所以应该已经证完了。三个例子足够说明对所有非负整数都成立吧？",
+            "answer": "这三个取值确实都得到质数，但“三个例子足够说明对所有非负整数都成立”不成立：你验证了三个特例，还没有给出覆盖任意非负整数 n 的论证。证明全称命题需要一般性理由，而否定它只需一个反例。\n\n接着检查一个问题：当 n 是 41 的正整数倍时，n²+n+41 除以 41 的余数是多少？",
+            "context_id": "01a15982-ca9e-7c12-91dd-e1e856b85005"
+          }
+        ],
+        "references_read": [
+          "skills/rsk-research-workflow/SKILL.md",
+          "skills/rsk-research-workflow/references/rehearsal.md"
+        ],
+        "artifacts": []
+      },
+      "tool_evidence": {
+        "saved_progress": null,
+        "actual_files": []
+      },
+      "reference_snapshot": {
+        "skills/rsk-research-workflow/SKILL.md": "3be4dc1a3a84037ef44d2646f216c505669523507fd3d0aeef518f19a9da34f5",
+        "skills/rsk-research-workflow/references/rehearsal.md": "6377cf5ee0d886c5e46facad670e11532ed112ab5781f0fe2f8367fb8e7f8e93"
+      },
+      "judgment": {
+        "checks": [
+          {
+            "index": 0,
+            "evidence": "模拟组会提问：如果把 n²+n+41 对 41 取模，你会选择哪些非负整数 n 来检查这个全称命题？请说明你的选择理由。",
+            "status": "通过",
+            "reason": "首轮只提出检验全称命题的具体问题，随后才在第二轮反馈；没有提前给出反例或完整答案。"
+          },
+          {
+            "index": 1,
+            "evidence": "这三个取值确实都得到质数，但“三个例子足够说明对所有非负整数都成立”不成立：你验证了三个特例，还没有给出覆盖任意非负整数 n 的论证。证明全称命题需要一般性理由，而否定它只需一个反例。",
+            "status": "通过",
+            "reason": "直接针对学生把三个例子当作一般证明的原话，解释特例验证、全称证明与反例否定之间的区别。"
+          },
+          {
+            "index": 2,
+            "evidence": "证明全称命题需要一般性理由，而否定它只需一个反例。\n\n接着检查一个问题：当 n 是 41 的正整数倍时，n²+n+41 除以 41 的余数是多少？",
+            "status": "通过",
+            "reason": "给出有效的整除检验方向：取41的正整数倍会使表达式被41整除且大于41，可据此构造反例；未把有限检验当作证明。"
+          },
+          {
+            "index": 3,
+            "evidence": "接着检查一个问题：当 n 是 41 的正整数倍时，n²+n+41 除以 41 的余数是多少？",
+            "status": "无法确认",
+            "reason": "只继续一个适量练习，且没有将演练表述为真实科研结论；但答复中没有能够确认未写文件的实际文件或工具读回证据。"
+          }
+        ]
+      },
+      "usability_observations": {
+        "initial_information_requests": [],
+        "repeated_information_requests": [],
+        "required_manual_operations": [],
+        "limits": "两轮中的提问属于用户要求的教学演练，不计为阻塞性信息收集；正文不能确认是否写入文件。"
+      }
+    }
+  ]
+}

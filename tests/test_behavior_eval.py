@@ -41,6 +41,111 @@ class BehaviorRecordTests(unittest.TestCase):
     def test_repeated_utility_records_are_valid(self):
         VALIDATOR.validate_run(*self.utility_fixture())
 
+    def test_case_subset_keeps_the_original_full_source_snapshot(self):
+        report, sources = self.utility_fixture()
+        other = json.loads(json.dumps(sources['cases']['cases'][0]))
+        other['id'] = 'OTHER'
+        sources['cases']['cases'].append(other)
+        report['snapshot'] = VALIDATOR.source_snapshot(sources)
+        report['case_ids'] = ['UNIT']
+        cases = VALIDATOR.validate_run(report, sources)
+        self.assertEqual([case['id'] for case in cases], ['UNIT'])
+        self.assertEqual(len(sources['cases']['cases']), 2)
+
+    def test_selected_cases_must_be_nonempty_unique_and_recorded(self):
+        for selected in ([], ['UNIT', 'UNIT'], ['MISSING'], 'UNIT'):
+            report, sources = self.utility_fixture()
+            report['case_ids'] = selected
+            with self.subTest(selected=selected), self.assertRaisesRegex(ValueError, 'Invalid selected evaluation cases'):
+                VALIDATOR.validate_run(report, sources)
+
+    def test_unselected_records_cannot_be_smuggled_into_a_subset(self):
+        report, sources = self.utility_fixture()
+        report['case_ids'] = ['UNIT']
+        extra = json.loads(json.dumps(report['records'][0]))
+        extra['case_id'] = 'OTHER'
+        report['records'].append(extra)
+        with self.assertRaisesRegex(ValueError, 'Missing or duplicate'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_explicit_skill_only_run_does_not_invent_a_control_arm(self):
+        report, sources = self.utility_fixture()
+        sources['cases']['cases'][0]['variants'] = ['skill']
+        report['snapshot'] = VALIDATOR.source_snapshot(sources)
+        report['records'] = [r for r in report['records'] if r['variant'] == 'skill']
+        VALIDATOR.validate_run(report, sources)
+
+    def test_skill_only_run_still_requires_all_declared_repetitions(self):
+        report, sources = self.utility_fixture()
+        sources['cases']['cases'][0]['variants'] = ['skill']
+        report['snapshot'] = VALIDATOR.source_snapshot(sources)
+        report['records'] = [r for r in report['records'] if r['variant'] == 'skill'][:1]
+        with self.assertRaisesRegex(ValueError, 'Missing or duplicate'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_variants_are_nonempty_unique_and_known(self):
+        for variants in ([], ['skill', 'skill'], ['unrecorded'], 'skill'):
+            with self.subTest(variants=variants), self.assertRaisesRegex(ValueError, 'Invalid evaluation variants'):
+                VALIDATOR.case_variants({'variants': variants})
+
+    def guided_fixture(self):
+        report, sources = self.utility_fixture()
+        sources['cases']['grading']['type'] = 'guided-deliverable-v1'
+        sources['cases']['cases'][0]['variants'] = ['skill']
+        report['snapshot'] = VALIDATOR.source_snapshot(sources)
+        report['records'] = [r for r in report['records'] if r['variant'] == 'skill']
+        for row in report['records']:
+            row['response']['turns'] = [{'user': 'input', 'answer': 'fixture', 'context_id': 'unit-' + str(row['repetition'])}]
+        return report, sources
+
+    def test_guided_records_require_actual_user_and_answer_text(self):
+        report, sources = self.guided_fixture()
+        VALIDATOR.validate_run(report, sources)
+        report['records'][0]['response']['turns'][0]['answer'] = 'not in recorded answer'
+        with self.assertRaisesRegex(ValueError, 'Invalid guided conversation'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_guided_records_reject_changed_initial_request(self):
+        report, sources = self.guided_fixture()
+        report['records'][0]['response']['turns'][0]['user'] = 'a better expert prompt'
+        with self.assertRaisesRegex(ValueError, 'fixed request'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_guided_independent_context_ids_cannot_be_reused(self):
+        report, sources = self.guided_fixture()
+        report['records'][1]['response']['turns'][0]['context_id'] = 'unit-1'
+        with self.assertRaisesRegex(ValueError, 'contexts were reused'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_guided_followup_cannot_be_replaced_with_an_expert_prompt(self):
+        report, sources = self.guided_fixture()
+        case = sources['cases']['cases'][0]
+        case['files'].append('inputs/resume.md')
+        sources['inputs']['inputs/resume.md'] = 'continue'
+        report['snapshot'] = VALIDATOR.source_snapshot(sources)
+        for row in report['records']:
+            context = row['response']['turns'][0]['context_id']
+            row['response']['turns'].extend([
+                {'user': 'followup', 'answer': 'fixture', 'context_id': context},
+                {'user': 'continue', 'answer': 'fixture', 'context_id': context + '-fresh'}])
+        VALIDATOR.validate_run(report, sources)
+        report['records'][0]['response']['turns'][1]['user'] = 'hidden expert rescue prompt'
+        with self.assertRaisesRegex(ValueError, 'Guided followup differs'):
+            VALIDATOR.validate_run(report, sources)
+
+    def test_guided_student_answer_is_frozen(self):
+        report, sources = self.guided_fixture()
+        sources['cases']['cases'][0]['files'].append('inputs/student-answer.md')
+        sources['inputs']['inputs/student-answer.md'] = 'fixed student answer'
+        report['snapshot'] = VALIDATOR.source_snapshot(sources)
+        for row in report['records']:
+            row['response']['turns'].append({'user': 'fixed student answer', 'answer': 'fixture',
+                                             'context_id': row['response']['turns'][0]['context_id']})
+        VALIDATOR.validate_run(report, sources)
+        report['records'][0]['response']['turns'][1]['user'] = 'a different answer'
+        with self.assertRaisesRegex(ValueError, 'Guided student answer differs'):
+            VALIDATOR.validate_run(report, sources)
+
     def test_missing_utility_repetition_is_rejected(self):
         report, sources = self.utility_fixture()
         report['records'].pop()
@@ -91,6 +196,14 @@ class BehaviorRecordTests(unittest.TestCase):
     def test_recorded_artifacts_are_consistent(self):
         result = VALIDATOR.validate(self.package)
         self.assertEqual(result['records'], result['expected_records'])
+
+    def test_required_current_case_cannot_be_hidden_by_report_selection(self):
+        path = self.package / 'evals/runs.json'
+        index = json.loads(path.read_text(encoding='utf-8'))
+        index['required_current_cases'].append('NOT_RECORDED')
+        path.write_text(json.dumps(index), encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'Missing current behavior cases: NOT_RECORDED'):
+            VALIDATOR.validate(self.package)
 
     def test_changed_input_invalidates_record(self):
         path = self.package / 'evals/history/2026-10-09-sources.json'

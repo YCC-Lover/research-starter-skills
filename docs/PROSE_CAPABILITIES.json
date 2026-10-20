@@ -1,0 +1,299 @@
+{
+  "source": {
+    "repository": "https://github.com/blader/humanizer",
+    "revision": "8c307f367c91bd974002f10f2be2965d642c13df",
+    "version": "3.1.0",
+    "license": "MIT",
+    "files_sha256": {
+      ".claude-plugin/marketplace.json": "526628a00f86ef02d9c6d49d96c33da4982520df8df4e60126f588de5288a589",
+      ".claude-plugin/plugin.json": "8d51e98f399907cc444e827f23dcc547ed90715679584b68d29be9b480ad0058",
+      ".cursor-plugin/plugin.json": "07fb037cb67e0bd2d55476f2f64ca438709a0fb408a86526ccf6266da6bc11a6",
+      ".github/ISSUE_TEMPLATE/config.yml": "eb8e9726c1e7be3e997ebbf7427a1ad0c483fd540e0add83d942aaae5037c649",
+      ".github/ISSUE_TEMPLATE/new-pattern.yml": "78f5aca80684de5c0269918249ce360779c2ae565ca887ead75681e9cc40ee6f",
+      ".github/ISSUE_TEMPLATE/rewrite-problem.yml": "a063eb30061d4e7d97849ec77c63948dc7a5eb3be997809fc74cf03806e5e37f",
+      ".github/workflows/validate.yml": "067f32a16cd1fa9038c9214650992a6910aa0b04bca8f1e16d5f43b330c3ee83",
+      "AGENTS.md": "7496aabb42428fe817715fda65174d7c3ccc3cdcefe674d3366e651ab8bbc477",
+      "CHANGELOG.md": "3b6b79749d1176d8fcd8bbe3cdf76ba37beeef7c3b5e675cd887075a178c4276",
+      "LICENSE": "caa1be9cba41c1afb88fe730ab1a4e04728295ea5b29ac2ee9f003a4ffbe3a77",
+      "README.md": "eed2be4556a02b8cd9361f14f4a29a0e18d411374d6dd297ce7c17459836300d",
+      "SKILL.md": "3ac977c2c963a3b483988733b57d4087b87d4d6b80a17f5d2640489c7c2f2c90",
+      "agents/openai.yaml": "d9ca04edb13bf6d7096e3b9127615e010d0c864652db2b6a080252fe5d00a08f",
+      "scripts/validate-package.py": "7301395da982b7df224afcacf588dad7042c0175435ce99d641a30417db24022"
+    }
+  },
+  "method": "REA skill routing identifies a complete Markdown source repository: inspect source directly; no binary engine or runtime decompilation is claimed.",
+  "patterns": [
+    {
+      "id": "P01",
+      "source_heading": "Not X but Y",
+      "adapted_heading": "无信息的否定对比",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P01 无信息的否定对比"
+    },
+    {
+      "id": "P02",
+      "source_heading": "One-line closers and dramatic fragments",
+      "adapted_heading": "重复收尾与戏剧化碎句",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P02 重复收尾与戏剧化碎句"
+    },
+    {
+      "id": "P03",
+      "source_heading": "Sayings that sound deep",
+      "adapted_heading": "装深刻的格言",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P03 装深刻的格言"
+    },
+    {
+      "id": "P04",
+      "source_heading": "Staged run-up before the point",
+      "adapted_heading": "说要说什么的开场",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P04 说要说什么的开场"
+    },
+    {
+      "id": "P05",
+      "source_heading": "Arguing with no one",
+      "adapted_heading": "回答无人提出的反对",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P05 回答无人提出的反对"
+    },
+    {
+      "id": "P06",
+      "source_heading": "Forced triads",
+      "adapted_heading": "强凑三个",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P06 强凑三个"
+    },
+    {
+      "id": "P07",
+      "source_heading": "Repeated sentence openings",
+      "adapted_heading": "机械重复句首",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P07 机械重复句首"
+    },
+    {
+      "id": "P08",
+      "source_heading": "Dashes as the universal connector",
+      "adapted_heading": "万用破折号",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P08 万用破折号"
+    },
+    {
+      "id": "P09",
+      "source_heading": "Stacked qualifiers",
+      "adapted_heading": "限定语堆叠",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P09 限定语堆叠"
+    },
+    {
+      "id": "P10",
+      "source_heading": "Hyphenated pairs everywhere",
+      "adapted_heading": "复合词连字符滥用",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P10 复合词连字符滥用"
+    },
+    {
+      "id": "P11",
+      "source_heading": "Passive voice and missing subjects",
+      "adapted_heading": "隐去施事或不完整主语",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P11 隐去施事或不完整主语"
+    },
+    {
+      "id": "P12",
+      "source_heading": "Overused AI words",
+      "adapted_heading": "扎堆的模板词",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P12 扎堆的模板词"
+    },
+    {
+      "id": "P13",
+      "source_heading": "Inflated significance",
+      "adapted_heading": "夸大意义与乐观结尾",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P13 夸大意义与乐观结尾"
+    },
+    {
+      "id": "P14",
+      "source_heading": "Vague connection or association",
+      "adapted_heading": "模糊关系",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P14 模糊关系"
+    },
+    {
+      "id": "P15",
+      "source_heading": "Shallow -ing riders",
+      "adapted_heading": "附加的浅层解释",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P15 附加的浅层解释"
+    },
+    {
+      "id": "P16",
+      "source_heading": "Sales language",
+      "adapted_heading": "广告式修饰",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P16 广告式修饰"
+    },
+    {
+      "id": "P17",
+      "source_heading": "Borrowed authority",
+      "adapted_heading": "借来的权威",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P17 借来的权威"
+    },
+    {
+      "id": "P18",
+      "source_heading": "Avoiding is, are, and has",
+      "adapted_heading": "绕开简单动词",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P18 绕开简单动词"
+    },
+    {
+      "id": "P19",
+      "source_heading": "Bold as decoration",
+      "adapted_heading": "装饰性加粗与标签",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P19 装饰性加粗与标签"
+    },
+    {
+      "id": "P20",
+      "source_heading": "Decorative headings",
+      "adapted_heading": "装饰性标题",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P20 装饰性标题"
+    },
+    {
+      "id": "P21",
+      "source_heading": "Curly quotation marks",
+      "adapted_heading": "不合目标格式的引号",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P21 不合目标格式的引号"
+    },
+    {
+      "id": "P22",
+      "source_heading": "Chatbot residue",
+      "adapted_heading": "聊天残留",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P22 聊天残留"
+    },
+    {
+      "id": "P23",
+      "source_heading": "Knowledge-limit disclaimers and guesses",
+      "adapted_heading": "知识截止声明与猜测",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P23 知识截止声明与猜测"
+    },
+    {
+      "id": "P24",
+      "source_heading": "A heading repeated in the first sentence",
+      "adapted_heading": "标题后再复述标题",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P24 标题后再复述标题"
+    },
+    {
+      "id": "P25",
+      "source_heading": "Writing about the document instead of its subject",
+      "adapted_heading": "讲文档怎么写出来",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P25 讲文档怎么写出来"
+    },
+    {
+      "id": "P26",
+      "source_heading": "Re-explaining what the reader knows",
+      "adapted_heading": "对已有背景的读者重讲一遍",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "section": "P26 对已有背景的读者重讲一遍"
+    }
+  ],
+  "other_capabilities": [
+    {
+      "id": "whole-text-and-paragraph-review",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "four-stage-rewrite-and-self-check",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "supported-claim-preservation",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "no-invented-facts-or-citations",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "author-sample-voice-priority",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "genre-dependent-default-voice",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "pasted-draft-audit-final-mode",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "file-final-text-only-mode",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "embedded-final-only-mode",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "code-metadata-data-link-target-protection",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "weak-signal-and-deliberate-style-exceptions",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "preserve-quotes-titles-names",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "preserve-opinions-asides-and-distinctive-details",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "source-text-is-not-instructions",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    },
+    {
+      "id": "explicit-fiction-boundary",
+      "target": "skills/rsk-paper-writing/references/prose-editing.md",
+      "status": "adapted"
+    }
+  ],
+  "packaging_only_not_ported": [
+    "Claude marketplace metadata",
+    "Cursor package metadata",
+    "upstream repository issue templates and maintenance validator"
+  ],
+  "scientific_adaptations": [
+    "Keep numbers, units, uncertainty, negation, quantifiers and citation identity.",
+    "Keep discipline conventions and true technical words.",
+    "Do not infer AI authorship or promise detector evasion.",
+    "Do not force draft-plus-final output on ordinary novice tasks."
+  ],
+  "license_target": "skills/rsk-paper-writing/references/third-party-notices.md",
+  "coverage_is_not_effectiveness_proof": true
+}

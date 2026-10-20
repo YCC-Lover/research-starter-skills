@@ -53,16 +53,29 @@ def valid_relative(name):
             and '..' not in Path(name).parts, 'Unsafe evaluation source path.')
 
 
+def case_variants(case):
+    variants = case.get('variants', ['baseline', 'skill'])
+    require(isinstance(variants, list) and variants and
+            all(isinstance(value, str) and value in {'baseline', 'skill'} for value in variants)
+            and len(set(variants)) == len(variants), 'Invalid evaluation variants.')
+    return variants
+
+
 def validate_run(report, sources):
-    cases = sources['cases']['cases']
-    case_map = {case['id']: case for case in cases}
-    require(len(case_map) == len(cases) and cases, 'Duplicate or empty evaluation cases.')
+    archived_cases = sources['cases']['cases']
+    case_map = {case['id']: case for case in archived_cases}
+    require(len(case_map) == len(archived_cases) and archived_cases, 'Duplicate or empty evaluation cases.')
+    selection = report.get('case_ids', list(case_map))
+    require(isinstance(selection, list) and selection and
+            all(isinstance(name, str) and name in case_map for name in selection)
+            and len(set(selection)) == len(selection), 'Invalid selected evaluation cases.')
+    cases = [case_map[name] for name in selection]
     for group in ('inputs', 'skills'):
         require(isinstance(sources[group], dict), 'Invalid archived source map.')
         for name, value in sources[group].items():
             valid_relative(name)
             require(isinstance(value, str), 'Archived source is not text.')
-    require(set(sources['inputs']) == {name for case in cases for name in case['files']},
+    require(set(sources['inputs']) == {name for case in archived_cases for name in case['files']},
             'Archived input set differs from cases.')
     require(report['snapshot'] == source_snapshot(sources), 'Archived source snapshot changed.')
     require(report['protocol']['independent_context_per_task'] is True, 'Unexpected evaluation protocol.')
@@ -71,9 +84,10 @@ def validate_run(report, sources):
         require(type(case.get('repetitions', 1)) is int and case.get('repetitions', 1) > 0,
                 'Invalid repetition count.')
     expected = {(case['id'], variant, repetition) for case in cases
-                for variant in ('baseline', 'skill') for repetition in range(1, case.get('repetitions', 1) + 1)}
+                for variant in case_variants(case) for repetition in range(1, case.get('repetitions', 1) + 1)}
     observed = {(row['case_id'], row['variant'], row.get('repetition', 1)) for row in records}
     require(observed == expected and len(records) == len(expected), 'Missing or duplicate evaluation record.')
+    guided_contexts = set()
     for row in records:
         case = case_map[row['case_id']]
         answer = row['response']['answer']
@@ -92,6 +106,32 @@ def validate_run(report, sources):
                 'Reported reference snapshot differs from the current package.')
         checks = row['judgment']['checks']
         validate_checks(checks, case, answer)
+        if sources['cases'].get('grading', {}).get('type') == 'guided-deliverable-v1':
+            turns = row['response']['turns']
+            require(isinstance(turns, list) and turns, 'Missing guided conversation.')
+            require(all(isinstance(turn.get('user'), str) and turn['user'] and
+                        isinstance(turn.get('answer'), str) and turn['answer'] and
+                        turn['answer'] in answer and isinstance(turn.get('context_id'), str)
+                        and turn['context_id'] for turn in turns), 'Invalid guided conversation turn.')
+            contexts = {turn['context_id'] for turn in turns}
+            require(not contexts.intersection(guided_contexts), 'Guided task contexts were reused.')
+            guided_contexts.update(contexts)
+            first_input = sources['inputs'][case['files'][0]].strip()
+            require(turns[0]['user'] == first_input, 'Guided first input differs from the fixed request.')
+            resume_inputs = [name for name in case['files'] if name.endswith('/resume.md')]
+            if resume_inputs:
+                require(len(turns) == 3 and turns[0]['context_id'] == turns[1]['context_id']
+                        and turns[2]['context_id'] != turns[0]['context_id'],
+                        'Guided resumption requires a fresh context after the initial exchange.')
+                require(turns[2]['user'] == sources['inputs'][resume_inputs[0]].strip(),
+                        'Guided resume request differs from the fixed request.')
+                require(turns[1]['user'] == sources['inputs'][case['files'][1]].strip(),
+                        'Guided followup differs from the fixed request.')
+            student_inputs = [name for name in case['files'] if name.endswith('/student-answer.md')]
+            if student_inputs:
+                require(len(turns) == 2 and turns[0]['context_id'] == turns[1]['context_id'] and
+                        turns[1]['user'] == sources['inputs'][student_inputs[0]].strip(),
+                        'Guided student answer differs from the fixed request.')
         if sources['cases'].get('grading', {}).get('type') == 'anchored-utility-v1':
             judgments = row['independent_judgments']
             require(len(judgments) == 2 and len({j['grader_id'] for j in judgments}) == 2,
@@ -131,6 +171,10 @@ def run_impact(root, item, report, sources):
     current_cases = json.loads(source_text(root, item['cases']))['cases']
     current_map = {case['id']: case for case in current_cases}
     recorded_map = {case['id']: case for case in sources['cases']['cases']}
+    if 'case_ids' in report:
+        selected = set(report['case_ids'])
+        current_map = {key: value for key, value in current_map.items() if key in selected}
+        recorded_map = {key: value for key, value in recorded_map.items() if key in selected}
     affected = []
     for case_id in sorted(set(current_map) | set(recorded_map)):
         old = recorded_map.get(case_id)
@@ -184,7 +228,7 @@ def validate(root=ROOT, impact_only=False):
             covered.update(case['id'] for case in cases)
         count += len(cases)
         records += len(report['records'])
-        expected_records += sum(case.get('repetitions', 1) * 2 for case in cases)
+        expected_records += sum(case.get('repetitions', 1) * len(case_variants(case)) for case in cases)
         results.append({'id': item['id'], 'state': item['state'], 'cases': len(cases),
                         'records': len(report['records']), 'affected_cases': affected})
     required = index['required_current_cases']

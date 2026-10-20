@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.5.0
+
+- Guide beginners from an everyday request or one available item; ask only the next decision-changing question and produce a small usable artifact.
+- Add local, append-only research checkpoints with file fingerprints, answered-question tracking, explicit completion evidence, revision checks and fresh-chat resumption.
+- Adapt the full 26-pattern prose-editing workflow, author voice matching and pasted/file/embedded modes; retain component attribution and its MIT notice without changing the package's overall usage scope.
+- Add a read-only protected-span checker for common Markdown, text and LaTeX code, metadata, links, citations, formulas and numbers; keep semantic review separate.
+- Add evidence-style guidance for quantitative, computational, qualitative, historical, theoretical and sensitive-population research.
+- Record guided-task verification separately from teaching examples and historical experiments; focus the public entrypoints on concrete capabilities and beginner use.
+
 ## 1.4.0
 
 - Put usable deliverables first: replacement prose, a near-term decision or a focused learning exercise, sized to the user's time and scope.

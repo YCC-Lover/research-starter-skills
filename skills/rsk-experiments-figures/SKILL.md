@@ -9,6 +9,8 @@ description: "依据 Research-Starter-Kit 规划公平实验、分析真实结�
 
 ## 读取指南
 
+新手不知如何整理材料时，按 [引导起步](../research-starter-paper/references/guided-start.md) 从一份原始导出和条件说明开始，自动记录文件、回答和下一步；不要求用户预先整理完整证据表。跨学科采用 [证据方式](../research-starter-paper/references/discipline-fit.md)。结果文字与图注可按 [自然表达](../rsk-paper-writing/references/prose-editing.md) 复核，不改变数值、单位、比较与机制边界。
+
 - 实验计划、结果解释、Experiments 章节：[实验](references/experiments.md)。
 - teaser、方法示意、数据图表：[图表](references/figures.md)。
 - 重复类型、统计解释、预处理、TG/DTG 或跨学科比较：[测量与比较](references/measurement-checks.md)。

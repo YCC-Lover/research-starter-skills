@@ -5,6 +5,8 @@ description: "依据 Research-Starter-Kit 起草逐条、有证据的审稿回�
 
 # 审稿回复与修改
 
+第一次返修、不知提供什么时，按 [引导起步](../research-starter-paper/references/guided-start.md) 从一条意见和实际进度开始，并自动保存已确认回答、回复与待办。最终语气按 [自然表达](../rsk-paper-writing/references/prose-editing.md) 复核，保持礼貌、真实状态与完整回答，不为简短删除审稿人要求的依据。
+
 学习请求解释一条意见及其回应依据，用标为虚构的例子给可选练习与反馈；执行请求交付回复；检查请求只列覆盖、证据或完成状态问题，不自动改稿、补实验或发送。已有真实回复时保留用户立场与范围，不强制套用教学流程。
 
 读取 [回复指南](references/rebuttal.md) 和必要的 [来源说明](references/sources.md)。
