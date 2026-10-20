@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.1
+
+- Record eight synthetic cases and sixteen fresh-context model responses with identical materials and read-only thermal-tool availability; preserve full answers, source snapshots, blinded model judgments and limitations.
+- Separate actual outputs from teaching walkthroughs and retain historical model records plus the initial transport-invalid dispatch incident.
+- Pin CSV line endings to LF so Windows ZIP exports match the thermal tool record's raw source hashes; add a regression check and verify Git archive contents.
+- Keep v1.3.0 tags/assets unchanged, preserve the seven entrypoints, and do not claim human expert review, universal improvement or a new license.
+
 ## 1.3.0
 
 - Add task briefing, resource-aware research decisions, multi-paper synthesis, thesis consistency, results/discussion, revision tracing and interactive rehearsal guides without adding new skill entrypoints.

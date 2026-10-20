@@ -1,4 +1,6 @@
 import importlib.util
+import hashlib
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -11,6 +13,15 @@ SPEC.loader.exec_module(THERMAL)
 
 
 class ThermalTests(unittest.TestCase):
+    def test_public_tool_record_matches_distributed_sources(self):
+        report = json.loads((ROOT / 'examples/worked/thermal-check.json').read_text(encoding='utf-8'))
+        script = ROOT / report['command'][1]
+        self.assertEqual(hashlib.sha256(script.read_bytes()).hexdigest(), report['script_sha256'])
+        for field, name in [('input_sha256', 'thermal.csv'), ('metadata_sha256', 'thermal.json')]:
+            with self.subTest(file=name):
+                self.assertEqual(hashlib.sha256((ROOT / 'examples/worked' / name).read_bytes()).hexdigest(),
+                                 report['stdout_json'][field])
+
     def setUp(self):
         self.work = Path(tempfile.mkdtemp(prefix='rsk-thermal-'))
         self.data = self.work / 'input.csv'

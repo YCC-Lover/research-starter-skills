@@ -234,7 +234,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 ## 版本与来源
 
-当前稳定版为 `v1.3.0`，首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 [GitHub Releases](https://github.com/YCC-Lover/research-starter-skills/releases/latest) 下载技能包或选择对应 tag，以固定版本安装。
+当前稳定版为 `v1.3.1`，首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 [GitHub Releases](https://github.com/YCC-Lover/research-starter-skills/releases/latest) 下载技能包或选择对应 tag，以固定版本安装。
 
 覆盖对应上游提交 `36ba390d153f5289308ec833e2b633c26b304a7b`。外部致谢资料仅保留出处关系，未声称阅读其中的整本书。[完整来源表](skills/research-starter-paper/references/sources.md) 与 [NOTICE.md](NOTICE.md) 说明作者归属和发布范围。
 
@@ -250,7 +250,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 工程校验不等于模型在所有学科都表现可靠。[行为评测](evals/README.md)独立记录固定合成任务的对照协议、实际输出、模型判读与主会话复核，与提示词示例及手工示意分开；不冒充人类专家评审。小样本不证明普遍优越、节省时间或录用率；最终数据、引文与结论仍需作者核对。
 
-v1.2.0 的八题模型记录保留为历史证据，不算 v1.3.0 的新增流程已通过。新版任务包提供合成输入、维护者教学示意和真实的确定性热分析工具记录；新增独立模型运行只有实际完成后才会进入 [运行索引](evals/runs.json)。
+v1.3.1 已完成八题、两组共十六次独立模型任务，提供 [本轮报告](evals/runs/2026-10-20/REPORT.md)、[实际答复](evals/runs/2026-10-20/OUTPUTS.md)和逐项证据。使用相同的合成材料与只读工具，判读时隐藏加载标签。开题演练仅测首问，没有验证完整多轮反馈；不把小样本结果当作效果提升。v1.2.0 原答复及失败记录继续作为历史证据保存。
 
 ## 觉得有用，欢迎一起完善
 

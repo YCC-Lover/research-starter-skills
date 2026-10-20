@@ -154,6 +154,8 @@ For long projects, optionally reuse the [handoff template](skills/research-start
 
 ## What it does not promise
 
+The v1.3.1 [evaluation report](evals/runs/2026-10-20/REPORT.md) records eight synthetic tasks and sixteen fresh-context responses, with loading labels hidden from the independent model grader. Both arms had the same inputs and read-only thermal helper. [Actual answers](evals/runs/2026-10-20/OUTPUTS.md) are separate from maintainer-written walkthroughs. Rehearsal covers only the first question; this is not a human expert review or evidence of general superiority.
+
 Skills are instructions, not standalone research engines. Search, proprietary file parsing, plotting, and document export depend on available tools. An Origin .opju file still requires a supported interface or readable export. Validation tests do not establish model accuracy, publication success, or time savings. Authors remain responsible for checking sources and conclusions.
 
 No raw tutorials, upstream figures, private research, credentials, or account sessions are published. This repository has not adopted a general license, and does not grant redistribution rights to upstream tutorials. Public visibility and attribution are not substitutes for permission; see [NOTICE.md](NOTICE.md).
