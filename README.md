@@ -12,6 +12,8 @@
 
 **[下载最新技能包](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [新手学习路径](docs/LEARNING_PATH.md) · [完成首次练习](examples/first-run/README.md) · [查看 19 个使用示例](examples/README.md) · [开始安装](#安装)**
 
+正在处理复杂任务？查看 [七个完整任务包](examples/worked/README.md)：课题决策、多文献综合、学位论文章节、TG/DTG、返修联动和开题演练，附公开输入与纠错自查。新增任务指南为本项目独立补充，原教程的 19 篇来源映射保持不变。
+
 本项目将 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 固定版本的 README 与全部 **19 篇教程**独立提炼为 **1 个总入口 + 6 个小 skill**，用于 Codex 的科研与论文写作协作。技能文件公开下载，安装脚本仅依赖 Python 标准库；运行任务仍需你自己的 Codex 环境及其可用工具。
 
 **来源与致谢：** 科研方法与教程源自 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit)，感谢郭兰哲老师及陈煜旸、葛凌岳、张逸凯等同学的整理与分享。本项目由 YCC-Lover 独立提炼、适配为 Codex skills 并持续维护；原教程观点与本项目补充内容分别标注。[逐篇来源](skills/research-starter-paper/references/sources.md) · [发布范围](NOTICE.md)。
@@ -68,12 +70,12 @@
 | Skill | 用途 | 原教程 |
 | --- | --- | --- |
 | [research-starter-paper](skills/research-starter-paper/SKILL.md) | 科研入门、跨阶段任务与接续的总入口 | 01-19 |
-| [rsk-research-design](skills/rsk-research-design/SKILL.md) | 选题、问题、Idea、最小验证 | 01、04 |
-| [rsk-literature](skills/rsk-literature/SKILL.md) | 找论文、读论文、引用与 BibTeX | 02、03、15 |
-| [rsk-paper-writing](skills/rsk-paper-writing/SKILL.md) | 大纲、摘要、引言、相关工作、方法；独立补充讨论与投稿检查 | 08、10-13 |
-| [rsk-experiments-figures](skills/rsk-experiments-figures/SKILL.md) | 实验设计、结果分析、论文图表 | 09、14 |
-| [rsk-rebuttal](skills/rsk-rebuttal/SKILL.md) | 审稿回复与返修 | 16 |
-| [rsk-research-workflow](skills/rsk-research-workflow/SKILL.md) | 汇报、meeting、参会、日志、资助、AI 协作 | 05-07、17-19 |
+| [rsk-research-design](skills/rsk-research-design/SKILL.md) | 选题、候选问题决策、Idea、最小验证 | 01、04 |
+| [rsk-literature](skills/rsk-literature/SKILL.md) | 检索、阅读卡、多文献综合、引用与版本核验 | 02、03、15 |
+| [rsk-paper-writing](skills/rsk-paper-writing/SKILL.md) | 章节写作；独立补充学位论文、长文一致性、讨论与投稿检查 | 08、10-13 |
+| [rsk-experiments-figures](skills/rsk-experiments-figures/SKILL.md) | 实验图表；独立补充 TG/DTG 工具和表征检查 | 09、14 |
+| [rsk-rebuttal](skills/rsk-rebuttal/SKILL.md) | 审稿回复、稿件修改与证据联动 | 16 |
+| [rsk-research-workflow](skills/rsk-research-workflow/SKILL.md) | 汇报、参会、开题/答辩演练、记录与 AI 协作 | 05-07、17-19 |
 
 ## 应用示例
 
@@ -163,7 +165,7 @@
 
 **预期交付：** 研究介绍、提问清单和待真实交流后填写的跟进模板。
 
-更多输入清单与提示词见 [19 个完整场景](examples/README.md)；想先用公开教学材料试一次，见 [首次引言练习](examples/first-run/README.md)。
+更多输入清单与提示词见 [19 个任务场景](examples/README.md)；想先用公开教学材料试一次，见 [首次引言练习](examples/first-run/README.md) 或 [七个完整任务包](examples/worked/README.md)。任务包中的自查与示意不冒充模型实测输出。
 
 ## 安装
 
@@ -190,6 +192,8 @@ python scripts/install_skills.py
 总入口需要六个小 skill 位于同级目录；建议一起安装。已有同名目录时，默认拒绝覆盖，不会删除任何文件。
 
 安装前可执行 `python scripts/install_skills.py --dry-run`；已有安装可用 `python scripts/install_skills.py --check` 只读对比内容。完整路径、备份、失败处理和换账号说明见 [安装指南](docs/INSTALLATION.md)。
+
+新安装/更新会保存版本与文件校验收据，`--check` 同时报告包版本、已记录安装版本和安装后的本地修改；旧安装没有收据时如实显示未知。`python scripts/install_skills.py --doctor` 只读检查安装并发现可选工具，不联网、不安装软件，也不把工具存在当成已经读取论文或完成导出。确认后在新 Codex 对话中做一次 [使用验收](docs/INSTALLATION.md#安装后验收)。
 
 ## 使用
 
@@ -230,7 +234,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 ## 版本与来源
 
-当前稳定版为 `v1.2.0`，首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 [GitHub Releases](https://github.com/YCC-Lover/research-starter-skills/releases/latest) 下载技能包或选择对应 tag，以固定版本安装。
+当前稳定版为 `v1.3.0`，首版为 `v1.0.0`；以 [catalog.json](catalog.json) 中的版本为准。可在 [GitHub Releases](https://github.com/YCC-Lover/research-starter-skills/releases/latest) 下载技能包或选择对应 tag，以固定版本安装。
 
 覆盖对应上游提交 `36ba390d153f5289308ec833e2b633c26b304a7b`。外部致谢资料仅保留出处关系，未声称阅读其中的整本书。[完整来源表](skills/research-starter-paper/references/sources.md) 与 [NOTICE.md](NOTICE.md) 说明作者归属和发布范围。
 
@@ -245,6 +249,8 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 自动检查技能格式、19 篇来源映射、相对链接、公开路径、安装更新及批准图像的完整性。新增回归测试覆盖优化模式下校验、链接目录与硬链接、无写入预览及内容对比。[本次审查记录](docs/PROJECT_AUDIT.md) 区分已验证事项与剩余风险。
 
 工程校验不等于模型在所有学科都表现可靠。[行为评测](evals/README.md)独立记录固定合成任务的对照协议、实际输出、模型判读与主会话复核，与提示词示例及手工示意分开；不冒充人类专家评审。小样本不证明普遍优越、节省时间或录用率；最终数据、引文与结论仍需作者核对。
+
+v1.2.0 的八题模型记录保留为历史证据，不算 v1.3.0 的新增流程已通过。新版任务包提供合成输入、维护者教学示意和真实的确定性热分析工具记录；新增独立模型运行只有实际完成后才会进入 [运行索引](evals/runs.json)。
 
 ## 觉得有用，欢迎一起完善
 

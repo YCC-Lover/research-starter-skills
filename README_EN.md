@@ -8,6 +8,8 @@ Start with the step that is blocking you: a broad topic, a dense introduction, a
 
 **[Download](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [Learning path](docs/LEARNING_PATH.md) · [First exercise](examples/first-run/README.md) · [19 task examples](examples/README.md) · [Contribute](CONTRIBUTING.md)**
 
+Version 1.3 adds [seven complete task packs](examples/worked/README.md): task briefing, research decisions, evidence synthesis, thesis chapters, TG/DTG, revision tracing and rehearsal. New guidance is independently authored; the 19 upstream tutorial mappings are unchanged.
+
 ## Origin first
 
 The research methods and tutorials come from [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit), based on its README at revision 36ba390d153f5289308ec833e2b633c26b304a7b and all 19 exported tutorials. We thank Guo Lanzhe, Chen Yuyang, Ge Lingyue, Zhang Yikai, and the other contributors for their work and sharing. YCC-Lover independently distills, adapts and maintains these Codex skills; upstream guidance and additions from this project are identified separately.
@@ -134,6 +136,8 @@ python scripts/install_skills.py
 ~~~
 
 Without Git, download the ZIP from Releases, extract it, and run the installer from the directory containing catalog.json. Install all seven folders as siblings. The default is CODEX_HOME/skills, or ~/.codex/skills when unset. Use --dest to specify another profile. See the [installation guide](docs/INSTALLATION.md) for read-only checks and explicit backup updates.
+
+Installation/update records a version and file-hash receipt. `--check` compares actual contents and identifies changes since that installation; legacy installs without a receipt report an unknown installed version. `python scripts/install_skills.py --doctor` discovers optional tools without running them, contacting services or installing packages. Discovery is not proof of parsing, export or model behavior.
 
 Then try:
 

@@ -1,0 +1,17 @@
+{
+  "data_kind": "user-to-fill-not-an-instrument-default",
+  "temperature_column": "temperature_C",
+  "temperature_unit": "C",
+  "mass_unit": "%",
+  "samples": {
+    "mass_A_pct": {
+      "sample_id": null,
+      "atmosphere": null,
+      "flow_ml_min": null,
+      "heating_rate_C_min": null,
+      "initial_mass_mg": null,
+      "normalization": null,
+      "independent_repeats": null
+    }
+  }
+}

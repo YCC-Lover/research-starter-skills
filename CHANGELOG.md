@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.0
+
+- Add task briefing, resource-aware research decisions, multi-paper synthesis, thesis consistency, results/discussion, revision tracing and interactive rehearsal guides without adding new skill entrypoints.
+- Add seven complete original teaching task packs, correction exercises and output-oriented checks; retain the 19 prompt scenarios and upstream source mappings.
+- Add a read-only CSV thermal-data checker with opt-in NumPy differentiation, explicit units, condition checks and source hashes; never infer mechanism or significance.
+- Record installation versions and hashes, distinguish later local changes, and add read-only optional-tool discovery plus post-installation acceptance steps.
+- Archive actual v1.2.0 evaluation sources and decouple historical evidence from current dependency-impact checks; preserve original responses and failure records.
+- Preserve upstream attribution, existing product imagery, user files and the maintainer's choice not to add a license.
+
 ## 1.2.0
 
 - Add optional learning, execution and review behavior to all seven skill entrypoints; preserve narrow task scope and read-only review.

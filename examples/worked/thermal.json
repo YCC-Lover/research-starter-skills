@@ -1,0 +1,26 @@
+{
+  "data_kind": "original-synthetic-teaching-data-not-measured",
+  "temperature_column": "temperature_C",
+  "temperature_unit": "C",
+  "mass_unit": "%",
+  "samples": {
+    "mass_A_pct": {
+      "sample_id": "teaching-A",
+      "atmosphere": "nitrogen",
+      "flow_ml_min": 40,
+      "heating_rate_C_min": 10,
+      "initial_mass_mg": 5,
+      "normalization": "initial_mass_100pct",
+      "independent_repeats": 1
+    },
+    "mass_B_pct": {
+      "sample_id": "teaching-B",
+      "atmosphere": "air",
+      "flow_ml_min": 40,
+      "heating_rate_C_min": 20,
+      "initial_mass_mg": 5,
+      "normalization": "initial_mass_100pct",
+      "independent_repeats": 1
+    }
+  }
+}

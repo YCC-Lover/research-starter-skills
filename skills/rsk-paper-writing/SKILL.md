@@ -1,6 +1,6 @@
 ---
 name: rsk-paper-writing
-description: "依据 Research-Starter-Kit 起草或重构科研论文的论证与章节，尤其是摘要、引言、相关工作和方法。用于论文大纲和实质改写；单纯语言润色无需整套流程。"
+description: "依据 Research-Starter-Kit 组织论文论证、起草或修改章节，并核对学位论文的长文一致性。用于摘要、引言、方法、结果与讨论等实质写作；单纯语言润色无需整套流程。"
 ---
 
 # 论文论证与章节写作
@@ -10,9 +10,11 @@ description: "依据 Research-Starter-Kit 起草或重构科研论文的论证�
 ## 选择所需指南
 
 - 全文论证、作者与投稿前准备：[论文结构](references/structure.md)。
+- 学位论文、长文一致性与修改影响：[长篇论文](references/thesis-longform.md)。
 - 摘要与引言：[摘要和引言](references/abstract-introduction.md)。
 - 相关工作与方法：[相关工作和方法](references/related-methods.md)。
 - 讨论、结论与投稿前核查：[讨论与投稿](references/discussion-submission.md)，只加载与当前篇章或投稿任务有关的部分。
+- 结果与讨论段落的证据组织：[结果与讨论](references/results-discussion.md)。
 - 学习原文的摘要与对比图案例：[案例](references/examples.md)。
 - 对应教程与适用边界：[来源](references/sources.md)。
 

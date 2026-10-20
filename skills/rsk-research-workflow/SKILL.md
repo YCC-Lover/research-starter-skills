@@ -1,6 +1,6 @@
 ---
 name: rsk-research-workflow
-description: "依据 Research-Starter-Kit 准备学术汇报、meeting、会议参会与会后跟进，建立科研日志与习惯、设计可验证的 AI 协作，并筛选资助线索。用于科研过程组织，不作为当前会议或奖学金政策、Codex 操作手册。"
+description: "依据 Research-Starter-Kit 准备组会、会议交流与科研记录，并支持开题、阶段汇报和答辩问答演练。用于科研过程组织、反馈与 AI 协作；现行会议、资助和工具规则仍需另行核验。"
 ---
 
 # 科研工作流与学术交流
@@ -11,6 +11,7 @@ description: "依据 Research-Starter-Kit 准备学术汇报、meeting、会议�
 
 - 组会、论文汇报、meeting、实验日志和习惯：[科研实践](references/practice.md)。
 - 学术会议计划、现场交流、研究介绍与会后跟进：[会议参会](references/conferences.md)。
+- 开题、阶段汇报、预答辩和问答训练：[演练与反馈](references/rehearsal.md)。
 - 与 AI 协作、上下文、验证和自动化边界：[AI 协作](references/ai-collaboration.md)。
 - 未发表材料、AI 使用记录与披露：[负责任的 AI 协作](references/responsible-ai.md)。
 - 原文中的旧版 Claude/macOS 命令：[历史工具附录](references/claude-snapshot.md)，仅用于解释原文，不执行为 Codex 操作。

@@ -1,6 +1,6 @@
 ---
 name: rsk-experiments-figures
-description: "依据 Research-Starter-Kit 规划公平的实验、撰写实验分析，并设计论文 teaser、方法图和结果图表。用于主张与证据对齐；不生成虚构数据或替代真实实验。"
+description: "依据 Research-Starter-Kit 规划公平实验、分析真实结果并设计论文图表，提供 TG/DTG 只读数据检查与材料表征证据核对。用于主张与证据对齐，不生成虚构数据或替代真实实验。"
 ---
 
 # 实验设计、分析与论文图表
@@ -12,6 +12,8 @@ description: "依据 Research-Starter-Kit 规划公平的实验、撰写实验�
 - 实验计划、结果解释、Experiments 章节：[实验](references/experiments.md)。
 - teaser、方法示意、数据图表：[图表](references/figures.md)。
 - 重复类型、统计解释、预处理、TG/DTG 或跨学科比较：[测量与比较](references/measurement-checks.md)。
+- TG/DTG 输入、只读检查及可追溯计算：[热分析任务包](references/thermal-task.md)。
+- DSC、FTIR、XRD 等材料表征的输入和解释边界：[其他表征](references/characterization.md)。
 - 原文示例页和工具线索：[案例与资源](references/examples-resources.md)。
 - 正文来源与适用说明：[来源](references/sources.md)。
 

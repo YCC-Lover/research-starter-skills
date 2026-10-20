@@ -1,6 +1,8 @@
 """Install the complete bundle without deleting existing files."""
 
 import argparse
+import hashlib
+import importlib.util
 import json
 import os
 import re
@@ -11,6 +13,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+RECEIPT = '.research-starter-skills-install.json'
 
 
 def unlinked_path(value):
@@ -62,9 +65,15 @@ def target_directory(destination):
 def check_installation(destination):
     destination = target_directory(destination)
     catalog, sources = bundle()
+    receipt_path = unlinked_path(destination / RECEIPT)
+    receipt = json.loads(receipt_path.read_text(encoding='utf-8')) if receipt_path.is_file() else None
+    if receipt is not None and (not isinstance(receipt, dict) or receipt.get('schema_version') != 1
+                                or not isinstance(receipt.get('files'), dict)
+                                or not isinstance(receipt.get('package_version'), str)):
+        raise ValueError('Invalid installation receipt; retain it and inspect the installation.')
     statuses = []
     for name, source, files in sources:
-        missing, modified = [], []
+        missing, modified, local_changes = [], [], []
         for file in files:
             relative = file.relative_to(source)
             target = destination / name / relative
@@ -73,10 +82,35 @@ def check_installation(destination):
                 missing.append(relative.as_posix())
             elif target.read_bytes() != file.read_bytes():
                 modified.append(relative.as_posix())
+            key = name + '/' + relative.as_posix()
+            if receipt and key in receipt['files'] and target.is_file():
+                if hashlib.sha256(target.read_bytes()).hexdigest() != receipt['files'][key]:
+                    local_changes.append(relative.as_posix())
         statuses.append({'name': name, 'missing': missing, 'modified': modified,
+                         'local_changes_since_install': local_changes,
                          'current': not missing and not modified})
     return {'version': catalog['version'], 'destination': str(destination),
-            'current': all(skill['current'] for skill in statuses), 'skills': statuses}
+            'installed_version': receipt['package_version'] if receipt else None,
+            'receipt_status': 'recorded-not-proof-of-discovery' if receipt else 'not-recorded',
+            'current': all(skill['current'] for skill in statuses), 'skills': statuses,
+            'next_step': 'Open a new Codex chat and confirm the intended skill is discovered.'
+            if all(skill['current'] for skill in statuses)
+            else 'Inspect differences; update only with an explicit backup and a local-edit decision.'}
+
+
+def diagnose_environment(destination):
+    modules = {}
+    for name in ('numpy', 'PIL', 'pymupdf', 'docx'):
+        try:
+            modules[name] = importlib.util.find_spec(name) is not None
+        except (ImportError, ValueError):
+            modules[name] = False
+    return {'installation': check_installation(destination),
+            'commands_found': {name: shutil.which(name) is not None
+                               for name in ('codex', 'pdftotext', 'pdftoppm', 'latexmk')},
+            'python_modules_found': modules, 'network_checked': False,
+            'origin_interface_checked': False, 'files_written': 0,
+            'limits': 'Discovery only; no commands, document parsing, model calls or network requests were executed.'}
 
 
 def install(destination, update=False, backup_dir=None, dry_run=False):
@@ -91,6 +125,11 @@ def install(destination, update=False, backup_dir=None, dry_run=False):
             planned.append((file, target / file.relative_to(source)))
 
     overwrites = [(source, target) for source, target in planned if target.exists()]
+    receipt_path = unlinked_path(destination / RECEIPT)
+    if receipt_path.exists() and (not receipt_path.is_file() or receipt_path.stat().st_nlink > 1):
+        raise ValueError('Installation receipt is not a regular unlinked file.')
+    if receipt_path.exists() and not update:
+        raise ValueError('Installation receipt already exists; use --update with --backup-dir.')
     for _, target in planned:
         unlinked_path(target)
         if target.exists() and (not target.is_file() or target.stat().st_nlink > 1):
@@ -112,21 +151,29 @@ def install(destination, update=False, backup_dir=None, dry_run=False):
             raise ValueError('Backup and source repository must not overlap.')
         if backup_root.exists() and not backup_root.is_dir():
             raise ValueError('The backup path must be a directory.')
-        if overwrites and not dry_run:
+        if (overwrites or receipt_path.exists()) and not dry_run:
             backup = backup_root / ('snapshot-' + uuid.uuid4().hex)
             backup.mkdir(parents=True, exist_ok=False)
             for _, target in overwrites:
                 saved = backup / target.relative_to(destination)
                 saved.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(target, saved)
+            if receipt_path.exists():
+                shutil.copy2(receipt_path, backup / RECEIPT)
 
     if not dry_run:
         for source, target in planned:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
+        receipt = {'schema_version': 1, 'package_version': catalog['version'],
+                   'files': {target.relative_to(destination).as_posix():
+                             hashlib.sha256(source.read_bytes()).hexdigest()
+                             for source, target in planned}}
+        receipt_path.write_text(json.dumps(receipt, sort_keys=True, indent=2) + '\n', encoding='utf-8')
     return {'installed': [name for name, _, _ in sources] if not dry_run else [],
             'version': catalog['version'], 'destination': str(destination),
             'backup': str(backup) if backup else None, 'deleted_files': 0,
+            'receipt': str(receipt_path) if not dry_run else None,
             'dry_run': dry_run, 'files_to_copy': len(planned), 'files_to_backup': len(overwrites)}
 
 
@@ -139,12 +186,13 @@ def main():
     modes = parser.add_mutually_exclusive_group()
     modes.add_argument('--dry-run', action='store_true', help='Validate and preview without writing files.')
     modes.add_argument('--check', action='store_true', help='Compare installed files with this package without writing.')
+    modes.add_argument('--doctor', action='store_true', help='Read-only installation and optional-tool discovery; no network.')
     args = parser.parse_args()
     try:
-        if args.check:
+        if args.check or args.doctor:
             if args.update or args.backup_dir:
-                parser.error('--check cannot be combined with update or backup options.')
-            result = check_installation(args.dest)
+                parser.error('--check/--doctor cannot be combined with update or backup options.')
+            result = diagnose_environment(args.dest) if args.doctor else check_installation(args.dest)
         else:
             result = install(args.dest, args.update, args.backup_dir, args.dry_run)
     except (OSError, ValueError, KeyError, TypeError) as error:

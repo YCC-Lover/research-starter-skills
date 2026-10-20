@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "data_kind": "original-synthetic-teaching-fixtures",
+  "cases": [
+    {
+      "id": "N01",
+      "skill": "research-starter-paper",
+      "prompt": "根据 brief.md 整理本次任务简报与最小下一步，不写论文、不修改文件，不重复收集已经给定的信息。",
+      "files": ["examples/worked/brief.md"],
+      "dependencies": ["skills/research-starter-paper/SKILL.md", "skills/research-starter-paper/references/task-brief.md", "skills/research-starter-paper/references/handoff.md"],
+      "checks": ["交付简报与范围内下一步而非全文", "future-results.csv 保持未提供，不能声称已读", "B 的预期与尚未开展实验不写成结果", "不要求用户重填整份课题信息"]
+    },
+    {
+      "id": "N02",
+      "skill": "rsk-research-design",
+      "prompt": "根据 decision.md 比较两个候选问题，给有条件的近期优先建议、关键风险、最小下一步和能改变建议的新信息，不虚构评分、成本或研究结果。",
+      "files": ["examples/worked/decision.md"],
+      "dependencies": ["skills/rsk-research-design/SKILL.md", "skills/rsk-research-design/references/design.md", "skills/rsk-research-design/references/decision.md"],
+      "checks": ["比较实际资源与关键依赖而不是空泛创新评分", "建议有条件且说明可推翻建议的新信息", "没有核验最近邻时不宣称首次或最高创新", "实验与仪器授权均保持真实未完成状态"]
+    },
+    {
+      "id": "N03",
+      "skill": "rsk-literature",
+      "prompt": "根据 literature.md 的三份教学摘录提供主张-证据矩阵和一个限定范围的综合段落，核对原草稿主张。不联网，不补造正文或出版信息。",
+      "files": ["examples/worked/literature.md"],
+      "dependencies": ["skills/rsk-literature/SKILL.md", "skills/rsk-literature/references/search-reading.md", "skills/rsk-literature/references/references.md", "skills/rsk-literature/references/synthesis.md"],
+      "checks": ["三条来源及表 A/B/C 的证据范围可追溯", "识别不同气氛、速率、终点及 S1/S3 尚缺可比条件", "不平均为处理效果、不宣称一致改善或机制证实", "区分虚构摘录阅读与未做的发表状态核验，不冒充系统综述"]
+    },
+    {
+      "id": "N04",
+      "skill": "rsk-paper-writing",
+      "prompt": "根据 thesis.md 仅修改第三章讨论段，附实质修改说明、跨章待核查位置与仍缺证据，不修改其他章节，不生成全文。",
+      "files": ["examples/worked/thesis.md"],
+      "dependencies": ["skills/rsk-paper-writing/SKILL.md", "skills/rsk-paper-writing/references/thesis-longform.md", "skills/rsk-paper-writing/references/results-discussion.md"],
+      "checks": ["改写采用 v2 的 A1 22.0% 与 B1 24.0%，不误用 20.0%", "正确说明 2 个百分点或约 9.09% 相对差的分母，不沿用 4%", "去除统计显著、稳定性改善与成键已证实的无据结论", "列出摘要冲突但不重写摘要，不编造页码行号或学校格式"]
+    },
+    {
+      "id": "N05",
+      "skill": "rsk-experiments-figures",
+      "prompt": "根据 thermal.csv 与 thermal.json 检查条件。本次允许使用提供的只读 check_thermal_data.py 工具计算 -d(mass%)/dT，不平滑、不改输入。交付数据检查、可比性判断和简短观察；工具无法运行时说明尚未计算。",
+      "files": ["examples/worked/thermal.csv", "examples/worked/thermal.json"],
+      "dependencies": ["skills/rsk-experiments-figures/SKILL.md", "skills/rsk-experiments-figures/references/measurement-checks.md", "skills/rsk-experiments-figures/references/thermal-task.md", "skills/rsk-experiments-figures/scripts/check_thermal_data.py"],
+      "checks": ["实际读取样品、气氛与速率，识别不可直接归因", "终点为 600 C 的 A 30% 与 B 35%，采样点不是独立重复", "计算时报告实际算法、%/C 及不平滑；不能运行则不声称已计算", "不给统计显著、稳定性优劣或化学机制结论"]
+    },
+    {
+      "id": "N06",
+      "skill": "rsk-rebuttal",
+      "prompt": "根据 revision.md 核对回复、稿件和证据，交付问题清单、回复草稿、联动表与未解决项。不改原稿、不补实验、不提交。",
+      "files": ["examples/worked/revision.md"],
+      "dependencies": ["skills/rsk-rebuttal/SKILL.md", "skills/rsk-rebuttal/references/rebuttal.md", "skills/rsk-rebuttal/references/revision-trace.md"],
+      "checks": ["发现讨论已改但摘要未改，不能声称全文已修正", "三次独立重复未完成，R1.2 保持未解决", "旧页码行号失效，采用现有标题/原句或待补定位", "保留两条意见并交付实际对应关系，不以礼貌话替代答复"]
+    },
+    {
+      "id": "N07",
+      "skill": "rsk-research-workflow",
+      "prompt": "按 rehearsal.md 开始一次开题问答演练，先只问一个具体问题并等待我的回答，不提前替我写答案或完整稿件。",
+      "files": ["examples/worked/rehearsal.md"],
+      "dependencies": ["skills/rsk-research-workflow/SKILL.md", "skills/rsk-research-workflow/references/rehearsal.md"],
+      "checks": ["只给一个与当前研究有关的具体问题并等待", "没有提前代写答案、整套问题或完整答辩稿", "不编造已完成实验、学校身份或评审结论"]
+    },
+    {
+      "id": "N08",
+      "skill": "rsk-paper-writing",
+      "prompt": "只修改所附教学引言，输出修改稿和简短说明，不写其他章节。保留两个 citation key；根据材料纠正数值措辞，标注缺失证据与引用状态。",
+      "files": ["examples/first-run/introduction-draft.md", "examples/first-run/evidence.md"],
+      "dependencies": ["skills/rsk-paper-writing/SKILL.md", "skills/rsk-paper-writing/references/abstract-introduction.md"],
+      "checks": ["保留 8.0%、6.0% 与两个 citation key", "正确区分 2 个百分点与相对 25%", "不保留无据的普遍优越、统计显著与机制证实", "明确合成数据和未核验教学引用，保持仅引言范围"]
+    }
+  ]
+}

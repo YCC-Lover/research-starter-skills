@@ -31,6 +31,40 @@ class InstallTests(unittest.TestCase):
         router = self.destination / 'research-starter-paper'
         self.assertTrue((router / '../rsk-paper-writing/SKILL.md').resolve().is_file())
 
+    def test_receipt_records_version_and_detects_later_local_changes(self):
+        result = INSTALLER.install(self.destination)
+        receipt = json.loads(Path(result['receipt']).read_text(encoding='utf-8'))
+        current = INSTALLER.check_installation(self.destination)
+        self.assertEqual(current['installed_version'], receipt['package_version'])
+        changed = self.destination / 'rsk-paper-writing/SKILL.md'
+        changed.write_text('local customizations', encoding='utf-8')
+        status = next(s for s in INSTALLER.check_installation(self.destination)['skills']
+                      if s['name'] == 'rsk-paper-writing')
+        self.assertEqual(status['local_changes_since_install'], ['SKILL.md'])
+        self.assertEqual(changed.read_text(encoding='utf-8'), 'local customizations')
+
+    def test_legacy_and_doctor_checks_do_not_write(self):
+        diagnosis = INSTALLER.diagnose_environment(self.destination)
+        self.assertFalse(self.destination.exists())
+        self.assertIsNone(diagnosis['installation']['installed_version'])
+        self.assertEqual(diagnosis['files_written'], 0)
+        self.assertFalse(diagnosis['network_checked'])
+
+    def test_receipt_is_backed_up_and_unsafe_receipt_rejected(self):
+        result = INSTALLER.install(self.destination)
+        receipt = Path(result['receipt'])
+        old = receipt.read_bytes()
+        update = INSTALLER.install(self.destination, update=True, backup_dir=self.work / 'backups')
+        self.assertEqual((Path(update['backup']) / INSTALLER.RECEIPT).read_bytes(), old)
+        linked = self.work / 'receipt-hardlink'
+        try:
+            os.link(receipt, linked)
+        except OSError:
+            self.skipTest('Creating hardlinks is not available.')
+        with self.assertRaises(ValueError):
+            INSTALLER.install(self.destination, update=True, backup_dir=self.work / 'new-backup')
+        self.assertFalse((self.work / 'new-backup').exists())
+
     def test_collision_aborts_before_partial_install(self):
         target = self.destination / NAMES[-1]
         target.mkdir(parents=True)
@@ -50,10 +84,31 @@ class InstallTests(unittest.TestCase):
             'rsk-experiments-figures/references/measurement-checks.md',
             'rsk-paper-writing/references/discussion-submission.md',
             'rsk-research-workflow/references/responsible-ai.md',
+            'research-starter-paper/references/task-brief.md',
+            'rsk-research-design/references/decision.md',
+            'rsk-literature/references/synthesis.md',
+            'rsk-paper-writing/references/thesis-longform.md',
+            'rsk-paper-writing/references/results-discussion.md',
+            'rsk-experiments-figures/references/thermal-task.md',
+            'rsk-experiments-figures/scripts/check_thermal_data.py',
+            'rsk-rebuttal/references/revision-trace.md',
+            'rsk-research-workflow/references/rehearsal.md',
         ]
         for relative in paths:
             self.assertEqual((self.destination / relative).read_bytes(),
                              (ROOT / 'skills' / relative).read_bytes())
+
+    def test_installed_thermal_helper_runs_on_public_fixture(self):
+        INSTALLER.install(self.destination)
+        result = subprocess.run([sys.executable,
+                                 str(self.destination / 'rsk-experiments-figures/scripts/check_thermal_data.py'),
+                                 str(ROOT / 'examples/worked/thermal.csv'), '--metadata',
+                                 str(ROOT / 'examples/worked/thermal.json')],
+                                capture_output=True, text=True, check=True)
+        data = json.loads(result.stdout)
+        self.assertEqual(data['files_written'], 0)
+        self.assertFalse(data['derived'])
+        self.assertEqual(data['comparison']['different_conditions'], ['atmosphere', 'heating_rate_C_min'])
 
     def test_update_requires_explicit_backup(self):
         INSTALLER.install(self.destination)

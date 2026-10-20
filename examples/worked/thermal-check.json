@@ -1,0 +1,106 @@
+{
+  "record_kind": "actual-deterministic-tool-execution-not-a-model-response",
+  "date": "2026-10-20",
+  "command": [
+    "python",
+    "skills/rsk-experiments-figures/scripts/check_thermal_data.py",
+    "examples/worked/thermal.csv",
+    "--metadata",
+    "examples/worked/thermal.json",
+    "--derive"
+  ],
+  "script_sha256": "9aabafc976b0784cd9ddd89afdf46f8817ffcfcf1d43b79c606122a73a38405d",
+  "stdout_json": {
+    "input_name": "thermal.csv",
+    "input_sha256": "b12d4db3e128591e6d1c830252a5583bd1524603adea633f5b4c5da7d5408144",
+    "data_kind": "original-synthetic-teaching-data-not-measured",
+    "temperature_unit": "C",
+    "mass_unit": "%",
+    "temperature_range_C": [
+      100.0,
+      600.0
+    ],
+    "samples": [
+      {
+        "column": "mass_A_pct",
+        "points": 5,
+        "first_mass_pct": 100.0,
+        "last_mass_pct": 30.0,
+        "last_temperature_C": 600.0,
+        "missing_metadata": [],
+        "conditions": {
+          "sample_id": "teaching-A",
+          "atmosphere": "nitrogen",
+          "flow_ml_min": 40.0,
+          "heating_rate_C_min": 10.0,
+          "initial_mass_mg": 5.0,
+          "normalization": "initial_mass_100pct",
+          "independent_repeats": 1.0
+        },
+        "warnings": [],
+        "derivative": {
+          "definition": "-d(mass%)/dT",
+          "unit": "%/C",
+          "method": "numpy.gradient(edge_order=1)",
+          "numpy_version": "2.4.4",
+          "smoothing": null,
+          "values": [
+            0.02,
+            0.08666666666666667,
+            0.21,
+            0.12333333333333335,
+            0.05
+          ]
+        }
+      },
+      {
+        "column": "mass_B_pct",
+        "points": 5,
+        "first_mass_pct": 100.0,
+        "last_mass_pct": 35.0,
+        "last_temperature_C": 600.0,
+        "missing_metadata": [],
+        "conditions": {
+          "sample_id": "teaching-B",
+          "atmosphere": "air",
+          "flow_ml_min": 40.0,
+          "heating_rate_C_min": 20.0,
+          "initial_mass_mg": 5.0,
+          "normalization": "initial_mass_100pct",
+          "independent_repeats": 1.0
+        },
+        "warnings": [],
+        "derivative": {
+          "definition": "-d(mass%)/dT",
+          "unit": "%/C",
+          "method": "numpy.gradient(edge_order=1)",
+          "numpy_version": "2.4.4",
+          "smoothing": null,
+          "values": [
+            0.01,
+            0.06999999999999998,
+            0.19666666666666668,
+            0.12333333333333332,
+            0.05
+          ]
+        }
+      }
+    ],
+    "comparison": {
+      "different_conditions": [
+        "atmosphere",
+        "heating_rate_C_min"
+      ],
+      "unknown_conditions": [],
+      "causal_or_statistical_conclusion": "not-assessed"
+    },
+    "derived": true,
+    "files_written": 0,
+    "limits": [
+      "Sampling points are not independent repeats.",
+      "Endpoint mass is defined only at the reported temperature.",
+      "No mechanism, significance or thermal-stability ranking is inferred."
+    ],
+    "metadata_sha256": "1be2cb56f680b763fb911069b66fde5f307bbe41e78c88fb4d5469dffa564826"
+  }
+}
