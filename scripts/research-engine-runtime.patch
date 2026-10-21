@@ -709,7 +709,7 @@
              committed_raw, committed_document = _recovery_passport_snapshot(
                  passport, "committed passport"
              )
-@@ -2370,25 +2415,12 @@
+@@ -2370,25 +2415,16 @@
              if _path_digest(ledger_target, field="committed ledger") != new_digest:
                  raise TransactionRecoveryError("committed ledger digest mismatch")
              _require_regular_nonsymlink(sidecars["journal"], "transaction_journal")
@@ -736,11 +736,15 @@
 +        except BaseException as exc:
 +            # A rename may succeed before its flush reports failure. Never
 +            # remove either staged generation, even without a visible journal.
-+            exc.add_note(f"Transaction sidecars retained beside {passport}")
++            note = f"Transaction sidecars retained beside {passport}"
++            if hasattr(exc, "add_note"):
++                exc.add_note(note)
++            else:
++                print(note, file=sys.stderr)
              raise
      return new_pointer
  
-@@ -2410,6 +2442,12 @@
+@@ -2410,6 +2446,12 @@
  def main(argv: list[str] | None = None) -> int:
      parser = argparse.ArgumentParser(description=__doc__)
      subparsers = parser.add_subparsers(dest="command", required=True)
@@ -753,7 +757,7 @@
  
      def add_ledger_inputs(
          command_parser: argparse.ArgumentParser, *, authoritative: bool = False
-@@ -2439,7 +2477,7 @@
+@@ -2439,7 +2481,7 @@
      add_ledger_inputs(append_parser, authoritative=True)
      append_parser.add_argument("--event", required=True, type=Path)
  
@@ -762,7 +766,7 @@
      add_ledger_inputs(summary_parser, authoritative=True)
      summary_parser.add_argument("--moment", choices=SUMMARY_MOMENTS, required=True)
      summary_parser.add_argument("--signal-event-id", type=int)
-@@ -2456,6 +2494,7 @@
+@@ -2456,6 +2498,7 @@
      load_parser.add_argument("--project-ref", required=True)
      load_parser.add_argument("--orphan-candidate", type=Path)
      load_parser.add_argument("--no-recover", action="store_true")
@@ -770,7 +774,7 @@
  
      commit_parser = subparsers.add_parser("commit")
      commit_parser.add_argument("--passport", required=True, type=Path)
-@@ -2464,13 +2503,18 @@
+@@ -2464,13 +2507,18 @@
      commit_parser.add_argument("--ledger", required=True, type=Path)
      commit_parser.add_argument("--profile", action="append", required=True, type=Path)
      commit_parser.add_argument("--project-ref", required=True)
@@ -791,7 +795,7 @@
              replay_ledger(
                  ledger,
                  catalog,
-@@ -2495,7 +2539,7 @@
+@@ -2495,7 +2543,7 @@
                  expected_project_ref=args.project_ref,
              )
              sys.stdout.buffer.write(canonical_bytes(updated))
@@ -800,7 +804,7 @@
              projection = replay_ledger(
                  ledger, catalog, expected_project_ref=args.project_ref
              )
-@@ -2517,6 +2561,7 @@
+@@ -2517,6 +2565,7 @@
                  expected_project_ref=args.project_ref,
                  orphan_candidate=args.orphan_candidate,
                  recover=not args.no_recover,
@@ -808,7 +812,7 @@
              )
              _emit_json(result)
          elif args.command == "commit":
-@@ -2529,11 +2574,14 @@
+@@ -2529,11 +2578,14 @@
                  ledger,
                  catalog,
                  args.project_ref,

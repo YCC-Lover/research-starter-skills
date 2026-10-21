@@ -2420,7 +2420,11 @@ def commit_ledger_transaction(
         except BaseException as exc:
             # A rename may succeed before its flush reports failure. Never
             # remove either staged generation, even without a visible journal.
-            exc.add_note(f"Transaction sidecars retained beside {passport}")
+            note = f"Transaction sidecars retained beside {passport}"
+            if hasattr(exc, "add_note"):
+                exc.add_note(note)
+            else:
+                print(note, file=sys.stderr)
             raise
     return new_pointer
 

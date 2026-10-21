@@ -16,8 +16,8 @@
     {
       "path": "scripts/inquiry_branch_ledger.py",
       "base_sha256": "831e5438a182d44dd68df7fa82ae65eacf4560e3096ede672fb90b36338004f1",
-      "sha256": "21ec33e02a923fcfa0fadb9258d505fa0abedde57d6e0029c4988bb6644c8d51",
-      "reason": "Use native Windows cooperating locks and write-ahead recovery while retaining superseded journals and failed scratch instead of deleting them."
+      "sha256": "b687645a971614261f1a8dbcc59a89a1caeff4113c8016caf43b5cc870f36173",
+      "reason": "Use native Windows cooperating locks and write-ahead recovery while retaining superseded journals and failed scratch; preserve recovery errors on Python 3.10 without requiring BaseException.add_note."
     },
     {
       "path": "scripts/review_criteria_binding.py",
