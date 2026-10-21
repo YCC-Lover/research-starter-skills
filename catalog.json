@@ -1,11 +1,19 @@
 {
   "name": "research-starter-skills",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "repository": "https://github.com/YCC-Lover/research-starter-skills",
   "upstream_repository": "https://github.com/LAMDA-NeSy/Research-Starter-Kit",
   "upstream_revision": "36ba390d153f5289308ec833e2b633c26b304a7b",
   "tutorials_covered": 19,
   "tutorials_total": 19,
+  "research_engine": {
+    "source_repository": "https://github.com/Imbad0202/academic-research-skills",
+    "source_commit": "3224a27a2571cefef0fddfd437004cb006f2b0cb",
+    "license": "CC-BY-NC-4.0",
+    "registered_modes": 35,
+    "path": "skills/research-starter-paper/resources/research-engine",
+    "routes": "skills/research-starter-paper/references/advanced-capabilities.json"
+  },
   "skills": [
     {
       "name": "research-starter-paper",

@@ -2,6 +2,7 @@
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import re
 import struct
@@ -90,6 +91,15 @@ def validate(root=ROOT):
                     for reference in metadata.get('references', [])), 'Missing upstream citation.')
 
     approved_images = set()
+    engine_script = local_file(root, 'skills/research-starter-paper/scripts/research_engine.py')
+    engine_spec = importlib.util.spec_from_file_location('rsk_research_engine_validation', engine_script)
+    engine_module = importlib.util.module_from_spec(engine_spec)
+    engine_spec.loader.exec_module(engine_module)
+    engine_result = engine_module.verify_bundle()
+    # Four zero-byte filename fixtures exercise PDF-folder import, not PDF reading.
+    # Only exact manifest-bound empty files are exempt; actual documents remain banned.
+    empty_pdf_fixtures = {local_file(root, 'skills/research-starter-paper/resources/research-engine/' + name)
+                          for name in engine_result['empty_pdf_filename_fixtures']}
     asset_manifest = root / 'docs/images/manifest.json'
     if asset_manifest.is_file():
         for asset in json.loads(asset_manifest.read_text(encoding='utf-8'))['images']:
@@ -117,7 +127,7 @@ def validate(root=ROOT):
             continue
         if path in approved_images:
             continue
-        require(path.suffix.lower() not in {'.pdf', '.opju', '.png', '.jpg', '.jpeg', '.exe', '.zip'},
+        require(path in empty_pdf_fixtures or path.suffix.lower() not in {'.pdf', '.opju', '.png', '.jpg', '.jpeg', '.exe', '.zip'},
                 'Unapproved binary or raw source file: ' + str(path.relative_to(root)))
         try:
             text = path.read_text(encoding='utf-8')
@@ -135,7 +145,7 @@ def validate(root=ROOT):
                 require(destination.is_relative_to(root) and destination.exists(),
                         'Broken or escaping link: ' + str(path.relative_to(root)) + ' -> ' + target)
     return {'skills': len(names), 'tutorials_covered': 19, 'public_paths_and_links_valid': True,
-            'approved_images': len(approved_images)}
+            'approved_images': len(approved_images), 'research_engine': engine_result}
 
 
 if __name__ == '__main__':

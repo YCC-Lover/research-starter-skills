@@ -39,7 +39,7 @@ jobs:
           work = Path(os.environ["RUNNER_TEMP"]) / "research-starter-tests"
           work.mkdir(parents=True, exist_ok=True)
           with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as env:
-              for key in ("TEMP", "TMP", "TMPDIR"):
+              for key in ("TEMP", "TMP", "TMPDIR", "RSK_PDF_TEST_ROOT", "RSK_ACTIVITY_TEST_ROOT"):
                   env.write(f"{key}={work}\n")
       - name: Install Validation Dependency
         env:

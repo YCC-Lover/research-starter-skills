@@ -16,6 +16,7 @@ description: "依据 Research-Starter-Kit 准备组会、会议交流与科研�
 - 开题、阶段汇报、预答辩和问答训练：[演练与反馈](references/rehearsal.md)。
 - 与 AI 协作、上下文、验证和自动化边界：[AI 协作](references/ai-collaboration.md)。
 - 未发表材料、AI 使用记录与披露：[负责任的 AI 协作](references/responsible-ai.md)。
+- 材料护照、完整流程恢复、证据与决定记录、披露生成及研究后跟踪：[进阶协作](references/advanced-workflow.md)。不自动开启持续监测或外部传输。
 - 原文中的旧版 Claude/macOS 命令：[历史工具附录](references/claude-snapshot.md)，仅用于解释原文，不执行为 Codex 操作。
 - 奖学金及其他资助线索：[历史目录](references/funding.md)，具体申请需检索当年官方通知。
 - 对应教程与适用说明：[来源](references/sources.md)。

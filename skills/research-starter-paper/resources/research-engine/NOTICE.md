@@ -1,0 +1,26 @@
+# NOTICE
+
+## Personal Project Statement
+
+This project (academic-research-skills) is a personal project by Cheng-I Wu (Imbad0202).
+
+**Development context:**
+- Developed in personal time using personal equipment
+- Uses personal AI subscriptions (Claude / Codex / Gemini etc., self-paid)
+- Does not contain confidential information from any employer
+- Domain knowledge applied is publicly available or personally researched
+
+**Relationship to employment:**
+- The author is currently employed in higher education quality assurance.
+- This project explores technical / methodological topics in that field.
+- It is not developed under employer direction or using employer resources.
+- Views and code are the author's own, not the employer's.
+
+## Governance
+
+How decisions are made, what cross-model review does and does not provide, and the
+end-of-life posture are stated in [GOVERNANCE.md](https://github.com/Imbad0202/academic-research-skills/blob/3224a27a2571cefef0fddfd437004cb006f2b0cb/GOVERNANCE.md).
+
+## License
+
+See LICENSE file for terms.

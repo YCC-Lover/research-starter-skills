@@ -9,6 +9,8 @@ tmp/
 backups/
 source-private/
 *.pdf
+# Pinned zero-byte filename fixtures only; package validation checks exact bytes.
+!skills/research-starter-paper/resources/research-engine/scripts/adapters/examples/folder_scan/input_fixture/*.pdf
 *.opju
 *.zip
 auth-probe.json

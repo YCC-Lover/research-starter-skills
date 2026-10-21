@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.0
+
+- Connect 35 advanced research, screening, writing, review and pipeline modes to the existing seven skills while retaining lightweight novice and prose-editing workflows.
+- Bundle pinned role instructions, protocols, templates, schemas, normative design references and local helpers with file-level provenance and required usage notices.
+- Add native Codex screening dispatch plans, retained report snapshots, manuscript-bound bibliographic lookup and Windows PDF/revision artifact adapters.
+- Preserve author decisions, exact-byte evidence bindings, unknown execution status and the distinction between model role separation and independently observed review.
+
 ## 1.5.0
 
 - Guide beginners from an everyday request or one available item; ask only the next decision-changing question and produce a small usable artifact.

@@ -1,0 +1,89 @@
+# Mode Registry
+
+Single source of truth for all modes across the ARS suite. **35 modes** across 5 skills.
+
+When adding or modifying modes, update this file first — SKILL.md files and CLAUDE.md should reference this registry.
+
+Last updated: v3.23.1 (2026-10-16)
+
+---
+
+## deep-research (8 modes)
+
+| Mode | Spectrum | Output | Oversight | Triggers |
+|------|----------|--------|-----------|----------|
+| `full` | Balanced | APA 7.0 report, 3,000-8,000 words | High | "research [topic]", "deep research", "academic analysis" |
+| `quick` | Fidelity | Research brief, 500-1,500 words | Medium | "quick brief", "30 minute summary", "quick research" |
+| `review` | Balanced | Reviewer report on provided text | High | "review this paper", "evaluate this paper", "assess this source" |
+| `lit-review` | Fidelity | Annotated bibliography + synthesis | Medium | "literature review", "annotated bibliography" |
+| `three-way-scan` | Fidelity | WHY/HOW/WHAT paper shortlist + cross-paper synthesis | Low | "WHY HOW WHAT papers", "3W literature scan", "compare these papers" |
+| `fact-check` | Fidelity | Claim-by-claim verification report | Medium | "verify claims", "fact-check", "evidence verification" |
+| `socratic` | Originality | Research Plan Summary + INSIGHT collection | Very High | "guide my research", "help me think through", "I'm not sure what to research" |
+| `systematic-review` | Fidelity | PRISMA 2020 report, 5,000-15,000 words | Medium | "systematic review", "meta-analysis", "PRISMA" |
+
+## academic-paper (11 modes)
+
+| Mode | Spectrum | Output | Oversight | Triggers |
+|------|----------|--------|-----------|----------|
+| `full` | Balanced | Complete paper draft (IMRaD or domain-appropriate) | High | "write a paper", "academic paper", "research paper" |
+| `plan` | Originality | Chapter Plan + INSIGHT collection (Socratic) | Very High | "guide my paper", "help me plan", "step by step paper" |
+| `outline-only` | Balanced | Detailed outline + evidence map | High | "paper outline", "just need an outline" |
+| `revision` | Fidelity | Revised draft + point-by-point R&R responses | High | "revise paper", "incorporate reviewer feedback" |
+| `revision-coach` | Balanced | Reviewer path: Revision Roadmap + Response Letter Skeleton. Explicit real-committee variant: source-accounted concern tracker + placeholder response skeleton | Medium | "parse reviews", "I got reviewer comments", "track these committee comments" |
+| `abstract-only` | Fidelity | Bilingual abstract (zh-TW + EN) + keywords | Medium | "write abstract" |
+| `lit-review` | Fidelity | Annotated bibliography in paper format | Medium | "literature review paper", "write a lit review" |
+| `format-convert` | Fidelity | Formatted document (LaTeX/DOCX-via-Pandoc/PDF/MD) | Low | "convert to LaTeX", "convert citations to [format]" |
+| `citation-check` | Fidelity | Citation error report | Low | "check citations", "verify references" |
+| `disclosure` | Fidelity | Default venue path: applicability/status bundle; policy-anchor path: anchor-specific render | Low | "AI disclosure for [venue]", "generate AI usage statement" |
+| `rebuttal-audit` | Fidelity | Advisory QA of an existing rebuttal draft (per-comment coverage + gaps + risk flags); no generation; no Schema 11 emission | Low | "audit my response", "check my rebuttal", "did I miss any reviewer comment" |
+
+## academic-paper-reviewer (6 modes)
+
+| Mode | Spectrum | Output | Oversight | Triggers |
+|------|----------|--------|-----------|----------|
+| `full` | Balanced | 5 review reports + Editorial Decision + Revision Roadmap | High | "review paper", "peer review", "manuscript review" |
+| `re-review` | Fidelity | Revision verification checklist + residual issues | Medium | "check revisions", "verification review" |
+| `quick` | Fidelity | Journal-Fit Reviewer quick assessment + key issues list | Low | "quick review", "quick look" |
+| `methodology-focus` | Fidelity | In-depth methodology review | Medium | "check methodology", "focus on methods" |
+| `guided` | Originality | Socratic issue-by-issue dialogue | Very High | "guide me to improve", "walk me through issues" |
+| `calibration` | Fidelity | Explicit 3-paper directional readout or default full Calibration Report + tier-scoped disclosure | Medium | "calibrate reviewer", "measure reviewer accuracy" |
+
+## academic-pipeline (1 orchestrator + 1 resume mode)
+
+| Mode | Spectrum | Output | Oversight | Triggers |
+|------|----------|--------|-----------|----------|
+| (pipeline) | Balanced | 10-stage orchestrated workflow | Very High | "academic pipeline", "research to paper", "full paper workflow" |
+| `resume_from_passport=<hash>` | Fidelity | Resume a prior pipeline run from a Material Passport reset boundary. Opt-in (`ARS_PASSPORT_RESET=1`). See `academic-pipeline/references/passport_as_reset_boundary.md`. | High | "resume from passport", "continue pipeline from reset boundary" |
+
+## sr-screener (8 modes)
+
+| Mode | Spectrum | Output | Oversight | Triggers |
+|------|----------|--------|-----------|----------|
+| `protocol` | Fidelity | `screening_protocol.md` + `screening_config.json`, confirmed by the user | Very High | "turn my proposal into a screening protocol", "screening criteria" |
+| `quick` | Fidelity | Decision table in chat, labelled single-reviewer triage | Medium | "is this abstract eligible", "screen these abstracts" |
+| `pilot` | Fidelity | Calibration report (seeds, agreement, conflicts) + agreed protocol clarifications | High | "pilot the screening", "calibrate screening" |
+| `ta-screen` | Fidelity | Dual-review title/abstract decisions, screening log, RIS groups, PRISMA counts, methods draft | High | "title/abstract screening", "screen these papers" |
+| `ft-screen` | Fidelity | Full-text decisions with one reason per exclusion (page and section) | High | "full-text screening", "full-text eligibility" |
+| `adjudicate` | Fidelity | Advisory third-reviewer suggestions for a human screening set's conflicts | Medium | "resolve screening conflicts", "adjudicate Rayyan conflicts" |
+| `audit` | Fidelity | Exclusions a senior reviewer would advance, advisory | Medium | "audit my exclusions", "double-check excluded records" |
+| `report` | Fidelity | PRISMA 2020 counts, methods draft, RIS exports, `literature_corpus[]` handoff | Medium | "PRISMA flow numbers", "methods paragraph for the screening" |
+
+---
+
+## Summary
+
+| Metric | Count |
+|--------|-------|
+| Total modes | 35 |
+| Fidelity | 25 (71%) |
+| Balanced | 7 (20%) |
+| Originality | 3 (9%) |
+
+### Oversight levels
+
+| Level | Meaning |
+|-------|---------|
+| Very High | User-led dialogue or mandatory checkpoints at every stage |
+| High | User confirms key decisions (RQ, outline, configuration) |
+| Medium | Structured format with limited decision points |
+| Low | Mechanical/template-driven, minimal human input |

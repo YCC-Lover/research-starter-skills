@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "scripts/adjudication_activity.py",
+      "base_sha256": "2bff31aca8a402d2439350aa76cbe52b4968a639aa40cdb1f45ae6cd47aedea3",
+      "sha256": "0cb6b5d608283cae87933233f2a12b833e3f50a7932e1f02eb669501bcdd93e9",
+      "reason": "Support native Windows activity reads, cooperating locks and retained publication without POSIX-only descriptor calls or cleanup."
+    },
+    {
+      "path": "scripts/build_submission_packet_manifest.py",
+      "base_sha256": "d4a03bbd2768c2cbac3b3b96574bd0a440aff307b1782b6bfe4f1f5d8fef1603",
+      "sha256": "10c04cf1069f51e09e1f23942a6418e4b329c2635ce254a1eb5797a11ba90604",
+      "reason": "Observe exactly listed submission artifacts through the shared Windows handle reader; retain missing, conflicting and unverified authority states."
+    },
+    {
+      "path": "scripts/inquiry_branch_ledger.py",
+      "base_sha256": "831e5438a182d44dd68df7fa82ae65eacf4560e3096ede672fb90b36338004f1",
+      "sha256": "21ec33e02a923fcfa0fadb9258d505fa0abedde57d6e0029c4988bb6644c8d51",
+      "reason": "Use native Windows cooperating locks and write-ahead recovery while retaining superseded journals and failed scratch instead of deleting them."
+    },
+    {
+      "path": "scripts/review_criteria_binding.py",
+      "base_sha256": "c31b564a1b9f7b6cfffbebec31ffd5fb3e5f5cc3a844fe7f1f41dd793dec6e40",
+      "sha256": "75b350e29235fe5886251fa6bf063089d917a36ee05df034e3116f5a8a152eff",
+      "reason": "Bind exact criterion and consumer artifact bytes on native Windows using the shared reader, with portable locks and retained failed outputs."
+    },
+    {
+      "path": "scripts/revision_roadmap.py",
+      "base_sha256": "5341358d489a550b56f0e7efde850c551b6d9df41106b0462e2f804ab4de9998",
+      "sha256": "9fe56c05824cd3a6f56140d54a6c882615f17cfab3530784ad803403dea9e1ed",
+      "reason": "Preserve byte-exact, hash-bound artifact reads on native Windows using retained handle-relative traversal."
+    },
+    {
+      "path": "sr-screener/scripts/build_outputs.py",
+      "base_sha256": "0cd8b13fd00fa1d0943f0a02c4937dae151a40e100df7b6c65c0c9090ecaf57a",
+      "sha256": "37192e15ae9662833283b6b33c6d8163dd19c9ed2d0e037fcc5e012fd2f3dd05",
+      "reason": "Retain export snapshots with completeness, context and byte hashes; distinguish preliminary outputs from explicitly attested finalization."
+    },
+    {
+      "path": "sr-screener/scripts/prepare_records.py",
+      "base_sha256": "c348fef94297f2fc9b4dcfb8796c27218d87f4f66e6f4c6d9fdfff421d02a577",
+      "sha256": "a07fa747406ba1510cea5039d60e70c4a0f62d76202d64db24909bcae1d5ddea",
+      "reason": "Retain old batches and stable record IDs; require a fresh work directory instead of bulk deletion."
+    },
+    {
+      "path": "sr-screener/scripts/srlib.py",
+      "base_sha256": "6db3670e8e2b5e4e4d9f4e89e598bef261abcbf93015e19e6a931a1505d05712",
+      "sha256": "f1e43dc5d32864dc4bfb058636a1831778793800a033fd554862ff98a94f38f3",
+      "reason": "Archive superseded revision state as individually checked files; inherit current Codex model by default."
+    },
+    {
+      "path": "sr-screener/scripts/build_workflow.py",
+      "base_sha256": "b83f4453cfaa5cc94a4efc6039b0278b0f61008a8d3f2ea2f031341b29d9604c",
+      "sha256": "fde3cb31aa405cc5f8a7f8ca247d8c0123e16de6016871dba6e8cdc4426712e6",
+      "reason": "Emit context-bound native Codex prompt/dispatch plans by default without claiming worker execution."
+    }
+  ]
+}

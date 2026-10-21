@@ -1,0 +1,8 @@
+# Optional executable research helpers, tested on Python 3.13 / Windows.
+# Reading and using the skill instructions does not require these packages.
+PyYAML==6.0.3
+jsonschema[format]==4.26.0
+referencing==0.37.0
+pypdf==6.21.1
+defusedxml==0.7.1
+ruamel.yaml==0.18.17

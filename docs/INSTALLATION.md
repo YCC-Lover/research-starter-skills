@@ -66,6 +66,16 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 ## 从输入到成果
 
+v2.0.0 的进阶资源随七个技能一起复制，不再单独注册内部工作流。执行 Python 研究
+辅助工具时，可在用户选定的环境中使用已安装总入口内的
+`assets/requirements-research.txt`；发行仓库根目录的 `requirements-research.txt`
+指向同一份依赖清单。普通文字指导不需要安装这些包。Windows 的研究事务和文件
+绑定工具目前按 Python 3.13 验证，安装器仍只需 Python 3.10+。
+
+代理按 [运行工具](../skills/research-starter-paper/references/runtime-helpers.md) 设置
+任务内临时目录与缓存，按需运行本地检查或明确授权的联网核验。Pandoc、TeX、PDF
+内容分类器与其他可选工具使用当前环境实际可用的版本，不在安装技能时自动下载安装。
+
 学习与文字分析可以直接从提供的材料开始。按任务需要启用可用的检索、PDF读取、科学作图或Word/LaTeX导出工具。TG/DTG只读CSV检查提供显式的 `--derive` 导数计算选项，使用环境中已有的NumPy；Origin项目可经可用接口读取，或导出CSV/XLSX后分析。
 
 [学习路径](LEARNING_PATH.md)连接原教程与实践；[对照实测](../evals/utility/REPORT.md)提供相同材料下两组实际交付，方便选择自己的第一个任务。

@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "source_commit": "3224a27a2571cefef0fddfd437004cb006f2b0cb",
+  "mode_count": 35,
+  "modes": [
+    {
+      "id": "deep-research:full",
+      "workflow": "deep-research",
+      "mode": "full",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "deep-research/WORKFLOW.md"
+    },
+    {
+      "id": "deep-research:quick",
+      "workflow": "deep-research",
+      "mode": "quick",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "deep-research/WORKFLOW.md"
+    },
+    {
+      "id": "deep-research:review",
+      "workflow": "deep-research",
+      "mode": "review",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "deep-research/WORKFLOW.md"
+    },
+    {
+      "id": "deep-research:lit-review",
+      "workflow": "deep-research",
+      "mode": "lit-review",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "deep-research/WORKFLOW.md"
+    },
+    {
+      "id": "deep-research:three-way-scan",
+      "workflow": "deep-research",
+      "mode": "three-way-scan",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "deep-research/WORKFLOW.md"
+    },
+    {
+      "id": "deep-research:fact-check",
+      "workflow": "deep-research",
+      "mode": "fact-check",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "deep-research/WORKFLOW.md"
+    },
+    {
+      "id": "deep-research:socratic",
+      "workflow": "deep-research",
+      "mode": "socratic",
+      "skills": [
+        "rsk-research-design"
+      ],
+      "entry": "deep-research/WORKFLOW.md"
+    },
+    {
+      "id": "deep-research:systematic-review",
+      "workflow": "deep-research",
+      "mode": "systematic-review",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "deep-research/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:full",
+      "workflow": "academic-paper",
+      "mode": "full",
+      "skills": [
+        "rsk-paper-writing"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:plan",
+      "workflow": "academic-paper",
+      "mode": "plan",
+      "skills": [
+        "rsk-paper-writing"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:outline-only",
+      "workflow": "academic-paper",
+      "mode": "outline-only",
+      "skills": [
+        "rsk-paper-writing"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:revision",
+      "workflow": "academic-paper",
+      "mode": "revision",
+      "skills": [
+        "rsk-rebuttal"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:revision-coach",
+      "workflow": "academic-paper",
+      "mode": "revision-coach",
+      "skills": [
+        "rsk-rebuttal"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:abstract-only",
+      "workflow": "academic-paper",
+      "mode": "abstract-only",
+      "skills": [
+        "rsk-paper-writing"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:lit-review",
+      "workflow": "academic-paper",
+      "mode": "lit-review",
+      "skills": [
+        "rsk-paper-writing"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:format-convert",
+      "workflow": "academic-paper",
+      "mode": "format-convert",
+      "skills": [
+        "rsk-paper-writing"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:citation-check",
+      "workflow": "academic-paper",
+      "mode": "citation-check",
+      "skills": [
+        "rsk-literature",
+        "rsk-paper-writing"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:disclosure",
+      "workflow": "academic-paper",
+      "mode": "disclosure",
+      "skills": [
+        "rsk-research-workflow",
+        "rsk-paper-writing"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper:rebuttal-audit",
+      "workflow": "academic-paper",
+      "mode": "rebuttal-audit",
+      "skills": [
+        "rsk-rebuttal"
+      ],
+      "entry": "academic-paper/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper-reviewer:full",
+      "workflow": "academic-paper-reviewer",
+      "mode": "full",
+      "skills": [
+        "rsk-rebuttal"
+      ],
+      "entry": "academic-paper-reviewer/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper-reviewer:re-review",
+      "workflow": "academic-paper-reviewer",
+      "mode": "re-review",
+      "skills": [
+        "rsk-rebuttal"
+      ],
+      "entry": "academic-paper-reviewer/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper-reviewer:quick",
+      "workflow": "academic-paper-reviewer",
+      "mode": "quick",
+      "skills": [
+        "rsk-rebuttal"
+      ],
+      "entry": "academic-paper-reviewer/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper-reviewer:methodology-focus",
+      "workflow": "academic-paper-reviewer",
+      "mode": "methodology-focus",
+      "skills": [
+        "rsk-rebuttal"
+      ],
+      "entry": "academic-paper-reviewer/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper-reviewer:guided",
+      "workflow": "academic-paper-reviewer",
+      "mode": "guided",
+      "skills": [
+        "rsk-rebuttal"
+      ],
+      "entry": "academic-paper-reviewer/WORKFLOW.md"
+    },
+    {
+      "id": "academic-paper-reviewer:calibration",
+      "workflow": "academic-paper-reviewer",
+      "mode": "calibration",
+      "skills": [
+        "rsk-rebuttal"
+      ],
+      "entry": "academic-paper-reviewer/WORKFLOW.md"
+    },
+    {
+      "id": "academic-pipeline:pipeline",
+      "workflow": "academic-pipeline",
+      "mode": "pipeline",
+      "skills": [
+        "research-starter-paper",
+        "rsk-research-workflow"
+      ],
+      "entry": "academic-pipeline/WORKFLOW.md"
+    },
+    {
+      "id": "academic-pipeline:resume-from-passport",
+      "workflow": "academic-pipeline",
+      "mode": "resume-from-passport",
+      "skills": [
+        "research-starter-paper",
+        "rsk-research-workflow"
+      ],
+      "entry": "academic-pipeline/WORKFLOW.md"
+    },
+    {
+      "id": "sr-screener:protocol",
+      "workflow": "sr-screener",
+      "mode": "protocol",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "sr-screener/WORKFLOW.md"
+    },
+    {
+      "id": "sr-screener:quick",
+      "workflow": "sr-screener",
+      "mode": "quick",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "sr-screener/WORKFLOW.md"
+    },
+    {
+      "id": "sr-screener:pilot",
+      "workflow": "sr-screener",
+      "mode": "pilot",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "sr-screener/WORKFLOW.md"
+    },
+    {
+      "id": "sr-screener:ta-screen",
+      "workflow": "sr-screener",
+      "mode": "ta-screen",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "sr-screener/WORKFLOW.md"
+    },
+    {
+      "id": "sr-screener:ft-screen",
+      "workflow": "sr-screener",
+      "mode": "ft-screen",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "sr-screener/WORKFLOW.md"
+    },
+    {
+      "id": "sr-screener:adjudicate",
+      "workflow": "sr-screener",
+      "mode": "adjudicate",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "sr-screener/WORKFLOW.md"
+    },
+    {
+      "id": "sr-screener:audit",
+      "workflow": "sr-screener",
+      "mode": "audit",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "sr-screener/WORKFLOW.md"
+    },
+    {
+      "id": "sr-screener:report",
+      "workflow": "sr-screener",
+      "mode": "report",
+      "skills": [
+        "rsk-literature"
+      ],
+      "entry": "sr-screener/WORKFLOW.md"
+    }
+  ],
+  "additional_role_routes": [
+    {
+      "skill": "rsk-experiments-figures",
+      "capabilities": [
+        "methodology design",
+        "experiment provenance and claim alignment",
+        "visualization planning and generation",
+        "optional figure verification",
+        "reproducibility configuration and audit"
+      ],
+      "resources": [
+        "deep-research/agents/research_architect_agent.md",
+        "academic-paper/agents/visualization_agent.md",
+        "academic-pipeline/agents/integrity_verification_agent.md"
+      ]
+    },
+    {
+      "skill": "rsk-research-workflow",
+      "capabilities": [
+        "post-research literature monitoring",
+        "research ethics",
+        "AI disclosure",
+        "process record",
+        "resumable workflow"
+      ],
+      "resources": [
+        "deep-research/agents/monitoring_agent.md",
+        "academic-pipeline/agents/pipeline_orchestrator_agent.md"
+      ]
+    }
+  ]
+}

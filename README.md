@@ -104,9 +104,38 @@ python scripts/install_skills.py
 
 TG/DTG 模块还提供只读 CSV 检查与按实际温度网格计算导数的工具；`--derive` 使用环境中已有的 NumPy。[完整热分析任务](skills/rsk-experiments-figures/references/thermal-task.md)
 
+## 进阶研究工作流
+
+七个技能按任务连接 **35 种进阶模式**，日常小修仍可直接完成。
+
+| 当前要做的事 | 新增能力 |
+| --- | --- |
+| 把宽泛方向变成可研究的问题 | Socratic 提问、深度调研、WHY/HOW/WHAT 对照、事实核查 |
+| 开展系统综述 | 协议、去重、试筛、隔离题摘/全文筛选、冲突裁决、质控与可追溯导出 |
+| 从材料组织完整论文 | 分步规划、大纲、全文、摘要、综述章节、格式转换与引用核验 |
+| 检查和修改稿件 | 多视角审稿、方法专项、修改辅导、作者决定、可回放修订与复审 |
+| 连接多个研究阶段 | 材料护照、阶段检查点、证据记录、AI 使用披露与投稿包检查 |
+
+```text
+使用 $rsk-literature。请根据附件记录，先和我确认纳排标准，
+做一轮小规模试筛；保留分歧和依据，再决定是否扩大筛选。
+```
+
+```text
+使用 $rsk-rebuttal。请对附件稿件做多视角审稿，
+先指出影响结论的证据问题，再与我确认修改范围。
+```
+
+代理按需读取角色、模板和数据契约，使用当前 Codex 的原生工具执行。
+独立筛选和多视角审稿需要实际独立上下文；格式转换、联网核验和模型调用依赖当前环境。
+流程保留缺失材料、未运行检查和计划实验的实际状态。
+[全部模式与执行方式](skills/research-starter-paper/references/advanced-research.md) ·
+[可执行工具与依赖](skills/research-starter-paper/references/runtime-helpers.md) ·
+[资源使用范围](skills/research-starter-paper/references/research-engine-notice.md)
+
 ## 看实际成果
 
-[新手与表达任务验收](evals/guided/REPORT.md)记录从空白起步、跨对话接续、材料变化检查和文字编辑的实际答复；[完整教学任务](examples/worked/README.md)提供可自己练习的合成材料。保存成功、文件可用、事实边界和用户操作分别核对，不用一个总分代替体验。
+[本轮任务回归与能力验收](evals/integration-v2/REPORT.md)记录从空白起步、跨对话接续、材料变化检查、文字编辑和原生筛选的实际执行；[完整教学任务](examples/worked/README.md)提供可自己练习的合成材料。保存成功、文件可用、事实边界和用户操作分别核对，不用一个总分代替体验。
 
 这些记录是小规模合成任务验证，不承诺录用、通用于所有学科的效果或固定节省时间。自动保存只在当前任务中执行，不是后台监控；新对话仍需定位项目。[工程验收](docs/PROJECT_AUDIT.md)
 
@@ -122,7 +151,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 安装器保存版本和文件哈希；`--doctor` 提供只读环境诊断。数据解析、作图和 Word/PDF/LaTeX 交付按当前 Codex 环境中的工具完成。[详细验收](docs/INSTALLATION.md#安装后验收)
 
-当前版本为 **v1.5.0**，来源固定于上游提交 `36ba390d153f5289308ec833e2b633c26b304a7b`。原教程归属、独立补充与发布范围见 [NOTICE.md](NOTICE.md)，引用信息见 [CITATION.cff](CITATION.cff)。
+当前版本为 **v2.0.0**。原教程仍固定于提交 `36ba390d153f5289308ec833e2b633c26b304a7b`；进阶工作流另保留固定版本和文件级来源记录。各部分归属、许可与发布范围见 [NOTICE.md](NOTICE.md)，引用信息见 [CITATION.cff](CITATION.cff)。
 
 ## 一起让科研起步更容易
 

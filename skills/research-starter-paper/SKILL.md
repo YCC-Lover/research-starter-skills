@@ -46,6 +46,12 @@ description: "科研学习与论文写作总入口，协调六个模块。帮助
 
 六个入口安装在本 skill 的同级目录；如未安装或某个入口不存在，明确说明缺项，可使用保留的 [研究补充](references/research.md)、[章节补充](references/paper-sections.md)、[证据补充](references/evidence-and-figures.md)、[返修补充](references/revision.md) 和 [实践补充](references/research-practice.md)，不能假称已调用缺失模块。
 
+## 进阶任务
+
+用户要求系统综述、记录筛选、多视角审稿、完整研究到成稿、材料护照恢复或其他进阶任务时，
+读取 [进阶研究工作流](references/advanced-research.md)，按任务进入相应模式并加载必要资源。
+普通润色和新手单步任务继续用当前轻量流程，不默认启动全部角色或十阶段编排。
+
 ## 写作工作流
 
 1. **明确研究问题。** 从材料写出研究对象、现有不足、要检验的问题、已取得的证据和适用边界。区分用户已确认的结果与待验证假设。

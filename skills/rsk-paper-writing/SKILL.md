@@ -14,6 +14,7 @@ description: "组织论文论证、起草或修改章节、核对学位论文一
 - 去模板腔、语气匹配、自然润色或成稿表达复核：[自然表达](references/prose-editing.md)。纯润色只加载此页，保留科学含义、作者语气和文件结构；默认交最终稿，不向论文中插入工具来源或编辑过程。
 
 - 全文论证、作者与投稿前准备：[论文结构](references/structure.md)。
+- 多阶段全文写作、作者风格校准、论证证据链、可核验格式转换：[进阶写作](references/advanced-writing.md)。明确要求这些任务时读取，不用于独立润色。
 - 学位论文、长文一致性与修改影响：[长篇论文](references/thesis-longform.md)。
 - 摘要与引言：[摘要和引言](references/abstract-introduction.md)。
 - 相关工作与方法：[相关工作和方法](references/related-methods.md)。

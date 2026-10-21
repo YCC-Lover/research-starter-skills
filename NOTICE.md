@@ -20,6 +20,8 @@ v1.3.0 的任务简报、决策比较、多文献综合、学位论文、材料�
 
 v1.5.0 的逐步引导、自动进度工具及跨学科证据适配为本项目独立补充。自然表达指南中的第三方编辑能力单独记录来源、固定版本与完整 MIT 许可，见 [第三方说明](skills/rsk-paper-writing/references/third-party-notices.md)。该许可仅覆盖对应适配部分，不改变原教程或本项目其他内容的使用范围。
 
+v2.0.0 的进阶研究资源整合自 Cheng-I Wu 的 [Academic Research Skills](https://github.com/Imbad0202/academic-research-skills)，固定提交 `3224a27a2571cefef0fddfd437004cb006f2b0cb`。对应工作流、契约、脚本及其适配按 CC BY-NC 4.0 分发，包含署名与非商业使用要求；完整许可、文件来源、平台改动及参考的 Codex 版本见 [研究资源说明](skills/research-starter-paper/references/research-engine-notice.md)。该部分许可独立适用，不替 Research-Starter-Kit 原教程或本项目其他内容授予许可。
+
 上游固定版本没有 LICENSE/COPYING 文件。这里不声明原教程采用 MIT、Apache 或其他未被证实的许可，不授予对原教程全文及其他第三方作品的再分发权。README 致谢中的外部书籍和文章仅保留出处，未作为已阅读全文处理。
 
 按维护者明确选择，本仓库目前不增加整体许可或原创代码与素材的新许可。公开可读、来源致谢与引用信息均不等于授予任意转载、商业使用或再许可权。需要这些用途时，应向相应权利人确认授权，而不是推断默认采用某个开源许可。

@@ -1,6 +1,6 @@
 ---
 name: rsk-literature
-description: "依据 Research-Starter-Kit 检索与批判阅读论文，综合多文献证据、核对矛盾结论与引用版本，并整理 BibTeX。用于阅读卡、综述准备和引用核验；论文章节写作由写作模块承担。"
+description: "检索与批判阅读论文，综合证据、核对引用与版本；支持深度调研、系统综述和元分析，以及按用户确认协议进行题摘/全文筛选。用于文献任务，论文章节写作由写作模块承担。"
 ---
 
 # 文献检索、阅读与引用
@@ -14,6 +14,7 @@ description: "依据 Research-Starter-Kit 检索与批判阅读论文，综合�
 - 找论文、读论文、复现与阅读卡：[检索和阅读](references/search-reading.md)。
 - 引用核验、去重、BibTeX 格式：[引用管理](references/references.md)。
 - 多文献比较、矛盾结论与综述准备：[证据综合](references/synthesis.md)。
+- 深度调研、系统综述、元分析、WHY/HOW/WHAT 对照及题摘/全文筛选：[进阶文献流程](references/advanced-literature.md)。
 - 作者来源与原文建议的适用边界：[来源](references/sources.md)。
 
 确定主题、时间范围、用途和用户已有种子论文。找最新工作时实际检索；将搜索线索、元数据已核验、全文已读和已复现分开标记。不能把摘要阅读冒充全文阅读，也不能将用户打不开的正文补成猜测。

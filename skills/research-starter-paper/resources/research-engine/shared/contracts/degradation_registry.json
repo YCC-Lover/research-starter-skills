@@ -1,0 +1,478 @@
+{
+  "$comment": "Degradation registry (#511 Part A). Machine-readable INDEX of every graceful-degradation mechanism in ARS: what fails, what degraded state is emitted, where the degradation is visible, who consumes it, and how the terminal-policy layer treats it. The registry INDEXES — it never re-authors: each row's `authority` points at the per-mechanism source of truth (a content anchor that must appear verbatim in the cited file), so semantics live in exactly one place and this file cannot drift into a second authority. Rows use each mechanism's NATIVE semantics (unresolvable / not_checked / PASS WITH NOTES / omit-field / warn-and-continue); there is deliberately NO universal score-cap column — ARS's gate model is tri-state outcomes + advisory suffixes + opt-in terminal policies, not a shared scalar score (#511 'Explicitly rejected: score capping'). Numeric/severity caps appear only where a scale already exists (see compliance_non_sr_warn_cap). Adding a row: fill every required field, cite the authority file with a short verbatim anchor (never a line number — anchors survive drift, line numbers do not), list the tests/lints/schemas that pin the behavior under `pinned_by` (path, or path::test_function), then run scripts/check_degradation_registry.py.",
+  "registry_version": "1.3.0",
+  "mechanisms": [
+    {
+      "mechanism": "citation_resolver_outage",
+      "failure_class": "Bibliographic lookup API unreachable (network error, 5xx, rate-limit exhaustion) during citation-existence verification",
+      "degraded_state": "Per-resolver outcome status 'unreachable' (queried_by null); a TOTAL outage of all applicable resolvers reduces lookup_verified to 'unresolvable' — never to 'true' (an outage is not evidence of existence) and never alone to 'false' (an outage is not fabrication evidence)",
+      "diagnostic_marker": "resolver_outcomes.<resolver>.status == 'unreachable' in the citation verification summary",
+      "downstream_consumer": "pipeline_orchestrator_agent finalizer (5-cell gate) and terminal_policies.citation_existence evaluation",
+      "terminal_policy_effect": "advisory by default; under citation_existence='strict' only lookup_verified=='false' (ID-keyed unmatched, C-V6(a)) refuses — 'unresolvable' from outage is NEVER blocked",
+      "authority": [
+        {
+          "file": "scripts/citation_verification_summary.py",
+          "anchor": "`unresolvable` otherwise — every applicable resolver `unreachable` (total"
+        },
+        {
+          "file": "scripts/verification_gate/__init__.py",
+          "anchor": "return _outcome(STATUS_UNREACHABLE, None)"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_verification_gate.py::test_all_unreachable_is_unresolvable",
+        "scripts/test_transport_fixture_citation_gate.py::test_total_outage_reduces_to_unresolvable_through_real_clients",
+        "shared/contracts/passport/citation_verification_summary.schema.json"
+      ]
+    },
+    {
+      "mechanism": "contamination_signal_api_degradation",
+      "failure_class": "Lookup API (Semantic Scholar / OpenAlex / Crossref / arXiv) degraded while computing a contamination signal at ingest/backfill time",
+      "degraded_state": "The per-resolver *_unmatched field is OMITTED from contamination_signals — never set to false (which would falsely read 'checked and clean'); the omission is excluded from the k/k_max triangulation count per R-L3-2-C",
+      "diagnostic_marker": "contamination_signal_omissions.<signal> == 'api_degraded' on the corpus entry (#511 Part A reason-provenance; entries written before this field exists carry no marker — absence of BOTH the signal and the omission reason is indistinguishable from 'not yet computed', which is the pre-#511 live weakness this field closes)",
+      "downstream_consumer": "pipeline_orchestrator_agent finalizer advisory-suffix matrix (k, k_max) per shared/references/firm_rules.md R-L3-2-C",
+      "terminal_policy_effect": "advisory by default per R-L3-2-A; a degraded lookup is excluded from the k/k_max count (R-L3-2-C) and which annotation tier fires is determined by the resulting (k, k_max) pair — degradation can therefore change the tier — strengthen it, weaken it, or leave it unchanged — never monotonically weaken it; whether any tier is promoted to a terminal block is decided at the emission boundary by terminal_policies (opt-in strict, contamination_triangulation only), never by the omission itself",
+      "authority": [
+        {
+          "file": "scripts/contamination_signals.py",
+          "anchor": "None means OMIT the field from the"
+        },
+        {
+          "file": "shared/references/firm_rules.md",
+          "anchor": "Absent fields are excluded from the count and do not default to either `true` or `false`."
+        },
+        {
+          "file": "shared/references/firm_rules.md",
+          "anchor": "By default, contamination and temporal-integrity signals never block emission on their own"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_contamination_signals.py",
+        "shared/contracts/passport/literature_corpus_entry.schema.json",
+        "scripts/adapters/tests/test_literature_corpus_entry_schema.py",
+        "scripts/test_migrate_literature_corpus_to_v3_9_0.py",
+        "scripts/test_migrate_literature_corpus_to_v3_7_3.py"
+      ]
+    },
+    {
+      "mechanism": "vlm_unavailable",
+      "failure_class": "No multimodal/vision capability available for VLM figure verification (or figure too simple to warrant it)",
+      "degraded_state": "VLM verification step is SKIPPED; the Figure Package records 'VLM verification: skipped' instead of a verification section",
+      "diagnostic_marker": "'VLM verification: skipped' note in the Figure Package output",
+      "downstream_consumer": "integrity_verification_agent Stage 4.5 Phase C3 figure/table fidelity review",
+      "terminal_policy_effect": "no terminal policy exists for VLM; a skipped verification can reach PASS WITH NOTES but never converts to FAIL on absence alone (FAIL requires a positive fidelity finding)",
+      "authority": [
+        {
+          "file": "academic-paper/agents/visualization_agent.md",
+          "anchor": "If not available or figure is simple: skip (note \"VLM verification: skipped\" in Figure Package)"
+        },
+        {
+          "file": "academic-pipeline/agents/integrity_verification_agent.md",
+          "anchor": "an entry reaches PASS WITH NOTES only when NO FAIL condition is met"
+        }
+      ],
+      "pinned_by": []
+    },
+    {
+      "mechanism": "submission_package_incompleteness",
+      "failure_class": "A submission-package check cannot run (missing artifact, unreadable input, extraction failure) during package verification",
+      "degraded_state": "Check status 'not_checked' (distinct from pass AND from fail); process exit code 3 = 'passed what was checkable' — distinct from a full pass (0) and from a failure (1)",
+      "diagnostic_marker": "[NOT-CHECKED] lines + not_checked_count in the verification report header; exit code 3",
+      "downstream_consumer": "submission-package policy evaluation (advisory vs strict) and the orchestrator invoking scripts/verify_submission_package.py",
+      "terminal_policy_effect": "advisory: not_checked surfaces but does not refuse (exit 3); under strict, ONLY strict_eligible not_checked checks fail closed (VERIFICATION-INCOMPLETE token, exit 4) — heuristic-classed not_checked stays nonterminal at exit 3 even under strict",
+      "authority": [
+        {
+          "file": "scripts/verify_submission_package.py",
+          "anchor": "return 3  # \"passed what was checkable\" (§8) — distinct from a full pass"
+        },
+        {
+          "file": "scripts/verify_submission_package.py",
+          "anchor": "Fail-closed (§5.2): a missing parser/profile must not silently"
+        },
+        {
+          "file": "scripts/verify_submission_package.py",
+          "anchor": "if c[\"strict_eligible\"] and c[\"status\"] == \"not_checked\")"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_verify_submission_package.py"
+      ]
+    },
+    {
+      "mechanism": "cross_model_unavailable",
+      "failure_class": "Transport-level failure of a CONFIGURED cross-model verifier mid-run (API error, rate limit, expired key, selected Codex citation transport unavailable, or a provider-side safety / misalignment intervention that surfaces as an API error or an adapter failure). An unset ARS_CROSS_MODEL is NOT a degradation — it is the standard single-model configuration and produces no error marker or disclosure; an unset or api ARS_CROSS_MODEL_TRANSPORT is likewise ordinary API-route selection, while an invalid selector is a visible configuration error",
+      "degraded_state": "Warn-and-continue: pipeline proceeds single-model; NEVER blocks on cross-model transport failure; a NOT_SEARCHED grounded-lookup result is NOT a transport failure and does not fall back (it is counted separately and surfaced for re-run/human review)",
+      "diagnostic_marker": "[CROSS-MODEL-ERROR: reason] log line + required report disclosure 'Cross-model verification was configured but unavailable for this run. Results are single-model only.'",
+      "downstream_consumer": "integrity_verification_agent (Stage 2.5/4.5 sample checks), devils_advocate reviewers, blind disagreement checkpoints (#518)",
+      "terminal_policy_effect": "none — cross-model is verification-support, not a gate; its absence is disclosed, never blocking",
+      "authority": [
+        {
+          "file": "shared/cross_model_verification.md",
+          "anchor": "Continue with single-model verification — never block the pipeline on cross-model failure"
+        },
+        {
+          "file": "shared/cross_model_verification.md",
+          "anchor": "Cross-model verification was configured but unavailable for this run. Results are single-model only."
+        },
+        {
+          "file": "shared/cross_model_verification.md",
+          "anchor": "A `NOT_SEARCHED` result is **not** a transport failure and is handled differently."
+        },
+        {
+          "file": "shared/cross_model_verification.md",
+          "anchor": "An intervention is never a verdict."
+        }
+      ],
+      "pinned_by": [
+        "scripts/check_cross_model_verification_sync.py",
+        "scripts/test_cross_model_codex_transport.py",
+        "scripts/check_630_codex_subscription_transport.py"
+      ]
+    },
+    {
+      "mechanism": "compliance_non_sr_warn_cap",
+      "failure_class": "Compliance checkpoint running outside systematic-review mode (PRISMA-trAIce scope not applicable)",
+      "degraded_state": "RAISE principles-only evaluation with severity capped at 'warn' — never block (the one registry row with a severity cap, legitimate because compliance already has a native block>warn>info scale; NOT a precedent for score caps elsewhere)",
+      "diagnostic_marker": "compliance section of the FULL checkpoint dashboard showing principles_only / warn-only evaluation",
+      "downstream_consumer": "Stage 2.5 / 4.5 integrity gates aggregating compliance decisions via max_severity precedence",
+      "terminal_policy_effect": "non-SR compliance findings can warn but never block the pipeline; block conditions are SR-mode-only",
+      "authority": [
+        {
+          "file": "shared/compliance_checkpoint_protocol.md",
+          "anchor": "| Non-SR mode | RAISE principles_only, warn-only (never block) | Same |"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_check_compliance_report.py"
+      ]
+    },
+    {
+      "mechanism": "re_review_attribution_indeterminate",
+      "failure_class": "Stage 3' new-issue provenance cannot be established despite the hard-required original manuscript (for example, non-comparable formats or an exact-span comparison that remains unavailable) (#576 §8/SD-9)",
+      "degraded_state": "Attribution 'indeterminate' — treated as previously_missed for decision purposes (cannot escalate the decision), never silently promoted to regression",
+      "diagnostic_marker": "[ATTRIBUTION-INDETERMINATE]",
+      "downstream_consumer": "Stage 3' decision derivation (goalpost guard — indeterminate never appears in Step 2) and integrity_verification_agent at Stage 4.5 (consumes indeterminate records as gate input)",
+      "terminal_policy_effect": "none — fail-closed on attribution and decision-inert by design; current 1.1 never uses missing original-manuscript bytes as this degradation path",
+      "authority": [
+        {
+          "file": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "anchor": "flagged `[ATTRIBUTION-INDETERMINATE]` — never silently promoted to `regression`"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_check_re_review_synthesis.py"
+      ]
+    },
+    {
+      "mechanism": "re_review_criteria_layer_absent_no_letter",
+      "failure_class": "Stage 3' with the Editorial Decision Letter absent from the input manifest: the criterion inheritance chain loses its level-2 (letter Acceptance-criteria) layer (#576 §11)",
+      "degraded_state": "The §4 chain runs without level 2 — inherited_criterion.letter_text legitimately absent on every item; verification proceeds on the Schema 7 verification_criteria + remaining layers",
+      "diagnostic_marker": "[CRITERIA-LAYER-ABSENT: no decision letter]",
+      "downstream_consumer": "Phase 1 pre-commitment records and check_re_review_synthesis.py letter-binding invariants",
+      "terminal_policy_effect": "none — the letter is not hard-required; the run-level marker plus the existing 'unknown (provenance block absent)' Judge Record rule make the absence visible",
+      "authority": [
+        {
+          "file": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "anchor": "[CRITERIA-LAYER-ABSENT: no decision letter]"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_check_re_review_synthesis.py::test_letter_fields_absent_when_layer_degraded_passes"
+      ]
+    },
+    {
+      "mechanism": "re_review_criteria_layer_absent_ordinal_mismatch",
+      "failure_class": "Stage 3' with the letter PRESENT but its Required Item Details block ids not exactly the contiguous sequence R1..Rn against the roadmap's must_fix order — a gap, duplicate, or extra id makes the #576 §5.1 ordinal derivation unsound",
+      "degraded_state": "The WHOLE letter criterion layer degrades to absent (every item legally omits letter_text/letter_item_ref); the checker RECOMPUTES the contiguity state from the hash-bound letter + roadmap — no carrier field exists",
+      "diagnostic_marker": "[CRITERIA-LAYER-ABSENT: letter/roadmap ordinal mismatch]",
+      "downstream_consumer": "Phase 1 pre-commitment records and check_re_review_synthesis.py letter-binding invariants",
+      "terminal_policy_effect": "none — a malformed letter degrades the layer visibly rather than producing a possibly-wrong join or an abort",
+      "authority": [
+        {
+          "file": "scripts/check_re_review_synthesis.py",
+          "anchor": "[CRITERIA-LAYER-ABSENT: letter/roadmap ordinal mismatch]"
+        },
+        {
+          "file": "academic-paper-reviewer/templates/editorial_decision_template.md",
+          "anchor": "Required blocks are exactly `R1..Rn` with no gaps, duplicates, or extras"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_check_re_review_synthesis.py::test_letter_ordinal_gap_degrades_whole_letter_layer"
+      ]
+    },
+    {
+      "mechanism": "re_review_round1_findings_absent",
+      "failure_class": "Stage 3' with the Round-1 review findings (Schema 6 reports) absent from the input manifest: the criterion chain's level-3 driving-finding layer has no report-side source (#576 §11)",
+      "degraded_state": "Level 3 degrades to the Schema 7 TRANSPORTED fields alone (severity/anchor/confidence ride on the roadmap items themselves, #574 A2/A3) — partial coverage survives",
+      "diagnostic_marker": "[ROUND1-FINDINGS-ABSENT]",
+      "downstream_consumer": "Phase 1 pre-commitment operationalization and the driving_severity operands of the decision derivation",
+      "terminal_policy_effect": "none — transported fields keep the derivation sound; a null driving_severity on a legacy item is treated as NOT critical, never fabricated",
+      "authority": [
+        {
+          "file": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "anchor": "[ROUND1-FINDINGS-ABSENT]"
+        }
+      ],
+      "pinned_by": []
+    },
+    {
+      "mechanism": "re_review_commitment_evidence_absent",
+      "failure_class": "Stage 3' with the Response to Reviewers absent: acknowledgment_only commitments (whose evidence IS the letter) cannot be independently confirmed (#576 §11)",
+      "degraded_state": "Phase 2B runs claim-matching-empty (authors_claim = \"—\"); acknowledgment_only commitments keep their author-declared fulfillment_status UNCHANGED (the closed Schema 11 enum gains no value) but each affected commitment carries the report-level advisory flag; the existing COMMITMENT_GAP rule applies unchanged",
+      "diagnostic_marker": "[COMMITMENT-EVIDENCE-ABSENT: acknowledgment_only — no response letter]",
+      "downstream_consumer": "Commitment Ledger Verification output (re-review report) and the revision-loop reader",
+      "terminal_policy_effect": "none — advisory flag; the P1 authors_claim requirement is satisfied by the letter-absent \"—\" fill (its flag-as-CANNOT_VERIFY consequence is legacy-mode-scoped, #576)",
+      "authority": [
+        {
+          "file": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "anchor": "[COMMITMENT-EVIDENCE-ABSENT: acknowledgment_only — no response letter]"
+        }
+      ],
+      "pinned_by": []
+    },
+    {
+      "mechanism": "re_review_routing_degraded_unmapped_labels",
+      "failure_class": "Stage 3' verifier routing: a routed P1/P2 item's first non-DA label found no card seat, or a non-empty source_reviewer parsed to zero recognized tokens (parse failure) — partial card parsing, even when other cards parsed fine (#576 §10)",
+      "degraded_state": "The affected items route to EIC; the run-level Routing line is the parameterized degradation form whose payload names every label group and unparsed item — a decision-driving item silently defaulting to EIC cannot hide behind a healthy-looking run",
+      "diagnostic_marker": "[ROUTING-DEGRADED: unmapped labels — <payload>] (payload grammar: seat-missing `<label> (<item ids>)` groups in label order, then `unparsed <item_id> \"<raw>\"` groups)",
+      "downstream_consumer": "Judge Record Routing line + Schema 6 judge_record.routing_status (oneOf pattern form — the payload is accountability content, never collapsed to a bare enum)",
+      "terminal_policy_effect": "none — routing degradation is visible, never a block; card_mapped is reportable ONLY when every routed item's first non-DA label found its seat",
+      "authority": [
+        {
+          "file": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "anchor": "[ROUTING-DEGRADED: unmapped labels — <payload>]"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_check_re_review_synthesis.py::test_source_reviewer_labels_must_recompute"
+      ]
+    },
+    {
+      "mechanism": "re_review_routing_degraded_cards_unparsable",
+      "failure_class": "Stage 3' verifier routing: Round-1 cards are present but no non-EIC label parsed anywhere — total card-parse failure (#576 §10)",
+      "degraded_state": "Routing defaults to EIC-verifies-all; yardstick continuity may still hold (a run can reuse cards for the yardstick AND fail to parse them for routing — the Routing line is orthogonal to Reviewer configuration by design)",
+      "diagnostic_marker": "[ROUTING-DEGRADED: cards unparsable]",
+      "downstream_consumer": "Judge Record Routing line + Schema 6 judge_record.routing_status (constant form)",
+      "terminal_policy_effect": "none — visible total-failure form, never a block",
+      "authority": [
+        {
+          "file": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "anchor": "[ROUTING-DEGRADED: cards unparsable]"
+        }
+      ],
+      "pinned_by": []
+    },
+    {
+      "mechanism": "re_review_routing_degraded_no_cards",
+      "failure_class": "Stage 3' verifier routing with no Round-1 Reviewer Configuration Cards available at all (#576 §10)",
+      "degraded_state": "The existing [YARDSTICK-REGENERATED] fallback governs configuration; routing defaults to EIC-verifies-all",
+      "diagnostic_marker": "[ROUTING-DEGRADED: no round-1 cards]",
+      "downstream_consumer": "Judge Record Routing line + Schema 6 judge_record.routing_status (constant form)",
+      "terminal_policy_effect": "none — visible; composes with the yardstick-regeneration advisory rather than replacing it",
+      "authority": [
+        {
+          "file": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "anchor": "[ROUTING-DEGRADED: no round-1 cards]"
+        }
+      ],
+      "pinned_by": []
+    },
+    {
+      "mechanism": "re_review_legacy_no_contract",
+      "failure_class": "Stage 3' (or standalone) re-review explicitly run under ARS_RE_REVIEW_LEGACY=1 — the pre-contract single-pass orchestration shape (#576 §12/SD-8)",
+      "degraded_state": "One-call legacy run, old template; NO traceability sidecar is produced; no byte-equivalence claim is made for LLM prose (the flag preserves ORCHESTRATION shape only). Absent the flag, a run that cannot satisfy the contract prerequisites ABORTS with the specific G0-class reason — never a silent legacy fallback",
+      "diagnostic_marker": "[LEGACY-NO-CONTRACT] at the top of the Verification Review Report",
+      "downstream_consumer": "Stage 3' checkpoint reader; integrity_verification_agent at Stage 4.5 (sidecar absence is a visible degradation to note, not a block)",
+      "terminal_policy_effect": "none — legacy is explicit opt-in; the fail-closed boundary is on the FLAGLESS path (G0-class abort), not on the flagged one",
+      "authority": [
+        {
+          "file": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "anchor": "[LEGACY-NO-CONTRACT]"
+        },
+        {
+          "file": "academic-pipeline/agents/pipeline_orchestrator_agent.md",
+          "anchor": "Never convert an abort into a decision or a silent legacy run"
+        }
+      ],
+      "pinned_by": []
+    },
+    {
+      "mechanism": "re_review_apply_chain_witness_not_run",
+      "failure_class": "Stage 3' apply-chain witness has no links to check because apply_reports is empty for an all-declined no-op round (#576 current 1.1 §11)",
+      "degraded_state": "Closed composite state not_run_no_reports (zero reports — never a silent vacuous pass); original_manuscript is hard-required and first_link_not_run belongs only to archived 1.0",
+      "diagnostic_marker": "apply_chain_witness == 'not_run_no_reports' in DecisionInputs and on the Judge Record Apply-report chain line",
+      "downstream_consumer": "check_re_review_synthesis.py (witness compared on every emission kind) + Schema 6 judge_record.apply_chain_witness",
+      "terminal_policy_effect": "none for not_run_no_reports; 'fail' outranks it (fail > not_run_no_reports > pass) and is the G0 manifest_hash_mismatch abort",
+      "authority": [
+        {
+          "file": "scripts/check_re_review_synthesis.py",
+          "anchor": "fail > not_run_no_reports > pass"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_check_re_review_synthesis.py::test_no_reports_is_not_run_no_reports_witness",
+        "scripts/test_check_re_review_synthesis.py::test_recorded_witness_must_match_recomputed"
+      ]
+    },
+    {
+      "mechanism": "write_scope_guard_no_python",
+      "failure_class": "No real Python interpreter found by the write-scope guard launcher (candidate list exhausted, or only non-functional stubs present, e.g. the 0-byte Microsoft Store `python3` App Execution Alias)",
+      "degraded_state": "The launcher emits the canonical pass-through hook JSON and exits 0, silent on stderr; the guard is inactive and core skills are unaffected (the guard is optional hardening and ARS core needs no Python). It deliberately emits no permissionDecision — never 'allow' — so the session's normal permission rules still decide, and it never exits non-zero",
+      "diagnostic_marker": "Silent per call BY DESIGN (per-call stderr on a hot path is exactly the #454 spam the launcher exists to stop); the observable state is hook output equal to the canonical pass-through JSON {\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\"}} with no permissionDecision",
+      "downstream_consumer": "Claude Code PreToolUse permission flow (the pass-through output carries no permissionDecision, so the session's normal permission rules decide)",
+      "terminal_policy_effect": "none — the write-scope guard sits outside the Material Passport / terminal-policy layer; this failure path resolves to pass-through, never block",
+      "authority": [
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "if no real Python is found, OR the guard subprocess misbehaves, the"
+        },
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "no permissionDecision => falls back to the normal permission"
+        },
+        {
+          "file": "docs/SETUP.md",
+          "anchor": "if no real Python is found it cleanly no-ops and the guard is simply inactive"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_run_guard_launcher.py"
+      ]
+    },
+    {
+      "mechanism": "write_scope_guard_no_git_bash",
+      "failure_class": "Windows host without Git Bash: `hooks.json` invokes the launcher through `bash`, and no POSIX shell is available to run the `.sh` at all",
+      "degraded_state": "Guard inactive — Claude Code falls back to PowerShell, which cannot run the launcher; this ARS hook never blocks a write (the session's normal permission rules still apply), but the PreToolUse hook logs an error per call (noisy, accepted degradation) until Git Bash is installed",
+      "diagnostic_marker": "Per-call PreToolUse hook error logged by Claude Code (the launcher never executes on this path, so no ARS-side marker can be emitted)",
+      "downstream_consumer": "Claude Code PreToolUse permission flow (the hook failure is non-blocking; the session's normal permission rules decide)",
+      "terminal_policy_effect": "none — the write-scope guard sits outside the Material Passport / terminal-policy layer; on this path the hook simply does not run, so it can block nothing",
+      "authority": [
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "with no Git Bash, CC falls back to PowerShell which can't"
+        },
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "the guard is then inactive (accepted degradation"
+        },
+        {
+          "file": "docs/SETUP.md",
+          "anchor": "the guard is inactive and the `PreToolUse` hook will log an error per call rather than no-op quietly"
+        }
+      ],
+      "pinned_by": []
+    },
+    {
+      "mechanism": "write_scope_guard_no_timeout_binary",
+      "failure_class": "No usable `timeout` binary on PATH when the launcher wall-clock-bounds its interpreter probes and the guard subprocess: none present, or one that rejects the GNU `timeout <N>s cmd` form (the Windows built-in timeout.exe under Git for Windows, #970)",
+      "degraded_state": "run_bounded switches to the portable background-and-watchdog fallback: same wall-clock bound (ARS_PROBE_BOUND, integer seconds, default 3) and same pass-through-on-overrun posture — a bounding-mechanism swap, never a change to the security decision",
+      "diagnostic_marker": "None when healthy (the two bounding paths are decision-equivalent); an overrun on either path surfaces only as the canonical pass-through output in place of a guard decision",
+      "downstream_consumer": "Claude Code PreToolUse permission flow (the pass-through output carries no permissionDecision, so the session's normal permission rules decide)",
+      "terminal_policy_effect": "none — the write-scope guard sits outside the Material Passport / terminal-policy layer; the healthy fallback still forwards the guard's real decision (including deny) — only an overrun resolves to pass-through, never block",
+      "authority": [
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "No usable `timeout` binary: a portable background-and-watchdog fallback"
+        },
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "never the security decision"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_run_guard_launcher.py"
+      ]
+    },
+    {
+      "mechanism": "write_scope_guard_subprocess_misbehaves",
+      "failure_class": "Guard subprocess misbehaves under a healthy launcher — non-zero exit, wall-clock overrun, or output failing the launcher's validity check (anything that is not a JSON object carrying a top-level hookSpecificOutput key; the check is deliberately this shallow and does not validate the full hook schema) — or a missing guard script, or the launcher itself fails internally (mktemp failure, SELF_DIR self-resolution failure)",
+      "degraded_state": "The launcher emits the canonical pass-through hook JSON and exits 0; the guard's stderr is dropped on this path (relayed only on the healthy path) so a broken guard cannot spam the hot path, and a mktemp failure degrades to pass-through rather than falling back to a predictable (symlink-attackable) temp path",
+      "diagnostic_marker": "Canonical pass-through JSON in place of a guard decision; the guard's own stderr advisories are absent",
+      "downstream_consumer": "Claude Code PreToolUse permission flow (the pass-through output carries no permissionDecision, so the session's normal permission rules decide)",
+      "terminal_policy_effect": "none — the write-scope guard sits outside the Material Passport / terminal-policy layer; this failure path resolves to pass-through, never block",
+      "authority": [
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "Guard broke / timed out / produced invalid output. Degrade, don't block, don't spam."
+        },
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "degrade safely to pass-through instead of writing a guessable path"
+        },
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "SELF_DIR=$(CDPATH= cd -- \"$(dirname -- \"$0\")\" && pwd) || emit_passthrough_and_exit"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_run_guard_launcher.py"
+      ]
+    },
+    {
+      "mechanism": "write_scope_guard_payload_capacity_edge",
+      "failure_class": "A POSIX shell caps the payload variable the launcher holds and replays on a multi-megabyte Write payload (the launcher buffers stdin in a shell variable by design)",
+      "degraded_state": "No pinned outcome — the launcher documents this as an accepted, unfixed narrow case and neither enforces nor tests a specific behavior for it. The row exists for inventory completeness; no pass-through or other deterministic resolution is claimed",
+      "diagnostic_marker": "None defined for this edge (no code path detects a capped payload)",
+      "downstream_consumer": "Claude Code PreToolUse permission flow (whatever the launcher emits in this case is consumed there; no specific emission is claimed)",
+      "terminal_policy_effect": "none — the write-scope guard sits outside the Material Passport / terminal-policy layer; the launcher's design intent is non-blocking, but for this edge no enforced outcome is claimed",
+      "authority": [
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "documented degradation rather than fixed speculatively"
+        },
+        {
+          "file": "hooks/run_guard.sh",
+          "anchor": "A multi-megabyte Write payload on a POSIX shell that caps variable"
+        }
+      ],
+      "pinned_by": []
+    },
+    {
+      "mechanism": "acronym_check_not_checked",
+      "failure_class": "The acronym check cannot read its input (not a Markdown or plain-text file, not UTF-8 text, an unknown scope name, an unreadable allowlist file, or no requested scope with a line of prose in the input, as in an empty file), or the script cannot run at all (for example, no Python interpreter)",
+      "degraded_state": "not_checked: the script exits 2 and its report states the reason; no finding is emitted. When the script cannot run, the caller reports that the acronym check did not run",
+      "diagnostic_marker": "JSON status not_checked with a closed reason code; Markdown report line 'Not checked: <reason>.' ('未檢查：<原因>。' in zh-TW)",
+      "downstream_consumer": "The caller that runs scripts/check_acronyms.py, the writer or abstract_bilingual_agent that receives the report, the Editorial Decision Letter that carries it as an advisory attachment after a review, and the user, who is shown it",
+      "terminal_policy_effect": "none: the acronym check is advisory; findings and degraded states never block a handoff, change a decision, or stop a run",
+      "authority": [
+        {
+          "file": "scripts/check_acronyms.py",
+          "anchor": "Exit 2: nothing was checked (``not_checked``: unsupported format, unreadable"
+        },
+        {
+          "file": "academic-paper/references/writing_quality_check.md",
+          "anchor": "If the script cannot run at all, say that the acronym check did not run; never report it as clean."
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_check_acronyms.py::test_clean_result_is_distinct_from_not_checked",
+        "scripts/test_check_acronyms.py::test_cli_exit_codes_and_outputs"
+      ]
+    },
+    {
+      "mechanism": "acronym_check_partial_coverage",
+      "failure_class": "The acronym check reads the input only in part: an acronym uses a definition form the check does not read, or a parenthetical the check cannot confirm as its definition; an abstract is in a language the check does not read; or a requested scope is not in the input",
+      "degraded_state": "partial: the script exits 0, its coverage line says partial, and the report lists each unread part; an acronym with an unread or unconfirmed definition gets no finding in that scope",
+      "diagnostic_marker": "JSON status partial, with coverage marking a requested scope not_in_input, or a non-empty coverage_limits or unread_sections; Markdown report coverage line ending '(partial)', a 'Not checked:' line listing coverage_limits and unread_sections when either is non-empty, and a 'Not in this input:' line when a requested scope is absent ('（部分）', '未檢查：', and '此檔沒有：' in zh-TW)",
+      "downstream_consumer": "The caller that runs scripts/check_acronyms.py, the writer or abstract_bilingual_agent that receives the report, the Editorial Decision Letter that carries it as an advisory attachment after a review, and the user, who is shown it",
+      "terminal_policy_effect": "none: the acronym check is advisory; a partial report is not a clean result and blocks nothing",
+      "authority": [
+        {
+          "file": "scripts/check_acronyms.py",
+          "anchor": "status = \"partial\" if limits or doc.unread_sections or missing else \"checked\""
+        },
+        {
+          "file": "academic-paper/references/writing_quality_check.md",
+          "anchor": "A `partial` report lists what it did not read"
+        }
+      ],
+      "pinned_by": [
+        "scripts/test_check_acronyms.py::test_unread_definition_form_is_a_coverage_limit_not_a_finding",
+        "scripts/test_check_acronyms.py::test_a_parenthetical_it_cannot_confirm_is_a_coverage_limit",
+        "scripts/test_check_acronyms.py::test_unread_abstract_section_makes_coverage_partial",
+        "scripts/test_check_acronyms.py::test_requested_scope_absent_from_the_input"
+      ]
+    }
+  ]
+}

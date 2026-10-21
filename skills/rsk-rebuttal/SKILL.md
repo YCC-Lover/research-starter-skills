@@ -1,9 +1,13 @@
 ---
 name: rsk-rebuttal
-description: "依据 Research-Starter-Kit 起草逐条、有证据的审稿回复，并联动核对当前修订稿、实际修改和完成状态。用于会议 rebuttal 或期刊返修，不用于操纵评审或编造新增实验。"
+description: "起草逐条、有证据的审稿回复，核对修订稿与实际修改；支持多视角模拟审稿、方法学专项、复审和回复审计。区分只读检查与作者授权的修稿，不编造实验或承诺录用。"
 ---
 
 # 审稿回复与修改
+
+用户要求模拟审稿、专项方法学检查、复审、返修教练或已有回复审计时，读取
+[审稿与返修进阶流程](references/advanced-review.md)。保留只读审稿边界，不能因发现问题
+自动修改稿件；单条回复仍可直接按下方轻量流程完成。
 
 第一次返修、不知提供什么时，按 [引导起步](../research-starter-paper/references/guided-start.md) 从一条意见和实际进度开始，并自动保存已确认回答、回复与待办。最终语气按 [自然表达](../rsk-paper-writing/references/prose-editing.md) 复核，保持礼貌、真实状态与完整回答，不为简短删除审稿人要求的依据。
 

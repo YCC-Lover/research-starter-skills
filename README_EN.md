@@ -84,7 +84,7 @@ Guided tasks save confirmed information, hypotheses, answered or unavailable que
 
 Prose editing supports author samples, paragraph restructuring and 26 editing patterns while protecting scientific meaning, citations, numbers and formulas. Evidence guidance adapts to quantitative, qualitative, historical and theoretical work; it does not impose one discipline's method on every project.
 
-The [guided-task records](evals/guided/REPORT.md) show actual starts, handoffs, file checks and editing outputs. These are small synthetic-task checks, not proof of universal outcomes, fixed time savings, detector evasion or publication acceptance. [Engineering checks](docs/PROJECT_AUDIT.md)
+The [guided-task records](evals/integration-v2/REPORT.md) show actual starts, handoffs, file checks and editing outputs. These are small synthetic-task checks, not proof of universal outcomes, fixed time savings, detector evasion or publication acceptance. [Engineering checks](docs/PROJECT_AUDIT.md)
 
 ## Keep your workflow portable
 
@@ -92,6 +92,6 @@ Skills are editable Markdown files. Continue with another Codex account in the s
 
 The installer records versions and file hashes, supports read-only checks and optional-tool discovery, and updates with an explicit backup. Document export, plotting and file parsing use the tools available in your Codex environment.
 
-Version **1.5.0** retains the upstream 19-tutorial mapping at revision 36ba390d153f5289308ec833e2b633c26b304a7b. [Attribution and usage scope](NOTICE.md) · [Citation metadata](CITATION.cff)
+Version **2.0.0** adds 35 advanced modes across the existing seven skills: deep research, systematic screening, manuscript planning and writing, multi-perspective review, revision and connected research workflows. The original 19-tutorial mapping remains at revision 36ba390d153f5289308ec833e2b633c26b304a7b. [Advanced workflows](skills/research-starter-paper/references/advanced-research.md) · [Runtime helpers](skills/research-starter-paper/references/runtime-helpers.md) · [Attribution and usage scope](NOTICE.md) · [Citation metadata](CITATION.cff)
 
 Star to find the project again, share a sanitized task in [Issues](https://github.com/YCC-Lover/research-starter-skills/issues), or contribute a concrete example. [Contributing](CONTRIBUTING.md)

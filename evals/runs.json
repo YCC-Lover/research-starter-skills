@@ -34,17 +34,24 @@
     },
     {
       "id": "2026-10-20-v1.5.0-guided-progress",
-      "state": "current",
+      "state": "historical",
       "cases": "evals/guided/cases.json",
       "report": "evals/guided/results.json",
       "sources": "evals/guided/sources.json"
     },
     {
       "id": "2026-10-20-v1.5.0-expression-and-research",
-      "state": "current",
+      "state": "historical",
       "cases": "evals/guided/cases.json",
       "report": "evals/guided/expressions-results.json",
       "sources": "evals/guided/expressions-sources.json"
+    },
+    {
+      "id": "2026-10-21-v2.0.0-guided-regression",
+      "state": "current",
+      "cases": "evals/guided/cases.json",
+      "report": "evals/integration-v2/results.json",
+      "sources": "evals/integration-v2/sources.json"
     }
   ]
 }
