@@ -206,8 +206,8 @@ def build(source, destination, git='git', write=False, update_source_hashes=Fals
             output.parent.mkdir(parents=True, exist_ok=True)
             if not output.exists() or output.read_bytes() != data:
                 output.write_bytes(data)
-        (destination / 'source-manifest.json').write_text(
-            json.dumps(manifest, ensure_ascii=True, indent=2) + '\n', encoding='utf-8')
+        (destination / 'source-manifest.json').write_bytes(
+            (json.dumps(manifest, ensure_ascii=True, indent=2) + '\n').encode('utf-8'))
     if export_patch:
         sections = []
         bases = dict(pending)
@@ -230,7 +230,7 @@ def build(source, destination, git='git', write=False, update_source_hashes=Fals
         new = {row['path']: row['sha256'] for row in files}
         if old != new or previous['source_commit'] != commit:
             raise ValueError('Source hash migration must not change runtime bytes, inventory or source pin.')
-        manifest_path.write_text(json.dumps(manifest, ensure_ascii=True, indent=2) + '\n', encoding='utf-8')
+        manifest_path.write_bytes((json.dumps(manifest, ensure_ascii=True, indent=2) + '\n').encode('utf-8'))
     if write:
         if destination.exists():
             raise ValueError('Refusing an existing output. Generate into a new directory and inspect differences.')
@@ -239,8 +239,8 @@ def build(source, destination, git='git', write=False, update_source_hashes=Fals
             output = destination / target
             output.parent.mkdir(parents=True, exist_ok=True)
             output.write_bytes(data)
-        (destination / 'source-manifest.json').write_text(
-            json.dumps(manifest, ensure_ascii=True, indent=2) + '\n', encoding='utf-8')
+        (destination / 'source-manifest.json').write_bytes(
+            (json.dumps(manifest, ensure_ascii=True, indent=2) + '\n').encode('utf-8'))
         if adapted:
             for row in patch_records:
                 if row['base_sha256'] != next(f['sha256'] for f in files if f['path'] == row['path']):
