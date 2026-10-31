@@ -48,10 +48,17 @@
     },
     {
       "id": "2026-10-21-v2.0.0-guided-regression",
-      "state": "current",
+      "state": "historical",
       "cases": "evals/guided/cases.json",
       "report": "evals/integration-v2/results.json",
       "sources": "evals/integration-v2/sources.json"
+    },
+    {
+      "id": "2026-10-31-v2.1.0-guided-regression",
+      "state": "current",
+      "cases": "evals/guided/cases.json",
+      "report": "evals/integration-v21/results.json",
+      "sources": "evals/integration-v21/sources.json"
     }
   ]
 }

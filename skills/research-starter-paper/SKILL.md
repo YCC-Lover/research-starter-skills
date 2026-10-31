@@ -38,7 +38,7 @@ description: "科研学习与论文写作总入口，协调六个模块。帮助
 | 大纲、论证、摘要、引言、相关工作、方法 | [rsk-paper-writing](../rsk-paper-writing/SKILL.md) | 08、10、11、12、13 |
 | 实验、结果分析、论文图表 | [rsk-experiments-figures](../rsk-experiments-figures/SKILL.md) | 09、14 |
 | Rebuttal、返修回复 | [rsk-rebuttal](../rsk-rebuttal/SKILL.md) | 16 |
-| 汇报、meeting、参会与跟进、记录、资助、AI 协作 | [rsk-research-workflow](../rsk-research-workflow/SKILL.md) | 05、06、07、17、18、19 |
+| 汇报与可编辑 PPTX、模板改稿、meeting、参会与跟进、记录、资助、AI 协作 | [rsk-research-workflow](../rsk-research-workflow/SKILL.md) | 05、06、07、17、18、19 |
 
 读取与用户请求相关的小 skill 入口及其按需参考，不一次加载所有模块。可独立使用 `$rsk-paper-writing` 等名称。跨阶段任务共享研究问题、文献池、主张与证据状态，避免重复追问和创建重复记录。这是读取本地指导，不意味着已有子代理执行。
 

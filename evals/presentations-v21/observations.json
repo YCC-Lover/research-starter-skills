@@ -1,0 +1,726 @@
+{
+  "date": "2026-10-31",
+  "package_version": "2.1.0",
+  "materials": "synthetic teaching only",
+  "model_identity": "Native inherited worker; exact serving identity not independently observed.",
+  "file_checks": {
+    "svg": [
+      {
+        "check": "slide_count",
+        "passed": true,
+        "observed": 4,
+        "expected": 4
+      },
+      {
+        "check": "01_研究问题.svg:canvas",
+        "passed": true,
+        "observed": "0 0 1280 720",
+        "expected": "0 0 1280 720"
+      },
+      {
+        "check": "01_研究问题.svg:language",
+        "passed": true,
+        "observed": "zh-CN",
+        "expected": "zh-CN"
+      },
+      {
+        "check": "01_研究问题.svg:synthetic_disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "01_研究问题.svg:bitmap_count",
+        "passed": true,
+        "observed": 0,
+        "expected": 0
+      },
+      {
+        "check": "02_温度点比较.svg:canvas",
+        "passed": true,
+        "observed": "0 0 1280 720",
+        "expected": "0 0 1280 720"
+      },
+      {
+        "check": "02_温度点比较.svg:language",
+        "passed": true,
+        "observed": "zh-CN",
+        "expected": "zh-CN"
+      },
+      {
+        "check": "02_温度点比较.svg:synthetic_disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "02_温度点比较.svg:bitmap_count",
+        "passed": true,
+        "observed": 0,
+        "expected": 0
+      },
+      {
+        "check": "03_证据边界.svg:canvas",
+        "passed": true,
+        "observed": "0 0 1280 720",
+        "expected": "0 0 1280 720"
+      },
+      {
+        "check": "03_证据边界.svg:language",
+        "passed": true,
+        "observed": "zh-CN",
+        "expected": "zh-CN"
+      },
+      {
+        "check": "03_证据边界.svg:synthetic_disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "03_证据边界.svg:bitmap_count",
+        "passed": true,
+        "observed": 0,
+        "expected": 0
+      },
+      {
+        "check": "04_下一步.svg:canvas",
+        "passed": true,
+        "observed": "0 0 1280 720",
+        "expected": "0 0 1280 720"
+      },
+      {
+        "check": "04_下一步.svg:language",
+        "passed": true,
+        "observed": "zh-CN",
+        "expected": "zh-CN"
+      },
+      {
+        "check": "04_下一步.svg:synthetic_disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "04_下一步.svg:bitmap_count",
+        "passed": true,
+        "observed": 0,
+        "expected": 0
+      },
+      {
+        "check": "chart_categories",
+        "passed": true,
+        "observed": [
+          "A",
+          "B",
+          "C"
+        ],
+        "expected": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      {
+        "check": "chart_values_300",
+        "passed": true,
+        "observed": [
+          68,
+          70,
+          69
+        ],
+        "expected": [
+          68,
+          70,
+          69
+        ]
+      },
+      {
+        "check": "bar-a-300:geometry",
+        "passed": true,
+        "observed": [
+          "175",
+          "320.5",
+          "5E+1",
+          "229.5"
+        ],
+        "expected": [
+          "175",
+          "320.5",
+          "5E+1",
+          "229.5"
+        ]
+      },
+      {
+        "check": "bar-b-300:geometry",
+        "passed": true,
+        "observed": [
+          "365",
+          "313.75",
+          "5E+1",
+          "236.25"
+        ],
+        "expected": [
+          "365",
+          "313.75",
+          "5E+1",
+          "236.25"
+        ]
+      },
+      {
+        "check": "bar-c-300:geometry",
+        "passed": true,
+        "observed": [
+          "555",
+          "317.125",
+          "5E+1",
+          "232.875"
+        ],
+        "expected": [
+          "555",
+          "317.125",
+          "5E+1",
+          "232.875"
+        ]
+      },
+      {
+        "check": "chart_values_800",
+        "passed": true,
+        "observed": [
+          22,
+          29,
+          26
+        ],
+        "expected": [
+          22,
+          29,
+          26
+        ]
+      },
+      {
+        "check": "bar-a-800:geometry",
+        "passed": true,
+        "observed": [
+          "225",
+          "475.75",
+          "5E+1",
+          "74.25"
+        ],
+        "expected": [
+          "225",
+          "475.75",
+          "5E+1",
+          "74.25"
+        ]
+      },
+      {
+        "check": "bar-b-800:geometry",
+        "passed": true,
+        "observed": [
+          "415",
+          "452.125",
+          "5E+1",
+          "97.875"
+        ],
+        "expected": [
+          "415",
+          "452.125",
+          "5E+1",
+          "97.875"
+        ]
+      },
+      {
+        "check": "bar-c-800:geometry",
+        "passed": true,
+        "observed": [
+          "605",
+          "462.25",
+          "5E+1",
+          "87.75"
+        ],
+        "expected": [
+          "605",
+          "462.25",
+          "5E+1",
+          "87.75"
+        ]
+      },
+      {
+        "check": "axis_range",
+        "passed": true,
+        "observed": [
+          0,
+          80
+        ],
+        "expected": [
+          0,
+          80
+        ]
+      },
+      {
+        "check": "native_table_values",
+        "passed": true,
+        "observed": [
+          [
+            "A",
+            "68%",
+            "22%"
+          ],
+          [
+            "B",
+            "70%",
+            "29%"
+          ],
+          [
+            "C",
+            "69%",
+            "26%"
+          ]
+        ],
+        "expected": [
+          [
+            "A",
+            "68%",
+            "22%"
+          ],
+          [
+            "B",
+            "70%",
+            "29%"
+          ],
+          [
+            "C",
+            "69%",
+            "26%"
+          ]
+        ]
+      },
+      {
+        "check": "formula_latex",
+        "passed": true,
+        "observed": "R(T) = \\frac{m(T)}{m_0} \\times 100\\%",
+        "expected": "R(T) = \\frac{m(T)}{m_0} \\times 100\\%"
+      },
+      {
+        "check": "object_scoped_plot_marker_count",
+        "passed": true,
+        "observed": 1,
+        "expected": 1
+      },
+      {
+        "check": "no_error_bar_payload",
+        "passed": true,
+        "observed": false,
+        "expected": false
+      }
+    ],
+    "pptx": [
+      {
+        "check": "pptx_exists",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "zip_crc",
+        "passed": true,
+        "observed": null,
+        "expected": null
+      },
+      {
+        "check": "native_slides",
+        "passed": true,
+        "observed": 4,
+        "expected": 4
+      },
+      {
+        "check": "native_charts",
+        "passed": true,
+        "observed": 1,
+        "expected": 1
+      },
+      {
+        "check": "embedded_workbooks",
+        "passed": true,
+        "observed": 1,
+        "expected": 1
+      },
+      {
+        "check": "notes_slides",
+        "passed": true,
+        "observed": 4,
+        "expected": 4
+      },
+      {
+        "check": "native_tables",
+        "passed": true,
+        "observed": 1,
+        "expected": 1
+      },
+      {
+        "check": "native_omml",
+        "passed": true,
+        "observed": 1,
+        "expected": 1
+      },
+      {
+        "check": "omml_fraction",
+        "passed": true,
+        "observed": 1,
+        "expected": 1
+      },
+      {
+        "check": "omml_subscript",
+        "passed": true,
+        "observed": 1,
+        "expected": 1
+      },
+      {
+        "check": "slide_picture_count",
+        "passed": true,
+        "observed": 0,
+        "expected": 0
+      },
+      {
+        "check": "audio_video_parts",
+        "passed": true,
+        "observed": [],
+        "expected": []
+      },
+      {
+        "check": "slide_1:disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "slide_2:disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "slide_3:disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "slide_4:disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "chart_xml_values",
+        "passed": true,
+        "observed": [
+          [
+            68.0,
+            70.0,
+            69.0
+          ],
+          [
+            22.0,
+            29.0,
+            26.0
+          ]
+        ],
+        "expected": [
+          [
+            68.0,
+            70.0,
+            69.0
+          ],
+          [
+            22.0,
+            29.0,
+            26.0
+          ]
+        ]
+      },
+      {
+        "check": "chart_error_bars",
+        "passed": true,
+        "observed": 0,
+        "expected": 0
+      },
+      {
+        "check": "workbook_numeric_values",
+        "passed": true,
+        "observed": [
+          68.0,
+          70.0,
+          69.0,
+          22.0,
+          29.0,
+          26.0
+        ],
+        "expected": [
+          68.0,
+          70.0,
+          69.0,
+          22.0,
+          29.0,
+          26.0
+        ]
+      },
+      {
+        "check": "table_xml_values",
+        "passed": true,
+        "observed": [
+          [
+            "条件",
+            "300 °C",
+            "800 °C"
+          ],
+          [
+            "A",
+            "68%",
+            "22%"
+          ],
+          [
+            "B",
+            "70%",
+            "29%"
+          ],
+          [
+            "C",
+            "69%",
+            "26%"
+          ]
+        ],
+        "expected": [
+          [
+            "条件",
+            "300 °C",
+            "800 °C"
+          ],
+          [
+            "A",
+            "68%",
+            "22%"
+          ],
+          [
+            "B",
+            "70%",
+            "29%"
+          ],
+          [
+            "C",
+            "69%",
+            "26%"
+          ]
+        ]
+      },
+      {
+        "check": "notes_1:substantial_script",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "notes_1:synthetic_disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "notes_2:substantial_script",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "notes_2:synthetic_disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "notes_3:substantial_script",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "notes_3:synthetic_disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "notes_4:substantial_script",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "notes_4:synthetic_disclosure",
+        "passed": true,
+        "observed": true,
+        "expected": true
+      }
+    ]
+  },
+  "artifacts": {
+    "four-slide.pptx": {
+      "sha256": "01ea6ddbce83b538350213727cf7118c66b5c3c1163a3c01c4b6100cbabf0d3f",
+      "bytes": 38911
+    },
+    "cover-edited.pptx": {
+      "sha256": "b8116e382b1020ffa2cd1fa02a9abf31499cf130d459d84460a107e72c7c1291",
+      "bytes": 38899
+    },
+    "reused-native.pptx": {
+      "sha256": "fa5951c51b23fd0385f9b137929cc714a89d0661d8baf327b89059e7463b1e8c",
+      "bytes": 13691
+    }
+  },
+  "renderer": "Installed Microsoft PowerPoint COM, actual PPTX open and PNG/PDF export",
+  "rendered_pages": [
+    {
+      "deck": "four-slide",
+      "page": 1,
+      "sha256": "a59535536a65d853c96635c93ead9da7de93b88dc62a8b8b0978606603f19b00",
+      "pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "deck": "four-slide",
+      "page": 2,
+      "sha256": "16e2589d3df321a6e566f2c518333a408e9a1bb4b9187dc99a9f0d6c7ae334d8",
+      "pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "deck": "four-slide",
+      "page": 3,
+      "sha256": "f71325e077ee123d21b34e17d029800ad8083122f2f501e61eb5e02accc58e28",
+      "pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "deck": "four-slide",
+      "page": 4,
+      "sha256": "1456d4bd6f8e2a4c3368509bcd6f0b42431d66ea20f5d62a5f104c52ad5a6403",
+      "pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "deck": "selective-edit",
+      "page": 1,
+      "sha256": "d50a513498c169e6c49bd8835506d90e1b06127cca130e556bffc9c3d76068eb",
+      "pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "deck": "selective-edit",
+      "page": 2,
+      "sha256": "16e2589d3df321a6e566f2c518333a408e9a1bb4b9187dc99a9f0d6c7ae334d8",
+      "pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "deck": "selective-edit",
+      "page": 3,
+      "sha256": "f71325e077ee123d21b34e17d029800ad8083122f2f501e61eb5e02accc58e28",
+      "pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "deck": "selective-edit",
+      "page": 4,
+      "sha256": "1456d4bd6f8e2a4c3368509bcd6f0b42431d66ea20f5d62a5f104c52ad5a6403",
+      "pixels": [
+        1600,
+        900
+      ]
+    },
+    {
+      "deck": "template-reuse",
+      "page": 1,
+      "sha256": "96e4c879d49e226cdf9e8f36cfabf9876a293739ccd4cb2e67c21b19f94c8b3e",
+      "pixels": [
+        1600,
+        900
+      ]
+    }
+  ],
+  "visual_review": {
+    "reviewer": "main coding agent, not a human expert",
+    "directly_viewed": "All four final pages, edited cover and template page",
+    "unedited_pages": "Pages 2-4 additionally match final original render pixel-for-pixel",
+    "findings": "Table crowding repaired; final text, chart, values and fraction readable with no observed clipping/overlap."
+  },
+  "selective_edit": {
+    "source_sha256": "01ea6ddbce83b538350213727cf7118c66b5c3c1163a3c01c4b6100cbabf0d3f",
+    "output_sha256": "b8116e382b1020ffa2cd1fa02a9abf31499cf130d459d84460a107e72c7c1291",
+    "protected_parts": [
+      "ppt/notesSlides/notesSlide1.xml",
+      "ppt/notesSlides/notesSlide2.xml",
+      "ppt/notesSlides/notesSlide3.xml",
+      "ppt/notesSlides/notesSlide4.xml",
+      "ppt/slideLayouts/slideLayout7.xml",
+      "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slides/slide2.xml",
+      "ppt/slides/slide3.xml",
+      "ppt/slides/slide4.xml",
+      "ppt/slideMasters/_rels/slideMaster1.xml.rels",
+      "ppt/slideLayouts/_rels/slideLayout7.xml.rels",
+      "ppt/notesSlides/_rels/notesSlide1.xml.rels",
+      "ppt/notesSlides/_rels/notesSlide2.xml.rels",
+      "ppt/notesSlides/_rels/notesSlide3.xml.rels",
+      "ppt/notesSlides/_rels/notesSlide4.xml.rels"
+    ],
+    "differences": [],
+    "receipt": "passthrough=3 rebuilt=1"
+  },
+  "final_motion": {
+    "transitions": {
+      "carrier_slide_count": 0,
+      "visual_effect_slide_count": 0,
+      "timed_advance_slide_count": 0,
+      "carrier_slides": [],
+      "visual_effect_slides": [],
+      "timed_advance_slides": [],
+      "effects": {}
+    },
+    "object_animations": {
+      "timing_slide_count": 0,
+      "object_animation_slide_count": 0,
+      "audio_timing_slide_count": 0,
+      "timing_slides": [],
+      "object_animation_slides": [],
+      "audio_timing_slides": []
+    }
+  },
+  "not_executed": [
+    "External TTS/image services",
+    "Narration/video playback",
+    "Full Brand/Style/Layout generation",
+    "All third-party assets"
+  ],
+  "failure_history_retained_locally": true,
+  "production_sources": {
+    "presentation_launch.py": "be7f94e24900e728adc94712641193b845fd0ad090594e0bf4239b43d05664c4",
+    "presentation_mirror.py": "07e8cfacfd1753182a6918d6ac0d1c3df20e4aca5a2b65726eb26424e8d2f2e9",
+    "presentation_retention.py": "27856c279892aa77228d791bfad23a25cfbffeb1311ca0e8da47372fe46e2757",
+    "presentation_source.py": "c5e3a87f671d3cdbcbdcb7c4dc6508922ea27425a1cf4dcb756e93397923a3ee",
+    "research_presentations.py": "0937d98f065915a802a905ed8c9625240b9e7c717b17f049970ce3f5872a013e"
+  }
+}

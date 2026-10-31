@@ -1,0 +1,9 @@
+{
+  "case_id": "G08",
+  "stage": "final",
+  "captured_from_actual_files": true,
+  "raw_hashes_and_normalized_text_are_distinct": true,
+  "files": [],
+  "normalization": "Project, package and task prefixes replaced, including JSON-escaped Windows paths; original byte hashes not recomputed.",
+  "capture_sha256_of_original_bytes": "ecb0758c98e7e8707a5f5a75dd206409804e1cd7e893a2b062f8f0a63c0ba2a4"
+}

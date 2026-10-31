@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/hugohe3/ppt-master",
+  "source_commit": "5e8856be0da8e6bc85c4aa28acc614478f7b7137",
+  "source_version": "6.8.0",
+  "license": "MIT",
+  "resource_count": 13051,
+  "source_bytes": 39481612,
+  "pack_sha256": "954847d9f86f1426343841a9e5b729e47ef731bbe57910e1f5010692c5e0f6de",
+  "pack_bytes": 25040126,
+  "pack": "resources.json",
+  "scope": "Complete upstream skill package; no repository example projects.",
+  "adaptation": "Runtime-only recorded cleanup retention and hash-bound unchanged-mirror geometry context patch; upstream attribution gates unchanged."
+}

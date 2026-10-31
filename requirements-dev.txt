@@ -1,2 +1,3 @@
 -r requirements-research.txt
+-r requirements-presentations.txt
 numpy>=1.24

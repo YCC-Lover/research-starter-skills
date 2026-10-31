@@ -1,0 +1,130 @@
+{
+  "G05": {
+    "status": "通过",
+    "command": "python skills/rsk-paper-writing/scripts/check_prose_edit.py evals/guided/inputs/draft.md {{project}}/inbox/draft.md",
+    "exit_code": 0,
+    "result": {
+      "protected_spans_unchanged": true,
+      "changes": [],
+      "limits": [
+        "Lexical checks cover common Markdown/text/LaTeX forms, not a complete document parser.",
+        "No semantic, authorship, scientific-validity or AI-detection judgment is made.",
+        "Negation, quantifiers, units, scope and author voice also need contextual review."
+      ],
+      "files_written": 0
+    },
+    "actual_before_equals_source_text": true,
+    "candidate_equals_actual_target_text": true,
+    "source_original_bytes_sha256": "1cac814dc922fb0ee89ca959b1bac5e19728f9dafc62c870f3ecea8a898e1a56",
+    "actual_backup_original_bytes_sha256": "1cac814dc922fb0ee89ca959b1bac5e19728f9dafc62c870f3ecea8a898e1a56",
+    "target_original_bytes_sha256": "d91a41044a903f71dd95ca7bfe441026c0b5a6d51ebe1395dc00e68a8619d393",
+    "actual_project_files": [
+      "inbox/draft.md"
+    ],
+    "semantic_review": "可能、未证明因果、尚未验证交联、全称公式及不能改为存在量词的限制均保留。"
+  },
+  "G03": {
+    "fixture_and_actual_files_match": true,
+    "descriptive_recalculation": [
+      {
+        "source": "evals/guided/inputs/thermal.csv",
+        "descriptive_only": true,
+        "rows": [
+          {
+            "temperature_C": 200.0,
+            "U_mean": 100.0,
+            "T_mean": 100.0,
+            "T_minus_U_percentage_points": 0.0
+          },
+          {
+            "temperature_C": 300.0,
+            "U_mean": 98.0,
+            "T_mean": 94.0,
+            "T_minus_U_percentage_points": -4.0
+          },
+          {
+            "temperature_C": 400.0,
+            "U_mean": 78.5,
+            "T_mean": 75.5,
+            "T_minus_U_percentage_points": -3.0
+          },
+          {
+            "temperature_C": 600.0,
+            "U_mean": 37.5,
+            "T_mean": 41.0,
+            "T_minus_U_percentage_points": 3.5
+          },
+          {
+            "temperature_C": 800.0,
+            "U_mean": 20.0,
+            "T_mean": 26.0,
+            "T_minus_U_percentage_points": 6.0
+          }
+        ]
+      },
+      {
+        "source": "evals/guided/inputs/thermal-updated.csv",
+        "descriptive_only": true,
+        "rows": [
+          {
+            "temperature_C": 200.0,
+            "U_mean": 100.0,
+            "T_mean": 100.0,
+            "T_minus_U_percentage_points": 0.0
+          },
+          {
+            "temperature_C": 300.0,
+            "U_mean": 98.0,
+            "T_mean": 94.0,
+            "T_minus_U_percentage_points": -4.0
+          },
+          {
+            "temperature_C": 400.0,
+            "U_mean": 78.5,
+            "T_mean": 75.5,
+            "T_minus_U_percentage_points": -3.0
+          },
+          {
+            "temperature_C": 600.0,
+            "U_mean": 37.5,
+            "T_mean": 41.0,
+            "T_minus_U_percentage_points": 3.5
+          },
+          {
+            "temperature_C": 800.0,
+            "U_mean": 20.0,
+            "T_mean": 27.0,
+            "T_minus_U_percentage_points": 7.0
+          }
+        ]
+      }
+    ],
+    "current_artifact": "mentor-update-20261031.md",
+    "preserved_stale_artifacts": [
+      "mentor-update-v2.md",
+      "tg-reading-notes.md",
+      "tg-descriptive-summary.json"
+    ],
+    "stale_artifacts_not_used_as_current_values": true
+  },
+  "G08": {
+    "n": 41,
+    "value": 1763,
+    "factors": [
+      41,
+      43
+    ],
+    "valid_counterexample_test": true,
+    "not_a_proof_by_finite_examples": true
+  },
+  "additional_tool_diagnostic": {
+    "id": "thermal-checker-help",
+    "rubric_check": false,
+    "status": "不通过",
+    "command": "python skills/rsk-experiments-figures/scripts/check_thermal_data.py --help",
+    "python_version": "3.13.13",
+    "exit_code": 1,
+    "error_excerpt": "ValueError: unsupported format character ')' (0x29) at index 29",
+    "limits": "Local read-only CLI reproduction, not a new model run. Captured G03 notes mention Python 3.14; this reproduction records its own actual runtime. Production source not edited."
+  }
+}

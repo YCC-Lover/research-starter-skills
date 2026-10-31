@@ -1,0 +1,304 @@
+{
+  "frozen_snapshot": "behavior-v21/pre-run-skill-snapshot.json",
+  "frozen_snapshot_sha256_of_original_bytes": "15c405d2937df6df0ce18ea53f558b9e88014a7ed870873fc24ed1814414e5be",
+  "scope": "Core guidance and adapters before first dispatch; resource archives are separately bound.",
+  "frozen_source_files": 104,
+  "unique_references_and_dependencies": 26,
+  "selected_case_source_checks": [
+    {
+      "path": "skills/research-starter-paper/references/discipline-fit.md",
+      "frozen_sha256": "bec10d6ec1eb2d404c8c4f0f2d2858de8cd61a9cc0bee4b77e4828af2c98266d",
+      "current_sha256": "bec10d6ec1eb2d404c8c4f0f2d2858de8cd61a9cc0bee4b77e4828af2c98266d",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02",
+        "G03"
+      ]
+    },
+    {
+      "path": "skills/research-starter-paper/references/guided-start.md",
+      "frozen_sha256": "35293b2d822bb38dd5d74a57efab2322e2034467a136d3d5a9c72bd782b49fda",
+      "current_sha256": "35293b2d822bb38dd5d74a57efab2322e2034467a136d3d5a9c72bd782b49fda",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02",
+        "G03"
+      ]
+    },
+    {
+      "path": "skills/research-starter-paper/references/handoff.md",
+      "frozen_sha256": "1fdf3e1b2acdc1ae881e45a14914b329e6014b3fd42c8827bd720151437822ea",
+      "current_sha256": "1fdf3e1b2acdc1ae881e45a14914b329e6014b3fd42c8827bd720151437822ea",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02",
+        "G03"
+      ]
+    },
+    {
+      "path": "skills/research-starter-paper/references/learning.md",
+      "frozen_sha256": "7b3499183e30fc86e1cc755bffc94c69945f7cff221dccc7d7eaf0affc8d4537",
+      "current_sha256": "7b3499183e30fc86e1cc755bffc94c69945f7cff221dccc7d7eaf0affc8d4537",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02"
+      ]
+    },
+    {
+      "path": "skills/research-starter-paper/scripts/research_session.py",
+      "frozen_sha256": "31c217fb1628acb9be7b6a895fcdfcc6eed0a96bd87a04250c201d04e3c2fce8",
+      "current_sha256": "31c217fb1628acb9be7b6a895fcdfcc6eed0a96bd87a04250c201d04e3c2fce8",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02",
+        "G03"
+      ]
+    },
+    {
+      "path": "skills/research-starter-paper/SKILL.md",
+      "frozen_sha256": "cbfaec4f321af12662939fd46d2acb0cb850ecd5140b0f97da465fd69d17d78d",
+      "current_sha256": "cbfaec4f321af12662939fd46d2acb0cb850ecd5140b0f97da465fd69d17d78d",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02",
+        "G03",
+        "G07"
+      ]
+    },
+    {
+      "path": "skills/rsk-experiments-figures/references/characterization.md",
+      "frozen_sha256": "c8e291bbfc64fb5a442510145fc00b8a4cc3b3a4ebedab851272ee8e126ca794",
+      "current_sha256": "c8e291bbfc64fb5a442510145fc00b8a4cc3b3a4ebedab851272ee8e126ca794",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G03"
+      ]
+    },
+    {
+      "path": "skills/rsk-experiments-figures/references/measurement-checks.md",
+      "frozen_sha256": "528862aeb4ea68317f0cf36f3325b5d583460e43c3cd73788bd1aa1a7cf9b30e",
+      "current_sha256": "528862aeb4ea68317f0cf36f3325b5d583460e43c3cd73788bd1aa1a7cf9b30e",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G03"
+      ]
+    },
+    {
+      "path": "skills/rsk-experiments-figures/references/thermal-task.md",
+      "frozen_sha256": "ea28cc6d201cfd8e5cdac372ae38460e4ba8091c2eb385af170e5653dd3c1191",
+      "current_sha256": "ea28cc6d201cfd8e5cdac372ae38460e4ba8091c2eb385af170e5653dd3c1191",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G03"
+      ]
+    },
+    {
+      "path": "skills/rsk-experiments-figures/scripts/check_thermal_data.py",
+      "frozen_sha256": "9aabafc976b0784cd9ddd89afdf46f8817ffcfcf1d43b79c606122a73a38405d",
+      "current_sha256": "9aabafc976b0784cd9ddd89afdf46f8817ffcfcf1d43b79c606122a73a38405d",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G03"
+      ]
+    },
+    {
+      "path": "skills/rsk-experiments-figures/SKILL.md",
+      "frozen_sha256": "4241017a1ca1a0725e3c6a15fbe47d2014e27ec85960ea90f8f8e8619c8ab1b0",
+      "current_sha256": "4241017a1ca1a0725e3c6a15fbe47d2014e27ec85960ea90f8f8e8619c8ab1b0",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G03"
+      ]
+    },
+    {
+      "path": "skills/rsk-literature/references/references.md",
+      "frozen_sha256": "7eb3182af1ddb3c87941aef6008c27c543e7514a63700e79f1edfd49723f5f63",
+      "current_sha256": "7eb3182af1ddb3c87941aef6008c27c543e7514a63700e79f1edfd49723f5f63",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G07"
+      ]
+    },
+    {
+      "path": "skills/rsk-literature/references/synthesis.md",
+      "frozen_sha256": "abb439d2cd38ce557d37d7664fcdf41afe9dc637da9cf32395a88b037122e57a",
+      "current_sha256": "abb439d2cd38ce557d37d7664fcdf41afe9dc637da9cf32395a88b037122e57a",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G07"
+      ]
+    },
+    {
+      "path": "skills/rsk-literature/SKILL.md",
+      "frozen_sha256": "8568bb4bd98f4c802398e4b96ce3038cc2d195510590590bb28fa8bf5890e8ad",
+      "current_sha256": "8568bb4bd98f4c802398e4b96ce3038cc2d195510590590bb28fa8bf5890e8ad",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G07"
+      ]
+    },
+    {
+      "path": "skills/rsk-paper-writing/references/prose-editing.md",
+      "frozen_sha256": "4fd43bdffa382ed03ca798825c3d7e305449f62916147ee715c86f306d253566",
+      "current_sha256": "4fd43bdffa382ed03ca798825c3d7e305449f62916147ee715c86f306d253566",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G03",
+        "G04",
+        "G05",
+        "G06"
+      ]
+    },
+    {
+      "path": "skills/rsk-paper-writing/scripts/check_prose_edit.py",
+      "frozen_sha256": "9949c96e41069b60637bbbc053577665658ed6acd80e97e3b19dcc624f362445",
+      "current_sha256": "9949c96e41069b60637bbbc053577665658ed6acd80e97e3b19dcc624f362445",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G05"
+      ]
+    },
+    {
+      "path": "skills/rsk-paper-writing/SKILL.md",
+      "frozen_sha256": "68ad6ca3b81851ea0427e7d5c817b9c6580fa770c61b68e36cfa0a03130eafd9",
+      "current_sha256": "68ad6ca3b81851ea0427e7d5c817b9c6580fa770c61b68e36cfa0a03130eafd9",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G04",
+        "G05"
+      ]
+    },
+    {
+      "path": "skills/rsk-rebuttal/references/rebuttal.md",
+      "frozen_sha256": "23ba77d83274a14223048ec178077476e4cf028b55024975aa6a25f720ae0920",
+      "current_sha256": "23ba77d83274a14223048ec178077476e4cf028b55024975aa6a25f720ae0920",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G06"
+      ]
+    },
+    {
+      "path": "skills/rsk-rebuttal/references/revision-trace.md",
+      "frozen_sha256": "875971b62a38d3c200699b5879fba22a74afb56a94772dffea0af57d639a55c4",
+      "current_sha256": "875971b62a38d3c200699b5879fba22a74afb56a94772dffea0af57d639a55c4",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G06"
+      ]
+    },
+    {
+      "path": "skills/rsk-rebuttal/references/sources.md",
+      "frozen_sha256": "b727680e1b4af3c8dae896d98ffdd05d6dac08cffbad3f88b095e02066a4238d",
+      "current_sha256": "b727680e1b4af3c8dae896d98ffdd05d6dac08cffbad3f88b095e02066a4238d",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G06"
+      ]
+    },
+    {
+      "path": "skills/rsk-rebuttal/SKILL.md",
+      "frozen_sha256": "030a41b1a9721ed3a751578158afe9a7c5775750e39ffd7300d7498748dbc5a4",
+      "current_sha256": "030a41b1a9721ed3a751578158afe9a7c5775750e39ffd7300d7498748dbc5a4",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G06"
+      ]
+    },
+    {
+      "path": "skills/rsk-research-design/references/design.md",
+      "frozen_sha256": "2987a6f4ebd066b32be74ec0e5487cca7ff7eea45e9c824fda28237252af6e20",
+      "current_sha256": "2987a6f4ebd066b32be74ec0e5487cca7ff7eea45e9c824fda28237252af6e20",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02"
+      ]
+    },
+    {
+      "path": "skills/rsk-research-design/SKILL.md",
+      "frozen_sha256": "d38997793e74e7e58ebfcc7d41e07d90b17dc8811150c6bb1c024847d62d7fea",
+      "current_sha256": "d38997793e74e7e58ebfcc7d41e07d90b17dc8811150c6bb1c024847d62d7fea",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02"
+      ]
+    },
+    {
+      "path": "skills/rsk-research-workflow/references/practice.md",
+      "frozen_sha256": "b5343e9d5b563563b628b4de4f6563db90af6196084c5279e1d2d21431154131",
+      "current_sha256": "b5343e9d5b563563b628b4de4f6563db90af6196084c5279e1d2d21431154131",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02"
+      ]
+    },
+    {
+      "path": "skills/rsk-research-workflow/references/rehearsal.md",
+      "frozen_sha256": "6377cf5ee0d886c5e46facad670e11532ed112ab5781f0fe2f8367fb8e7f8e93",
+      "current_sha256": "6377cf5ee0d886c5e46facad670e11532ed112ab5781f0fe2f8367fb8e7f8e93",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G08"
+      ]
+    },
+    {
+      "path": "skills/rsk-research-workflow/SKILL.md",
+      "frozen_sha256": "f1bff1bb4630c05ca7b3d0796abe7310ed5fec6229bb683203fa0f2f5c14f032",
+      "current_sha256": "f1bff1bb4630c05ca7b3d0796abe7310ed5fec6229bb683203fa0f2f5c14f032",
+      "text_equal": true,
+      "used_by_selected_cases": [
+        "G01",
+        "G02",
+        "G08"
+      ]
+    }
+  ],
+  "changed_frozen_sources": [
+    {
+      "path": "skills/rsk-research-workflow/references/ppt-master-notices.md",
+      "frozen_sha256": "659b4c372fdfc618ecd2bf4b0fb4877a8c5a1435d0d4c7b9df31ef86434470c3",
+      "current_sha256": "289dc32935b87ecaddb07437f7bfaa2daa50e811537b592a86dd6fee18e5aa1f",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    },
+    {
+      "path": "skills/rsk-research-workflow/references/presentation-tools.md",
+      "frozen_sha256": "a10776cf27610eac0a81202292d770c63fce5b6e6b7b519e199190aac7e893ea",
+      "current_sha256": "768392823779c02cd05c262a748038afe0c4b2535b46b30e645ff7765b734253",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    },
+    {
+      "path": "skills/rsk-research-workflow/scripts/presentation_retention.py",
+      "frozen_sha256": "dc3164b831fc66248074cc1b7138cef098c247e0c475762ed837ea20975fbb0e",
+      "current_sha256": "27856c279892aa77228d791bfad23a25cfbffeb1311ca0e8da47372fe46e2757",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    },
+    {
+      "path": "skills/rsk-research-workflow/scripts/presentation_source.py",
+      "frozen_sha256": "932367fc32b55e24b4303c85af7d6e62728adec8bd78872b69063eb0a9828b0f",
+      "current_sha256": "c5e3a87f671d3cdbcbdcb7c4dc6508922ea27425a1cf4dcb756e93397923a3ee",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    },
+    {
+      "path": "skills/rsk-research-workflow/scripts/research_presentations.py",
+      "frozen_sha256": "1bc132e2e83ece15e6aee0f2c9c64dc803f280ea12832172b70d5493b70a92a6",
+      "current_sha256": "0937d98f065915a802a905ed8c9625240b9e7c717b17f049970ce3f5872a013e",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    }
+  ],
+  "affected_selected_cases": [],
+  "snapshot_hashes_refreshed_from_current_sources": false,
+  "resource_archives_in_frozen_snapshot": false
+}

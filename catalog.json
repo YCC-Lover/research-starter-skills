@@ -1,6 +1,6 @@
 {
   "name": "research-starter-skills",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "repository": "https://github.com/YCC-Lover/research-starter-skills",
   "upstream_repository": "https://github.com/LAMDA-NeSy/Research-Starter-Kit",
   "upstream_revision": "36ba390d153f5289308ec833e2b633c26b304a7b",
@@ -13,6 +13,14 @@
     "registered_modes": 35,
     "path": "skills/research-starter-paper/resources/research-engine",
     "routes": "skills/research-starter-paper/references/advanced-capabilities.json"
+  },
+  "presentation_engine": {
+    "source_repository": "https://github.com/hugohe3/ppt-master",
+    "source_commit": "5e8856be0da8e6bc85c4aa28acc614478f7b7137",
+    "source_version": "6.8.0",
+    "license": "MIT",
+    "path": "skills/rsk-research-workflow/resources/presentation-engine",
+    "routes": "skills/rsk-research-workflow/references/presentation-capabilities.json"
   },
   "skills": [
     {

@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "Cite this independent adaptation and acknowledge Research-Starter-Kit separately; see NOTICE.md."
 type: software
 title: Research Starter Skills
-version: 2.0.0
-date-released: 2026-10-21
+version: 2.1.0
+date-released: 2026-10-31
 authors:
   - name: YCC-Lover
 repository-code: https://github.com/YCC-Lover/research-starter-skills
@@ -15,6 +15,11 @@ keywords:
   - academic-writing
   - research-starter-kit
 references:
+  - type: software
+    title: PPT Master
+    authors:
+      - name: Hugo He
+    url: https://github.com/hugohe3/ppt-master
   - type: generic
     title: Research-Starter-Kit
     authors:

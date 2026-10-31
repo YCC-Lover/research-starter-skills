@@ -6,6 +6,7 @@ import importlib.util
 import json
 import re
 import struct
+import sys
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -96,6 +97,17 @@ def validate(root=ROOT):
     engine_module = importlib.util.module_from_spec(engine_spec)
     engine_spec.loader.exec_module(engine_module)
     engine_result = engine_module.verify_bundle()
+    presentation_script = local_file(root, 'skills/rsk-research-workflow/scripts/research_presentations.py')
+    presentation_spec = importlib.util.spec_from_file_location('rsk_presentations_validation', presentation_script)
+    presentation_module = importlib.util.module_from_spec(presentation_spec)
+    sys.path.insert(0, str(presentation_script.parent))
+    try:
+        presentation_spec.loader.exec_module(presentation_module)
+        presentation_result = presentation_module.verify()
+    finally:
+        sys.path.pop(0)
+    require(catalog['presentation_engine']['source_commit'] == presentation_result['source_commit'],
+            'Presentation source version differs from the catalog.')
     # Four zero-byte filename fixtures exercise PDF-folder import, not PDF reading.
     # Only exact manifest-bound empty files are exempt; actual documents remain banned.
     empty_pdf_fixtures = {local_file(root, 'skills/research-starter-paper/resources/research-engine/' + name)
@@ -145,7 +157,8 @@ def validate(root=ROOT):
                 require(destination.is_relative_to(root) and destination.exists(),
                         'Broken or escaping link: ' + str(path.relative_to(root)) + ' -> ' + target)
     return {'skills': len(names), 'tutorials_covered': 19, 'public_paths_and_links_valid': True,
-            'approved_images': len(approved_images), 'research_engine': engine_result}
+            'approved_images': len(approved_images), 'research_engine': engine_result,
+            'presentation_engine': presentation_result}
 
 
 if __name__ == '__main__':

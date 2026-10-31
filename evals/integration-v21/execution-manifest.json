@@ -1,0 +1,400 @@
+{
+  "run_id": "2026-10-31-v2.1.0-guided-regression",
+  "cases": [
+    {
+      "case_id": "G01",
+      "prepared": {
+        "case_id": "G01",
+        "skill": "research-starter-paper",
+        "project": "{{project}}",
+        "original_user": "我刚读研，导师让我先摸索课题，但我完全没系统学过，不知道给你什么材料。一步步带我做出下次组会能用的东西吧。这个文件夹是我的工作目录：{{project}}。",
+        "actual_user": "我刚读研，导师让我先摸索课题，但我完全没系统学过，不知道给你什么材料。一步步带我做出下次组会能用的东西吧。这个文件夹是我的工作目录：{{project}}。"
+      },
+      "prepared_original_bytes_sha256": "f5781efb987a40b02fca487b4e2159562dad5b9dbbee412f3cf5c9f30a45e867",
+      "first_user_matches_fixed_input": true,
+      "actual_request_is_project_substitution_only": true,
+      "turn_user_text_provenance": "Initial request checked against prepared.json. Followup/resume/student requests recorded from the fixed case fixture; response envelopes do not independently contain the dispatched user message.",
+      "stages": [
+        {
+          "stage": "initial",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G01/raw-initial.json",
+          "sha256_of_original_envelope_bytes": "9b4ae4d5d0993723820cca803252001dfd1337a6fa4e4c6e0be00ec20fc25abb",
+          "context_id": "01a19098-c263-79a2-86c4-511493f52aa5",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "7569ec32e1c56182ce3a7f1d4bc6e12b1b3015ac00f3f3c31b24ccf59d9dac34",
+          "references_read_as_reported": [
+            "skills/research-starter-paper/SKILL.md",
+            "skills/research-starter-paper/references/guided-start.md",
+            "AGENTS.md",
+            "catalog.json",
+            "skills/research-starter-paper/references/learning.md",
+            "skills/rsk-research-workflow/SKILL.md",
+            "skills/research-starter-paper/scripts/research_session.py",
+            "skills/rsk-research-workflow/references/practice.md",
+            "skills/research-starter-paper/references/handoff.md"
+          ]
+        },
+        {
+          "stage": "followup",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G01/raw-followup.json",
+          "sha256_of_original_envelope_bytes": "d4cc6b336bf1fc0a5a7530d22a613afebd413951c79b9e1a299964071bbb0766",
+          "context_id": "01a19098-c263-79a2-86c4-511493f52aa5",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "300af35597749c10f67d887cce87b02f44654ec4f57fb74909fcc0309980bffd",
+          "references_read_as_reported": [
+            "skills/research-starter-paper/SKILL.md",
+            "skills/research-starter-paper/references/guided-start.md",
+            "skills/research-starter-paper/references/discipline-fit.md",
+            "skills/rsk-research-design/SKILL.md",
+            "skills/rsk-research-design/references/design.md"
+          ]
+        },
+        {
+          "stage": "resume",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G01/raw-resume.json",
+          "sha256_of_original_envelope_bytes": "999cf5d9fd5310b81556f830c4e14714443f9ed1c6540c1bc7c51976b13c3588",
+          "context_id": "01a190a2-304b-7983-a7c2-7861ef42bbf1",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "957d28c5c88457bc40944e1dc181a5e983de42f04dbc4663c41176403d4094f4",
+          "references_read_as_reported": [
+            "skills/research-starter-paper/SKILL.md",
+            "skills/research-starter-paper/references/guided-start.md",
+            "skills/research-starter-paper/references/handoff.md",
+            "skills/research-starter-paper/scripts/research_session.py",
+            "skills/research-starter-paper/references/discipline-fit.md",
+            "skills/rsk-research-design/SKILL.md",
+            "skills/rsk-research-design/references/design.md",
+            "skills/rsk-research-workflow/SKILL.md",
+            "skills/rsk-research-workflow/references/practice.md"
+          ]
+        }
+      ],
+      "final_project_file_count": 8
+    },
+    {
+      "case_id": "G02",
+      "prepared": {
+        "case_id": "G02",
+        "skill": "research-starter-paper",
+        "project": "{{project}}",
+        "original_user": "我刚读研，导师让我先摸索课题，但我完全没系统学过，不知道给你什么材料。一步步带我做出下次组会能用的东西吧。这个文件夹是我的工作目录：{{project}}。",
+        "actual_user": "我刚读研，导师让我先摸索课题，但我完全没系统学过，不知道给你什么材料。一步步带我做出下次组会能用的东西吧。这个文件夹是我的工作目录：{{project}}。"
+      },
+      "prepared_original_bytes_sha256": "078457900734c49fad1cf9e1b33aa361eabb75e6fe1b46129fa15edff58ce767",
+      "first_user_matches_fixed_input": true,
+      "actual_request_is_project_substitution_only": true,
+      "turn_user_text_provenance": "Initial request checked against prepared.json. Followup/resume/student requests recorded from the fixed case fixture; response envelopes do not independently contain the dispatched user message.",
+      "stages": [
+        {
+          "stage": "initial",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G02/raw-initial.json",
+          "sha256_of_original_envelope_bytes": "c077e197a3d27ec88f05222582be0b2e342747a3ff99f020f1fcb938c017aed4",
+          "context_id": "01a1909e-cc88-7f42-a404-3c7a1b7e6ac5",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "070f63432cda2d95895e3a4f2b2c8b4eb4d9de1b1a1185daaacd6bf56836870c",
+          "references_read_as_reported": [
+            "skills/research-starter-paper/SKILL.md",
+            "skills/research-starter-paper/references/guided-start.md",
+            "skills/research-starter-paper/references/learning.md",
+            "AGENTS.md",
+            "skills/rsk-research-design/SKILL.md",
+            "skills/rsk-research-workflow/SKILL.md",
+            "skills/research-starter-paper/scripts/research_session.py",
+            "catalog.json",
+            "skills/rsk-research-design/references/design.md",
+            "skills/rsk-research-workflow/references/practice.md"
+          ]
+        },
+        {
+          "stage": "followup",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G02/raw-followup.json",
+          "sha256_of_original_envelope_bytes": "1ec8d6114b3b09f112463220798ad2aedf5299dbcf8c05d1a21a5dd7616a73ec",
+          "context_id": "01a1909e-cc88-7f42-a404-3c7a1b7e6ac5",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "4d9c08090fe1bd30eb764105b7af57be9ba6d2d9bade7d7b3a812151b473eb8d",
+          "references_read_as_reported": [
+            "AGENTS.md",
+            "catalog.json",
+            "skills/research-starter-paper/SKILL.md",
+            "skills/research-starter-paper/references/guided-start.md",
+            "skills/research-starter-paper/references/discipline-fit.md",
+            "skills/research-starter-paper/references/handoff.md",
+            "skills/rsk-research-design/SKILL.md",
+            "skills/rsk-research-design/references/design.md"
+          ]
+        },
+        {
+          "stage": "resume",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G02/raw-resume.json",
+          "sha256_of_original_envelope_bytes": "4e2f9c0c899a8d9af2aab69638729a4b8055e0394697060381c19086071d8986",
+          "context_id": "01a190ae-a9e8-7e11-9dc0-24d8ec50c242",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "703678cab770609c581990c97de1b339921f227302acae708b89cc56e12e2fe7",
+          "references_read_as_reported": [
+            "skills/research-starter-paper/SKILL.md",
+            "skills/research-starter-paper/references/handoff.md",
+            "skills/research-starter-paper/references/guided-start.md",
+            "skills/research-starter-paper/scripts/research_session.py",
+            "skills/rsk-research-design/SKILL.md",
+            "skills/rsk-research-design/references/design.md",
+            "skills/research-starter-paper/references/discipline-fit.md"
+          ]
+        }
+      ],
+      "final_project_file_count": 9
+    },
+    {
+      "case_id": "G03",
+      "prepared": {
+        "case_id": "G03",
+        "skill": "rsk-experiments-figures",
+        "project": "{{project}}",
+        "original_user": "我做聚合物溶胀，师兄给了TG的Origin项目，我不知道该发给你什么，也不懂怎么看。项目文件在工作目录{{project}}的inbox里。带我先写一段能给导师看的话。",
+        "actual_user": "我做聚合物溶胀，师兄给了TG的Origin项目，我不知道该发给你什么，也不懂怎么看。项目文件在工作目录{{project}}的inbox里。带我先写一段能给导师看的话。"
+      },
+      "prepared_original_bytes_sha256": "5636b2df48f54a65fe911e742e125afbe32c500ec930d01cfda0dc3576dbf6d1",
+      "first_user_matches_fixed_input": true,
+      "actual_request_is_project_substitution_only": true,
+      "turn_user_text_provenance": "Initial request checked against prepared.json. Followup/resume/student requests recorded from the fixed case fixture; response envelopes do not independently contain the dispatched user message.",
+      "stages": [
+        {
+          "stage": "initial",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G03/raw-initial.json",
+          "sha256_of_original_envelope_bytes": "6cb1a9d548e7af18c8b211c5b6a2fbd2cfee7358a822757ee2213ef95fcca7b1",
+          "context_id": "01a19098-c2f5-7300-b2fc-ed4e55fa750a",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "908f75be9072cfa8d044c42baad006bfb3a53273e3c7a484edd6f5128a51fb29",
+          "references_read_as_reported": [
+            "skills/rsk-experiments-figures/SKILL.md",
+            "skills/research-starter-paper/references/guided-start.md",
+            "skills/rsk-experiments-figures/references/thermal-task.md",
+            "skills/rsk-experiments-figures/references/measurement-checks.md",
+            "skills/research-starter-paper/scripts/research_session.py"
+          ]
+        },
+        {
+          "stage": "followup",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G03/raw-followup.json",
+          "sha256_of_original_envelope_bytes": "6b913123943c72792983d7f3c597e330607714993c97505c1f243796f61a1bce",
+          "context_id": "01a19098-c2f5-7300-b2fc-ed4e55fa750a",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "1efa9862c02247f68903e9f60b9841588fdc1f0440778b1d0af7c183db4f39a7",
+          "references_read_as_reported": [
+            "skills/rsk-experiments-figures/SKILL.md",
+            "skills/research-starter-paper/references/guided-start.md",
+            "skills/rsk-experiments-figures/references/thermal-task.md",
+            "skills/rsk-experiments-figures/references/measurement-checks.md",
+            "skills/rsk-experiments-figures/references/characterization.md",
+            "skills/rsk-paper-writing/references/prose-editing.md",
+            "skills/rsk-experiments-figures/scripts/check_thermal_data.py",
+            "skills/research-starter-paper/scripts/research_session.py"
+          ]
+        },
+        {
+          "stage": "resume",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G03/raw-resume.json",
+          "sha256_of_original_envelope_bytes": "9d2f2da1997cb5f364866ba0b49edc62b11dd2e549bbc24788560f951b18af29",
+          "context_id": "01a190a2-311d-7330-a249-75bbabd43332",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "768b9247b1105a48df6b6844715997be6f77e37a0f908e29f2340359d4ce5c35",
+          "references_read_as_reported": [
+            "AGENTS.md",
+            "catalog.json",
+            "skills/rsk-experiments-figures/SKILL.md",
+            "skills/rsk-experiments-figures/references/thermal-task.md",
+            "skills/rsk-experiments-figures/references/measurement-checks.md",
+            "skills/research-starter-paper/SKILL.md",
+            "skills/research-starter-paper/references/guided-start.md",
+            "skills/research-starter-paper/references/handoff.md",
+            "skills/research-starter-paper/scripts/research_session.py"
+          ]
+        }
+      ],
+      "final_project_file_count": 20
+    },
+    {
+      "case_id": "G04",
+      "prepared": {
+        "case_id": "G04",
+        "skill": "rsk-paper-writing",
+        "project": "{{project}}",
+        "original_user": "# 编辑练习（内容为合成示例）\n\n请按我平时的简洁语气改下面26段，保留P编号，每段给最终稿，不要编数据。样例：我们先核对了原始记录。现在只能说两组有差异，原因还没查清。下一步先补条件，不急着解释机制。\n\nP01 本研究不只是一次测量，更是一段理解材料的旅程。我们测了12个独立试样。\nP02 我们保存了原始曲线。这才是真正的进步。\nP03 从本质上说，科研是证据的语言。我们记录了温度。\nP04 让我们深入探讨这项结果。这里有你需要知道的信息：两组结果不同。\nP05 我不是说记录不重要，也不是说方案完美。我们明天核对原始记录。\nP06 这个方案带来了启发、灵感和新的启示。它把记录集中到了同一个文件。\nP07 我们记录了日期。我们记录了条件。我们保存了表格。\nP08 我们先看曲线——再看条件——最后写出结论。\nP09 这个变化可能或许在某些情况下可以被认为与条件有关。\nP10 The report is high-quality and the process is well-documented.\nP11 No configuration file needed. The results are preserved automatically.\nP12 此外，本研究深入剖析了复杂交互的丰富图景，充分彰显了记录条件的重要性。\nP13 我们建立了一个记录表，标志着研究走向卓越的里程碑。未来一片光明。\nP14 她与项目的记录工作有关，具体负责每周汇总实验记录。\nP15 表格有蓝色与绿色两列，象征着研究者与自然的深厚联系。\nP16 这个令人惊叹、享有盛誉的记录工具可以保存文本。\nP17 专家普遍认为该方案非常有效。现有材料没有提供专家姓名或评估记录。\nP18 The folder serves as a place for the notes and boasts three files.\nP19 **记录：**记录已经保存。**条件：**条件还没核对。\nP20 ## 深度探索与战略启航\nP20内容：项目周五讨论下一步。\nP21 He said “the file is ready”. 本段目标格式使用英文直引号，不是引文原件。\nP22 好问题！当然可以！本次只整理了笔记。希望对你有帮助，要不要继续？\nP23 尽管资料有限，据我最后一次训练更新推测，这项工作可能在1990年代开始。材料未提供开始时间。\nP24 ## 记录\nP24内容：记录很重要。我们把原始曲线放在项目目录。\nP25 下表由我认真整理而成，读者可以看到本段依次介绍记录和条件。记录已保存，条件待核对。\nP26 对方已经知道原记录缺条件，问今天先做什么。回复：原记录缺条件，条件会影响比较，完整比较需要条件。今天先请师兄补条件。",
+        "actual_user": "# 编辑练习（内容为合成示例）\n\n请按我平时的简洁语气改下面26段，保留P编号，每段给最终稿，不要编数据。样例：我们先核对了原始记录。现在只能说两组有差异，原因还没查清。下一步先补条件，不急着解释机制。\n\nP01 本研究不只是一次测量，更是一段理解材料的旅程。我们测了12个独立试样。\nP02 我们保存了原始曲线。这才是真正的进步。\nP03 从本质上说，科研是证据的语言。我们记录了温度。\nP04 让我们深入探讨这项结果。这里有你需要知道的信息：两组结果不同。\nP05 我不是说记录不重要，也不是说方案完美。我们明天核对原始记录。\nP06 这个方案带来了启发、灵感和新的启示。它把记录集中到了同一个文件。\nP07 我们记录了日期。我们记录了条件。我们保存了表格。\nP08 我们先看曲线——再看条件——最后写出结论。\nP09 这个变化可能或许在某些情况下可以被认为与条件有关。\nP10 The report is high-quality and the process is well-documented.\nP11 No configuration file needed. The results are preserved automatically.\nP12 此外，本研究深入剖析了复杂交互的丰富图景，充分彰显了记录条件的重要性。\nP13 我们建立了一个记录表，标志着研究走向卓越的里程碑。未来一片光明。\nP14 她与项目的记录工作有关，具体负责每周汇总实验记录。\nP15 表格有蓝色与绿色两列，象征着研究者与自然的深厚联系。\nP16 这个令人惊叹、享有盛誉的记录工具可以保存文本。\nP17 专家普遍认为该方案非常有效。现有材料没有提供专家姓名或评估记录。\nP18 The folder serves as a place for the notes and boasts three files.\nP19 **记录：**记录已经保存。**条件：**条件还没核对。\nP20 ## 深度探索与战略启航\nP20内容：项目周五讨论下一步。\nP21 He said “the file is ready”. 本段目标格式使用英文直引号，不是引文原件。\nP22 好问题！当然可以！本次只整理了笔记。希望对你有帮助，要不要继续？\nP23 尽管资料有限，据我最后一次训练更新推测，这项工作可能在1990年代开始。材料未提供开始时间。\nP24 ## 记录\nP24内容：记录很重要。我们把原始曲线放在项目目录。\nP25 下表由我认真整理而成，读者可以看到本段依次介绍记录和条件。记录已保存，条件待核对。\nP26 对方已经知道原记录缺条件，问今天先做什么。回复：原记录缺条件，条件会影响比较，完整比较需要条件。今天先请师兄补条件。"
+      },
+      "prepared_original_bytes_sha256": "425b1e834b3064949b5bdc6ca68533f905f2c10d568b0cab2489d65ec091c48a",
+      "first_user_matches_fixed_input": true,
+      "actual_request_is_project_substitution_only": true,
+      "turn_user_text_provenance": "Initial request checked against prepared.json. Followup/resume/student requests recorded from the fixed case fixture; response envelopes do not independently contain the dispatched user message.",
+      "stages": [
+        {
+          "stage": "initial",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G04/raw-initial.json",
+          "sha256_of_original_envelope_bytes": "5ca8e60b1f0843a4187820b3bc1c1187e21e626270e42acda9997153a094c9a7",
+          "context_id": "01a1909b-f528-7c22-9694-90e354347984",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "12dc179691eddd5a4f713eaa039fa4195fbf2f3f6ec984f797df28b5a4da3e8a",
+          "references_read_as_reported": [
+            "skills/rsk-paper-writing/SKILL.md",
+            "evals/guided/inputs/patterns.md",
+            "skills/rsk-paper-writing/references/prose-editing.md"
+          ]
+        }
+      ],
+      "final_project_file_count": 0
+    },
+    {
+      "case_id": "G05",
+      "prepared": {
+        "case_id": "G05",
+        "skill": "rsk-paper-writing",
+        "project": "{{project}}",
+        "original_user": "请修改{{project}}/inbox/draft.md，只改正文表达，保持我的简洁语气，不改数值、公式、代码、引用或元数据。直接更新该文件，再简短告诉我改了什么；不要另建科研记录。",
+        "actual_user": "请修改{{project}}/inbox/draft.md，只改正文表达，保持我的简洁语气，不改数值、公式、代码、引用或元数据。直接更新该文件，再简短告诉我改了什么；不要另建科研记录。"
+      },
+      "prepared_original_bytes_sha256": "364b53c9dcebd4e06ebb546823bd6388c1537722d0d54d8b7883a28ca72e17c5",
+      "first_user_matches_fixed_input": true,
+      "actual_request_is_project_substitution_only": true,
+      "turn_user_text_provenance": "Initial request checked against prepared.json. Followup/resume/student requests recorded from the fixed case fixture; response envelopes do not independently contain the dispatched user message.",
+      "stages": [
+        {
+          "stage": "initial",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G05/raw-initial.json",
+          "sha256_of_original_envelope_bytes": "6feb8065ec2244ea5ed6c31db954e9890f6c8723e73d9982c701bc5c84618191",
+          "context_id": "01a1909e-cd85-7782-be51-a027033bb7b4",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "ae20c4b4d6230f85d1b43ce3446c84b71f12511edbf9882cd38bf79b13ebf030",
+          "references_read_as_reported": [
+            "AGENTS.md",
+            "catalog.json",
+            "skills/rsk-paper-writing/SKILL.md",
+            "skills/rsk-paper-writing/references/prose-editing.md",
+            "skills/rsk-paper-writing/scripts/check_prose_edit.py"
+          ]
+        }
+      ],
+      "final_project_file_count": 1
+    },
+    {
+      "case_id": "G06",
+      "prepared": {
+        "case_id": "G06",
+        "skill": "rsk-rebuttal",
+        "project": "{{project}}",
+        "original_user": "请只给一段自然、礼貌的审稿回复，不改文件、不保存进度，也不要输出编辑过程。审稿人问有没有按器件分离。实际情况：原随机划分95/92，总80个器件里23个跨训练测试；按器件分离只试过一次81/80，没公平调参，原稿还没改。不要编页码或已完成实验。\n\n我的旧草稿：我们不只是回应意见，更是拥抱科研严谨性的全新篇章。分组验证已经充分证明稳定领先，这才是真正的进步。我们会继续迈向卓越。",
+        "actual_user": "请只给一段自然、礼貌的审稿回复，不改文件、不保存进度，也不要输出编辑过程。审稿人问有没有按器件分离。实际情况：原随机划分95/92，总80个器件里23个跨训练测试；按器件分离只试过一次81/80，没公平调参，原稿还没改。不要编页码或已完成实验。\n\n我的旧草稿：我们不只是回应意见，更是拥抱科研严谨性的全新篇章。分组验证已经充分证明稳定领先，这才是真正的进步。我们会继续迈向卓越。"
+      },
+      "prepared_original_bytes_sha256": "1c1f24de79a22be975b9c16ec39ff06fa21b80a84efaabcee3f62d702ad435d0",
+      "first_user_matches_fixed_input": true,
+      "actual_request_is_project_substitution_only": true,
+      "turn_user_text_provenance": "Initial request checked against prepared.json. Followup/resume/student requests recorded from the fixed case fixture; response envelopes do not independently contain the dispatched user message.",
+      "stages": [
+        {
+          "stage": "initial",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G06/raw-initial.json",
+          "sha256_of_original_envelope_bytes": "4b87d16752fb7a7a8ea93056b13e2b0a710a3f6d1b5ef08fb3bce7d19512045f",
+          "context_id": "01a1909b-f5e3-7810-ba89-bdef6ee68571",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "211ef60e0957f07dc916db356ed9b5210a9c694dff7226a83568a210878d5dd9",
+          "references_read_as_reported": [
+            "skills/rsk-rebuttal/SKILL.md",
+            "evals/guided/inputs/rebuttal.md",
+            "skills/rsk-rebuttal/references/rebuttal.md",
+            "skills/rsk-rebuttal/references/sources.md",
+            "skills/rsk-rebuttal/references/revision-trace.md",
+            "skills/rsk-paper-writing/references/prose-editing.md"
+          ]
+        }
+      ],
+      "final_project_file_count": 0
+    },
+    {
+      "case_id": "G07",
+      "prepared": {
+        "case_id": "G07",
+        "skill": "rsk-literature",
+        "project": "{{project}}",
+        "original_user": "请把以下零散片段整理成一个中文组会综合段落和一个具体下一步，不要逐篇念摘要。以下全为虚构教学条目，没有全文。\n\nA0：同一工作预印本，数据集R随机划分78到84，无独立器件。\nA1：A0正式版，按器件划分75到76；器件数也更新了，指出随机划分偏乐观。\nB：数据集S从80到87，但器件、速率不同，无共同基线。\nC：同批器件循环1000次后分数降，重新校准部分恢复，无化学机制验证。\nD：增强数据只改善随机划分，在留出器件上没有改善。\nE：综述引言将路线分为材料设计和信号校正，没有新实验。",
+        "actual_user": "请把以下零散片段整理成一个中文组会综合段落和一个具体下一步，不要逐篇念摘要。以下全为虚构教学条目，没有全文。\n\nA0：同一工作预印本，数据集R随机划分78到84，无独立器件。\nA1：A0正式版，按器件划分75到76；器件数也更新了，指出随机划分偏乐观。\nB：数据集S从80到87，但器件、速率不同，无共同基线。\nC：同批器件循环1000次后分数降，重新校准部分恢复，无化学机制验证。\nD：增强数据只改善随机划分，在留出器件上没有改善。\nE：综述引言将路线分为材料设计和信号校正，没有新实验。"
+      },
+      "prepared_original_bytes_sha256": "11bf2642c256e28ab3baf986cafbd9b04227c3facd6bbcd7ceb084270511fee4",
+      "first_user_matches_fixed_input": true,
+      "actual_request_is_project_substitution_only": true,
+      "turn_user_text_provenance": "Initial request checked against prepared.json. Followup/resume/student requests recorded from the fixed case fixture; response envelopes do not independently contain the dispatched user message.",
+      "stages": [
+        {
+          "stage": "initial",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G07/raw-initial.json",
+          "sha256_of_original_envelope_bytes": "5b9e9c0d1f41d2901732b1869fa92888f05719b8996b8510bec6719f4954b0df",
+          "context_id": "01a190a0-804f-7680-a85d-ba9a1c0f7ef0",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "d5cf97f85ee85c2bb228b7b1a8f3e1ac8817de0b9c68949b423ce3958fd7829c",
+          "references_read_as_reported": [
+            "skills/rsk-literature/SKILL.md",
+            "skills/rsk-literature/references/synthesis.md",
+            "skills/rsk-literature/references/references.md",
+            "AGENTS.md",
+            "catalog.json",
+            "skills/research-starter-paper/SKILL.md"
+          ]
+        }
+      ],
+      "final_project_file_count": 0
+    },
+    {
+      "case_id": "G08",
+      "prepared": {
+        "case_id": "G08",
+        "skill": "rsk-research-workflow",
+        "project": "{{project}}",
+        "original_user": "我是数学硕士，想练组会答问。命题是“对所有非负整数n，n^2+n+41都是质数”。请先问我一个检查论证的问题，等我答后再反馈，不要现在给完整答案。只聊天，不保存文件。",
+        "actual_user": "我是数学硕士，想练组会答问。命题是“对所有非负整数n，n^2+n+41都是质数”。请先问我一个检查论证的问题，等我答后再反馈，不要现在给完整答案。只聊天，不保存文件。"
+      },
+      "prepared_original_bytes_sha256": "920e2829da429523e2e58179d2aedea81e189c1efa90dfd47f6b9b00bad58507",
+      "first_user_matches_fixed_input": true,
+      "actual_request_is_project_substitution_only": true,
+      "turn_user_text_provenance": "Initial request checked against prepared.json. Followup/resume/student requests recorded from the fixed case fixture; response envelopes do not independently contain the dispatched user message.",
+      "stages": [
+        {
+          "stage": "initial",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G08/raw-initial.json",
+          "sha256_of_original_envelope_bytes": "6c9a9ad3be328e86f86665aaabaaabb43586207adf7dc6116620211c08fc622f",
+          "context_id": "01a19098-c3f1-7751-8c0a-01ac1c2a5bad",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "9b23edcbacc563ad221fcd10704f59f1e2cc3b9e4c86dd90ab660efb227868df",
+          "references_read_as_reported": [
+            "skills/rsk-research-workflow/SKILL.md",
+            "skills/rsk-research-workflow/references/rehearsal.md"
+          ]
+        },
+        {
+          "stage": "followup",
+          "actualraw": true,
+          "raw_envelope_locator_local_only": "behavior-v21/G08/raw-followup.json",
+          "sha256_of_original_envelope_bytes": "d9e1ac6fbbddbc73b0fc79dd7fef06ebd4d82ce4425aeec59e163d75fa56ea3c",
+          "context_id": "01a19098-c3f1-7751-8c0a-01ac1c2a5bad",
+          "raw_response_matches_parsed_response": true,
+          "normalized_answer_sha256": "9dc87c6a67007e065d3656f9d3768dccfd07a89a5ed51658895a457b2a05f0e2",
+          "references_read_as_reported": [
+            "skills/rsk-research-workflow/SKILL.md",
+            "skills/rsk-research-workflow/references/rehearsal.md"
+          ]
+        }
+      ],
+      "final_project_file_count": 0
+    }
+  ]
+}

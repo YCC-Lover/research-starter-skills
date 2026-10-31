@@ -1,0 +1,17 @@
+{
+  "case_id": "G05",
+  "stage": "final",
+  "captured_from_actual_files": true,
+  "raw_hashes_and_normalized_text_are_distinct": true,
+  "files": [
+    {
+      "path": "inbox/draft.md",
+      "bytes": 407,
+      "sha256_of_original_bytes": "d91a41044a903f71dd95ca7bfe441026c0b5a6d51ebe1395dc00e68a8619d393",
+      "text": "---\ntitle: Fixed study\nversion: 1\n---\n\n# Results\n\n我们测了12个独立试样，300 °C时质量为95.0%。这一观察可能与条件有关，未证明因果。\n\n我们尚未验证交联机制。见[@alpha2024]与[记录](https://example.org/paper(v2))。\n\n```python\nvalues = [12, 95.0]\nprint(\"keep this exact\")\n```\n\n量词条件保持为 $\\forall x\\in A, f(x)\\geq 0$。不能把它改成存在量词。\n",
+      "sha256_of_normalized_text_utf8": "d91a41044a903f71dd95ca7bfe441026c0b5a6d51ebe1395dc00e68a8619d393"
+    }
+  ],
+  "normalization": "Project, package and task prefixes replaced, including JSON-escaped Windows paths; original byte hashes not recomputed.",
+  "capture_sha256_of_original_bytes": "99b9ad45ae7a21163978cd3ba8014069493949f827bdeefcb1856de2dd487df7"
+}

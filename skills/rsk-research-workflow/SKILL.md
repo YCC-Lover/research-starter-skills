@@ -1,6 +1,6 @@
 ---
 name: rsk-research-workflow
-description: "依据 Research-Starter-Kit 准备组会、会议交流与科研记录，并支持开题、阶段汇报和答辩问答演练。用于科研过程组织、反馈与 AI 协作；现行会议、资助和工具规则仍需另行核验。"
+description: "准备组会、论文汇报、开题与答辩，支持可编辑 PPTX 制作、既有模板改稿、讲稿与问答演练；也用于会议交流、研究记录与 AI 协作。只要提纲或练习时不启动制稿，现行会议与资助规则另行核验。"
 ---
 
 # 科研工作流与学术交流
@@ -14,6 +14,7 @@ description: "依据 Research-Starter-Kit 准备组会、会议交流与科研�
 - 组会、论文汇报、meeting、实验日志和习惯：[科研实践](references/practice.md)。
 - 学术会议计划、现场交流、研究介绍与会后跟进：[会议参会](references/conferences.md)。
 - 开题、阶段汇报、预答辩和问答训练：[演练与反馈](references/rehearsal.md)。
+- 制作、重构、美化或修改科研 PPT/PPTX，复用模板，补充讲稿、动画与旁白：[科研演示制作](references/presentations.md)。需要真实文件时按该指南执行；提纲、讲解和互动演练不自动启动制作工具。
 - 与 AI 协作、上下文、验证和自动化边界：[AI 协作](references/ai-collaboration.md)。
 - 未发表材料、AI 使用记录与披露：[负责任的 AI 协作](references/responsible-ai.md)。
 - 材料护照、完整流程恢复、证据与决定记录、披露生成及研究后跟踪：[进阶协作](references/advanced-workflow.md)。不自动开启持续监测或外部传输。

@@ -1,0 +1,11 @@
+# Local native PPTX export, round-trip editing and common document intake.
+# Other source formats, image/TTS services and video tools are optional.
+python-pptx>=1.0.2,<2
+XlsxWriter>=3.0,<4
+skia-pathops>=0.9.2,<1
+uharfbuzz>=0.50,<1
+Pillow>=9,<13
+PyYAML>=6,<7
+mammoth>=1.6,<2
+markdownify>=0.11,<2
+openpyxl>=3.1,<4

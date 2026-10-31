@@ -1,6 +1,6 @@
 interface:
   display_name: "科研工作流与学术交流"
-  short_description: "组织学术汇报、会议交流与研究记录，并支持开题和答辩问答演练"
-  default_prompt: "使用 $rsk-research-workflow，帮我准备科研汇报、meeting 或可执行的研究记录。"
+  short_description: "制作可编辑科研汇报与模板改稿，组织会议交流、研究记录和答辩演练"
+  default_prompt: "使用 $rsk-research-workflow，依据我的真实材料准备科研汇报；需要 PPTX 时完成制作与检查，需要演练时一次问一个问题。"
 policy:
   allow_implicit_invocation: true

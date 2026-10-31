@@ -28,7 +28,7 @@
 | 一段引言或学位论文章节 | 重建论证，统一术语、数据版本和跨章关系 | 可替换正文、实质修改说明、联动清单 |
 | 实验表格、TG/DTG 或表征结果 | 看清关键比较与指标权衡，组织图文表达 | 图方案、图注、结果与讨论、后续验证 |
 | 多条审稿意见和修订记录 | 确定返修优先级，把回复对应到实际改稿 | 回复草稿、证据与位置联动表、行动顺序 |
-| 开题、组会或答辩准备 | 一问一答地练习，针对你的原话反馈 | 更清楚的研究表达、改述练习、下一问 |
+| 开题、组会或答辩准备 | 组织论证、制作可编辑汇报，再按需一问一答练习 | PPTX、讲稿、证据对应与针对原话的反馈 |
 
 小任务直接给成果，复杂任务先理清材料；学习时讲方法、做练习，执行时处理文本和文件，检查时给出发现与建议。你可以随时切换，按自己的进度推进。
 
@@ -100,7 +100,7 @@ python scripts/install_skills.py
 | [rsk-paper-writing](skills/rsk-paper-writing/SKILL.md) | 引言、摘要、方法、结果讨论、学位论文一致性 |
 | [rsk-experiments-figures](skills/rsk-experiments-figures/SKILL.md) | 实验比较、材料表征、图注、TG/DTG 数据检查 |
 | [rsk-rebuttal](skills/rsk-rebuttal/SKILL.md) | 审稿回复、返修排序、稿件与证据联动 |
-| [rsk-research-workflow](skills/rsk-research-workflow/SKILL.md) | 组会、参会交流、科研记录、开题与答辩演练 |
+| [rsk-research-workflow](skills/rsk-research-workflow/SKILL.md) | 可编辑科研 PPT、模板改稿、组会、参会、研究记录与答辩演练 |
 
 TG/DTG 模块还提供只读 CSV 检查与按实际温度网格计算导数的工具；`--derive` 使用环境中已有的 NumPy。[完整热分析任务](skills/rsk-experiments-figures/references/thermal-task.md)
 
@@ -133,9 +133,26 @@ TG/DTG 模块还提供只读 CSV 检查与按实际温度网格计算导数的�
 [可执行工具与依赖](skills/research-starter-paper/references/runtime-helpers.md) ·
 [资源使用范围](skills/research-starter-paper/references/research-engine-notice.md)
 
+## 从科研材料到可编辑汇报
+
+`rsk-research-workflow` 现在连接 PPT Master 的原生演示制作能力：从材料新建汇报，
+保留原稿设计进行局部修改，或制作可复用模板。正文、形状、数据图表和公式分别按
+实际对象类型检查；讲稿、动画、旁白和视频按任务需要启用，不把提纲冒充已完成的 PPT。
+
+```text
+使用 $rsk-research-workflow。根据附件笔记和真实数据，
+制作一份面向课题组的8分钟汇报，突出问题、关键比较、限制和下一步。
+请保留可编辑图表，附逐页讲稿，并核对导出后的文件。
+```
+
+已有学校或课题组模板时可直接提供 PPTX，说明需要保留的页面和改动范围。
+只要提纲或答辩演练时仍走轻量流程。[制作指南](skills/rsk-research-workflow/references/presentations.md) ·
+[工具与可选依赖](skills/rsk-research-workflow/references/presentation-tools.md) ·
+[来源与许可](skills/rsk-research-workflow/references/ppt-master-notices.md)
+
 ## 看实际成果
 
-[本轮任务回归与能力验收](evals/integration-v2/REPORT.md)记录从空白起步、跨对话接续、材料变化检查、文字编辑和原生筛选的实际执行；[完整教学任务](examples/worked/README.md)提供可自己练习的合成材料。保存成功、文件可用、事实边界和用户操作分别核对，不用一个总分代替体验。
+[本轮新手任务回归](evals/integration-v21/REPORT.md)记录从空白起步、跨对话接续、材料变化检查与文字编辑；[演示制作验收](evals/presentations-v21/REPORT.md)记录原生对象导出、模板复用、局部改稿和实际 PowerPoint 渲染。[完整教学任务](examples/worked/README.md)提供可自己练习的合成材料。保存成功、文件可用、事实边界和用户操作分别核对，不用一个总分代替体验。
 
 这些记录是小规模合成任务验证，不承诺录用、通用于所有学科的效果或固定节省时间。自动保存只在当前任务中执行，不是后台监控；新对话仍需定位项目。[工程验收](docs/PROJECT_AUDIT.md)
 
@@ -151,7 +168,7 @@ python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-st
 
 安装器保存版本和文件哈希；`--doctor` 提供只读环境诊断。数据解析、作图和 Word/PDF/LaTeX 交付按当前 Codex 环境中的工具完成。[详细验收](docs/INSTALLATION.md#安装后验收)
 
-当前版本为 **v2.0.0**。原教程仍固定于提交 `36ba390d153f5289308ec833e2b633c26b304a7b`；进阶工作流另保留固定版本和文件级来源记录。各部分归属、许可与发布范围见 [NOTICE.md](NOTICE.md)，引用信息见 [CITATION.cff](CITATION.cff)。
+当前版本为 **v2.1.0**。原教程仍固定于提交 `36ba390d153f5289308ec833e2b633c26b304a7b`；进阶工作流与演示资源另保留固定版本和文件级来源记录。各部分归属、许可与发布范围见 [NOTICE.md](NOTICE.md)，引用信息见 [CITATION.cff](CITATION.cff)。
 
 ## 一起让科研起步更容易
 

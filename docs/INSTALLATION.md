@@ -80,6 +80,18 @@ v2.0.0 的进阶资源随七个技能一起复制，不再单独注册内部工�
 
 [学习路径](LEARNING_PATH.md)连接原教程与实践；[对照实测](../evals/utility/REPORT.md)提供相同材料下两组实际交付，方便选择自己的第一个任务。
 
+## 科研汇报制作
+
+v2.1.0 的制作资源随 `rsk-research-workflow` 安装；首次实际制稿时才展开到任务目录，
+不会新增一个独立技能入口。核心 Python 依赖见发行包的 `requirements-presentations.txt`
+或已安装模块的 `assets/requirements-presentations.txt`。建议安装到独立环境；
+普通提纲、问答演练和文字指导不需要它们。已有持久运行环境时，代理可读取安装目录
+父级的 `.research-starter-skills-runtime.json`；没有此配置时使用当前选定的解释器。
+
+PowerPoint/LibreOffice、PDF、图片生成、语音和视频是按任务选择的外部能力，不随
+技能自动安装。模板保留、原生对象范围和实际渲染分别检查，不能以脚本成功替代。
+[制作与边界](../skills/rsk-research-workflow/references/presentation-tools.md)
+
 ## 给项目贡献修改
 
 修改 `skills/<名称>/SKILL.md` 及相关参考，保持来源映射和七模块布局。验证后更新已安装副本：

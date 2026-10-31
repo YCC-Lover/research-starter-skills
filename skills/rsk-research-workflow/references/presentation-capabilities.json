@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "source_commit": "5e8856be0da8e6bc85c4aa28acc614478f7b7137",
+  "routes": {
+    "generate": "workflows/generate-pptx.md",
+    "create-template": "workflows/create-template.md",
+    "edit-native": "workflows/edit-native-pptx.md"
+  },
+  "profiles": {
+    "quick": "workflows/profiles/quick-generate.md",
+    "beautify": "workflows/profiles/beautify-pptx.md",
+    "image-to-pptx": "workflows/profiles/image-to-pptx.md"
+  },
+  "supporting_authorities": {
+    "brand-template": "workflows/create-template/create-brand.md",
+    "style-template": "workflows/create-template/create-style.md",
+    "layout-template": "workflows/create-template/create-layout.md",
+    "deck-template": "workflows/create-template/create-deck.md",
+    "data-charts-tables": "references/native-data-interface.md",
+    "formulas": "references/native-formula.md",
+    "native-shapes": "references/native-shape-authoring.md",
+    "speaker-notes": "references/executor-notes.md",
+    "animations": "workflows/stages/customize-animations.md",
+    "narration": "workflows/stages/generate-audio.md",
+    "video": "references/video-design.md",
+    "source-research": "workflows/stages/topic-research.md",
+    "visual-review": "workflows/stages/visual-review.md",
+    "resume": "workflows/stages/resume-execute.md"
+  },
+  "execution_scope": "Routing and resources, not proof that each optional service or scientific claim has been validated."
+}

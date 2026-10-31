@@ -25,3 +25,5 @@ v2.0.0 的进阶研究资源整合自 Cheng-I Wu 的 [Academic Research Skills](
 上游固定版本没有 LICENSE/COPYING 文件。这里不声明原教程采用 MIT、Apache 或其他未被证实的许可，不授予对原教程全文及其他第三方作品的再分发权。README 致谢中的外部书籍和文章仅保留出处，未作为已阅读全文处理。
 
 按维护者明确选择，本仓库目前不增加整体许可或原创代码与素材的新许可。公开可读、来源致谢与引用信息均不等于授予任意转载、商业使用或再许可权。需要这些用途时，应向相应权利人确认授权，而不是推断默认采用某个开源许可。
+
+v2.1.0 的演示制作资源整合自 Hugo He 的 [PPT Master](https://github.com/hugohe3/ppt-master)，固定提交 `5e8856be0da8e6bc85c4aa28acc614478f7b7137`、skill 版本 6.8.0。原始代码与工作流的 MIT 许可、署名门，以及图标/声音/形状数据的独立声明均保留；科研汇报适配和保留策略的边界见 [演示资源说明](skills/rsk-research-workflow/references/ppt-master-notices.md)。这不改变本仓库其他部分的许可。

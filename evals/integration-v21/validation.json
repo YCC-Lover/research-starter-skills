@@ -1,0 +1,248 @@
+{
+  "run_id": "2026-10-31-v2.1.0-guided-regression",
+  "independent_current_raw_evidence_checks": 56,
+  "actual_raw_envelopes": 15,
+  "actual_final_files": 38,
+  "frozen_source_text_and_hashes_unchanged": true,
+  "all_reported_skill_references_and_case_dependencies_match_current_text": true,
+  "historical_report_and_sources_files_byte_identical": 12,
+  "historical_index_metadata_preserved_except_state": true,
+  "unique_current_run": "2026-10-31-v2.1.0-guided-regression",
+  "public_files_privacy_scanned": 16,
+  "local_project_or_repository_prefix_leaks": 0,
+  "new_model_calls": 0,
+  "validators": [
+    {
+      "command": "python scripts/validate_behavior_eval.py",
+      "exit_code": 0,
+      "stdout": {
+        "cases": 46,
+        "records": 80,
+        "expected_records": 80,
+        "archived_snapshots_match": true,
+        "current_cases_recorded": 8,
+        "behavior_status": "current-records-present-not-accuracy-proof",
+        "required_current_cases_missing": [],
+        "runs": [
+          {
+            "id": "2026-10-09-v1.2.0",
+            "state": "historical",
+            "cases": 8,
+            "records": 16,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-20-v1.3.1",
+            "state": "historical",
+            "cases": 8,
+            "records": 16,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-20-v1.4.0-utility",
+            "state": "historical",
+            "cases": 6,
+            "records": 24,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-20-v1.5.0-guided-progress",
+            "state": "historical",
+            "cases": 3,
+            "records": 3,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-20-v1.5.0-expression-and-research",
+            "state": "historical",
+            "cases": 5,
+            "records": 5,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-21-v2.0.0-guided-regression",
+            "state": "historical",
+            "cases": 8,
+            "records": 8,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-31-v2.1.0-guided-regression",
+            "state": "current",
+            "cases": 8,
+            "records": 8,
+            "affected_cases": []
+          }
+        ],
+        "judgments_are_review_not_accuracy_proof": true
+      },
+      "stderr": ""
+    },
+    {
+      "command": "python -O scripts/validate_behavior_eval.py",
+      "exit_code": 0,
+      "stdout": {
+        "cases": 46,
+        "records": 80,
+        "expected_records": 80,
+        "archived_snapshots_match": true,
+        "current_cases_recorded": 8,
+        "behavior_status": "current-records-present-not-accuracy-proof",
+        "required_current_cases_missing": [],
+        "runs": [
+          {
+            "id": "2026-10-09-v1.2.0",
+            "state": "historical",
+            "cases": 8,
+            "records": 16,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-20-v1.3.1",
+            "state": "historical",
+            "cases": 8,
+            "records": 16,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-20-v1.4.0-utility",
+            "state": "historical",
+            "cases": 6,
+            "records": 24,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-20-v1.5.0-guided-progress",
+            "state": "historical",
+            "cases": 3,
+            "records": 3,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-20-v1.5.0-expression-and-research",
+            "state": "historical",
+            "cases": 5,
+            "records": 5,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-21-v2.0.0-guided-regression",
+            "state": "historical",
+            "cases": 8,
+            "records": 8,
+            "affected_cases": []
+          },
+          {
+            "id": "2026-10-31-v2.1.0-guided-regression",
+            "state": "current",
+            "cases": 8,
+            "records": 8,
+            "affected_cases": []
+          }
+        ],
+        "judgments_are_review_not_accuracy_proof": true
+      },
+      "stderr": ""
+    },
+    {
+      "command": "python scripts/validate_skills.py",
+      "exit_code": 0,
+      "stdout": {
+        "skills": 7,
+        "tutorials_covered": 19,
+        "public_paths_and_links_valid": true,
+        "approved_images": 4,
+        "research_engine": {
+          "resource_files": 1131,
+          "modes": 35,
+          "source_commit": "3224a27a2571cefef0fddfd437004cb006f2b0cb",
+          "content_verified": true,
+          "empty_pdf_filename_fixtures": [
+            "scripts/adapters/examples/folder_scan/input_fixture/Chen2024_AIAssessment.pdf",
+            "scripts/adapters/examples/folder_scan/input_fixture/Wang_2023_formative_feedback.pdf",
+            "scripts/adapters/examples/folder_scan/input_fixture/paper1.pdf",
+            "scripts/adapters/examples/folder_scan/input_fixture/中文檔名_2024.pdf"
+          ],
+          "execution_verified": false
+        },
+        "presentation_engine": {
+          "source_commit": "5e8856be0da8e6bc85c4aa28acc614478f7b7137",
+          "source_version": "6.8.0",
+          "resource_files": 13051,
+          "content_verified": true,
+          "execution_verified": false
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "command": "python -O scripts/validate_skills.py",
+      "exit_code": 0,
+      "stdout": {
+        "skills": 7,
+        "tutorials_covered": 19,
+        "public_paths_and_links_valid": true,
+        "approved_images": 4,
+        "research_engine": {
+          "resource_files": 1131,
+          "modes": 35,
+          "source_commit": "3224a27a2571cefef0fddfd437004cb006f2b0cb",
+          "content_verified": true,
+          "empty_pdf_filename_fixtures": [
+            "scripts/adapters/examples/folder_scan/input_fixture/Chen2024_AIAssessment.pdf",
+            "scripts/adapters/examples/folder_scan/input_fixture/Wang_2023_formative_feedback.pdf",
+            "scripts/adapters/examples/folder_scan/input_fixture/paper1.pdf",
+            "scripts/adapters/examples/folder_scan/input_fixture/中文檔名_2024.pdf"
+          ],
+          "execution_verified": false
+        },
+        "presentation_engine": {
+          "source_commit": "5e8856be0da8e6bc85c4aa28acc614478f7b7137",
+          "source_version": "6.8.0",
+          "resource_files": 13051,
+          "content_verified": true,
+          "execution_verified": false
+        }
+      },
+      "stderr": ""
+    }
+  ],
+  "latest_changed_frozen_sources": [
+    {
+      "path": "skills/rsk-research-workflow/references/ppt-master-notices.md",
+      "frozen_sha256": "659b4c372fdfc618ecd2bf4b0fb4877a8c5a1435d0d4c7b9df31ef86434470c3",
+      "current_sha256": "289dc32935b87ecaddb07437f7bfaa2daa50e811537b592a86dd6fee18e5aa1f",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    },
+    {
+      "path": "skills/rsk-research-workflow/references/presentation-tools.md",
+      "frozen_sha256": "a10776cf27610eac0a81202292d770c63fce5b6e6b7b519e199190aac7e893ea",
+      "current_sha256": "768392823779c02cd05c262a748038afe0c4b2535b46b30e645ff7765b734253",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    },
+    {
+      "path": "skills/rsk-research-workflow/scripts/presentation_retention.py",
+      "frozen_sha256": "dc3164b831fc66248074cc1b7138cef098c247e0c475762ed837ea20975fbb0e",
+      "current_sha256": "27856c279892aa77228d791bfad23a25cfbffeb1311ca0e8da47372fe46e2757",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    },
+    {
+      "path": "skills/rsk-research-workflow/scripts/presentation_source.py",
+      "frozen_sha256": "932367fc32b55e24b4303c85af7d6e62728adec8bd78872b69063eb0a9828b0f",
+      "current_sha256": "c5e3a87f671d3cdbcbdcb7c4dc6508922ea27425a1cf4dcb756e93397923a3ee",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    },
+    {
+      "path": "skills/rsk-research-workflow/scripts/research_presentations.py",
+      "frozen_sha256": "1bc132e2e83ece15e6aee0f2c9c64dc803f280ea12832172b70d5493b70a92a6",
+      "current_sha256": "0937d98f065915a802a905ed8c9625240b9e7c717b17f049970ce3f5872a013e",
+      "text_equal": false,
+      "used_by_selected_cases": []
+    }
+  ],
+  "latest_affected_selected_cases": []
+}

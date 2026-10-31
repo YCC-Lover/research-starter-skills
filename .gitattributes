@@ -7,5 +7,6 @@
 *.tsv text eol=lf
 *.csv text eol=lf
 *.txt text eol=lf
+*.cff text eol=lf
 skills/research-starter-paper/resources/research-engine/** text eol=lf
 scripts/research-engine-runtime.patch text eol=lf

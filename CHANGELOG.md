@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.0
+
+- Connect native research presentation creation, faithful beautification, image reconstruction, reusable templates and source-preserving PPTX editing to rsk-research-workflow.
+- Preserve source-grounded slide arguments, figures, native chart/table data, editable formulas, speaker notes and the distinction between a plan, an export and a visually verified deck.
+- Bundle the pinned PPT Master skill package with its original attribution gates and component notices; expand it only in the selected task directory without registering another skill.
+- Adapt temporary cleanup into retained task artifacts, preserve original research sources, and make network, preview, narration and video execution explicit.
+
 ## 2.0.0
 
 - Connect 35 advanced research, screening, writing, review and pipeline modes to the existing seven skills while retaining lightweight novice and prose-editing workflows.
