@@ -1,36 +1,29 @@
 # Research Starter Skills
 
-[中文](README.md) · [English](README_EN.md) · [版本记录](CHANGELOG.md)
+**科研入门、论文写作与学术汇报，连接到你正在做的研究。**
 
-[![技能校验状态](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml)
+[![技能校验状态](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/YCC-Lover/research-starter-skills/actions/workflows/validate.yml) [![最新版本](https://img.shields.io/github/v/release/YCC-Lover/research-starter-skills?label=release&color=087F8C)](https://github.com/YCC-Lover/research-starter-skills/releases/latest)
 
-**不知道从哪开始科研？从你手边的一句话、一份笔记开始。**
+刚进课题组，缺少系统的科研训练或持续指导，不知道论文从哪里找、读完怎样形成问题、结果怎样写成论证？这里把科研方法整理为 **1 个总入口 + 6 个专业模块**，让 Codex 从你现有的一句话、一份笔记或一段草稿开始，陪你完成眼前的任务。
 
-刚进课题组，没有系统学过科研，连该准备什么材料都不清楚？Research Starter Skills 会先利用你已有的信息，带你逐步形成研究问题、读懂论文、整理结果、修改章节，自动保存进度。**1 个总入口 + 6 个专业模块**，覆盖从科研起步到论文、返修与学术交流的具体任务。
+读 [Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 的对应原创教程理解方法，再用本项目的 skills 处理自己的材料。从选题、检索与阅读，到自然润色、审稿返修、可编辑科研汇报和学术交流，按需要进入相应阶段。
 
-先读 [Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 的原创教程理解方法，再用本项目的 skills 处理自己的文献、笔记、数据和草稿：把阅读变成观点，把结果变成论证，把问题变成下一步。
+**[三步开始](#quick-start) · [下载最新版](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [查看实际交付](#deliverables) · [文档导航](docs/README.md) · [English](README_EN.md)**
 
-**[下载最新版](https://github.com/YCC-Lover/research-starter-skills/releases/latest) · [开始安装](#三步开始) · [新手从这里开始](docs/BEGINNER.md) · [原教程学习路径](docs/LEARNING_PATH.md) · [看完整任务](examples/worked/README.md)**
+科研方法源于原项目的 19 篇教程；本仓库由 YCC-Lover 独立提炼、适配与扩展维护。[来源与致谢](#credits)
 
-**来源与致谢：** 科研方法源自 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 的全部 19 篇教程。感谢郭兰哲老师及陈煜旸、葛凌岳、张逸凯等同学的整理与分享；YCC-Lover 负责独立提炼、Codex 适配与扩展维护。[逐篇来源](skills/research-starter-paper/references/sources.md) · [归属与使用范围](NOTICE.md)
+## 从你现在卡住的地方开始
 
-![Research Starter Skills：从研究问题到文献、写作、实验图表、审稿回复与学术交流](docs/images/workflow-product.png)
+| 你当前的问题 | 可以一起完成的成果 |
+| --- | --- |
+| 导师给了方向，但不知道下一步做什么 | 一张能带去组会的问题卡、最小材料请求与下一步行动 |
+| 读了几篇论文，却写不出自己的观点 | 方法与证据对照、分歧梳理和有来源的综合段落 |
+| 有结果和草稿，但论证不清、语言生硬 | 可替换正文、自然润色、作者语气匹配与章节联动清单 |
+| 要返修、汇报或答辩，材料还很零散 | 有证据的回复、可编辑 PPTX、逐页讲稿与一问一答练习 |
 
-产品概念图由本项目使用 GPT-image 生成。[图像说明](docs/images/workflow-product.prompt.md) · [更多场景](examples/SHOWCASE.md)
+没有完整计划也能起步。已有明确任务时，直接处理当前文本或文件；只想检查时，给出发现与建议，不自动改稿。
 
-## 用一次具体任务，感受它的价值
-
-| 你手里有什么 | skill 帮你推进什么 | 你会拿到什么 |
-| --- | --- | --- |
-| 不知道提供什么，只有导师一句话 | 从眼前困难开始，只补关键材料，逐步完成一件事 | 问题卡、第一步行动、自动保存的项目进度 |
-| 一个宽泛方向、有限时间和设备 | 比较候选问题，找到最有信息价值的验证 | 近期优先建议、研究问题、最小验证计划 |
-| 几篇论文和零散阅读笔记 | 比较路线、条件与分歧，形成自己的观点 | 证据综合、可追溯索引、具体研究切口 |
-| 一段引言或学位论文章节 | 重建论证，统一术语、数据版本和跨章关系 | 可替换正文、实质修改说明、联动清单 |
-| 实验表格、TG/DTG 或表征结果 | 看清关键比较与指标权衡，组织图文表达 | 图方案、图注、结果与讨论、后续验证 |
-| 多条审稿意见和修订记录 | 确定返修优先级，把回复对应到实际改稿 | 回复草稿、证据与位置联动表、行动顺序 |
-| 开题、组会或答辩准备 | 组织论证、制作可编辑汇报，再按需一问一答练习 | PPTX、讲稿、证据对应与针对原话的反馈 |
-
-小任务直接给成果，复杂任务先理清材料；学习时讲方法、做练习，执行时处理文本和文件，检查时给出发现与建议。你可以随时切换，按自己的进度推进。
+<a name="quick-start"></a>
 
 ## 三步开始
 
@@ -42,7 +35,10 @@
 python scripts/install_skills.py
 ~~~
 
-也可以使用 Git：
+安装只需 Python 3.10+ 和标准库。七个目录一起安装到 `$CODEX_HOME/skills`，未设置时为 `~/.codex/skills`。普通文字指导无需安装绘图、演示或语音依赖。
+
+<details>
+<summary>使用 Git 安装，或更新已有安装</summary>
 
 ~~~text
 git clone https://github.com/YCC-Lover/research-starter-skills.git
@@ -50,128 +46,142 @@ cd research-starter-skills
 python scripts/install_skills.py
 ~~~
 
-安装使用 Python 3.10+ 和标准库。技能默认放在 `$CODEX_HOME/skills`，未设置时放在 `~/.codex/skills`。七个目录保持同级，便于总入口协调各模块。[安装、更新与备份](docs/INSTALLATION.md)
+更新前先检查当前副本，保留需要的自定义内容，再指定备份目录：
 
-### 2. 带上当前材料
+~~~text
+python scripts/install_skills.py --check
+python scripts/install_skills.py --update --backup-dir <备份目录>
+~~~
 
-新开 Codex 对话，附上一段草稿、一份记录或一篇论文。没有文件也没关系，先用自己的话说方向和眼前困难，不需要自己先整理完。[零材料起步](docs/BEGINNER.md) · [七套教学任务](examples/worked/README.md)
+备份目录与来源、安装目录分开，按自己的存储约定选择。[完整安装与验收](docs/INSTALLATION.md)
 
-### 3. 说出你想完成的事
+</details>
+
+### 2. 新开对话，带上一件材料
+
+可以是一段草稿、一份笔记、一篇论文或一个可读的数据导出。没有文件也可以先说方向，不用先整理成专业模板。[零材料起步](docs/BEGINNER.md)
+
+### 3. 说出想完成的事
 
 ~~~text
 使用 $research-starter-paper。
-我刚读研，没系统学过科研，不知道该提供什么材料。
-导师说先看看【用自己的话写方向】，带我做出下次组会能用的东西。
-工作目录是【我的项目目录】，请自动保存进度。
+我刚读研，没有系统学过科研。
+导师让我看看【用自己的话写方向】，
+带我做出下次组会能讨论的东西。
+项目目录是【路径】，请在这里保存进度。
 ~~~
+
+<details>
+<summary>已有草稿、汇报材料或答辩任务？直接用这些请求</summary>
+
+**修改与自然润色**
 
 ~~~text
 使用 $rsk-paper-writing。
-请修改附件中的3.4讨论，先给可替换正文，
-再列出需要联动修改的位置和关键依据。
+修改附件中的讨论，先给可替换正文。
+保留数值、引用、研究含义和我的语气，
+再列出关键修改与需要联动的章节。
 ~~~
+
+**制作科研汇报**
 
 ~~~text
-使用 $rsk-research-workflow，陪我练习开题问答。
-根据我的回答给简短反馈，再追问一个问题。
+使用 $rsk-research-workflow。
+根据附件笔记和数据制作8分钟组会PPT。
+保留可编辑图表，附逐页讲稿，
+说明证据不足之处，并检查实际导出文件。
 ~~~
 
-已明确任务时可以直接点名小模块；希望先梳理方向时交给总入口。[19 个可直接改用的提示词](examples/README.md)
+**练习开题问答**
 
-## 从自学到写作
+~~~text
+使用 $rsk-research-workflow。
+根据我的开题材料一次问一个问题，
+等我回答后给针对性反馈，再继续追问。
+~~~
 
-**从方法走到实践。** 学习路径把原教程、具体任务、练习产出与自查连在一起。刚入门时，可以从对象、现象和可用资源开始；已有结果时，可以直接进入写作与分析。
+</details>
 
-**把零散材料连成论证。** 文献综合关注路线之间的关系，长文修改关注章节之间的依赖，返修关注意见、证据和稿件之间的对应。交付围绕你当前需要使用的成果展开。
+[19 个任务提示词](examples/README.md) · [七套完整教学任务](examples/worked/README.md) · [原教程学习路径](docs/LEARNING_PATH.md)
 
-**让下一步更明确。** 候选问题比较会解释取舍；实验建议会说明新增信息的价值；学习反馈会回到你的原句，并给一个可以完成的练习。
+<a name="deliverables"></a>
 
-**进度不用自己反复整理。** 引导任务由代理保存关键回答、实际产物与下一步；新对话先读检查点、核对文件变化，再继续。已有笔记可以复用，只读任务和单段润色不强制建记录。[保存与接续](docs/BEGINNER.md#进度由代理保存)
+## 看一份真实生成的交付
 
-**自然表达，保留你的声音。** 语言编辑支持作者样例、结构调整和26类表达复核，保护数值、引用、公式与专业含义。不同研究采用相应证据方式，定量实验、定性访谈、历史文本和理论证明不套同一模板。
+下面是 v2.1.0 四页合成教学汇报的实际 PowerPoint 渲染，展示其中的原生图表与表格。可以下载 PPTX，直接查看数据编辑、公式和讲稿。
+
+[![合成科研汇报的实际 PowerPoint 渲染：三个条件在两个温度点的原生图表与数值表格，不是真实实验](docs/images/presentation-native.png)](https://github.com/YCC-Lover/research-starter-skills/releases/download/v2.1.0/research-presentation-demo-v2.1.0.pptx)
+
+**[下载可编辑示例 PPTX](https://github.com/YCC-Lover/research-starter-skills/releases/download/v2.1.0/research-presentation-demo-v2.1.0.pptx) · [查看输入与复做](examples/research-presentation/README.md) · [查看验收记录](evals/presentations-v21/REPORT.md)**
+
+这份文件包含原生 Chart、Table、嵌入工作簿、OMML 公式和四页讲稿；另已验证只改封面时，其余三页及母版、布局、讲稿共 15 个部件字节不变。材料均为合成教学设定，不代表真实科研结果。[预览来源](docs/images/presentation-native.source.md)
 
 ## 总入口与六个模块
 
-| Skill | 适合的任务 |
-| --- | --- |
-| [research-starter-paper](skills/research-starter-paper/SKILL.md) | 科研入门、跨阶段协作、材料梳理与接续 |
-| [rsk-research-design](skills/rsk-research-design/SKILL.md) | 选题、候选问题比较、Idea、最小验证 |
-| [rsk-literature](skills/rsk-literature/SKILL.md) | 检索、批判阅读、多文献综合、引用版本 |
-| [rsk-paper-writing](skills/rsk-paper-writing/SKILL.md) | 引言、摘要、方法、结果讨论、学位论文一致性 |
-| [rsk-experiments-figures](skills/rsk-experiments-figures/SKILL.md) | 实验比较、材料表征、图注、TG/DTG 数据检查 |
-| [rsk-rebuttal](skills/rsk-rebuttal/SKILL.md) | 审稿回复、返修排序、稿件与证据联动 |
-| [rsk-research-workflow](skills/rsk-research-workflow/SKILL.md) | 可编辑科研 PPT、模板改稿、组会、参会、研究记录与答辩演练 |
+- **[科研总入口](skills/research-starter-paper/SKILL.md)**：不知从哪里开始、跨阶段任务、材料梳理与项目接续。
+- **[研究设计](skills/rsk-research-design/SKILL.md)**：选题、比较候选问题、Idea 与最小验证。
+- **[文献阅读](skills/rsk-literature/SKILL.md)**：检索、批判阅读、多文献综合、引用与版本核对。
+- **[论文写作](skills/rsk-paper-writing/SKILL.md)**：章节论证、学位论文一致性、自然润色与作者语气。
+- **[实验与图表](skills/rsk-experiments-figures/SKILL.md)**：公平比较、材料表征、图注与 TG/DTG 数据检查。
+- **[审稿回复](skills/rsk-rebuttal/SKILL.md)**：逐条回复、返修排序、稿件与证据联动。
+- **[科研工作流](skills/rsk-research-workflow/SKILL.md)**：可编辑 PPT、模板改稿、组会、参会与答辩演练。
 
-TG/DTG 模块还提供只读 CSV 检查与按实际温度网格计算导数的工具；`--derive` 使用环境中已有的 NumPy。[完整热分析任务](skills/rsk-experiments-figures/references/thermal-task.md)
+<details>
+<summary>查看总入口与六个模块的概念图</summary>
+
+![Research Starter Skills：科研总入口按任务协调六个模块，并保留证据边界](docs/images/workflow-product.png)
+
+概念图由本项目使用 GPT-image 生成，不是软件界面或研究数据。[生成说明](docs/images/workflow-product.prompt.md) · [更多展示场景](examples/SHOWCASE.md)
+
+</details>
+
+## 从自学到写作
+
+**方法和实践连在一起。** [学习路径](docs/LEARNING_PATH.md)把对应原文、具体任务、练习和自查连接起来。可以边学边做，也可以直接处理已有材料，不强制先完成整套课程。
+
+**自然表达，保留你的声音。** 支持作者样例、结构调整与 26 类表达复核，处理重复、空话和模板腔，同时保留数值、引用、公式、确定程度与专业含义。不承诺通过 AI 检测器。
+
+**进度有文件可接续。** 引导任务在授权目录保存关键回答、实际产物和下一步；新对话先核对检查点与材料变化，再继续。只读检查、单段润色或明确不保存的任务不强制建记录。这不是后台监控或模型凭空记忆。[保存与恢复](docs/BEGINNER.md#进度由代理保存)
 
 ## 进阶研究工作流
 
-七个技能按任务连接 **35 种进阶模式**，日常小修仍可直接完成。
+日常任务按需调用；系统综述、完整写作、多视角审稿和多阶段研究可以进入更完整的流程。现有七个入口连接 **35 种进阶模式**。
 
-| 当前要做的事 | 新增能力 |
+<details>
+<summary>查看进阶能力与执行条件</summary>
+
+| 当前任务 | 可用流程 |
 | --- | --- |
-| 把宽泛方向变成可研究的问题 | Socratic 提问、深度调研、WHY/HOW/WHAT 对照、事实核查 |
-| 开展系统综述 | 协议、去重、试筛、隔离题摘/全文筛选、冲突裁决、质控与可追溯导出 |
-| 从材料组织完整论文 | 分步规划、大纲、全文、摘要、综述章节、格式转换与引用核验 |
-| 检查和修改稿件 | 多视角审稿、方法专项、修改辅导、作者决定、可回放修订与复审 |
-| 连接多个研究阶段 | 材料护照、阶段检查点、证据记录、AI 使用披露与投稿包检查 |
+| 把方向变成研究问题 | Socratic 提问、深度调研、WHY/HOW/WHAT 对照与事实核查 |
+| 开展系统综述 | 协议、去重、试筛、独立筛选、冲突裁决与可追溯导出 |
+| 从材料组织论文 | 分步规划、大纲、全文、摘要、综述章节与引用核验 |
+| 检查和修改稿件 | 多视角审稿、方法专项、修改辅导、作者决定与复审 |
+| 衔接多个研究阶段 | 材料护照、检查点、证据记录、AI 使用披露与投稿包检查 |
 
-```text
-使用 $rsk-literature。请根据附件记录，先和我确认纳排标准，
-做一轮小规模试筛；保留分歧和依据，再决定是否扩大筛选。
-```
+独立筛选和多视角审稿需要实际独立上下文；联网、文件转换及外部服务依赖当前环境。科研汇报按需选择新建、原稿保留编辑、模板、美化或截图重建路线。只要提纲和问答时不启动制稿。
 
-```text
-使用 $rsk-rebuttal。请对附件稿件做多视角审稿，
-先指出影响结论的证据问题，再与我确认修改范围。
-```
+[研究模式](skills/research-starter-paper/references/advanced-research.md) · [研究工具](skills/research-starter-paper/references/runtime-helpers.md) · [演示制作](skills/rsk-research-workflow/references/presentations.md) · [演示依赖与边界](skills/rsk-research-workflow/references/presentation-tools.md)
 
-代理按需读取角色、模板和数据契约，使用当前 Codex 的原生工具执行。
-独立筛选和多视角审稿需要实际独立上下文；格式转换、联网核验和模型调用依赖当前环境。
-流程保留缺失材料、未运行检查和计划实验的实际状态。
-[全部模式与执行方式](skills/research-starter-paper/references/advanced-research.md) ·
-[可执行工具与依赖](skills/research-starter-paper/references/runtime-helpers.md) ·
-[资源使用范围](skills/research-starter-paper/references/research-engine-notice.md)
+</details>
 
-## 从科研材料到可编辑汇报
+## 验证与适用范围
 
-`rsk-research-workflow` 现在连接 PPT Master 的原生演示制作能力：从材料新建汇报，
-保留原稿设计进行局部修改，或制作可复用模板。正文、形状、数据图表和公式分别按
-实际对象类型检查；讲稿、动画、旁白和视频按任务需要启用，不把提纲冒充已完成的 PPT。
+- [新手任务回归](evals/integration-v21/REPORT.md)：8 个合成场景，56 项检查中 55 项通过、1 项无法确认；不作为普遍效率或真实科研准确率的证明。
+- [演示制作验收](evals/presentations-v21/REPORT.md)：区分原生对象、文件结构、模板复用、局部修改和实际 PowerPoint 渲染；外部配音、视频及全部模板类型未逐项实测。
+- [工程验收](docs/PROJECT_AUDIT.md)与顶部 CI：核对包结构、来源、链接、安装和记录完整性，不等同于科研结论正确。
 
-```text
-使用 $rsk-research-workflow。根据附件笔记和真实数据，
-制作一份面向课题组的8分钟汇报，突出问题、关键比较、限制和下一步。
-请保留可编辑图表，附逐页讲稿，并核对导出后的文件。
-```
+只使用有权分享的材料；敏感与未发表内容按团队要求处理。不能读取的部分、缺失证据和未执行步骤需要明确保留。不同学科采用相应证据方式，不承诺所有期刊通用、固定节时或论文录用。
 
-已有学校或课题组模板时可直接提供 PPTX，说明需要保留的页面和改动范围。
-只要提纲或答辩演练时仍走轻量流程。[制作指南](skills/rsk-research-workflow/references/presentations.md) ·
-[工具与可选依赖](skills/rsk-research-workflow/references/presentation-tools.md) ·
-[来源与许可](skills/rsk-research-workflow/references/ppt-master-notices.md)
+<a name="credits"></a>
 
-## 看实际成果
+## 来源与致谢
 
-[本轮新手任务回归](evals/integration-v21/REPORT.md)记录从空白起步、跨对话接续、材料变化检查与文字编辑；[演示制作验收](evals/presentations-v21/REPORT.md)记录原生对象导出、模板复用、局部改稿和实际 PowerPoint 渲染。[完整教学任务](examples/worked/README.md)提供可自己练习的合成材料。保存成功、文件可用、事实边界和用户操作分别核对，不用一个总分代替体验。
+科研方法源于 [LAMDA-NeSy/Research-Starter-Kit](https://github.com/LAMDA-NeSy/Research-Starter-Kit) 的全部 19 篇教程。感谢郭兰哲老师及陈煜旸、葛凌岳、张逸凯等同学的整理与分享。YCC-Lover 负责本仓库的独立提炼、Codex 适配与扩展维护。
 
-这些记录是小规模合成任务验证，不承诺录用、通用于所有学科的效果或固定节省时间。自动保存只在当前任务中执行，不是后台监控；新对话仍需定位项目。[工程验收](docs/PROJECT_AUDIT.md)
-
-## 自己使用，也可以继续改进
-
-技能是可读、可编辑的 Markdown 文件。同机同一用户目录可由不同 Codex 账号继续使用；换机器或用户目录后重新安装即可。公开仓库可以 clone 或 fork，修改后通过自己的 GitHub 权限推送或提交 Pull Request。[协作说明](AGENTS.md)
-
-已安装用户可先运行 `python scripts/install_skills.py --check` 查看版本与文件状态，再使用显式备份更新：
-
-~~~text
-python scripts/install_skills.py --update --backup-dir D:\Codex\work\research-starter-skills-backups
-~~~
-
-安装器保存版本和文件哈希；`--doctor` 提供只读环境诊断。数据解析、作图和 Word/PDF/LaTeX 交付按当前 Codex 环境中的工具完成。[详细验收](docs/INSTALLATION.md#安装后验收)
-
-当前版本为 **v2.1.0**。原教程仍固定于提交 `36ba390d153f5289308ec833e2b633c26b304a7b`；进阶工作流与演示资源另保留固定版本和文件级来源记录。各部分归属、许可与发布范围见 [NOTICE.md](NOTICE.md)，引用信息见 [CITATION.cff](CITATION.cff)。
+进阶研究、自然表达与演示制作资源分别保留固定版本、来源及各自使用范围。本仓库未为全部内容追加统一许可。[逐篇来源](skills/research-starter-paper/references/sources.md) · [归属与使用范围](NOTICE.md) · [引用信息](CITATION.cff) · [版本记录](CHANGELOG.md)
 
 ## 一起让科研起步更容易
 
-从你正在卡住的一段文字、一张图或一次汇报开始，完成一个任务，再逐步拓展自己的科研方法。
+同机同一用户目录下可由不同 Codex 账号继续使用；换机器后重新安装。公开仓库可以 clone 或 fork，写入由相应 GitHub 权限控制。
 
-觉得有帮助，欢迎 Star 收藏；也欢迎通过 [Issues](https://github.com/YCC-Lover/research-starter-skills/issues) 分享脱敏后的具体问题，通过 Pull Request 补充真实可复核的场景。[贡献指南](CONTRIBUTING.md)
+觉得有帮助，欢迎 Star 收藏；也欢迎在 [Issues](https://github.com/YCC-Lover/research-starter-skills/issues) 分享脱敏后的具体场景，或通过 Pull Request 补充可复核的示例。[贡献指南](CONTRIBUTING.md)

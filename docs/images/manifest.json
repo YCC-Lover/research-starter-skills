@@ -1,6 +1,16 @@
 {
   "images": [
     {
+      "path": "docs/images/presentation-native.png",
+      "kind": "illustrative-output",
+      "creator": "YCC-Lover with Codex; actual Microsoft PowerPoint render",
+      "description": "Unmodified page-2 PNG from the verified v2.1.0 synthetic teaching PPTX; a recorded file render, not real experimental data or a mock software interface.",
+      "source": "docs/images/presentation-native.source.md",
+      "width": 1600,
+      "height": 900,
+      "sha256": "16e2589d3df321a6e566f2c518333a408e9a1bb4b9187dc99a9f0d6c7ae334d8"
+    },
+    {
       "path": "docs/images/workflow-product.png",
       "kind": "original-diagram",
       "creator": "YCC-Lover with Codex GPT-image",

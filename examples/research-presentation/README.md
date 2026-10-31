@@ -1,5 +1,18 @@
 # 可编辑科研汇报练习
 
+[项目首页](../../README.md) · [文档导航](../../docs/README.md) · [制作指南](../../skills/rsk-research-workflow/references/presentations.md)
+
+## 先查看实际文件
+
+[下载四页示例 PPTX](https://github.com/YCC-Lover/research-starter-skills/releases/download/v2.1.0/research-presentation-demo-v2.1.0.pptx)，
+可检查原生图表、表格、嵌入工作簿、公式和逐页讲稿。下图是该文件第 2 页的实际 PowerPoint 渲染。
+
+![合成教学 PPTX 的实际图表与表格预览，不代表真实实验](../../docs/images/presentation-native.png)
+
+[数据和对象验收](../../evals/presentations-v21/REPORT.md) · [预览来源](../../docs/images/presentation-native.source.md)
+
+## 使用相同输入复做
+
 [材料](materials.md)和 [CSV](results.csv)均为合成教学输入，不是真实实验。
 
 ```text
