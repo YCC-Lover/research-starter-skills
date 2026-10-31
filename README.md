@@ -12,6 +12,10 @@
 
 科研方法源于原项目的 19 篇教程；本仓库由 YCC-Lover 独立提炼、适配与扩展维护。[来源与致谢](#credits)
 
+![Research Starter Skills：科研总入口按任务协调六个模块，并保留证据边界](docs/images/workflow-product.png)
+
+概念图由本项目使用 GPT-image 生成，不是软件界面或研究数据。[生成说明](docs/images/workflow-product.prompt.md) · [更多展示场景](examples/SHOWCASE.md)
+
 ## 从你现在卡住的地方开始
 
 | 你当前的问题 | 可以一起完成的成果 |
@@ -125,15 +129,6 @@ python scripts/install_skills.py --update --backup-dir <备份目录>
 - **[实验与图表](skills/rsk-experiments-figures/SKILL.md)**：公平比较、材料表征、图注与 TG/DTG 数据检查。
 - **[审稿回复](skills/rsk-rebuttal/SKILL.md)**：逐条回复、返修排序、稿件与证据联动。
 - **[科研工作流](skills/rsk-research-workflow/SKILL.md)**：可编辑 PPT、模板改稿、组会、参会与答辩演练。
-
-<details>
-<summary>查看总入口与六个模块的概念图</summary>
-
-![Research Starter Skills：科研总入口按任务协调六个模块，并保留证据边界](docs/images/workflow-product.png)
-
-概念图由本项目使用 GPT-image 生成，不是软件界面或研究数据。[生成说明](docs/images/workflow-product.prompt.md) · [更多展示场景](examples/SHOWCASE.md)
-
-</details>
 
 ## 从自学到写作
 

@@ -34,6 +34,7 @@ It preserves unrelated installed files and never deletes obsolete ones automatic
 
 Keep all seven skill folders as siblings when installing. Router links depend on that layout.
 Original public PNGs require `docs/images/manifest.json` with origin, generation source, dimensions and SHA-256.
+Preserve existing preview images and their provenance. New previews are additions unless the user explicitly requests replacement or removal.
 Keep synthetic teaching data and illustrative outputs distinct from actual experiments and recorded model runs.
 Use `--dry-run` to preview installation and `--check` for read-only content comparison.
 Keep package and citation versions consistent; preserve the maintainer's choice not to add a new license.

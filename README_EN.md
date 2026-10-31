@@ -12,6 +12,10 @@ Read the relevant original tutorial in [Research-Starter-Kit](https://github.com
 
 The research methods originate in 19 upstream tutorials. YCC-Lover independently distills, adapts and extends this bundle. [Sources and thanks](#credits)
 
+![Research Starter Skills concept map: one router, six task-selected modules and evidence boundaries](docs/images/workflow-product.png)
+
+Generated with GPT-image. This is conceptual artwork, not a software interface or research data. [Generation notes](docs/images/workflow-product.prompt.md) · [More examples](examples/SHOWCASE.md)
+
 ## Start Where You Are Stuck
 
 | Your situation | A useful next deliverable |
@@ -125,15 +129,6 @@ The file contains a native Chart, Table, embedded workbook, OMML formula and fou
 - **[Experiments and figures](skills/rsk-experiments-figures/SKILL.md)**: fair comparisons, characterization, captions and TG/DTG checks.
 - **[Reviewer replies](skills/rsk-rebuttal/SKILL.md)**: point-by-point replies, priorities and revision evidence.
 - **[Research workflow](skills/rsk-research-workflow/SKILL.md)**: editable decks, template editing, meetings and rehearsal.
-
-<details>
-<summary>View the router and module concept map</summary>
-
-![Research Starter Skills concept map: one router, six task-selected modules and evidence boundaries](docs/images/workflow-product.png)
-
-Generated with GPT-image. This is conceptual artwork, not a software interface or research data. [Generation notes](docs/images/workflow-product.prompt.md) · [More examples](examples/SHOWCASE.md)
-
-</details>
 
 ## Learn, Write and Continue
 
